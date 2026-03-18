@@ -1,0 +1,225 @@
++++
+title = "Opportunities"
+type = "page"
++++
+
+<style>
+  .opps-page {
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 6px 0 38px;
+  }
+
+  .opps-hero {
+    margin-bottom: 30px;
+    max-width: 860px;
+  }
+
+  .opps-kicker {
+    color: var(--ualberta-green);
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .opps-hero h2 {
+    color: var(--ualberta-green-deep);
+    font-size: 46px;
+    line-height: 1.05;
+    margin: 0 0 16px;
+  }
+
+  .opps-lead {
+    color: #334638;
+    font-size: 18px;
+    line-height: 1.82;
+    margin: 0 0 14px;
+  }
+
+  .opps-sublead {
+    color: #5c6b61;
+    font-size: 15px;
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  .opps-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .opps-card {
+    background: #ffffff;
+    border: 1px solid rgba(39, 93, 56, 0.1);
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(20, 34, 25, 0.05);
+    padding: 22px;
+  }
+
+  .opps-card--span-4 { grid-column: span 4; }
+  .opps-card--span-5 { grid-column: span 5; }
+  .opps-card--span-6 { grid-column: span 6; }
+  .opps-card--span-7 { grid-column: span 7; }
+  .opps-card--span-12 { grid-column: span 12; }
+
+  .opps-card h3 {
+    color: var(--ualberta-green-deep);
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0 0 12px;
+  }
+
+  .opps-card p {
+    color: #45584c;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 0 14px;
+  }
+
+  .opps-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .opps-chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .opps-chip {
+    background: #edf4ed;
+    border-radius: 999px;
+    color: #1f4a2d;
+    display: inline-flex;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+    padding: 8px 12px;
+  }
+
+  .opps-list {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .opps-list li {
+    background: rgba(232, 240, 232, 0.58);
+    border-radius: 14px;
+    color: #345042;
+    list-style: none;
+    padding: 12px 14px;
+  }
+
+  .opps-list strong {
+    color: #1f3d2b;
+  }
+
+  .opps-note {
+    background: #f7f3e7;
+    border: 1px solid rgba(120, 99, 40, 0.14);
+    border-radius: 18px;
+    color: #645536;
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 16px 18px;
+  }
+
+  @media (max-width: 991px) {
+    .opps-card--span-4,
+    .opps-card--span-5,
+    .opps-card--span-6,
+    .opps-card--span-7 {
+      grid-column: span 12;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .opps-page {
+      padding-bottom: 18px;
+    }
+
+    .opps-hero h2 {
+      font-size: 34px;
+    }
+
+    .opps-lead {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<div class="opps-page">
+  <section class="opps-hero">
+    <h2>Working and training with COSSEE</h2>
+    <p class="opps-lead">
+      COSSEE is a place for collaborative, keen, and hard-working people who want to conduct research with <a href="https://scholar.google.com/citations?user=9-pCZzcAAAAJ&hl=en">Dr. Shinichi Nakagawa</a> and contribute to a broader vision of changing how science is done in ecology and evolution.
+    </p>
+  
+  </section>
+
+  <div class="opps-grid">
+    <section class="opps-card opps-card--span-6">
+      <h3>Qualities the Lab Looks For</h3>
+      <div class="opps-chip-list">
+        <span class="opps-chip">Collaborative</span>
+        <span class="opps-chip">Diligent</span>
+        <span class="opps-chip">Inclusive</span>
+        <span class="opps-chip">Honest and responsible</span>
+        <span class="opps-chip">Open-minded</span>
+        <span class="opps-chip">Curious</span>
+        <span class="opps-chip">Motivated to learn</span>
+      </div>
+    </section>
+
+    <section class="opps-card opps-card--span-6">
+      <h3>Skills and Background</h3>
+      <p>
+        COSSEE values strong analytical and computational habits, including experience or interest in tools such as <code>R</code>, <code>Python</code>, <code>Julia</code>, or <code>MATLAB</code>, along with a synthesis-centered approach to ecological and evolutionary questions.
+      </p>
+    </section>
+
+    <section class="opps-card opps-card--span-7">
+      <h3>Typical Application Materials</h3>
+      <ul class="opps-list">
+        <li>Cover letter</li>
+        <li>Scientific CV</li>
+        <li>Transcripts or representative publications, depending on the role</li>
+        <li>Referee contact details</li>
+        <li>Short statement of research interests</li>
+        <li>Diversity and social impact statement</li>
+      </ul>
+    </section>
+
+    <section class="opps-card opps-card--span-5">
+      <h3>Example Opportunity Format</h3>
+      <p>
+        A typical opportunity can combine ecological research, evidence synthesis, and collaborative training. One example project focused on investigating plant-insect community dynamics across deep time and environmental changes.
+      </p>
+      <ul class="opps-list">
+        <li><strong>Support:</strong> about <code>$27,894</code> per year for 2.3 years</li>
+        <li><strong>Location:</strong> Edmonton, Alberta</li>
+        <li><strong>Collaboration:</strong> Royal Tyrrell Museum</li>
+        <li><strong>Project scope:</strong> simulation, imaging, database curation, and outreach</li>
+      </ul>
+    </section>
+
+    <section class="opps-card opps-card--span-12">
+      <div class="opps-note">
+        Openings vary by project, timing, and funding. The structure above is meant to show the kinds of roles, skills, and materials that align well with COSSEE.
+      </div>
+    </section>
+
+    <section class="opps-card opps-card--span-12">
+      <h3>How To Follow Up</h3>
+      <p>
+        Use this site for current information about COSSEE, and reach out through the contact page if you want to enquire about fit, timing, or potential opportunities.
+      </p>
+    </section>
+  </div>
+</div>

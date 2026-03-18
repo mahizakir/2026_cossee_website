@@ -1,0 +1,27 @@
+{{- $page := . -}}
+{{- $cover := "" -}}
+{{- with $page.Resources.GetMatch "cover*" -}}
+  {{- $cover = .RelPermalink -}}
+{{- end -}}
+{{- if not $cover -}}
+  {{- with $page.Resources.GetMatch "banner*" -}}
+    {{- $cover = .RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $cover -}}
+  {{- $images := $page.Resources.ByType "image" -}}
+  {{- if gt (len $images) 0 -}}
+    {{- $cover = (index $images 0).RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $cover -}}
+  {{- with $page.Params.cover_image -}}
+    {{- $cover = . | relURL -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $cover -}}
+  {{- with $page.Params.banner -}}
+    {{- $cover = . | relURL -}}
+  {{- end -}}
+{{- end -}}
+{{- return $cover -}}

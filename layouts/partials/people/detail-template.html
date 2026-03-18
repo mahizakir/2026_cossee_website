@@ -1,0 +1,5 @@
+{{- if .detail_id -}}
+  <template id="profile-{{ .detail_group }}-{{ .detail_id }}">
+    {{- readFile (printf "assets/people/details/%s/%s.html" .detail_group .detail_id) | safeHTML -}}
+  </template>
+{{- end -}}

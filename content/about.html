@@ -1,0 +1,220 @@
++++
+title = "About"
+type = "page"
++++
+
+<style>
+  .about-page {
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 6px 0 38px;
+  }
+
+  .about-hero {
+    margin-bottom: 30px;
+    max-width: 1020px;
+  }
+
+  .about-kicker {
+    color: var(--ualberta-green);
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .about-hero h2 {
+    color: var(--ualberta-green-deep);
+    font-size: 46px;
+    line-height: 1.05;
+    margin: 0 0 16px;
+  }
+
+  .about-lead {
+    color: #334638;
+    font-size: 18px;
+    line-height: 1.82;
+    margin: 0 0 14px;
+  }
+
+  .about-sublead {
+    color: #5c6b61;
+    font-size: 15px;
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  .about-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .about-card {
+    background: #ffffff;
+    border: 1px solid rgba(39, 93, 56, 0.1);
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(20, 34, 25, 0.05);
+    padding: 22px;
+  }
+
+  .about-card--span-4 { grid-column: span 4; }
+  .about-card--span-5 { grid-column: span 5; }
+  .about-card--span-6 { grid-column: span 6; }
+  .about-card--span-7 { grid-column: span 7; }
+  .about-card--span-12 { grid-column: span 12; }
+
+  .about-card h3 {
+    color: var(--ualberta-green-deep);
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0 0 12px;
+  }
+
+  .about-card p {
+    color: #45584c;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 0 14px;
+  }
+
+  .about-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-list {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-list li {
+    background: rgba(232, 240, 232, 0.58);
+    border-radius: 14px;
+    color: #345042;
+    list-style: none;
+    padding: 12px 14px;
+  }
+
+  .about-list strong {
+    color: #1f3d2b;
+  }
+
+  .about-links {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .about-link-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f4f7f1 100%);
+    border: 1px solid rgba(39, 93, 56, 0.1);
+    border-radius: 18px;
+    padding: 18px;
+  }
+
+  .about-link-card strong {
+    color: var(--ualberta-green-deep);
+    display: block;
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .about-link-card p {
+    color: #526258;
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  @media (max-width: 991px) {
+    .about-card--span-4,
+    .about-card--span-5,
+    .about-card--span-6,
+    .about-card--span-7 {
+      grid-column: span 12;
+    }
+
+    .about-links {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 767px) {
+    .about-page {
+      padding-bottom: 18px;
+    }
+
+    .about-hero h2 {
+      font-size: 34px;
+    }
+
+    .about-lead {
+      font-size: 16px;
+    }
+
+    .about-links {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="about-page">
+  <section class="about-hero">
+    <h2>Collaboration for Open Science and Synthesis in Ecology and Evolution (COSSEE)</h2>
+    <p class="about-lead">
+      COSSEE is a research group centered on open, transparent, and reproducible science in ecology and evolution. The lab brings together synthesis, meta-research, and methodological innovation to study important ecological and evolutionary questions while also improving how science itself is done.
+
+      Led by <a href="https://scholar.google.com/citations?user=9-pCZzcAAAAJ&hl=en">Dr. Shinichi Nakagawa</a> at the University of Alberta, COSSEE works across evidence synthesis, statistics, computation, and collaborative open workflows to build research that is more reliable, reusable, and inclusive.
+    </p>
+  </section>
+
+  <div class="about-grid">
+    <section class="about-card about-card--span-7">
+      <h3>What COSSEE Emphasizes</h3>
+      <ul class="about-list">
+        <li><strong>Important questions:</strong> research that matters for ecology, evolution, and related environmental fields.</li>
+        <li><strong>Open science practice:</strong> studies that are easier to understand, reproduce, and extend.</li>
+        <li><strong>Methodological strength:</strong> work that improves evidence synthesis, meta-analysis, and meta-science.</li>
+        <li><strong>Training and collaboration:</strong> an environment that supports early-career researchers and international networks.</li>
+        <li><strong>Inclusive culture:</strong> a lab grounded in equity, diversity, and inclusion.</li>
+      </ul>
+    </section>
+
+    <section class="about-card about-card--span-5">
+      <h3>Why This Matters</h3>
+      <p>
+        COSSEE's work is not only about producing findings. It is also about making the research process itself more trustworthy and efficient, from study design and registration to analysis, reporting, and re-use.
+      </p>
+      <p>
+        That means building science that is useful now, but also easier for others to inspect, update, and build on later.
+      </p>
+    </section>
+
+    <section class="about-card about-card--span-12">
+      <h3>Where To Go Next</h3>
+      <div class="about-links">
+        <a class="about-link-card" href="/research/">
+          <strong>Research</strong>
+          <p>Explore the lab's themes, methods, and current directions.</p>
+        </a>
+        <a class="about-link-card" href="/people/">
+          <strong>People</strong>
+          <p>Meet the researchers, students, and collaborators behind the work.</p>
+        </a>
+        <a class="about-link-card" href="/resources/">
+          <strong>Resources</strong>
+          <p>Browse the wider ecosystem of open science and synthesis-related materials.</p>
+        </a>
+        <a class="about-link-card" href="/protocols/">
+          <strong>Protocols</strong>
+          <p>See how COSSEE connects planning, registration, and transparent reporting.</p>
+        </a>
+      </div>
+    </section>
+  </div>
+</div>

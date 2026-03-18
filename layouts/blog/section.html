@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  <head>
+    {{ partial "headers.html" . }}
+    {{ partial "custom_headers.html" . }}
+  </head>
+
+  <body>
+
+    <div id="all">
+
+        {{ partial "top.html" . }}
+
+        {{ partial "nav.html" . }}
+
+        {{ partial "breadcrumbs.html" . }}
+
+        <div id="content">
+            <div class="container blog-shell">
+                {{ $pages := sort (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) "Date" "desc" }}
+
+                <section class="blog-hero">
+                    <div class="blog-hero__copy">
+                        <span class="blog-kicker">COSSEE Journal</span>
+                        <h1>{{ .Title }}</h1>
+                        <p>Browse COSSEE posts with a faster, cleaner reading experience. Search by title, summary, author, or year to jump straight to what you need.</p>
+                    </div>
+                    <div class="blog-hero__search">
+                        <label class="blog-search-label" for="blog-search">Search posts</label>
+                        <div class="blog-search-wrap">
+                            <i class="fas fa-search"></i>
+                            <input id="blog-search" class="blog-search-input" type="search" placeholder="Try meta-analysis, open science, or an author name" autocomplete="off">
+                        </div>
+                        <p class="blog-search-meta"><span id="blog-result-count">{{ len $pages }}</span> posts in the archive</p>
+                    </div>
+                </section>
+
+                <div class="blog-toolbar">
+                    <div class="blog-toolbar__group">
+                        <span class="blog-toolbar__label">Featured topics</span>
+                        <button type="button" class="blog-filter-chip is-active" data-filter="">All</button>
+                        <button type="button" class="blog-filter-chip" data-filter="meta-analysis">Meta-analysis</button>
+                        <button type="button" class="blog-filter-chip" data-filter="open science">Open science</button>
+                        <button type="button" class="blog-filter-chip" data-filter="conference">Conference</button>
+                    </div>
+                </div>
+
+                <div class="blog-grid" id="blog-grid">
+                    {{ range $pages }}
+                    {{ $authors := partial "blog/authors.html" . }}
+                    {{ $cover := partial "blog/cover-image.html" . }}
+                    {{ $tags := .Params.tags | default (slice) }}
+                    {{ $categories := .Params.categories | default (slice) }}
+                    {{ $createdAt := .Date.Format .Site.Params.date_format }}
+                    {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
+                        {{ $createdAt = replace $createdAt $month (i18n $month) }}
+                    {{ end }}
+                    <article
+                        class="blog-card"
+                        data-search="{{ lower (printf "%s %s %s %s %s %s %s" .Title .Summary (delimit $authors " ") (delimit $tags " ") (delimit $categories " ") (.Date.Format "2006") .Plain) }}"
+                    >
+                        <a class="blog-card__media" href="{{ .Permalink }}">
+                            {{ if $cover }}
+                            <img src="{{ $cover }}" class="img-responsive" alt="{{ .Title }}" />
+                            {{ else }}
+                            <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="{{ .Title }}" />
+                            {{ end }}
+                        </a>
+                        <div class="blog-card__body">
+                            <div class="blog-card__meta">
+                                <span><i class="far fa-calendar"></i> {{ $createdAt }}</span>
+                                {{ if gt (len $authors) 0 }}
+                                <span><i class="far fa-user"></i> {{ delimit $authors ", " }}</span>
+                                {{ end }}
+                            </div>
+                            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                            <p class="blog-card__summary">{{ .Summary }}</p>
+                            <a href="{{ .Permalink }}" class="blog-card__link">Read article <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    {{ end }}
+                </div>
+
+                <div class="blog-empty-state" id="blog-empty-state" hidden>
+                    <h3>No posts matched that search.</h3>
+                    <p>Try a broader keyword, an author's name, or a year like 2025.</p>
+                </div>
+            </div>
+        </div>
+
+        {{ partial "footer.html" . }}
+
+    </div>
+
+    {{ partial "scripts.html" . }}
+    <script>
+      (function () {
+        var searchInput = document.getElementById('blog-search');
+        var cards = Array.prototype.slice.call(document.querySelectorAll('.blog-card'));
+        var resultCount = document.getElementById('blog-result-count');
+        var emptyState = document.getElementById('blog-empty-state');
+        var chips = Array.prototype.slice.call(document.querySelectorAll('.blog-filter-chip'));
+        var activeFilter = '';
+
+        function applyFilters() {
+          var query = (searchInput.value || '').toLowerCase().trim();
+          var visible = 0;
+
+          cards.forEach(function (card) {
+            var haystack = card.getAttribute('data-search') || '';
+            var matchesQuery = !query || haystack.indexOf(query) !== -1;
+            var matchesChip = !activeFilter || haystack.indexOf(activeFilter) !== -1;
+            var show = matchesQuery && matchesChip;
+            card.hidden = !show;
+            if (show) visible += 1;
+          });
+
+          resultCount.textContent = String(visible);
+          emptyState.hidden = visible !== 0;
+        }
+
+        if (searchInput) {
+          searchInput.addEventListener('input', applyFilters);
+        }
+
+        chips.forEach(function (chip) {
+          chip.addEventListener('click', function () {
+            activeFilter = chip.getAttribute('data-filter') || '';
+            chips.forEach(function (item) { item.classList.remove('is-active'); });
+            chip.classList.add('is-active');
+            applyFilters();
+          });
+        });
+
+        applyFilters();
+      }());
+    </script>
+
+  </body>
+</html>

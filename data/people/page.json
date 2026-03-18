@@ -1,0 +1,37 @@
+{
+  "group_photo": "/web_files/IMG_0109.jpg",
+  "role_filters": [
+    {
+      "value": "lead",
+      "label": "Lead"
+    },
+    {
+      "value": "postdocs",
+      "label": "Postdocs"
+    },
+    {
+      "value": "phd",
+      "label": "PhD Students"
+    },
+    {
+      "value": "msc",
+      "label": "MSc Students"
+    },
+    {
+      "value": "undergrad",
+      "label": "Undergrad"
+    },
+    {
+      "value": "assistants",
+      "label": "Research Assistants"
+    },
+    {
+      "value": "visitors",
+      "label": "Visitors"
+    },
+    {
+      "value": "others",
+      "label": "Others"
+    }
+  ]
+}

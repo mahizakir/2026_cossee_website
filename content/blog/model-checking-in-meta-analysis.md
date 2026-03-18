@@ -1,0 +1,41 @@
++++
+title = "Model Checking in Meta-Analysis"
+date = 2025-01-31
+authors = ["Yefeng Yang"]
+banner = "/web_files/blog-yy_orig.png"
+summary = "A COSSEE methods post centered on model checking and robustness in meta-analysis."
++++
+
+Today, my topic is about what we often overlook in meta-analytic practice—things that could make a big difference to the reliability of our results.
+
+Meta-analysis is everywhere now. With the rise of user-friendly statistical software, conducting one has never been easier. This accessibility is a double-edged sword. On the bright side, researchers with little to no statistical background can run meta-analyses and produce what is often considered more reliable evidence than any single study (thanks to increased statistical power). But on the flip side, it has become so accessible that many forget the statistical complexity behind it.
+
+I’ve seen many researchers grab example code from somewhere (yes, open science – the soul of our lab!) and tweak it for their own data without really thinking about whether the approach they’re borrowing or the way they’re interpreting their results is actually valid. The problem? This can lead to misleading evidence, which, when applied to conservation, health, or policy-relevant topics, may have serious real-world consequences. So today, I want to highlight two critical but often ignored steps in meta-analysis:
+
+- Checking model assumptions
+
+- Assessing model fit
+
+Are your assumptions holding up?
+
+Every statistical model relies on assumptions, and meta-analysis models are no exception. But let’s be honest—how often do we actually check them? For example, most meta-analysis models assume that effect size estimates come from normal sampling distributions (note: this doesn’t mean the effect sizes themselves have to be normally distributed). Yet, in practice, few people ever check this assumption. It’s easy to do—just simulate the sampling distribution of the effect size you have chosen, plot a histogram, or use a normal quantile-quantile (Q-Q) plot to see if things look off:
+
+Source: Wikipedia - Q–Q plot
+
+Another assumption that gets ignored is that effect size estimates are unbiased estimates of the true effect. This one might surprise you: the commonly used log-response ratio log(X₁/X₂) is actually a biased estimator because of Jensen’s inequality. There’s a simple bias-correction factor based on a Taylor expansion, but hardly anyone applies it.
+
+Is your model a good fit for your data?
+
+When you fit a meta-analysis model, you are making an implicit assumption that the model accurately represents the data-generating process. But in reality, the true process is almost always more complex than any model one can come up with. This is why checking model fit is essential, yet it’s something we rarely do.
+
+One simple way to test for model misspecification is by looking at standardized (deleted) residuals—if they’re not randomly scattered, that’s a red flag. Similarly, we often assume that true effects vary within and across studies (heterogeneity), but how many of us actually test this using, for example, a Q-test (not that this is the same as the often reported heterogeneity index I²)? We also assume that both within- and between-study random effects follow a normal distribution, yet we almost never run statistical tests to confirm this.
+
+And when we use the restricted maximum likelihood (REML) method, we assume it has successfully found the optimal parameter estimates. But without checking the likelihood profile, how do we know if it actually did? Most of us don’t bother to check—and that’s a problem.
+
+So, what should we do?
+
+My answer: don’t assume—verify! Some might say I’m overthinking this. Sure, some assumption violations—like non-normality—may not always impact results that much, according to simulations. But here’s the thing: you never know if that’s true for your specific dataset. The best way forward is to check. If you find assumption violations or model misspecifications, be transparent—report them, and interpret your results with caution.
+
+That said, I understand that checking every assumption and model fit metric manually can be tedious. This is where methodologists and software developers could step in—by creating pipelines that automate these essential checks.
+
+Meta-analyses shape scientific understanding, policy, and real-world decisions. If we want them to provide truly reliable evidence, we need to stop mechanically clicking and pointing in a GUI software or running a couple of lines of R code without critical thinking. Because in the end, a meta-analysis is only as good as the care put into it.

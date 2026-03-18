@@ -1,0 +1,5 @@
+weight: 2
+name: "Meta-Research"
+icon: "fas fa-magnifying-glass-chart"
+url: "/research/"
+description: "Study rigor, bias, replicability, and reporting practices to improve how research is produced and interpreted."

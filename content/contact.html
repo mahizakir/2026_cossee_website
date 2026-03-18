@@ -1,0 +1,102 @@
++++
+title = "Contact"
+type = "page"
++++
+
+<style>
+  .contact-form-page {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 8px 0 28px;
+  }
+
+  .contact-form-intro {
+    margin: 0 0 26px;
+    max-width: 760px;
+  }
+
+  .contact-form-intro h2 {
+    color: var(--ualberta-green-deep);
+    font-size: 38px;
+    line-height: 1.08;
+    margin: 0 0 12px;
+  }
+
+  .contact-form-intro::after {
+    content: "";
+    display: block;
+    width: 88px;
+    height: 3px;
+    margin-top: 18px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--ualberta-green) 0%, rgba(39, 93, 56, 0.18) 100%);
+  }
+
+  .contact-form-page p {
+    color: #3d4a5d;
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0 0 16px;
+  }
+
+  .contact-form-embed {
+    margin-top: 8px;
+  }
+
+  .contact-form-embed iframe {
+    background: transparent;
+    border: 0;
+    display: block;
+    min-height: 1400px;
+    width: 100%;
+  }
+
+  .contact-form-note {
+    color: #607086;
+    font-size: 14px;
+    margin-top: 18px;
+  }
+
+  @media (max-width: 767px) {
+    .contact-form-page {
+      padding-bottom: 16px;
+    }
+
+    .contact-form-intro {
+      margin-bottom: 20px;
+    }
+
+    .contact-form-intro h2 {
+      font-size: 30px;
+    }
+
+    .contact-form-page p {
+      font-size: 15px;
+    }
+
+    .contact-form-embed iframe {
+      min-height: 1550px;
+    }
+  }
+</style>
+
+<div class="contact-form-page">
+  <div class="contact-form-intro">
+    <h2>Contact COSSEE</h2>
+    <p>Send us your message through the form below. It is the quickest way to reach the team for questions, collaboration ideas, and general enquiries.</p>
+  </div>
+
+  <div class="contact-form-embed">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfCiGZmrB5UO8807gjcpW8cFTLrNlgfC9kWjs264Y9ZkF19_g/viewform?embedded=true"
+      title="COSSEE contact form"
+      loading="lazy">
+      Loading…
+    </iframe>
+  </div>
+
+  <p class="contact-form-note">
+    If the form does not load here, open it directly:
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCiGZmrB5UO8807gjcpW8cFTLrNlgfC9kWjs264Y9ZkF19_g/viewform" target="_blank" rel="noopener">COSSEE contact form</a>.
+  </p>
+</div>

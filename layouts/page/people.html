@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "headers.html" . }}
+    {{ partial "custom_headers.html" . }}
+  </head>
+
+  <body>
+    {{ $pageData := .Site.Data.people.page }}
+    {{ $members := .Site.Data.people.members }}
+
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+      {{ partial "breadcrumbs.html" . }}
+
+      <div id="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <style>
+              .people-wrap {
+                max-width: 1180px;
+                margin: 0 auto;
+              }
+              .people-controls {
+                margin: 10px 0 22px;
+                padding: 14px;
+                border: 1px solid #e8edf3;
+                border-radius: 12px;
+                background: #f8fafc;
+              }
+              .people-control-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                align-items: center;
+                margin-bottom: 10px;
+              }
+              .people-control-row:last-child {
+                margin-bottom: 0;
+              }
+              .people-label {
+                font-weight: 700;
+                color: #354052;
+                margin-right: 4px;
+              }
+              .filter-chip {
+                border: 1px solid #d5dde7;
+                background: #fff;
+                color: #45556c;
+                border-radius: 999px;
+                padding: 6px 12px;
+                font-size: 13px;
+                cursor: pointer;
+              }
+              .filter-chip.active {
+                background: #2b78c6;
+                color: #fff;
+                border-color: #2b78c6;
+              }
+              .people-grid {
+                display: grid;
+                gap: 18px;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+              }
+              .person-card {
+                border: 1px solid #e5ebf2;
+                border-radius: 14px;
+                background: #fff;
+                padding: 18px;
+                box-shadow: 0 5px 18px rgba(26, 37, 52, 0.06);
+              }
+              .person-top {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                margin-bottom: 12px;
+              }
+              .person-photo {
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                object-fit: cover;
+                background: #eef3f8;
+                border: 1px solid #e1e8f0;
+              }
+              .person-name {
+                margin: 0;
+                font-size: 18px;
+                line-height: 1.2;
+              }
+              .person-pronouns {
+                font-size: 12px;
+                color: #66758a;
+              }
+              .person-meta {
+                margin: 0 0 8px;
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+              }
+              .badge-pill {
+                display: inline-block;
+                font-size: 11px;
+                font-weight: 700;
+                border-radius: 999px;
+                padding: 4px 10px;
+                letter-spacing: 0.02em;
+              }
+              .badge-role {
+                background: #e9f1fb;
+                color: #1f5f9f;
+              }
+              .badge-current {
+                background: #e6f7ee;
+                color: #16784b;
+              }
+              .badge-past {
+                background: #f7ece6;
+                color: #9a4f1b;
+              }
+              .person-email {
+                font-size: 13px;
+                color: #607086;
+                margin-bottom: 8px;
+              }
+              .person-bio {
+                margin: 0;
+                color: #3d4a5d;
+                font-size: 14px;
+                line-height: 1.55;
+              }
+              .person-link {
+                display: none;
+              }
+              .person-card-actions {
+                margin-top: 12px;
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+              }
+              .people-subtitle {
+                margin: 28px 0 12px;
+                font-size: 24px;
+              }
+              .past-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+                gap: 12px;
+              }
+              .past-item {
+                border: 1px solid #e7edf4;
+                border-radius: 10px;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background: #fff;
+              }
+              .past-item img {
+                width: 44px;
+                height: 44px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1px solid #dbe4ee;
+              }
+              .past-item span {
+                font-size: 13px;
+                color: #415166;
+              }
+              .group-photo {
+                margin-top: 30px;
+              }
+              .group-photo img {
+                width: 100%;
+                border-radius: 14px;
+                border: 1px solid #e6ecf3;
+              }
+              .profile-modal {
+                position: fixed;
+                inset: 0;
+                z-index: 1100;
+                display: none;
+              }
+              .profile-modal.is-open {
+                display: block;
+              }
+              .profile-modal-backdrop {
+                position: absolute;
+                inset: 0;
+                background: rgba(16, 24, 40, 0.62);
+              }
+              .profile-modal-panel {
+                position: relative;
+                z-index: 1;
+                width: min(980px, calc(100vw - 32px));
+                max-height: calc(100vh - 40px);
+                margin: 20px auto;
+                overflow: auto;
+                border-radius: 18px;
+                background: #ffffff;
+                box-shadow: 0 24px 90px rgba(16, 24, 40, 0.34);
+              }
+              .profile-modal-header {
+                position: sticky;
+                top: 0;
+                z-index: 2;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 16px;
+                padding: 18px 22px;
+                border-bottom: 1px solid #e5ebf2;
+                background: #ffffff;
+              }
+              .profile-modal-title {
+                margin: 0;
+                font-size: 22px;
+                color: #223247;
+              }
+              .profile-modal-close {
+                border: 1px solid #d6e0ea;
+                border-radius: 999px;
+                background: #ffffff;
+                color: #415166;
+                padding: 8px 14px;
+                cursor: pointer;
+              }
+              .profile-modal-body {
+                padding: 22px;
+              }
+              .profile-modal-body .tab-content,
+              .profile-modal-body .profile-archive-item {
+                display: block !important;
+                border: 1px solid #e5ebf2;
+                border-radius: 14px;
+                background: #fff;
+                padding: 18px;
+                box-shadow: 0 5px 18px rgba(26, 37, 52, 0.06);
+              }
+              .profile-modal-body .wsite-spacer,
+              .profile-modal-body .styled-hr,
+              .profile-modal-body .wcustomhtml {
+                display: none !important;
+              }
+              .profile-modal-body .wsite-content-title {
+                margin: 0 0 14px;
+                font-size: 24px;
+                line-height: 1.25;
+                color: #233144;
+              }
+              .profile-modal-body .wsite-multicol-table,
+              .profile-modal-body .wsite-multicol-tbody,
+              .profile-modal-body .wsite-multicol-tr {
+                display: block;
+                width: 100%;
+              }
+              .profile-modal-body .wsite-multicol-tr {
+                display: grid;
+                grid-template-columns: 180px minmax(0, 1fr);
+                gap: 18px;
+                align-items: start;
+              }
+              .profile-modal-body .wsite-multicol-col {
+                display: block;
+                width: auto !important;
+                padding: 0 !important;
+              }
+              .profile-modal-body .wsite-image {
+                margin: 0 !important;
+                padding: 0 !important;
+              }
+              .profile-modal-body img {
+                width: 160px !important;
+                max-width: 160px !important;
+                height: 160px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1px solid #dce5ef;
+                background: #eef3f8;
+              }
+              .profile-modal-body .paragraph {
+                color: #3d4a5d;
+                font-size: 15px;
+                line-height: 1.65;
+              }
+              .profile-modal-body .paragraph font,
+              .profile-modal-body .paragraph span,
+              .profile-modal-body .paragraph em {
+                color: inherit;
+              }
+              .profile-modal-body .paragraph a {
+                word-break: break-word;
+              }
+              .profile-modal-body .wsite-button {
+                display: inline-block;
+                margin-top: 14px;
+                padding: 9px 14px;
+                border: 1px solid #2b78c6;
+                border-radius: 999px;
+                background: #2b78c6;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 1;
+              }
+              .profile-modal-body .wsite-button:hover,
+              .profile-modal-body .wsite-button:focus {
+                background: #1f5f9f;
+                border-color: #1f5f9f;
+                color: #ffffff;
+                text-decoration: none;
+              }
+              .profile-modal-body .wsite-button-inner {
+                color: inherit;
+              }
+              .profile-rich {
+                display: grid;
+                gap: 20px;
+              }
+              .profile-rich__intro {
+                display: grid;
+                grid-template-columns: 180px minmax(0, 1fr);
+                gap: 18px;
+                align-items: start;
+              }
+              .profile-rich__photo {
+                width: 160px;
+                max-width: 100%;
+                height: 160px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 1px solid #dce5ef;
+                background: #eef3f8;
+              }
+              .profile-rich__media {
+                display: grid;
+                gap: 14px;
+                justify-items: start;
+              }
+              .profile-rich__poster {
+                width: 160px;
+                max-width: 100%;
+                border-radius: 16px;
+                border: 1px solid #dce5ef;
+                background: #f7f9fc;
+                box-shadow: 0 6px 18px rgba(26, 37, 52, 0.08);
+              }
+              .profile-rich__caption {
+                color: #607086;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 0.02em;
+                margin-top: -6px;
+              }
+              .profile-rich__meta {
+                color: #607086;
+                font-size: 14px;
+                line-height: 1.7;
+                margin: 0 0 12px;
+              }
+              .profile-rich__meta strong {
+                color: #233144;
+              }
+              .profile-rich__intro p,
+              .profile-rich__section p,
+              .profile-rich__section li {
+                color: #3d4a5d;
+                font-size: 15px;
+                line-height: 1.7;
+              }
+              .profile-rich__intro p {
+                margin: 0 0 12px;
+              }
+              .profile-rich__section {
+                border-top: 1px solid #e5ebf2;
+                padding-top: 18px;
+              }
+              .profile-rich__section h3 {
+                color: #223247;
+                font-size: 18px;
+                margin: 0 0 10px;
+              }
+              .profile-rich__section ul {
+                margin: 0;
+                padding-left: 18px;
+              }
+              .profile-rich__section li + li {
+                margin-top: 8px;
+              }
+              @media (max-width: 767px) {
+                .profile-modal-panel {
+                  width: calc(100vw - 18px);
+                  margin: 9px auto;
+                  max-height: calc(100vh - 18px);
+                }
+                .profile-modal-body .wsite-multicol-tr {
+                  grid-template-columns: 1fr;
+                }
+                .profile-modal-body img {
+                  width: 120px !important;
+                  max-width: 120px !important;
+                  height: 120px;
+                }
+                .profile-rich__intro {
+                  grid-template-columns: 1fr;
+                }
+                .profile-rich__photo {
+                  width: 120px;
+                  height: 120px;
+                }
+                .profile-rich__poster {
+                  width: 120px;
+                }
+              }
+              </style>
+
+              <div class="people-wrap">
+                <section class="people-controls" aria-label="People filters">
+                  <div class="people-control-row" data-filter-group="status">
+                    <span class="people-label">Status:</span>
+                    <button class="filter-chip active" type="button" data-status="all">All</button>
+                    <button class="filter-chip" type="button" data-status="current">Current</button>
+                    <button class="filter-chip" type="button" data-status="past">Past</button>
+                  </div>
+                  <div class="people-control-row" data-filter-group="role">
+                    <span class="people-label">Role:</span>
+                    <button class="filter-chip active" type="button" data-role="all">All</button>
+                    {{ range $filter := index $pageData "role_filters" }}
+                      <button class="filter-chip" type="button" data-role="{{ $filter.value }}">{{ $filter.label }}</button>
+                    {{ end }}
+                  </div>
+                </section>
+
+                <section class="people-grid" id="people-grid">
+                  {{ range $members }}
+                    {{ partial "people/member-card.html" . }}
+                  {{ end }}
+                </section>
+
+                <section class="group-photo">
+                  <h2 class="people-subtitle">Lab Group Picture</h2>
+                  <img src="{{ index $pageData "group_photo" }}" alt="COSSEE lab group picture">
+                </section>
+              </div>
+
+              <div class="profile-modal" id="profile-modal" aria-hidden="true">
+                <div class="profile-modal-backdrop" data-close-modal="true"></div>
+                <div class="profile-modal-panel" role="dialog" aria-modal="true" aria-labelledby="profile-modal-title">
+                  <div class="profile-modal-header">
+                    <h2 class="profile-modal-title" id="profile-modal-title">Profile Details</h2>
+                    <button class="profile-modal-close" type="button" data-close-modal="true">Close</button>
+                  </div>
+                  <div class="profile-modal-body" id="profile-modal-body"></div>
+                </div>
+              </div>
+
+              <div hidden aria-hidden="true">
+                {{ range $members }}
+                  {{ partial "people/detail-template.html" . }}
+                {{ end }}
+              </div>
+
+              <script>
+              (function () {
+                var activeStatus = 'all';
+                var activeRole = 'all';
+                var modal = document.getElementById('profile-modal');
+                var modalBody = document.getElementById('profile-modal-body');
+                var modalTitle = document.getElementById('profile-modal-title');
+                var peopleGrid = document.getElementById('people-grid');
+                var statusGroup = document.querySelector('[data-filter-group="status"]');
+                var roleGroup = document.querySelector('[data-filter-group="role"]');
+
+                function setActive(group, button) {
+                  if (!group || !button) return;
+                  var buttons = group.querySelectorAll('.filter-chip');
+                  for (var i = 0; i < buttons.length; i += 1) {
+                    buttons[i].classList.remove('active');
+                  }
+                  button.classList.add('active');
+                }
+
+                function applyFilters() {
+                  var cards = peopleGrid.querySelectorAll('.person-card');
+                  for (var i = 0; i < cards.length; i += 1) {
+                    var card = cards[i];
+                    var status = card.getAttribute('data-status');
+                    var role = card.getAttribute('data-role');
+                    var statusOk = activeStatus === 'all' || status === activeStatus;
+                    var roleOk = activeRole === 'all' || role === activeRole;
+                    card.style.display = statusOk && roleOk ? '' : 'none';
+                  }
+                }
+
+                function openModal(button) {
+                  var templateId = button.getAttribute('data-profile-id');
+                  var template = templateId ? document.getElementById(templateId) : null;
+                  if (!template) return;
+                  modalTitle.textContent = button.getAttribute('data-profile-title') || 'Profile Details';
+                  modalBody.innerHTML = template.innerHTML;
+                  modal.classList.add('is-open');
+                  modal.setAttribute('aria-hidden', 'false');
+                  document.body.style.overflow = 'hidden';
+                }
+
+                function closeModal() {
+                  modal.classList.remove('is-open');
+                  modal.setAttribute('aria-hidden', 'true');
+                  modalBody.innerHTML = '';
+                  document.body.style.overflow = '';
+                }
+
+                document.addEventListener('click', function (event) {
+                  var closeTarget = event.target.closest('[data-close-modal="true"]');
+                  if (closeTarget) {
+                    closeModal();
+                    return;
+                  }
+
+                  var openTarget = event.target.closest('[data-profile-id]');
+                  if (openTarget) {
+                    openModal(openTarget);
+                    return;
+                  }
+
+                  var filterButton = event.target.closest('.filter-chip');
+                  if (!filterButton) return;
+
+                  if (statusGroup && statusGroup.contains(filterButton)) {
+                    activeStatus = filterButton.getAttribute('data-status');
+                    setActive(statusGroup, filterButton);
+                    applyFilters();
+                    return;
+                  }
+
+                  if (roleGroup && roleGroup.contains(filterButton)) {
+                    activeRole = filterButton.getAttribute('data-role');
+                    setActive(roleGroup, filterButton);
+                    applyFilters();
+                  }
+                });
+
+                document.addEventListener('keydown', function (event) {
+                  if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                    closeModal();
+                  }
+                });
+
+                applyFilters();
+              })();
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{ partial "footer.html" . }}
+    </div>
+
+    {{ partial "scripts.html" . }}
+  </body>
+</html>

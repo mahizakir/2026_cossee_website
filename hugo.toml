@@ -1,0 +1,232 @@
+baseurl = "http://localhost:1313/"
+title = "COSSEE Lab"
+theme = "hugo-universal-theme"
+
+languageCode = "en-us"
+defaultContentLanguage = "en"
+summaryLength = 70
+pluralizelisttitles = false
+
+[services]
+  [services.disqus]
+    shortname = ""
+  [services.googleAnalytics]
+    id = ""
+
+[pagination]
+  pagerSize = 10
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Research"
+    identifier = "menu.research"
+    url = "/research/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Research Overview"
+    url = "/research/"
+    weight = 1
+    parent = "menu.research"
+
+  [[menu.main]]
+    name = "Opportunities"
+    url = "/opportunities/"
+    weight = 2
+    parent = "menu.research"
+
+  [[menu.main]]
+    name = "People"
+    url = "/people/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Publications"
+    url = "/publications/"
+    weight = 5
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 6
+
+  [[menu.main]]
+    name = "Open Science"
+    identifier = "menu.open-science"
+    url = "/open-science/"
+    weight = 7
+
+  [[menu.main]]
+    name = "Open Science Overview"
+    url = "/open-science/"
+    weight = 1
+    parent = "menu.open-science"
+
+  [[menu.main]]
+    name = "Resources"
+    url = "/resources/"
+    weight = 2
+    parent = "menu.open-science"
+
+  [[menu.main]]
+    name = "Protocols"
+    url = "/protocols/"
+    weight = 3
+    parent = "menu.open-science"
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 8
+
+  [[menu.topbar]]
+    weight = 1
+    name = "University of Alberta"
+    url = "https://www.ualberta.ca/"
+    pre = "<i class='fas fa-2x fa-university'></i>"
+
+  [[menu.topbar]]
+    weight = 2
+    name = "GitHub"
+    url = "https://github.com/itchyshin"
+    pre = "<i class='fab fa-2x fa-github'></i>"
+
+  [[menu.topbar]]
+    weight = 3
+    name = "YouTube"
+    url = "https://apps.ualberta.ca/directory/person/snakagaw"
+    pre = "<i class='fab fa-2x fa-youtube'></i>"
+
+  [[menu.topbar]]
+    weight = 4
+    name = "Facebook"
+    url = "https://apps.ualberta.ca/directory/person/snakagaw"
+    pre = "<i class='fab fa-2x fa-facebook-f'></i>"
+
+  [[menu.topbar]]
+    weight = 5
+    name = "LinkedIn"
+    url = "https://apps.ualberta.ca/directory/person/snakagaw"
+    pre = "<i class='fab fa-2x fa-linkedin-in'></i>"
+
+  [[menu.topbar]]
+    weight = 6
+    name = "Instagram"
+    url = "https://apps.ualberta.ca/directory/person/snakagaw"
+    pre = "<i class='fab fa-2x fa-instagram'></i>"
+
+  [[menu.topbar]]
+    weight = 7
+    name = "Google Scholar"
+    url = "https://scholar.google.com/citations?user=9-pCZzcAAAAJ&hl=en"
+    pre = "<i class='fas fa-2x fa-graduation-cap'></i>"
+
+  [[menu.topbar]]
+    weight = 8
+    name = "Email"
+    url = "mailto:snakagaw@ualberta.ca"
+    pre = "<i class='fas fa-2x fa-envelope'></i>"
+
+[params]
+  author = "COSSEE Lab"
+  defaultKeywords = ["COSSEE", "open science", "ecology", "evolution", "research synthesis"]
+  mainSections = ["blog"]
+  defaultDescription = "Collaboration for Open Science and Synthesis in Ecology and Evolution"
+  facebook_site = ""
+  twitter_site = ""
+  default_sharing_image = "img/sharing-default.png"
+  enableGoogleMaps = false
+  googleMapsApiKey = ""
+  latitude = "53.5232"
+  longitude = "-113.5263"
+  style = "default"
+  formspree_action = ""
+  contact_form_ajax = false
+  enableRecaptchaInContactForm = false
+  googleRecaptchaKey = ""
+  about_us = "<p>COSSEE brings together open science, research synthesis, meta-research, and methodological innovation to improve ecology and evolution research.</p>"
+  copyright = "Copyright (c) COSSEE Lab."
+  date_format = "January 2, 2006"
+  dropdown_mouse_over = false
+  disabled_logo = false
+  logo_text = "COSSEE"
+  logo = "img/cossee-mahi1.svg"
+  logo_small = "img/cossee-mahi1.svg"
+  favicon = "img/cossee-mahi1.svg"
+  apple_touch_icon = "img/cossee-mahi1.svg"
+  contact_url = "/contact/"
+  address = """<p class="text-uppercase"><strong>COSSEE Lab</strong>
+      <br>University of Alberta
+      <br>Edmonton, Alberta
+      <br>Canada
+      <br>
+      <strong>Open Science and Synthesis in Ecology and Evolution</strong>
+    </p>
+    """
+
+[params.topbar]
+  enable = true
+  text = """<p class="hidden-sm hidden-xs">COSSEE is based at the University of Alberta in Edmonton, Canada.</p>
+    <p class="hidden-md hidden-lg"><a href="mailto:snakagaw@ualberta.ca" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a></p>
+    """
+
+[params.widgets]
+  categories = false
+  tags = false
+  search = false
+
+[params.carouselHomepage]
+  enable = true
+  auto_play = true
+  slide_speed = 2000
+  pagination_speed = 1000
+
+[params.features]
+  enable = true
+  cols = 3
+
+[params.testimonials]
+  enable = true
+  title = "Featured Publications"
+  subtitle = "Recent 2025 papers connected to the COSSEE research program, spanning global-change ecology, amphibian databases, and methodological advances in synthesis research."
+  scholar_url = "https://scholar.google.com/citations?user=9-pCZzcAAAAJ&hl=en"
+
+[params.see_more]
+  enable = true
+  icon = "fas fa-seedling"
+  title = "Want to Work With COSSEE?"
+  subtitle = "Explore research opportunities, training expectations, and the collaborative culture behind the lab."
+  link_url = "/opportunities/"
+  link_text = "View Opportunities"
+
+[params.clients]
+  enable = false
+
+[params.recent_posts]
+  enable = false
+  title = ""
+  subtitle = ""
+  hide_summary = true
+
+[params.footer.recent_posts]
+  enable = false
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  author = "authors"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

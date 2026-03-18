@@ -1,0 +1,31 @@
+{{- $member := . -}}
+{{- $fallbackPhoto := "/web_files/photo-1627704671340-0969d7dba-h_ma49xzt0.jpg" -}}
+<article class="person-card" data-status="{{ $member.status }}" data-role="{{ $member.role }}">
+  <div class="person-top">
+    <img class="person-photo" src="{{ $member.photo | default $fallbackPhoto }}" alt="{{ $member.name }}">
+    <div>
+      <h3 class="person-name">{{ $member.name }}</h3>
+      <div class="person-pronouns">{{ if $member.pronouns }}{{ $member.pronouns }}{{ else if eq $member.status "past" }}Past member{{ end }}</div>
+    </div>
+  </div>
+  <div class="person-meta">
+    <span class="badge-pill badge-role">{{ $member.role_label }}</span>
+    <span class="badge-pill {{ if eq $member.status "past" }}badge-past{{ else }}badge-current{{ end }}">{{ $member.status_label }}</span>
+  </div>
+  {{ with $member.email }}
+    <div class="person-email">{{ . }}</div>
+  {{ end }}
+  {{ with $member.bio }}
+    <p class="person-bio">{{ . }}</p>
+  {{ end }}
+  {{ if $member.detail_id }}
+    <div class="person-card-actions">
+      <button
+        type="button"
+        class="btn btn-template-main btn-sm"
+        data-profile-id="profile-{{ $member.detail_group }}-{{ $member.detail_id }}"
+        data-profile-title="{{ $member.name }}"
+      >View Details</button>
+    </div>
+  {{ end }}
+</article>

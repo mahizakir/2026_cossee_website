@@ -1,0 +1,5 @@
+weight: 4
+name: "Statistical Innovation"
+icon: "fas fa-chart-line"
+url: "/research/"
+description: "Develop new quantitative methods for meta-analysis, variance-aware inference, and evidence synthesis."

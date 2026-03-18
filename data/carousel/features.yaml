@@ -1,0 +1,10 @@
+weight: 3
+title: "Research synthesis, transparency, and collaboration"
+description: >
+  <ul class="list-style-none">
+    <li>Systematic reviews and meta-analysis</li>
+    <li>Meta-research and replicability</li>
+    <li>Open workflows and shared infrastructure</li>
+  </ul>
+image: "img/carousel/meta-copy.png"
+href: "/research/"

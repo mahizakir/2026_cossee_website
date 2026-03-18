@@ -1,0 +1,5 @@
+weight: 3
+name: "Open Science Infrastructure"
+icon: "fas fa-diagram-project"
+url: "/open-science/"
+description: "Support registrations, protocols, transparent workflows, and shared tools that make good practice easier."

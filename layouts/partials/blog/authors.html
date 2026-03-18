@@ -1,0 +1,9 @@
+{{- $authors := slice -}}
+{{- with .Params.authors -}}
+  {{- $authors = . -}}
+{{- else -}}
+  {{- with .Params.author -}}
+    {{- $authors = slice . -}}
+  {{- end -}}
+{{- end -}}
+{{- return $authors -}}

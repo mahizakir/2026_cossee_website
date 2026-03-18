@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  <head>
+    {{ partial "headers.html" . }}
+    {{ partial "custom_headers.html" . }}
+  </head>
+
+  <body>
+
+    <div id="all">
+        {{ partial "top.html" . }}
+        {{ partial "nav.html" . }}
+        {{ partial "breadcrumbs.html" . }}
+
+        <div id="content">
+            <div class="container blog-shell">
+                {{ $authors := partial "blog/authors.html" . }}
+                {{ $cover := partial "blog/cover-image.html" . }}
+                {{ $createdAt := .Date.Format .Site.Params.date_format }}
+                {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
+                    {{ $createdAt = replace $createdAt $month (i18n $month) }}
+                {{ end }}
+
+                <article class="blog-post-modern">
+                    <a href="/blog/" class="blog-back-link"><i class="fas fa-arrow-left"></i> Back to blog</a>
+
+                    <header class="blog-post-modern__header">
+                        <div class="blog-post-modern__meta">
+                            <span><i class="far fa-calendar"></i> {{ $createdAt }}</span>
+                            {{ if gt (len $authors) 0 }}
+                            <span><i class="far fa-user"></i> {{ delimit $authors ", " }}</span>
+                            {{ end }}
+                        </div>
+                        <h1>{{ .Title }}</h1>
+                        {{ if .Summary }}
+                        <p class="blog-post-modern__summary">{{ .Summary }}</p>
+                        {{ end }}
+                    </header>
+
+                    {{ if $cover }}
+                    <div class="blog-post-modern__image">
+                        <img src="{{ $cover }}" alt="{{ .Title }}" class="img-responsive">
+                    </div>
+                    {{ end }}
+
+                    <div class="blog-post-modern__content">
+                        {{ .Content }}
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        {{ partial "footer.html" . }}
+    </div>
+
+    {{ partial "scripts.html" . }}
+
+  </body>
+</html>
