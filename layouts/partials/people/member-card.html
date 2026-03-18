@@ -1,6 +1,10 @@
 {{- $member := . -}}
 {{- $fallbackPhoto := "/web_files/photo-1627704671340-0969d7dba-h_ma49xzt0.jpg" -}}
-<article class="person-card" data-status="{{ $member.status }}" data-role="{{ $member.role }}">
+{{- $roleFilters := slice $member.role -}}
+{{- if eq $member.extra_badge "Staff" -}}
+  {{- $roleFilters = $roleFilters | append "staff" -}}
+{{- end -}}
+<article class="person-card" data-status="{{ $member.status }}" data-role="{{ $member.role }}" data-role-filters="{{ delimit $roleFilters "," }}">
   <div class="person-top">
     <img class="person-photo" src="{{ $member.photo | default $fallbackPhoto }}" alt="{{ $member.name }}">
     <div>
@@ -10,6 +14,9 @@
   </div>
   <div class="person-meta">
     <span class="badge-pill badge-role">{{ $member.role_label }}</span>
+    {{ with $member.extra_badge }}
+      <span class="badge-pill badge-extra">{{ . }}</span>
+    {{ end }}
     <span class="badge-pill {{ if eq $member.status "past" }}badge-past{{ else }}badge-current{{ end }}">{{ $member.status_label }}</span>
   </div>
   {{ with $member.email }}

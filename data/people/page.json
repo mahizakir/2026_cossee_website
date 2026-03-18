@@ -2,6 +2,10 @@
   "group_photo": "/web_files/IMG_0109.jpg",
   "role_filters": [
     {
+      "value": "staff",
+      "label": "Staff"
+    },
+    {
       "value": "lead",
       "label": "Lead"
     },
