@@ -1,4 +1,4 @@
-baseurl = "http://localhost:1313/"
+baseurl = "https://testing.cossee.org/"
 title = "COSSEE Lab"
 theme = "hugo-universal-theme"
 
@@ -15,6 +15,10 @@ pluralizelisttitles = false
 
 [pagination]
   pagerSize = 10
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
 
 [menu]
   [[menu.main]]
