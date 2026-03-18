@@ -1,0 +1,59 @@
+{{ if isset .Site.Params "testimonials" }}
+{{ if .Site.Params.testimonials.enable }}
+{{ with .Site.Data.featured_publications }}
+{{ $root := $ }}
+<section class="bar background-pentagon no-mb featured-publications-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading text-center">
+                    <h2>{{ $root.Site.Params.testimonials.title }}</h2>
+                </div>
+
+                <p class="lead">
+                  {{ $root.Site.Params.testimonials.subtitle | markdownify }}
+                </p>
+
+                <div class="row featured-publications-grid">
+                    {{ range . }}
+                    <div class="col-sm-6 col-lg-3 publication-feature-column">
+                        <article class="publication-feature-card">
+                            <a class="publication-feature-image" href="{{ .url | safeURL }}" target="_blank" rel="noopener">
+                                <img src="{{ .image | safeURL }}" alt="{{ .image_alt }}" loading="lazy">
+                            </a>
+
+                            <div class="publication-feature-body">
+                                <div class="publication-feature-meta">
+                                    <span class="publication-feature-journal">{{ .journal }}</span>
+                                    <span class="publication-feature-date">{{ .published }}</span>
+                                </div>
+
+                                <h3>
+                                    <a href="{{ .url | safeURL }}" target="_blank" rel="noopener">{{ .title }}</a>
+                                </h3>
+
+                                <p class="publication-feature-authors">{{ .authors }}</p>
+                                <p class="publication-feature-citation">{{ .citation }}</p>
+                                <p class="publication-feature-summary">{{ .summary }}</p>
+
+                                <div class="publication-feature-actions">
+                                    <a class="btn btn-template-main btn-sm" href="{{ .url | safeURL }}" target="_blank" rel="noopener">Read Paper</a>
+                                    <span class="publication-feature-doi">{{ .doi }}</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    {{ end }}
+                </div>
+
+                <div class="featured-publications-footer">
+                    <a class="btn btn-template-transparent-primary" href="{{ "/publications/" | relURL }}">See All Publications</a>
+                    <a class="btn btn-template-transparent-black" href="{{ default "https://scholar.google.com/citations?user=9-pCZzcAAAAJ&hl=en" $root.Site.Params.testimonials.scholar_url | safeURL }}" target="_blank" rel="noopener">Scholar Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{ end }}
