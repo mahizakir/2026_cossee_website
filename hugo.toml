@@ -1,5 +1,5 @@
 baseurl = "https://testing.cossee.org/"
-title = "COSSEE Lab"
+title = "Collaboration for Open Science and Synthesis in Ecology and Evolution"
 theme = "hugo-universal-theme"
 
 languageCode = "en-us"
