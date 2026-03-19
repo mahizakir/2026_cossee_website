@@ -895,3 +895,12 @@ a:focus {
         font-size: 20px;
     }
 }
+
+#content a:not(.btn):not(.filter-chip):not(.wsite-button):not(.navbar-brand):not(.dropdown-toggle),
+#content a:not(.btn):not(.filter-chip):not(.wsite-button):not(.navbar-brand):not(.dropdown-toggle):visited,
+#content a:not(.btn):not(.filter-chip):not(.wsite-button):not(.navbar-brand):not(.dropdown-toggle):hover,
+#content a:not(.btn):not(.filter-chip):not(.wsite-button):not(.navbar-brand):not(.dropdown-toggle):focus {
+    font-style: italic;
+    font-weight: 700;
+    text-decoration: underline;
+}
