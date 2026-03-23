@@ -17,6 +17,8 @@
             <div class="container blog-shell">
                 {{ $authors := partial "blog/authors.html" . }}
                 {{ $cover := partial "blog/cover-image.html" . }}
+                {{ $sourcePath := printf "assets/blog/source/%s.html" .File.BaseFileName }}
+                {{ $hasImportedSource := fileExists $sourcePath }}
                 {{ $createdAt := .Date.Format .Site.Params.date_format }}
                 {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
                     {{ $createdAt = replace $createdAt $month (i18n $month) }}
@@ -38,14 +40,20 @@
                         {{ end }}
                     </header>
 
-                    {{ if $cover }}
+                    {{ if and $cover (not $hasImportedSource) }}
                     <div class="blog-post-modern__image">
                         <img src="{{ $cover }}" alt="{{ .Title }}" class="img-responsive">
                     </div>
                     {{ end }}
 
                     <div class="blog-post-modern__content">
+                        {{ if $hasImportedSource }}
+                        <div class="blog-imported-body">
+                            {{ readFile $sourcePath | safeHTML }}
+                        </div>
+                        {{ else }}
                         {{ .Content }}
+                        {{ end }}
                     </div>
 
                     {{ partial "blog/enrichments.html" . }}

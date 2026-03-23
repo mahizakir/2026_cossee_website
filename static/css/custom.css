@@ -665,6 +665,96 @@ a:focus {
     color: #304338;
 }
 
+.blog-imported-body {
+    display: grid;
+    gap: 20px;
+}
+
+.blog-imported-paragraph {
+    color: #304338;
+    font-size: 18px;
+    line-height: 1.82;
+    margin: 0;
+}
+
+.blog-imported-body h2 {
+    color: var(--ualberta-green-deep);
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 16px 0 0;
+}
+
+.blog-imported-body ul,
+.blog-imported-body ol {
+    color: #304338;
+    margin: 0 0 4px 22px;
+    padding: 0;
+}
+
+.blog-imported-body li + li {
+    margin-top: 10px;
+}
+
+.blog-inline-figure {
+    background: linear-gradient(135deg, rgba(39, 93, 56, 0.06), rgba(242, 205, 0, 0.18));
+    border: 1px solid rgba(39, 93, 56, 0.1);
+    border-radius: 24px;
+    margin: 8px 0;
+    overflow: hidden;
+    padding: 16px;
+}
+
+.blog-inline-figure img {
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto;
+    max-height: 520px;
+    max-width: 100%;
+    width: auto;
+}
+
+.blog-inline-figure figcaption {
+    color: #506354;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.55;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.blog-inline-gallery {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin: 6px 0;
+}
+
+.blog-inline-gallery__item {
+    background: linear-gradient(135deg, rgba(39, 93, 56, 0.06), rgba(242, 205, 0, 0.18));
+    border: 1px solid rgba(39, 93, 56, 0.1);
+    border-radius: 20px;
+    display: block;
+    overflow: hidden;
+    padding: 8px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-inline-gallery__item:hover,
+.blog-inline-gallery__item:focus {
+    box-shadow: 0 16px 28px rgba(23, 49, 29, 0.12);
+    transform: translateY(-2px);
+}
+
+.blog-inline-gallery__item img {
+    aspect-ratio: 4 / 3;
+    border-radius: 14px;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
 .blog-post-modern__extras {
     display: grid;
     gap: 26px;
@@ -857,6 +947,14 @@ a:focus {
 
     .blog-post-modern__content {
         font-size: 17px;
+    }
+
+    .blog-imported-paragraph {
+        font-size: 17px;
+    }
+
+    .blog-imported-body h2 {
+        font-size: 26px;
     }
 
     .blog-extras-card {

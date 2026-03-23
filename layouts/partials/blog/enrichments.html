@@ -1,5 +1,7 @@
 {{ $baseName := .File.BaseFileName }}
 {{ $extras := index site.Data.blog_extras $baseName }}
+{{ $sourcePath := printf "assets/blog/source/%s.html" $baseName }}
+{{ $hasImportedSource := fileExists $sourcePath }}
 {{ $gallery := slice }}
 {{ $resources := slice }}
 
@@ -19,9 +21,9 @@
   {{ $resources = . }}
 {{ end }}
 
-{{ if or (gt (len $gallery) 0) (gt (len $resources) 0) }}
+{{ if or (and (not $hasImportedSource) (gt (len $gallery) 0)) (gt (len $resources) 0) }}
 <section class="blog-post-modern__extras">
-  {{ if gt (len $gallery) 0 }}
+  {{ if and (not $hasImportedSource) (gt (len $gallery) 0) }}
   <div class="blog-extras-card">
     <div class="blog-extras-card__header">
       <span class="blog-extras-card__eyebrow">From the original post</span>
