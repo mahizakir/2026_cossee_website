@@ -47,6 +47,8 @@
                     <div class="blog-post-modern__content">
                         {{ .Content }}
                     </div>
+
+                    {{ partial "blog/enrichments.html" . }}
                 </article>
             </div>
         </div>

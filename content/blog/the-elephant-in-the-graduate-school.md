@@ -124,7 +124,7 @@ very good, having that document certainly helped organize our interactions over 
 
 years of research.
 
-I will attach a file (see below) to this post with the expectations agreement model I edited based on what I
+I am attaching an [expectations agreement model](/web_files/Student-Supervisor-Agreement%20-%20Eduardo%20Santos.pdf) to this post, adapted from the one I
 
 used. While this model generally works for graduate students, it can be edited to mediate
 
@@ -134,7 +134,7 @@ I'm also including some references to studies investigating the advisor-advisee 
 
 hope this helps! If you need anything, feel free to message me.
 
-Expectations agreement model.
+[Download the expectations agreement model.](/web_files/Student-Supervisor-Agreement%20-%20Eduardo%20Santos.pdf)
 
 References
 

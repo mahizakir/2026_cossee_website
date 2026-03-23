@@ -1,0 +1,155 @@
+{
+  "a-true-canadian-experience-lets-go-oilers": {
+    "gallery": [
+      "/web_files/img-9959.jpg",
+      "/web_files/img-9956.jpg",
+      "/web_files/img-9988.jpg",
+      "/web_files/img-9965.jpg",
+      "/web_files/img-9958.jpg"
+    ]
+  },
+  "a-visit-to-canada": {
+    "gallery": [
+      "/web_files/c3.jpg",
+      "/web_files/c2.jpg",
+      "/web_files/c4_orig.jpg",
+      "/web_files/c5.jpg",
+      "/web_files/c6.jpg",
+      "/web_files/c7.jpg",
+      "/web_files/c8.jpg"
+    ],
+    "resources": [
+      {
+        "label": "Related post: Five weeks across western Canada",
+        "url": "/blog/five-weeks-across-western-canada/"
+      },
+      {
+        "label": "Read about bear coat colour variation",
+        "url": "https://doi.org/10.1016/j.tig.2023.02.011"
+      },
+      {
+        "label": "View the blond grizzly example",
+        "url": "https://commons.wikimedia.org/wiki/File:Blonde_Grizzly_Bear_Cub_(43225169511).jpg"
+      },
+      {
+        "label": "Learn more about bear-safe bins and security trade-offs",
+        "url": "https://www.schneier.com/blog/archives/2006/08/security_is_a_t.html"
+      }
+    ]
+  },
+  "around-meta-analysis-16": {
+    "resources": [
+      {
+        "label": "Related post: Meta-analysis terminology can be confusing",
+        "url": "/blog/meta-analysis-terminology-can-be-confusing/"
+      },
+      {
+        "label": "Australian Bureau of Statistics: Metadata",
+        "url": "https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts/metadata"
+      },
+      {
+        "label": "Read more on Losia's blog archive",
+        "url": "https://mlagisz.weebly.com/blogs.html"
+      }
+    ]
+  },
+  "back-to-the-root-of-meta-analysis": {
+    "gallery": [
+      "/web_files/screenshot-2025-10-05-at-11-07-13-am.png"
+    ]
+  },
+  "five-weeks-across-western-canada": {
+    "gallery": [
+      "/web_files/picture2.jpg",
+      "/web_files/picture3.jpg",
+      "/web_files/picture4.jpg",
+      "/web_files/picture5.jpg"
+    ]
+  },
+  "mardi-gras-parade-2025": {
+    "gallery": [
+      "/web_files/img-5663 (1).jpg",
+      "/web_files/img-5677.jpg",
+      "/web_files/img-5657.jpg",
+      "/web_files/img-5670.jpg",
+      "/web_files/img-5687.jpg",
+      "/web_files/img-5690.jpg",
+      "/web_files/img-5653.jpg",
+      "/web_files/img-5695.jpg"
+    ]
+  },
+  "meta-analysis-terminology-can-be-confusing": {
+    "resources": [
+      {
+        "label": "Further reading: What does multivariate mean?",
+        "url": "https://jepusto.com/posts/what-does-multivariate-mean/"
+      }
+    ]
+  },
+  "reflecting-on-a-year-of-change-ideel-2024": {
+    "gallery": [
+      "/web_files/img-9192.jpg",
+      "/web_files/img-9191.jpg",
+      "/web_files/img-9234 (1).jpg"
+    ]
+  },
+  "reflecting-on-a-year-of-change-2025": {
+    "gallery": [
+      "/web_files/picture-2.jpg",
+      "/web_files/picture-3.jpg",
+      "/web_files/picture-4.jpg",
+      "/web_files/picture-5.jpg",
+      "/web_files/picture-6.jpg"
+    ],
+    "resources": [
+      {
+        "label": "Visit the I-DEEL lab website",
+        "url": "https://www.i-deel.org/"
+      }
+    ]
+  },
+  "the-elephant-in-the-graduate-school": {
+    "gallery": [
+      "/web_files/file.png"
+    ],
+    "resources": [
+      {
+        "label": "Download the expectations agreement model",
+        "url": "/web_files/Student-Supervisor-Agreement - Eduardo Santos.pdf"
+      }
+    ]
+  },
+  "the-spooky-season-in-science": {
+    "gallery": [
+      "/web_files/img-7215_orig.jpg",
+      "/web_files/sortee-virtual-social-2-12-2025_orig.png"
+    ]
+  },
+  "zotero-magic": {
+    "gallery": [
+      "/web_files/2-attanger-root-folder-settings_orig.png",
+      "/web_files/3-example-attanger-folder-definition-conditional-statements.png",
+      "/web_files/5-overleaf-linking-zotero-to-pverleaf_orig.png",
+      "/web_files/4-overleaf-selecting-advanced-referencing-style_orig.png",
+      "/web_files/6-overleaf-citation-accessing-personal-library_orig.png"
+    ],
+    "resources": [
+      {
+        "label": "DOI Manager for Zotero",
+        "url": "https://github.com/bwiernik/zotero-shortdoi"
+      },
+      {
+        "label": "Zoplicate",
+        "url": "https://github.com/ChenglongMa/zoplicate"
+      },
+      {
+        "label": "Better BibTeX for Zotero",
+        "url": "https://retorque.re/zotero-better-bibtex/"
+      },
+      {
+        "label": "Read the related I-DEEL article",
+        "url": "https://www.i-deel.org/blog/zotero-magic"
+      }
+    ]
+  }
+}

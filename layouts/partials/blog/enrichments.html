@@ -1,0 +1,65 @@
+{{ $baseName := .File.BaseFileName }}
+{{ $extras := index site.Data.blog_extras $baseName }}
+{{ $gallery := slice }}
+{{ $resources := slice }}
+
+{{ with $extras }}
+  {{ with .gallery }}
+    {{ $gallery = . }}
+  {{ end }}
+  {{ with .resources }}
+    {{ $resources = . }}
+  {{ end }}
+{{ end }}
+
+{{ with .Params.gallery }}
+  {{ $gallery = . }}
+{{ end }}
+{{ with .Params.resources }}
+  {{ $resources = . }}
+{{ end }}
+
+{{ if or (gt (len $gallery) 0) (gt (len $resources) 0) }}
+<section class="blog-post-modern__extras">
+  {{ if gt (len $gallery) 0 }}
+  <div class="blog-extras-card">
+    <div class="blog-extras-card__header">
+      <span class="blog-extras-card__eyebrow">From the original post</span>
+      <h2>Figures and photos</h2>
+    </div>
+    <div class="blog-gallery-grid">
+      {{ range $index, $image := $gallery }}
+      {{ $safeImage := replace $image " " "%20" }}
+      <a class="blog-gallery-item" href="{{ $safeImage }}" target="_blank" rel="noopener">
+        <div class="blog-gallery-item__media">
+          <img src="{{ $safeImage }}" alt="{{ $.Title }} figure {{ add $index 1 }}">
+        </div>
+        <span class="blog-gallery-item__label">Figure {{ add $index 1 }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ if gt (len $resources) 0 }}
+  <div class="blog-extras-card">
+    <div class="blog-extras-card__header">
+      <span class="blog-extras-card__eyebrow">Useful context</span>
+      <h2>Related links and files</h2>
+    </div>
+    <div class="blog-resource-list">
+      {{ range $resource := $resources }}
+      {{ $url := replace $resource.url " " "%20" }}
+      {{ $isFile := or (hasSuffix $url ".pdf") (hasSuffix $url ".jpg") (hasSuffix $url ".jpeg") (hasSuffix $url ".png") (hasSuffix $url ".webp") }}
+      <a class="blog-resource-item" href="{{ $url }}" {{ if hasPrefix $url "http" }}target="_blank" rel="noopener"{{ end }}>
+        <span class="blog-resource-item__icon">
+          <i class="fas {{ if $isFile }}fa-file-arrow-down{{ else }}fa-arrow-up-right-from-square{{ end }}"></i>
+        </span>
+        <span class="blog-resource-item__text">{{ $resource.label }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</section>
+{{ end }}
