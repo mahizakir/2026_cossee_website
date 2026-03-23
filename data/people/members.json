@@ -38,13 +38,16 @@
     "status": "current",
     "status_label": "Current",
     "role": "visitors",
-    "role_label": "Visitor",
+    "role_label": "",
     "extra_badge": "Staff",
-    "email": "m(-dot-)lagisz(-at-)unsw(-dot-)edu(-dot-)au",
-    "bio": "Works across comparative and meta-analytic projects with strong experience in synthesis-based biology and collaborative methods development.",
+    "email": "mnakaga1(-at-)ualberta(-dot-)ca",
+    "bio": "Works across evidence synthesis and meta-research. Associate Professor at the University of Alberta, leading a sister lab to COSSEE, called I-DEEL (Inter-Disciplinary Ecology and Evolution Lab).",
     "photo": "/web_files/losia.png",
     "detail_id": "losia",
-    "detail_group": "current"
+    "detail_group": "current",
+    "personal_webpage": "https://mlagisz.weebly.com/",
+    "google_scholar": "https://scholar.google.com.au/citations?user=x-T62VwAAAAJ&hl=en",
+    "orcid": "https://orcid.org/0000-0002-3993-6127"
   },
   {
     "name": "Ayumi Mizuno",
@@ -54,7 +57,7 @@
     "role": "postdocs",
     "role_label": "Postdoc",
     "email": "ayumi(-dot-)mizuno5(-at-)gmail(-dot-)com",
-    "bio": "Visiting research fellow focused on bird morphology and diet evolution using behavioral experiments and phylogenetic comparative approaches.",
+    "bio": "Postdoc focused on bird morphology and diet evolution using behavioral experiments and phylogenetic comparative approaches.",
     "photo": "/web_files/headshot-ayumi-circle-shadow.png",
     "detail_id": "ayumi",
     "detail_group": "current"
@@ -351,7 +354,7 @@
     "role_label": "Research Assistant",
     "extra_badge": "Staff",
     "email": "mzakir(-at-)ualberta(-dot-)ca",
-    "bio": "I joined COSSEE at the University of Alberta in March 2026. I hold an MSc in Computer Science from the University of Alberta and a BSc in Computer Science and Engineering from BRAC University.",
+    "bio": "I joined COSSEE at the University of Alberta in March 2026. I hold an MSc in Computing Science (Thesis) from the University of Alberta and a BSc in Computer Science and Engineering from BRAC University.",
     "photo": "/web_files/IMG_2724-copy.jpg",
     "detail_id": "mahi-zakir",
     "detail_group": "current",

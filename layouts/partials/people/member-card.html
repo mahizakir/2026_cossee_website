@@ -13,7 +13,9 @@
     </div>
   </div>
   <div class="person-meta">
-    <span class="badge-pill badge-role">{{ $member.role_label }}</span>
+    {{ with $member.role_label }}
+      <span class="badge-pill badge-role">{{ . }}</span>
+    {{ end }}
     {{ with $member.extra_badge }}
       <span class="badge-pill badge-extra">{{ . }}</span>
     {{ end }}

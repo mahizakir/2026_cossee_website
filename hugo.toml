@@ -159,7 +159,7 @@ pluralizelisttitles = false
   enableRecaptchaInContactForm = false
   googleRecaptchaKey = ""
   about_us = "<p>COSSEE brings together open science, research synthesis, meta-research, and methodological innovation to improve ecology and evolution research.</p>"
-  copyright = "Copyright (c) COSSEE Lab."
+  copyright = "Copyright (c): 2026 COSSEE Lab."
   date_format = "January 2, 2006"
   dropdown_mouse_over = false
   disabled_logo = false
@@ -170,17 +170,16 @@ pluralizelisttitles = false
   apple_touch_icon = "img/cossee-mahi1.svg"
   contact_url = "/contact/"
   address = """<p class="text-uppercase"><strong>COSSEE Lab</strong>
+      <br>Department of Biological Sciences
       <br>University of Alberta
       <br>Edmonton, Alberta
       <br>Canada
-      <br>
-      <strong>Open Science and Synthesis in Ecology and Evolution</strong>
     </p>
     """
 
 [params.topbar]
   enable = true
-  text = """<p class="hidden-sm hidden-xs">COSSEE is based at the University of Alberta in Edmonton, Canada.</p>
+  text = """<p class="hidden-sm hidden-xs">Collaboration for Open Science and Synthesis in Ecology and Evolution (COSSEE)</p>
     <p class="hidden-md hidden-lg"><a href="mailto:snakagaw@ualberta.ca" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a></p>
     """
 
@@ -202,12 +201,12 @@ pluralizelisttitles = false
 [params.testimonials]
   enable = true
   title = "Featured Publications"
-  subtitle = "Recent 2025 papers connected to the COSSEE research program, spanning global-change ecology, amphibian databases, and methodological advances in synthesis research."
+  subtitle = "Examples of our recent papers on diverse topics."
   scholar_url = "https://scholar.google.com/citations?user=9-pCZzcAAAAJ&hl=en"
 
 [params.see_more]
   enable = true
-  icon = "fas fa-seedling"
+  icon = "fas fa-users-gear"
   title = "Want to Work With COSSEE?"
   subtitle = "Explore research opportunities, training expectations, and the collaborative culture behind the lab."
   link_url = "/opportunities/"

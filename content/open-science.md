@@ -39,7 +39,7 @@ Open science also depends on how people work together. At COSSEE, this includes 
 
 Open science grows through shared tools, societies, repositories, and training networks. COSSEE sees this broader ecosystem as part of the work, not separate from it.
 
-## Explore This Section
+<h3 style="font-size: 22px; margin-top: 28px; margin-bottom: 12px;">Read more</h3>
 
 - [Protocols](/protocols/) for registrations, registered reports, and protocol-based planning
 - [Resources](/resources/) for societies, hubs, tools, and synthesis infrastructure

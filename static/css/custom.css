@@ -7,6 +7,14 @@
     --ualberta-gold-deep: #d4af00;
     --ualberta-ink: #203127;
     --ualberta-paper: #f7f6ef;
+    --primary-accent: #275d38;
+    --navbar-border-top: #1d472a;
+    --button-border: #1f4f2f;
+    --link-focus: #1d472a;
+    --form-shadow: rgba(39, 93, 56, 0.35);
+    --pagination-bg: #d9e9da;
+    --link-hover-bg: #1d472a;
+    --navbar-focus: #e8f0e8;
 }
 
 body {
@@ -101,6 +109,8 @@ a:focus {
     padding-bottom: 26px;
     padding-top: 26px;
     text-transform: uppercase;
+    -webkit-tap-highlight-color: rgba(39, 93, 56, 0.14);
+    user-select: none;
 }
 
 .navbar-brand.home h4 {
@@ -153,6 +163,20 @@ a:focus {
 .navbar-default .navbar-nav > .dropdown.open > a:focus {
     background: transparent !important;
     color: var(--ualberta-green) !important;
+}
+
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .open > a:focus,
+.dropdown-menu > li > a:focus {
+    outline: 2px solid rgba(39, 93, 56, 0.22);
+    outline-offset: 2px;
+}
+
+.navbar-default .navbar-nav > li > a::selection,
+.navbar-default .navbar-nav > li > a span::selection,
+.dropdown-menu > li > a::selection {
+    background: rgba(39, 93, 56, 0.18);
+    color: var(--ualberta-green-deep);
 }
 
 .dropdown-menu {
@@ -903,4 +927,20 @@ a:focus {
     font-style: italic;
     font-weight: 700;
     text-decoration: underline;
+}
+
+#top .row {
+    align-items: center;
+    display: flex;
+}
+
+#top p {
+    margin: 0;
+}
+
+#top .social {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    min-height: 100%;
 }
