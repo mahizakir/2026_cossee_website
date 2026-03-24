@@ -1,4 +1,4 @@
-baseurl = "https://testing.cossee.org/"
+baseurl = "https://cossee.org/"
 title = "COSSEE: Collaboration for Open Science and Synthesis in Ecology and Evolution"
 theme = "hugo-universal-theme"
 
