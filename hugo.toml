@@ -107,36 +107,12 @@ pluralizelisttitles = false
 
   [[menu.topbar]]
     weight = 3
-    name = "YouTube"
-    url = "https://apps.ualberta.ca/directory/person/snakagaw"
-    pre = "<i class='fab fa-2x fa-youtube'></i>"
-
-  [[menu.topbar]]
-    weight = 4
-    name = "Facebook"
-    url = "https://apps.ualberta.ca/directory/person/snakagaw"
-    pre = "<i class='fab fa-2x fa-facebook-f'></i>"
-
-  [[menu.topbar]]
-    weight = 5
-    name = "LinkedIn"
-    url = "https://apps.ualberta.ca/directory/person/snakagaw"
-    pre = "<i class='fab fa-2x fa-linkedin-in'></i>"
-
-  [[menu.topbar]]
-    weight = 6
-    name = "Instagram"
-    url = "https://apps.ualberta.ca/directory/person/snakagaw"
-    pre = "<i class='fab fa-2x fa-instagram'></i>"
-
-  [[menu.topbar]]
-    weight = 7
     name = "Google Scholar"
     url = "https://scholar.google.com/citations?user=9-pCZzcAAAAJ&hl=en"
     pre = "<i class='fas fa-2x fa-graduation-cap'></i>"
 
   [[menu.topbar]]
-    weight = 8
+    weight = 4
     name = "Email"
     url = "mailto:cossee.org@gmail.com"
     pre = "<i class='fas fa-2x fa-envelope'></i>"
