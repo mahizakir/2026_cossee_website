@@ -1,0 +1,35 @@
+<div class="blog-imported-paragraph">Systematic reviews and meta-analyses increasingly shape research directions, conservation strategies, and policy decisions in ecology and evolution. Yet before any statistical model is fitted, before effect sizes are estimated and heterogeneity quantified, all evidence must first be extracted from primary studies. This stage is often treated as technical or clerical, but in reality, it is foundational. It is where unstructured text, tables, and supplementary materials are transformed into structured data that directly determine downstream inference.</div>
+
+<div class="blog-imported-paragraph">With the rapid development of large language models (LLMs), tools such as NotebookLM promise to substantially accelerate this process. However, despite growing enthusiasm for AI-assisted evidence synthesis, empirical evaluations of their quantitative accuracy in ecological data extraction remain rare. A key advantage of NotebookLM is that it operates exclusively on user-provided source documents. Unlike open-ended chat models, it does not draw on general web knowledge but instead grounds its responses directly in the uploaded PDFs, providing citation-linked excerpts from those documents. This source-constrained design substantially reduces the risk of uncontrolled hallucinations and makes verification more transparent and auditable.</div>
+
+<h2>Testing NotebookLM on a difficult ecological dataset</h2>
+
+<div class="blog-imported-paragraph">For the purposes of our most recent meta-analysis, we evaluated the freely available version of NotebookLM (Gemini 1.5) as a first-pass extractor in a challenging ecological domain: avian extra-pair paternity (EPP). We analyzed 189 peer-reviewed studies published between 2017 and 2025, each reporting genetic parentage data. These papers represent exactly the kind of material that makes extraction difficult: heterogeneous terminology, complex tables, and key values distributed across main text and supplementary materials.</div>
+
+<div class="blog-imported-paragraph">To maintain contextual focus and reduce cross-document mixing, studies were uploaded and processed in controlled batches of 10&ndash;15 PDFs per session. This approach allowed the model to work within a limited and well-defined source set while still benefiting from contextual understanding across related studies. NotebookLM was prompted to extract 11 standardised study-level variables spanning both descriptive variables, such as bird species identity, molecular marker type used to determine parentage, nest-box use, start and end years of the study, reported start and end months of the breeding season, and whether EPP data were provided at the population&ndash;year level, and quantitative outcomes, including offspring and/or brood sample size, proportion of extra-pair young (EPY), and brood-level extra-pair paternity (EPbr). In total, 2,079 individual values were collected.</div>
+
+<h2>How accurate was the extraction?</h2>
+
+<div class="blog-imported-paragraph">Every extracted value was manually audited against the original PDF by our team (Aneta Arct, Agnieszka Gudowska, Monika Gronowska, and Karolina Skorb). All 2,079 values were checked. Overall extraction accuracy reached 87.8%, meaning that 12.2% of values required manual correction. However, performance differed markedly depending on the type of data being extracted.</div>
+
+<figure class="blog-inline-figure blog-inline-figure--center">
+  <img src="/web_files/aneta-fig1_orig.png" alt="Proportion of NotebookLM-extracted values requiring manual correction across variable types">
+  <figcaption>Figure 1. Proportion of LLM-extracted values requiring manual correction across 189 avian parentage studies included in the meta-analysis. Colors indicate variable types: categorical descriptors, numeric descriptors, and outcome variables.</figcaption>
+</figure>
+
+<div class="blog-imported-paragraph">NotebookLM performed exceptionally well for categorical study descriptors. Species identity, marker type, and nest-box breeding status showed error rates below 3%, indicating that AI-assisted extraction is highly reliable for descriptive categorical information. Numeric study descriptors, such as geographic coordinates and study period, showed moderate correction rates of approximately 8&ndash;13%, suggesting that LLMs can generally extract structured numeric study information with reasonable accuracy. In contrast, quantitative outcome variables showed substantially higher error rates. Estimates of EPY proportion, brood-level EPP, and associated sample sizes, including the numbers of offspring or broods sampled, required correction in roughly 20&ndash;30% of cases. Statistical modelling confirmed that these outcome variables were nearly seven times more likely to require correction than categorical descriptors.</div>
+
+<h2>Variation across studies</h2>
+
+<div class="blog-imported-paragraph">We also observed heterogeneity in LLM-assisted extraction performance across studies. Nearly half of the studies were extracted without any corrections at all. Some papers were straightforward and consistently well handled by the model; others required substantial manual revision. This variability likely reflects differences in how ecological data are reported across studies and highlights the importance of systematic manual verification of extracted data.</div>
+
+<figure class="blog-inline-figure blog-inline-figure--center">
+  <img src="/web_files/aneta-fig2.png" alt="Distribution of manual corrections after NotebookLM-based data extraction across studies">
+  <figcaption>Figure 2. Distribution of manual corrections following LLM-based data extraction across 189 studies included in the most recent meta-analysis of avian EPP.</figcaption>
+</figure>
+
+<h2>What this means for evidence synthesis</h2>
+
+<div class="blog-imported-paragraph">Taken together, our results indicate that AI-assisted extraction is already a powerful support tool for ecological evidence synthesis. In particular, its high reliability for categorical descriptors suggests that such tools are especially well suited for systematic maps, where the primary goal is to catalogue species, study characteristics, methodological approaches, and geographic coverage rather than to compute effect sizes. In contrast, quantitative meta-analysis places much heavier inferential weight on numeric outcomes, such as proportions, sample sizes, and variance components. Our findings demonstrate that numerical fields remain vulnerable to extraction error and therefore require systematic and comprehensive human validation.</div>
+
+<div class="blog-imported-paragraph">Accordingly, LLM-based workflows may currently offer the greatest efficiency gains at the stage of systematic mapping and metadata compilation, whereas fully automated quantitative synthesis remains premature without expert auditing. Rather than replacing human expertise, LLMs are best viewed as amplifiers of it: they can substantially accelerate structured data compilation while preserving inferential integrity when paired with transparent expert-led verification.</div>
