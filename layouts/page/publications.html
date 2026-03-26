@@ -301,7 +301,6 @@
                         <div class="publication-links">
                           {{ with .best_url }}{{ if ne . $doi }}<a href="{{ . }}" target="_blank" rel="noopener">Open record</a>{{ end }}{{ end }}
                           {{ with .doi_url }}<a href="{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}
-                          {{ with .orcid_work_url }}<a href="{{ . }}" target="_blank" rel="noopener">ORCID entry</a>{{ end }}
                         </div>
                       </article>
                       {{ end }}
