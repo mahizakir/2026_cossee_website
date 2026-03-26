@@ -28,15 +28,14 @@
                   border: 1px solid rgba(39, 93, 56, 0.12);
                   border-radius: 20px;
                   margin-bottom: 22px;
-                  max-width: 920px;
-                  padding: 14px 16px 12px;
+                  padding: 12px 16px 10px;
                 }
                 .publications-orcid__intro {
                   align-items: start;
                   display: grid;
                   gap: 12px;
-                  grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
-                  margin-bottom: 10px;
+                  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+                  margin-bottom: 8px;
                 }
                 .publications-orcid__intro-copy h2 {
                   color: var(--ualberta-green-deep);
@@ -56,6 +55,7 @@
                   border: 1px solid rgba(39, 93, 56, 0.12);
                   border-radius: 16px;
                   box-shadow: 0 10px 24px rgba(22, 37, 30, 0.04);
+                  max-width: 300px;
                   padding: 12px 14px;
                 }
                 .publications-orcid__eyebrow {
@@ -112,7 +112,7 @@
                   display: grid;
                   gap: 8px 14px;
                   grid-template-columns: auto minmax(0, 1fr);
-                  padding-top: 10px;
+                  padding-top: 8px;
                 }
                 .publications-orcid__jump-label {
                   color: #56705d;
@@ -272,11 +272,6 @@
                 {{ if $years }}
                 <section class="publications-orcid__top">
                   <div class="publications-orcid__intro">
-                    <div class="publications-orcid__intro-copy">
-                      <span class="publications-orcid__eyebrow">Publications Archive</span>
-                      <h2>Browse the publication record by year</h2>
-                      <p>Synced from Prof. Shinichi Nakagawa&rsquo;s public ORCID record.</p>
-                    </div>
                     <aside class="publications-orcid__summary">
                       <span class="publications-orcid__eyebrow">At a Glance</span>
                       <div class="publications-orcid__stats">
@@ -292,6 +287,11 @@
                       <p>Source: <a href="{{ $pubs.record_url }}" target="_blank" rel="noopener">ORCID</a> and <a href="https://scholar.google.com/citations?user=9-pCZzcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
                       {{ with $pubs.generated_at_display }}<p style="margin-top: 8px;">Last synced: <strong>{{ . }}</strong></p>{{ end }}
                     </aside>
+                    <div class="publications-orcid__intro-copy">
+                      <span class="publications-orcid__eyebrow">Publications Archive</span>
+                      <h2>Browse the publication record by year</h2>
+                      <p>Synced from Prof. Shinichi Nakagawa&rsquo;s public ORCID record.</p>
+                    </div>
                   </div>
                   <div class="publications-orcid__jump-wrap">
                     <div class="publications-orcid__jump-label">Jump to year</div>
