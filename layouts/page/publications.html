@@ -35,7 +35,12 @@
                   display: grid;
                   gap: 12px;
                   grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
-                  margin-bottom: 8px;
+                }
+                .publications-orcid__main {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  min-width: 0;
                 }
                 .publications-orcid__intro-copy h2 {
                   color: var(--ualberta-green-deep);
@@ -106,21 +111,20 @@
                 .publications-orcid__jump a:focus {
                   color: var(--ualberta-green-deep);
                 }
-                .publications-orcid__jump-wrap {
-                  align-items: center;
-                  border-top: 1px solid rgba(39, 93, 56, 0.08);
-                  display: grid;
-                  gap: 8px 14px;
-                  grid-template-columns: auto minmax(0, 1fr);
-                  padding-top: 8px;
+                .publications-orcid__jump-panel {
+                  background: rgba(255, 255, 255, 0.72);
+                  border: 1px solid rgba(39, 93, 56, 0.1);
+                  border-radius: 16px;
+                  padding: 10px 12px;
                 }
                 .publications-orcid__jump-label {
                   color: #56705d;
+                  display: block;
                   font-size: 11px;
                   font-weight: 800;
                   letter-spacing: 0.08em;
+                  margin-bottom: 8px;
                   text-transform: uppercase;
-                  white-space: nowrap;
                 }
                 .publications-orcid__section-head {
                   align-items: baseline;
@@ -237,9 +241,6 @@
                   .publications-orcid__summary {
                     max-width: none;
                   }
-                  .publications-orcid__jump-wrap {
-                    grid-template-columns: 1fr;
-                  }
                 }
                 @media (max-width: 767px) {
                   .publications-orcid__top {
@@ -287,17 +288,19 @@
                       <p>Source: <a href="{{ $pubs.record_url }}" target="_blank" rel="noopener">ORCID</a> and <a href="https://scholar.google.com/citations?user=9-pCZzcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
                       {{ with $pubs.generated_at_display }}<p style="margin-top: 8px;">Last synced: <strong>{{ . }}</strong></p>{{ end }}
                     </aside>
-                    <div class="publications-orcid__intro-copy">
-                      <span class="publications-orcid__eyebrow">Publications Archive</span>
-                      <h2>Browse the publication record by year</h2>
-                      <p>Synced from Prof. Shinichi Nakagawa&rsquo;s public ORCID record.</p>
+                    <div class="publications-orcid__main">
+                      <div class="publications-orcid__intro-copy">
+                        <span class="publications-orcid__eyebrow">Publications Archive</span>
+                        <h2>Browse the publication record by year</h2>
+                        <p>Synced from Prof. Shinichi Nakagawa&rsquo;s public ORCID record.</p>
+                      </div>
+                      <div class="publications-orcid__jump-panel">
+                        <div class="publications-orcid__jump-label">Jump to year</div>
+                        <nav class="publications-orcid__jump" aria-label="Publications archive jump links">
+                          {{ range $years }}<a href="#year-{{ .year }}">{{ .year }}</a>{{ end }}
+                        </nav>
+                      </div>
                     </div>
-                  </div>
-                  <div class="publications-orcid__jump-wrap">
-                    <div class="publications-orcid__jump-label">Jump to year</div>
-                    <nav class="publications-orcid__jump" aria-label="Publications archive jump links">
-                      {{ range $years }}<a href="#year-{{ .year }}">{{ .year }}</a>{{ end }}
-                    </nav>
                   </div>
                 </section>
 
