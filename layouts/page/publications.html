@@ -126,26 +126,6 @@
                   margin-bottom: 8px;
                   text-transform: uppercase;
                 }
-                .publications-orcid__section-head {
-                  align-items: baseline;
-                  display: flex;
-                  flex-wrap: wrap;
-                  gap: 8px 12px;
-                  justify-content: space-between;
-                  margin-bottom: 12px;
-                }
-                .publications-orcid__section-head h2 {
-                  color: var(--ualberta-green-deep);
-                  font-size: 24px;
-                  line-height: 1.15;
-                  margin: 0;
-                }
-                .publications-orcid__section-head p {
-                  color: #5a6c60;
-                  font-size: 13px;
-                  line-height: 1.55;
-                  margin: 0;
-                }
                 .publications-orcid__jump {
                   display: flex;
                   flex-wrap: wrap;
@@ -253,7 +233,6 @@
                     padding: 16px;
                   }
                   .publications-orcid__intro-copy h2,
-                  .publications-orcid__section-head h2,
                   .publication-year h2 {
                     font-size: 22px;
                   }
@@ -305,10 +284,6 @@
                 </section>
 
                 <section class="publications-orcid__archive">
-                  <div class="publications-orcid__section-head">
-                    <h2>Full Archive</h2>
-                    <p>Grouped by publication year so older and newer works stay easy to browse.</p>
-                  </div>
                   {{ range $years }}
                   <section class="publication-year" id="year-{{ .year }}">
                     <h2>{{ .year }} <span class="publication-year__count">{{ .count }} works</span></h2>
