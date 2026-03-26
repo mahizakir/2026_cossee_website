@@ -7,7 +7,6 @@
   <body>
     {{ $pubs := .Site.Data.orcid_publications }}
     {{ $years := $pubs.years }}
-    {{ $latest := $pubs.latest }}
 
     <div id="all">
       {{ partial "top.html" . }}
@@ -107,9 +106,6 @@
                 .publications-orcid__jump a:focus {
                   color: var(--ualberta-green-deep);
                 }
-                .publications-orcid__latest {
-                  margin-bottom: 26px;
-                }
                 .publications-orcid__section-head {
                   align-items: baseline;
                   display: flex;
@@ -129,54 +125,6 @@
                   font-size: 14px;
                   line-height: 1.7;
                   margin: 0;
-                }
-                .publication-card-grid {
-                  display: grid;
-                  gap: 18px;
-                  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-                }
-                .publication-card {
-                  background: #fff;
-                  border: 1px solid rgba(39, 93, 56, 0.12);
-                  border-radius: 20px;
-                  box-shadow: 0 14px 34px rgba(20, 34, 27, 0.06);
-                  display: flex;
-                  flex-direction: column;
-                  gap: 12px;
-                  padding: 20px;
-                }
-                .publication-card__meta {
-                  color: #5d6e61;
-                  display: flex;
-                  flex-wrap: wrap;
-                  font-size: 12px;
-                  font-weight: 700;
-                  gap: 8px;
-                  letter-spacing: 0.04em;
-                  text-transform: uppercase;
-                }
-                .publication-card__title {
-                  color: #203828;
-                  font-size: 21px;
-                  line-height: 1.35;
-                  margin: 0;
-                }
-                .publication-card__authors,
-                .publication-card__journal {
-                  color: #425648;
-                  font-size: 14px;
-                  line-height: 1.75;
-                  margin: 0;
-                }
-                .publication-card__journal strong {
-                  color: #1f3827;
-                }
-                .publication-card__links {
-                  display: flex;
-                  flex-wrap: wrap;
-                  gap: 10px 14px;
-                  margin-top: auto;
-                  padding-top: 4px;
                 }
                 .publications-orcid__jump {
                   border-top: 1px solid rgba(39, 93, 56, 0.1);
@@ -308,34 +256,6 @@
                     {{ with $pubs.generated_at_display }}<p style="margin-top: 12px;">Last synced: <strong>{{ . }}</strong></p>{{ end }}
                   </aside>
                 </section>
-
-                {{ if $latest }}
-                <section class="publications-orcid__latest">
-                  <div class="publications-orcid__section-head">
-                    <h2>Latest from ORCID</h2>
-                    <p>The newest records in the archive, pulled automatically from the public ORCID feed.</p>
-                  </div>
-                  <div class="publication-card-grid">
-                    {{ range $latest }}
-                    {{ $doi := .doi_url }}
-                    <article class="publication-card">
-                      <div class="publication-card__meta">
-                        <span>{{ .type_display }}</span>
-                        <span>{{ .publication_date_display }}</span>
-                      </div>
-                      <h3 class="publication-card__title">{{ .title }}</h3>
-                      {{ with .authors_display }}<p class="publication-card__authors">{{ . }}</p>{{ end }}
-                      <p class="publication-card__journal">{{ with .journal_title }}<strong>{{ . }}</strong>{{ else }}<strong>Publication record</strong>{{ end }}</p>
-                      <div class="publication-card__links">
-                        {{ with .best_url }}{{ if ne . $doi }}<a href="{{ . }}" target="_blank" rel="noopener">Open record</a>{{ end }}{{ end }}
-                        {{ with .doi_url }}<a href="{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}
-                        {{ with .orcid_work_url }}<a href="{{ . }}" target="_blank" rel="noopener">ORCID entry</a>{{ end }}
-                      </div>
-                    </article>
-                    {{ end }}
-                  </div>
-                </section>
-                {{ end }}
 
                 {{ if $years }}
                 <nav class="publications-orcid__jump" aria-label="Publications archive jump links">
