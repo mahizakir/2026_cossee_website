@@ -24,35 +24,16 @@
                   padding: 0 0 36px;
                 }
                 .publications-orcid__intro {
-                  display: grid;
-                  gap: 14px;
-                  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
+                  display: flex;
+                  justify-content: flex-end;
                   margin-bottom: 14px;
-                }
-                .publications-orcid__lead {
-                  background: linear-gradient(135deg, rgba(39, 93, 56, 0.06), rgba(255, 255, 255, 0.98));
-                  border: 1px solid rgba(39, 93, 56, 0.12);
-                  border-radius: 18px;
-                  padding: 18px 20px;
-                }
-                .publications-orcid__lead h1 {
-                  color: var(--ualberta-green-deep);
-                  font-size: 28px;
-                  line-height: 1.1;
-                  margin: 0 0 10px;
-                }
-                .publications-orcid__lead p {
-                  color: #314438;
-                  font-size: 15px;
-                  line-height: 1.65;
-                  margin: 0;
-                  max-width: 760px;
                 }
                 .publications-orcid__summary {
                   background: #fff;
                   border: 1px solid rgba(39, 93, 56, 0.12);
                   border-radius: 18px;
                   box-shadow: 0 10px 24px rgba(22, 37, 30, 0.05);
+                  max-width: 360px;
                   padding: 16px 18px;
                 }
                 .publications-orcid__eyebrow {
@@ -208,16 +189,14 @@
                 }
                 @media (max-width: 991px) {
                   .publications-orcid__intro {
-                    grid-template-columns: 1fr;
+                    display: block;
                   }
                 }
                 @media (max-width: 767px) {
-                  .publications-orcid__lead,
                   .publications-orcid__summary,
                   .publication-item {
                     padding: 16px;
                   }
-                  .publications-orcid__lead h1,
                   .publications-orcid__section-head h2,
                   .publication-year h2 {
                     font-size: 24px;
@@ -233,11 +212,6 @@
 
               <div class="publications-orcid">
                 <section class="publications-orcid__intro">
-                  <div class="publications-orcid__lead">
-                    <span class="publications-orcid__eyebrow">Automatically Updated Archive</span>
-                    <h1>{{ .Title }}</h1>
-                    <p>This page now tracks Prof. Shinichi Nakagawa&rsquo;s publication record directly from ORCID, making it easier to keep the COSSEE archive current as new works appear and older works remain searchable in one place.</p>
-                  </div>
                   <aside class="publications-orcid__summary">
                     <span class="publications-orcid__eyebrow">At a Glance</span>
                     <div class="publications-orcid__stats">
