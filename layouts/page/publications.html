@@ -278,15 +278,15 @@
                       <div class="publications-orcid__stats">
                         <div class="publications-orcid__stat">
                           <strong>{{ $pubs.works_count }}</strong>
-                          <span>Works in the archive</span>
+                          <span>Works currently pulled from ORCID</span>
                         </div>
                         <div class="publications-orcid__stat">
                           <strong>{{ len $years }}</strong>
-                          <span>Years represented</span>
+                          <span>Publication years represented</span>
                         </div>
                       </div>
-                      <p>Source: <a href="{{ $pubs.record_url }}" target="_blank" rel="noopener">ORCID</a> and <a href="https://scholar.google.com/citations?user=9-pCZzcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
-                      {{ with $pubs.generated_at_display }}<p style="margin-top: 8px;">Last synced: <strong>{{ . }}</strong></p>{{ end }}
+                      <p>Primary source: <a href="{{ $pubs.record_url }}" target="_blank" rel="noopener">Shinichi Nakagawa&rsquo;s ORCID record</a>.<br>Also see <a href="https://scholar.google.com/citations?user=9-pCZzcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> for citation tracking.</p>
+                      {{ with $pubs.generated_at_display }}<p style="margin-top: 12px;">Last synced: <strong>{{ . }}</strong></p>{{ end }}
                     </aside>
                     <div class="publications-orcid__main">
                       <div class="publications-orcid__intro-copy">
