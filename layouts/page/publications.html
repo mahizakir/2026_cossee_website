@@ -23,18 +23,39 @@
                   max-width: 1180px;
                   padding: 0 0 36px;
                 }
+                .publications-orcid__top {
+                  background: linear-gradient(180deg, rgba(39, 93, 56, 0.045), rgba(255, 255, 255, 0.96));
+                  border: 1px solid rgba(39, 93, 56, 0.12);
+                  border-radius: 20px;
+                  margin-bottom: 22px;
+                  padding: 18px 20px 16px;
+                }
                 .publications-orcid__intro {
-                  display: flex;
-                  justify-content: flex-end;
+                  align-items: start;
+                  display: grid;
+                  gap: 16px;
+                  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 360px);
                   margin-bottom: 14px;
                 }
+                .publications-orcid__intro-copy h2 {
+                  color: var(--ualberta-green-deep);
+                  font-size: 24px;
+                  line-height: 1.15;
+                  margin: 0 0 8px;
+                }
+                .publications-orcid__intro-copy p {
+                  color: #45604d;
+                  font-size: 14px;
+                  line-height: 1.65;
+                  margin: 0;
+                  max-width: 760px;
+                }
                 .publications-orcid__summary {
-                  background: #fff;
+                  background: rgba(255, 255, 255, 0.88);
                   border: 1px solid rgba(39, 93, 56, 0.12);
-                  border-radius: 18px;
-                  box-shadow: 0 10px 24px rgba(22, 37, 30, 0.05);
-                  max-width: 360px;
-                  padding: 16px 18px;
+                  border-radius: 16px;
+                  box-shadow: 0 10px 24px rgba(22, 37, 30, 0.04);
+                  padding: 14px 16px;
                 }
                 .publications-orcid__eyebrow {
                   color: var(--ualberta-green);
@@ -71,21 +92,34 @@
                   margin: 0;
                 }
                 .publications-orcid__summary a,
-                .publication-card__links a,
                 .publication-links a,
                 .publications-orcid__jump a {
                   color: var(--ualberta-green);
                   font-weight: 700;
                 }
                 .publications-orcid__summary a:hover,
-                .publication-card__links a:hover,
                 .publication-links a:hover,
                 .publications-orcid__jump a:hover,
                 .publications-orcid__summary a:focus,
-                .publication-card__links a:focus,
                 .publication-links a:focus,
                 .publications-orcid__jump a:focus {
                   color: var(--ualberta-green-deep);
+                }
+                .publications-orcid__jump-wrap {
+                  align-items: center;
+                  border-top: 1px solid rgba(39, 93, 56, 0.08);
+                  display: grid;
+                  gap: 10px 18px;
+                  grid-template-columns: auto minmax(0, 1fr);
+                  padding-top: 12px;
+                }
+                .publications-orcid__jump-label {
+                  color: #56705d;
+                  font-size: 12px;
+                  font-weight: 800;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  white-space: nowrap;
                 }
                 .publications-orcid__section-head {
                   align-items: baseline;
@@ -108,21 +142,26 @@
                   margin: 0;
                 }
                 .publications-orcid__jump {
-                  border-top: 1px solid rgba(39, 93, 56, 0.1);
-                  border-bottom: 1px solid rgba(39, 93, 56, 0.1);
                   display: flex;
                   flex-wrap: wrap;
-                  gap: 8px 16px;
-                  margin: 0 0 18px;
-                  padding: 10px 0;
+                  gap: 8px 10px;
+                  margin: 0;
+                  padding: 0;
                 }
                 .publications-orcid__jump a {
-                  font-size: 13px;
+                  background: rgba(255, 255, 255, 0.9);
+                  border: 1px solid rgba(39, 93, 56, 0.12);
+                  border-radius: 999px;
+                  font-size: 12px;
+                  padding: 6px 10px;
                   text-decoration: none;
+                }
+                .publications-orcid__archive {
+                  padding-top: 4px;
                 }
                 .publication-year {
                   border-bottom: 1px solid rgba(39, 93, 56, 0.1);
-                  padding: 22px 0 18px;
+                  padding: 20px 0 18px;
                   scroll-margin-top: 92px;
                 }
                 .publication-year:last-child {
@@ -131,13 +170,13 @@
                 }
                 .publication-year h2 {
                   color: var(--ualberta-green-deep);
-                  font-size: 30px;
+                  font-size: 27px;
                   line-height: 1.1;
-                  margin: 0 0 18px;
+                  margin: 0 0 14px;
                 }
                 .publication-year__count {
                   color: #59705f;
-                  font-size: 13px;
+                  font-size: 12px;
                   font-weight: 700;
                   letter-spacing: 0.04em;
                   margin-left: 8px;
@@ -151,6 +190,7 @@
                   background: #fff;
                   border: 1px solid rgba(39, 93, 56, 0.1);
                   border-radius: 18px;
+                  box-shadow: 0 8px 18px rgba(20, 34, 27, 0.03);
                   padding: 18px 20px;
                 }
                 .publication-item__top {
@@ -182,21 +222,35 @@
                   margin: 0 0 6px;
                 }
                 .publication-links {
+                  border-top: 1px solid rgba(39, 93, 56, 0.08);
                   display: flex;
                   flex-wrap: wrap;
                   gap: 10px 14px;
                   margin-top: 12px;
+                  padding-top: 10px;
                 }
                 @media (max-width: 991px) {
                   .publications-orcid__intro {
-                    display: block;
+                    grid-template-columns: 1fr;
+                  }
+                  .publications-orcid__summary {
+                    max-width: none;
+                  }
+                  .publications-orcid__jump-wrap {
+                    grid-template-columns: 1fr;
                   }
                 }
                 @media (max-width: 767px) {
+                  .publications-orcid__top {
+                    border-radius: 18px;
+                    margin-bottom: 18px;
+                    padding: 16px;
+                  }
                   .publications-orcid__summary,
                   .publication-item {
                     padding: 16px;
                   }
+                  .publications-orcid__intro-copy h2,
                   .publications-orcid__section-head h2,
                   .publication-year h2 {
                     font-size: 24px;
@@ -207,34 +261,46 @@
                   .publications-orcid__stats {
                     grid-template-columns: 1fr;
                   }
+                  .publications-orcid__jump {
+                    gap: 8px;
+                  }
                 }
               </style>
 
               <div class="publications-orcid">
-                <section class="publications-orcid__intro">
-                  <aside class="publications-orcid__summary">
-                    <span class="publications-orcid__eyebrow">At a Glance</span>
-                    <div class="publications-orcid__stats">
-                      <div class="publications-orcid__stat">
-                        <strong>{{ $pubs.works_count }}</strong>
-                        <span>Works currently pulled from ORCID</span>
-                      </div>
-                      <div class="publications-orcid__stat">
-                        <strong>{{ len $years }}</strong>
-                        <span>Publication years represented</span>
-                      </div>
+                {{ if $years }}
+                <section class="publications-orcid__top">
+                  <div class="publications-orcid__intro">
+                    <div class="publications-orcid__intro-copy">
+                      <span class="publications-orcid__eyebrow">Publications Archive</span>
+                      <h2>Browse the publication record by year</h2>
+                      <p>This archive is synced from Prof. Shinichi Nakagawa&rsquo;s public ORCID record and organized for easier browsing across recent and older work.</p>
                     </div>
-                    <p>Primary source: <a href="{{ $pubs.record_url }}" target="_blank" rel="noopener">Shinichi Nakagawa&rsquo;s ORCID record</a>.<br>Also see <a href="https://scholar.google.com/citations?user=9-pCZzcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> for citation tracking.</p>
-                    {{ with $pubs.generated_at_display }}<p style="margin-top: 8px;">Last synced: <strong>{{ . }}</strong></p>{{ end }}
-                  </aside>
+                    <aside class="publications-orcid__summary">
+                      <span class="publications-orcid__eyebrow">At a Glance</span>
+                      <div class="publications-orcid__stats">
+                        <div class="publications-orcid__stat">
+                          <strong>{{ $pubs.works_count }}</strong>
+                          <span>Works in the archive</span>
+                        </div>
+                        <div class="publications-orcid__stat">
+                          <strong>{{ len $years }}</strong>
+                          <span>Years represented</span>
+                        </div>
+                      </div>
+                      <p>Source: <a href="{{ $pubs.record_url }}" target="_blank" rel="noopener">ORCID</a> and <a href="https://scholar.google.com/citations?user=9-pCZzcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+                      {{ with $pubs.generated_at_display }}<p style="margin-top: 8px;">Last synced: <strong>{{ . }}</strong></p>{{ end }}
+                    </aside>
+                  </div>
+                  <div class="publications-orcid__jump-wrap">
+                    <div class="publications-orcid__jump-label">Jump to year</div>
+                    <nav class="publications-orcid__jump" aria-label="Publications archive jump links">
+                      {{ range $years }}<a href="#year-{{ .year }}">{{ .year }}</a>{{ end }}
+                    </nav>
+                  </div>
                 </section>
 
-                {{ if $years }}
-                <nav class="publications-orcid__jump" aria-label="Publications archive jump links">
-                  {{ range $years }}<a href="#year-{{ .year }}">{{ .year }}</a>{{ end }}
-                </nav>
-
-                <section>
+                <section class="publications-orcid__archive">
                   <div class="publications-orcid__section-head">
                     <h2>Full Archive</h2>
                     <p>Grouped by publication year so older and newer works stay easy to browse.</p>
