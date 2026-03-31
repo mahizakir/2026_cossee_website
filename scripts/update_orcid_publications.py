@@ -261,12 +261,6 @@ def build_payload(orcid_id: str, token: str | None) -> dict[str, Any]:
     return payload
 
 
-def payload_without_timestamp(payload: dict[str, Any]) -> dict[str, Any]:
-    copy = json.loads(json.dumps(payload))
-    copy.pop("generated_at", None)
-    return copy
-
-
 def main() -> int:
     orcid_id = os.environ.get("ORCID_ID", DEFAULT_ORCID_ID)
     token = os.environ.get("ORCID_ACCESS_TOKEN")
@@ -279,11 +273,6 @@ def main() -> int:
     except urllib.error.URLError as exc:
         print(f"Failed to fetch ORCID data: {exc.reason}", file=sys.stderr)
         return 1
-
-    if DATA_PATH.exists():
-        existing = json.loads(DATA_PATH.read_text())
-        if payload_without_timestamp(existing) == payload_without_timestamp(payload):
-            payload["generated_at"] = existing.get("generated_at", payload["generated_at"])
 
     DATA_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
     print(f"Wrote {payload['works_count']} ORCID publications to {DATA_PATH}")
