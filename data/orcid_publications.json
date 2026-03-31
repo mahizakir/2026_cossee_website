@@ -2,10 +2,64 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-03-30T10:42:27Z",
-  "generated_at_display": "March 30, 2026 at 10:42 UTC",
-  "works_count": 430,
+  "generated_at": "2026-03-31T10:18:04Z",
+  "generated_at_display": "March 31, 2026 at 10:18 UTC",
+  "works_count": 432,
   "latest": [
+    {
+      "put_code": 210174370,
+      "title": "Pre-registration and Registered Reports in Ecology and Evolutionary Biology: An Evidence-Based Appraisal by SORTEE",
+      "authors": [
+        "Joel Pick",
+        "Elina Takola",
+        "Kevin Bairos-Novak",
+        "Edward Ivimey-Cook",
+        "Daniel Morillo",
+        "Shinichi Nakagawa",
+        "Julia Sharapi"
+      ],
+      "authors_display": "Joel Pick, Elina Takola, Kevin Bairos-Novak, Edward Ivimey-Cook, Daniel Morillo, Shinichi Nakagawa, Julia Sharapi",
+      "journal_title": null,
+      "type": "preprint",
+      "type_display": "Preprint",
+      "publication_year": "2026",
+      "publication_month": "03",
+      "publication_day": "30",
+      "publication_date_display": "March 30, 2026",
+      "publication_date_iso": "2026-03-30",
+      "doi": "10.32942/x2c37q",
+      "doi_url": "https://doi.org/10.32942/x2c37q",
+      "best_url": "https://doi.org/10.32942/X2C37Q",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/210174370"
+    },
+    {
+      "put_code": 210174371,
+      "title": "Open Code in Ecology and Evolutionary Biology: An Evidence-Based Appraisal by SORTEE",
+      "authors": [
+        "Edward Ivimey-Cook",
+        "Kevin Bairos-Novak",
+        "Daniel Morillo",
+        "Shinichi Nakagawa",
+        "Julia Sharapi",
+        "Elina Takola",
+        "Joel Pick"
+      ],
+      "authors_display": "Edward Ivimey-Cook, Kevin Bairos-Novak, Daniel Morillo, Shinichi Nakagawa, Julia Sharapi, Elina Takola, Joel Pick",
+      "journal_title": null,
+      "type": "preprint",
+      "type_display": "Preprint",
+      "publication_year": "2026",
+      "publication_month": "03",
+      "publication_day": "30",
+      "publication_date_display": "March 30, 2026",
+      "publication_date_iso": "2026-03-30",
+      "doi": "10.32942/x27d4f",
+      "doi_url": "https://doi.org/10.32942/x27d4f",
+      "best_url": "https://doi.org/10.32942/X27D4F",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/210174371"
+    },
     {
       "put_code": 207760239,
       "title": "Avoiding misleading estimates of among‐individual variance caused by non‐random sampling of individuals in a changeable environment",
@@ -119,65 +173,67 @@
       "best_url": "https://doi.org/10.1371/journal.pbio.3003653",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/205651821"
-    },
-    {
-      "put_code": 199323889,
-      "title": "Location–scale models in ecology and evolution: Heteroscedasticity in continuous, count and proportion data",
-      "authors": [
-        "Shinichi Nakagawa",
-        "Santiago Ortega",
-        "Elena Gazzea",
-        "Malgorzata Lagisz",
-        "Anna Lenz",
-        "Erick Lundgren",
-        "Ayumi Mizuno"
-      ],
-      "authors_display": "Shinichi Nakagawa, Santiago Ortega, Elena Gazzea, Malgorzata Lagisz, Anna Lenz, Erick Lundgren, Ayumi Mizuno",
-      "journal_title": "Methods in Ecology and Evolution",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "02",
-      "publication_day": "00",
-      "publication_date_display": "February 2026",
-      "publication_date_iso": "2026-02-00",
-      "doi": "10.1111/2041-210x.70203",
-      "doi_url": "https://doi.org/10.1111/2041-210x.70203",
-      "best_url": "https://doi.org/10.1111/2041-210x.70203",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/199323889"
-    },
-    {
-      "put_code": 204099851,
-      "title": "One dataset, four meta-analyses: synthesising mean effects, within-population variability, and between-population heterogeneity in ecology",
-      "authors": [
-        "Haley Lacza",
-        "Ayumi Mizuno",
-        "Coralie Williams",
-        "Malgorzata Lagisz",
-        "Shinichi Nakagawa"
-      ],
-      "authors_display": "Haley Lacza, Ayumi Mizuno, Coralie Williams, Malgorzata Lagisz, Shinichi Nakagawa",
-      "journal_title": null,
-      "type": "preprint",
-      "type_display": "Preprint",
-      "publication_year": "2026",
-      "publication_month": "01",
-      "publication_day": "30",
-      "publication_date_display": "January 30, 2026",
-      "publication_date_iso": "2026-01-30",
-      "doi": "10.32942/x2jq0t",
-      "doi_url": "https://doi.org/10.32942/x2jq0t",
-      "best_url": "https://doi.org/10.32942/X2JQ0T",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/204099851"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 9,
+      "count": 11,
       "items": [
+        {
+          "put_code": 210174370,
+          "title": "Pre-registration and Registered Reports in Ecology and Evolutionary Biology: An Evidence-Based Appraisal by SORTEE",
+          "authors": [
+            "Joel Pick",
+            "Elina Takola",
+            "Kevin Bairos-Novak",
+            "Edward Ivimey-Cook",
+            "Daniel Morillo",
+            "Shinichi Nakagawa",
+            "Julia Sharapi"
+          ],
+          "authors_display": "Joel Pick, Elina Takola, Kevin Bairos-Novak, Edward Ivimey-Cook, Daniel Morillo, Shinichi Nakagawa, Julia Sharapi",
+          "journal_title": null,
+          "type": "preprint",
+          "type_display": "Preprint",
+          "publication_year": "2026",
+          "publication_month": "03",
+          "publication_day": "30",
+          "publication_date_display": "March 30, 2026",
+          "publication_date_iso": "2026-03-30",
+          "doi": "10.32942/x2c37q",
+          "doi_url": "https://doi.org/10.32942/x2c37q",
+          "best_url": "https://doi.org/10.32942/X2C37Q",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/210174370"
+        },
+        {
+          "put_code": 210174371,
+          "title": "Open Code in Ecology and Evolutionary Biology: An Evidence-Based Appraisal by SORTEE",
+          "authors": [
+            "Edward Ivimey-Cook",
+            "Kevin Bairos-Novak",
+            "Daniel Morillo",
+            "Shinichi Nakagawa",
+            "Julia Sharapi",
+            "Elina Takola",
+            "Joel Pick"
+          ],
+          "authors_display": "Edward Ivimey-Cook, Kevin Bairos-Novak, Daniel Morillo, Shinichi Nakagawa, Julia Sharapi, Elina Takola, Joel Pick",
+          "journal_title": null,
+          "type": "preprint",
+          "type_display": "Preprint",
+          "publication_year": "2026",
+          "publication_month": "03",
+          "publication_day": "30",
+          "publication_date_display": "March 30, 2026",
+          "publication_date_iso": "2026-03-30",
+          "doi": "10.32942/x27d4f",
+          "doi_url": "https://doi.org/10.32942/x27d4f",
+          "best_url": "https://doi.org/10.32942/X27D4F",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/210174371"
+        },
         {
           "put_code": 207760239,
           "title": "Avoiding misleading estimates of among‐individual variance caused by non‐random sampling of individuals in a changeable environment",
@@ -11991,6 +12047,6 @@
     "book-chapter": 1,
     "journal-article": 362,
     "other": 6,
-    "preprint": 60
+    "preprint": 62
   }
 }
