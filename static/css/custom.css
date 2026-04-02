@@ -388,11 +388,21 @@ a:focus {
 }
 
 .homepage-features-clean {
+    background: transparent !important;
+    border: 0 !important;
     border-bottom: 0 !important;
     border-top: 0 !important;
     box-shadow: none !important;
     margin-bottom: 0;
     margin-top: 0;
+}
+
+.homepage-features-clean .container,
+.homepage-features-clean .row,
+.homepage-features-clean .col-md-4 {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
 }
 
 .homepage-features-clean::before,
