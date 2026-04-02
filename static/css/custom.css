@@ -387,6 +387,19 @@ a:focus {
     min-height: 230px;
 }
 
+.homepage-features-clean {
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+    box-shadow: none !important;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.homepage-features-clean::before,
+.homepage-features-clean::after {
+    display: none !important;
+}
+
 .navbar-brand.home h4 {
     color: #ffffff;
     font-size: 28px;
