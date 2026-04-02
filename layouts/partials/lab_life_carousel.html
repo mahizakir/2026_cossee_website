@@ -1,0 +1,145 @@
+{{ with .Site.Data.home_gallery }}
+<section class="lab-life-home">
+  <div class="container">
+    <div class="lab-life-home__shell">
+      <div class="lab-life-home__intro">
+        <span class="lab-life-home__eyebrow">Lab Life</span>
+        <h2>{{ .title }}</h2>
+        <p>{{ .subtitle }}</p>
+      </div>
+
+      <div class="lab-life-home__carousel-wrap">
+        <div class="lab-life-carousel owl-carousel"
+          data-autoplay="{{ .autoplay }}"
+          data-slide-speed="{{ .slide_speed }}"
+          data-pagination-speed="{{ .pagination_speed }}">
+          {{ range .items }}
+          <div class="lab-life-home__slide">
+            <img src="{{ .image | safeURL }}" alt="{{ .alt }}" loading="lazy">
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .lab-life-home {
+      background:
+        radial-gradient(circle at top left, rgba(92, 143, 110, 0.12), transparent 36%),
+        linear-gradient(180deg, #f6faf5 0%, #ffffff 100%);
+      margin: 0;
+      padding: 34px 0 30px;
+    }
+    .lab-life-home__shell {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(39, 93, 56, 0.12);
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(20, 34, 27, 0.08);
+      display: grid;
+      gap: 24px;
+      grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.3fr);
+      overflow: hidden;
+      padding: 24px;
+    }
+    .lab-life-home__intro {
+      padding: 6px 4px 6px 6px;
+    }
+    .lab-life-home__eyebrow {
+      color: var(--ualberta-green);
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .lab-life-home__intro h2 {
+      color: var(--ualberta-green-deep);
+      font-size: 34px;
+      line-height: 1.08;
+      margin: 0 0 12px;
+    }
+    .lab-life-home__intro p {
+      color: #44604c;
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0;
+      max-width: 320px;
+    }
+    .lab-life-home__carousel-wrap {
+      min-width: 0;
+      position: relative;
+    }
+    .lab-life-home__slide {
+      padding: 4px;
+    }
+    .lab-life-home__slide img {
+      aspect-ratio: 16 / 10;
+      border-radius: 22px;
+      box-shadow: 0 16px 34px rgba(21, 38, 28, 0.12);
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+    .lab-life-home .owl-theme .owl-controls {
+      margin-top: 14px;
+      text-align: left;
+    }
+    .lab-life-home .owl-theme .owl-controls .owl-page span {
+      background: rgba(39, 93, 56, 0.2);
+      height: 10px;
+      width: 10px;
+    }
+    .lab-life-home .owl-theme .owl-controls .owl-page.active span,
+    .lab-life-home .owl-theme .owl-controls.clickable .owl-page:hover span {
+      background: var(--ualberta-green);
+    }
+    @media (max-width: 991px) {
+      .lab-life-home__shell {
+        grid-template-columns: 1fr;
+      }
+      .lab-life-home__intro p {
+        max-width: none;
+      }
+    }
+    @media (max-width: 767px) {
+      .lab-life-home {
+        padding: 26px 0 24px;
+      }
+      .lab-life-home__shell {
+        border-radius: 22px;
+        gap: 16px;
+        padding: 16px;
+      }
+      .lab-life-home__intro h2 {
+        font-size: 28px;
+      }
+      .lab-life-home__slide img {
+        border-radius: 18px;
+      }
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', function () {
+      if (!window.jQuery || !window.jQuery.fn || !window.jQuery.fn.owlCarousel) return;
+      var $carousel = window.jQuery('.lab-life-carousel');
+      if (!$carousel.length || $carousel.data('owlCarousel')) return;
+
+      $carousel.owlCarousel({
+        navigation: false,
+        slideSpeed: ($carousel.attr('data-slide-speed') || 2400),
+        paginationSpeed: ($carousel.attr('data-pagination-speed') || 900),
+        autoPlay: ($carousel.attr('data-autoplay') || 'true') === 'true',
+        stopOnHover: true,
+        singleItem: true,
+        lazyLoad: false,
+        addClassActive: true
+      });
+    });
+  </script>
+</section>
+{{ end }}

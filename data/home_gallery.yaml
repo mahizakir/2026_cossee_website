@@ -1,0 +1,16 @@
+title: "Lab Life at COSSEE"
+subtitle: "A small gallery of lab activities, shared moments, and the fun side of the group."
+autoplay: true
+slide_speed: 2400
+pagination_speed: 900
+items:
+  - image: "/web_files/IMG_0613.webp"
+    alt: "COSSEE lab photo 1"
+  - image: "/web_files/IMG_0612.webp"
+    alt: "COSSEE lab photo 2"
+  - image: "/web_files/IMG_0611.webp"
+    alt: "COSSEE lab photo 3"
+  - image: "/web_files/IMG_7534.webp"
+    alt: "COSSEE lab photo 4"
+  - image: "/web_files/IMG_7529.webp"
+    alt: "COSSEE lab photo 5"
