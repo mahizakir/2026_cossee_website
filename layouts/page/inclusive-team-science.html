@@ -6,26 +6,8 @@
   </head>
 
   <body>
-    {{ $peoplePage := .Site.Data.people.page }}
     {{ $members := where .Site.Data.people.members "status" "current" }}
     {{ $gallery := .Site.Data.home_gallery.items }}
-    {{ $fallbackPhoto := "/web_files/photo-1627704671340-0969d7dba-h_ma49xzt0.jpg" }}
-
-    {{ $leads := where $members "role" "lead" }}
-    {{ $postdocs := where $members "role" "postdocs" }}
-    {{ $phd := where $members "role" "phd" }}
-    {{ $msc := where $members "role" "msc" }}
-    {{ $assistants := where $members "role" "assistants" }}
-    {{ $visitors := where $members "role" "visitors" }}
-
-    {{ $roleGroups := slice
-      (dict "title" "Leads" "description" "The people setting scientific direction, building collaborations, and connecting COSSEE's research, infrastructure, and community work." "items" $leads)
-      (dict "title" "Postdocs" "description" "Researchers bringing disciplinary depth across ecology, evolution, conservation, palaeoecology, computing, and open-science methods." "items" $postdocs)
-      (dict "title" "PhD Students" "description" "Long-form projects that push questions forward while expanding the lab's methodological and synthesis capacity." "items" $phd)
-      (dict "title" "MSc Students" "description" "Focused graduate research projects that contribute to the lab's evidence, methods, and analytical work." "items" $msc)
-      (dict "title" "Research Assistants" "description" "Technical and computational contributors helping move collaborative projects, tooling, and synthesis workflows forward." "items" $assistants)
-      (dict "title" "Visitors" "description" "Visiting researchers who widen the lab's perspective through exchange, shared projects, and cross-institution collaboration." "items" $visitors)
-    }}
 
     {{ $countryScratch := newScratch }}
     {{ $countryScratch.Set "items" (slice) }}
@@ -41,14 +23,6 @@
       {{ end }}
     {{ end }}
     {{ $countries := sort ($countryScratch.Get "items") }}
-
-    {{ $groupCountScratch := newScratch }}
-    {{ $groupCountScratch.Set "count" 0 }}
-    {{ range $roleGroups }}
-      {{ if gt (len .items) 0 }}
-        {{ $groupCountScratch.Set "count" (add ($groupCountScratch.Get "count") 1) }}
-      {{ end }}
-    {{ end }}
 
     {{ $backgrounds := slice
       "Evidence synthesis"
@@ -102,22 +76,15 @@
                 }
 
                 .ts-hero {
-                  display: grid;
-                  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-                  gap: 24px;
-                  align-items: stretch;
+                  display: block;
                   margin-bottom: 24px;
                 }
 
-                .ts-hero__copy,
-                .ts-hero__media {
-                  border: 1px solid var(--ts-line);
-                  border-radius: 28px;
-                  background: linear-gradient(180deg, #f8fcf9 0%, #ffffff 100%);
-                  box-shadow: var(--ts-shadow);
-                }
-
                 .ts-hero__copy {
+                  border: 1px solid #2f7a61;
+                  border-radius: 28px;
+                  background: #2f7a61;
+                  box-shadow: var(--ts-shadow);
                   padding: 34px 34px 28px;
                 }
 
@@ -126,7 +93,7 @@
                   align-items: center;
                   gap: 8px;
                   margin-bottom: 14px;
-                  color: var(--ts-accent-deep);
+                  color: rgba(255, 255, 255, 0.88);
                   font-size: 12px;
                   font-weight: 800;
                   letter-spacing: 0.16em;
@@ -137,91 +104,22 @@
                   content: "";
                   width: 34px;
                   height: 1px;
-                  background: rgba(47, 122, 97, 0.35);
+                  background: rgba(255, 255, 255, 0.35);
                 }
 
                 .ts-title {
                   margin: 0 0 14px;
                   font-size: clamp(34px, 4vw, 50px);
                   line-height: 1.05;
-                  color: #173022;
+                  color: #ffffff;
                 }
 
                 .ts-lead {
                   margin: 0 0 14px;
                   font-size: 17px;
                   line-height: 1.72;
-                  color: #314456;
+                  color: rgba(244, 250, 246, 0.92);
                   max-width: 64ch;
-                }
-
-                .ts-stat-grid {
-                  display: grid;
-                  grid-template-columns: repeat(3, minmax(0, 1fr));
-                  gap: 12px;
-                  margin-top: 22px;
-                }
-
-                .ts-stat {
-                  border: 1px solid #e2ebe6;
-                  border-radius: 18px;
-                  background: var(--ts-surface);
-                  padding: 16px 18px;
-                }
-
-                .ts-stat strong {
-                  display: block;
-                  font-size: 28px;
-                  line-height: 1;
-                  color: var(--ts-accent-deep);
-                }
-
-                .ts-stat span {
-                  display: block;
-                  margin-top: 8px;
-                  font-size: 13px;
-                  line-height: 1.45;
-                  color: var(--ts-muted);
-                }
-
-                .ts-hero__media {
-                  overflow: hidden;
-                  position: relative;
-                  min-height: 420px;
-                }
-
-                .ts-hero__media img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  display: block;
-                }
-
-                .ts-hero__media-caption {
-                  position: absolute;
-                  left: 18px;
-                  right: 18px;
-                  bottom: 18px;
-                  padding: 16px 18px;
-                  border-radius: 18px;
-                  background: rgba(17, 31, 24, 0.72);
-                  color: #f4faf6;
-                  backdrop-filter: blur(10px);
-                }
-
-                .ts-hero__media-caption strong {
-                  display: block;
-                  margin-bottom: 6px;
-                  font-size: 14px;
-                  letter-spacing: 0.04em;
-                  text-transform: uppercase;
-                }
-
-                .ts-hero__media-caption span {
-                  display: block;
-                  font-size: 14px;
-                  line-height: 1.55;
-                  color: rgba(244, 250, 246, 0.9);
                 }
 
                 .ts-principles {
@@ -285,9 +183,7 @@
                 }
 
                 .ts-life__intro {
-                  display: grid;
-                  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
-                  gap: 18px;
+                  display: block;
                   padding: 24px 28px 0;
                 }
 
@@ -317,8 +213,7 @@
                 }
 
                 .ts-country-chip,
-                .ts-background-chip,
-                .ts-member-chip {
+                .ts-background-chip {
                   display: inline-flex;
                   align-items: center;
                   border-radius: 999px;
@@ -328,8 +223,7 @@
                   letter-spacing: 0.01em;
                 }
 
-                .ts-country-chip,
-                .ts-member-chip {
+                .ts-country-chip {
                   background: #eef5f1;
                   color: var(--ts-accent-deep);
                 }
@@ -352,161 +246,39 @@
 
                 .ts-gallery-rail {
                   display: grid;
-                  grid-auto-flow: column;
-                  grid-auto-columns: minmax(220px, 22vw);
+                  grid-template-columns: repeat(12, minmax(0, 1fr));
                   gap: 14px;
-                  overflow-x: auto;
-                  padding: 18px 28px 4px;
-                  scroll-snap-type: x proximity;
-                  scrollbar-width: thin;
-                  scrollbar-color: #b3c9bb transparent;
-                }
-
-                .ts-gallery-rail::-webkit-scrollbar {
-                  height: 8px;
-                }
-
-                .ts-gallery-rail::-webkit-scrollbar-thumb {
-                  background: #b3c9bb;
-                  border-radius: 999px;
+                  padding: 18px 28px 28px;
                 }
 
                 .ts-gallery-item {
-                  scroll-snap-align: start;
+                  grid-column: span 3;
                   border-radius: 22px;
                   overflow: hidden;
                   background: #edf5f0;
-                  min-height: 250px;
+                  aspect-ratio: 4 / 5;
                   box-shadow: 0 10px 28px rgba(18, 35, 27, 0.07);
+                  transition: transform 0.22s ease, box-shadow 0.22s ease;
+                }
+
+                .ts-gallery-item:nth-child(1),
+                .ts-gallery-item:nth-child(6),
+                .ts-gallery-item:nth-child(11),
+                .ts-gallery-item:nth-child(16) {
+                  grid-column: span 6;
+                  aspect-ratio: 16 / 10;
                 }
 
                 .ts-gallery-item img {
                   width: 100%;
                   height: 100%;
-                  min-height: 250px;
                   object-fit: cover;
                   display: block;
                 }
 
-                .ts-team {
-                  padding-bottom: 10px;
-                }
-
-                .ts-role-group {
-                  padding: 26px 28px 32px;
-                  border-top: 1px solid #edf2f0;
-                }
-
-                .ts-role-group:first-of-type {
-                  border-top: 0;
-                }
-
-                .ts-role-head {
-                  display: flex;
-                  justify-content: space-between;
-                  gap: 20px;
-                  align-items: end;
-                  margin-bottom: 18px;
-                }
-
-                .ts-role-head h4 {
-                  margin: 0 0 8px;
-                  font-size: 25px;
-                }
-
-                .ts-role-head p {
-                  margin: 0;
-                  max-width: 64ch;
-                  color: var(--ts-muted);
-                  line-height: 1.65;
-                }
-
-                .ts-role-count {
-                  white-space: nowrap;
-                  color: var(--ts-accent-deep);
-                  font-size: 13px;
-                  font-weight: 800;
-                  text-transform: uppercase;
-                  letter-spacing: 0.08em;
-                }
-
-                .ts-member-grid {
-                  display: grid;
-                  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                  gap: 16px;
-                }
-
-                .ts-member-card {
-                  border: 1px solid #e3ece7;
-                  border-radius: 22px;
-                  background: #ffffff;
-                  padding: 18px;
-                  box-shadow: 0 10px 30px rgba(18, 35, 27, 0.05);
-                  display: flex;
-                  flex-direction: column;
-                  min-height: 100%;
-                }
-
-                .ts-member-top {
-                  display: flex;
-                  gap: 14px;
-                  align-items: center;
-                  margin-bottom: 14px;
-                }
-
-                .ts-member-photo {
-                  width: 76px;
-                  height: 76px;
-                  border-radius: 50%;
-                  object-fit: cover;
-                  background: #eef3f8;
-                  border: 1px solid #dce5ec;
-                  flex: 0 0 76px;
-                }
-
-                .ts-member-name {
-                  margin: 0 0 6px;
-                  font-size: 18px;
-                  line-height: 1.2;
-                }
-
-                .ts-member-pronouns {
-                  font-size: 12px;
-                  color: #718197;
-                }
-
-                .ts-member-badges {
-                  display: flex;
-                  flex-wrap: wrap;
-                  gap: 8px;
-                  margin-bottom: 10px;
-                }
-
-                .ts-member-body {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 12px;
-                  flex: 1;
-                }
-
-                .ts-member-email {
-                  font-size: 13px;
-                  color: #5b6d80;
-                }
-
-                .ts-member-bio {
-                  margin: 0;
-                  font-size: 14px;
-                  line-height: 1.68;
-                  color: #37495c;
-                  flex: 1;
-                }
-
-                .ts-member-actions {
-                  display: flex;
-                  flex-wrap: wrap;
-                  gap: 10px;
-                  margin-top: 4px;
+                .ts-gallery-item:hover {
+                  transform: translateY(-3px);
+                  box-shadow: 0 18px 34px rgba(18, 35, 27, 0.12);
                 }
 
                 .ts-button {
@@ -553,7 +325,7 @@
                   padding: 28px;
                   border: 1px solid var(--ts-line);
                   border-radius: 28px;
-                  background: linear-gradient(135deg, #1f5d49 0%, #2d7c62 55%, #3b8b70 100%);
+                  background: #2f7a61;
                   color: #eef8f2;
                   box-shadow: var(--ts-shadow);
                 }
@@ -604,19 +376,26 @@
                 }
 
                 @media (max-width: 991px) {
-                  .ts-hero,
-                  .ts-life__intro,
                   .ts-principles,
                   .ts-footer {
                     grid-template-columns: 1fr;
                   }
 
-                  .ts-stat-grid {
-                    grid-template-columns: 1fr;
-                  }
-
                   .ts-footer__actions {
                     justify-content: flex-start;
+                  }
+
+                  .ts-gallery-rail {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                  }
+
+                  .ts-gallery-item,
+                  .ts-gallery-item:nth-child(1),
+                  .ts-gallery-item:nth-child(6),
+                  .ts-gallery-item:nth-child(11),
+                  .ts-gallery-item:nth-child(16) {
+                    grid-column: span 1;
+                    aspect-ratio: 4 / 5;
                   }
                 }
 
@@ -625,7 +404,6 @@
                   .ts-section__head,
                   .ts-life__intro,
                   .ts-backgrounds,
-                  .ts-role-group,
                   .ts-footer {
                     padding-left: 20px;
                     padding-right: 20px;
@@ -636,19 +414,20 @@
                   }
 
                   .ts-gallery-rail {
-                    grid-auto-columns: minmax(180px, 75vw);
+                    grid-template-columns: 1fr;
                     padding-left: 20px;
                     padding-right: 20px;
                   }
 
-                  .ts-role-head {
-                    flex-direction: column;
-                    align-items: flex-start;
+                  .ts-gallery-item,
+                  .ts-gallery-item:nth-child(1),
+                  .ts-gallery-item:nth-child(6),
+                  .ts-gallery-item:nth-child(11),
+                  .ts-gallery-item:nth-child(16) {
+                    grid-column: span 1;
+                    aspect-ratio: 4 / 5;
                   }
 
-                  .ts-member-top {
-                    align-items: flex-start;
-                  }
                 }
               </style>
 
@@ -663,29 +442,6 @@
                     <p class="ts-lead">
                       The goal is to show visitors, newcomers, and prospective members how COSSEE combines scientific depth with interdisciplinary teamwork: people working across evidence synthesis, ecology, conservation, palaeoecology, computing, machine learning, statistics, and open-science infrastructure in one connected research environment.
                     </p>
-
-                    <div class="ts-stat-grid">
-                      <div class="ts-stat">
-                        <strong>{{ len $members }}</strong>
-                        <span>current researchers, students, assistants, and visiting collaborators represented on the page.</span>
-                      </div>
-                      <div class="ts-stat">
-                        <strong>{{ $groupCountScratch.Get "count" }}</strong>
-                        <span>active role groups contributing to the team, from leads and postdocs to students, assistants, and visitors.</span>
-                      </div>
-                      <div class="ts-stat">
-                        <strong>{{ len $gallery }}</strong>
-                        <span>shared gallery moments showing collaboration, workspace culture, and life around the lab.</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="ts-hero__media">
-                    <img src="{{ $peoplePage.group_photo }}" alt="COSSEE group photo">
-                    <div class="ts-hero__media-caption">
-                      <strong>Group photo</strong>
-                      <span>A snapshot of the team around the time COSSEE began taking shape at the University of Alberta.</span>
-                    </div>
                   </div>
                 </section>
 
@@ -730,13 +486,6 @@
                         {{ end }}
                       </div>
                     </article>
-
-                    <article class="ts-life__card">
-                      <h4>Why this matters for visitors and future members</h4>
-                      <p>
-                        If you are visiting the site because you want to understand the lab, collaborate, or think about joining, this page is meant to make COSSEE feel legible. The photos show how the space feels. The profiles show the expertise people bring. Together they show that COSSEE is both scientifically ambitious and genuinely collaborative.
-                      </p>
-                    </article>
                   </div>
 
                   <div class="ts-gallery-rail" aria-label="Life at COSSEE gallery">
@@ -763,78 +512,6 @@
                       {{ end }}
                     </div>
                   </div>
-                </section>
-
-                <section class="ts-section ts-team">
-                  <div class="ts-section__head">
-                    <h3>Current team by role</h3>
-                    <p>
-                      The profiles below use the current People data from the site. Together they show the mix of scientific backgrounds, methods, and responsibilities that shape COSSEE's collaborative research environment.
-                    </p>
-                  </div>
-
-                  {{ range $roleGroups }}
-                    {{ if gt (len .items) 0 }}
-                      <div class="ts-role-group">
-                        <div class="ts-role-head">
-                          <div>
-                            <h4>{{ .title }}</h4>
-                            <p>{{ .description }}</p>
-                          </div>
-                          <div class="ts-role-count">{{ len .items }} currently listed</div>
-                        </div>
-
-                        <div class="ts-member-grid">
-                          {{ range .items }}
-                            {{ $country := .country }}
-                            {{ if eq $country "USA" }}
-                              {{ $country = "United States" }}
-                            {{ end }}
-                            <article class="ts-member-card">
-                              <div class="ts-member-top">
-                                <img class="ts-member-photo" src="{{ .photo | default $fallbackPhoto }}" alt="{{ .name }}">
-                                <div>
-                                  <h5 class="ts-member-name">{{ .name }}</h5>
-                                  {{ with .pronouns }}
-                                    <div class="ts-member-pronouns">{{ . }}</div>
-                                  {{ end }}
-                                </div>
-                              </div>
-
-                              <div class="ts-member-body">
-                                <div class="ts-member-badges">
-                                  {{ with .role_label }}
-                                    <span class="ts-member-chip">{{ . }}</span>
-                                  {{ end }}
-                                  {{ with .extra_badge }}
-                                    <span class="ts-member-chip">{{ . }}</span>
-                                  {{ end }}
-                                  {{ with $country }}
-                                    <span class="ts-member-chip">{{ . }}</span>
-                                  {{ end }}
-                                </div>
-
-                                {{ with .email }}
-                                  <div class="ts-member-email">{{ . }}</div>
-                                {{ end }}
-
-                                {{ with .bio }}
-                                  <p class="ts-member-bio">{{ . }}</p>
-                                {{ end }}
-
-                                <div class="ts-member-actions">
-                                  {{ with .orcid }}
-                                    <a class="ts-button" href="{{ . }}" target="_blank" rel="noopener">ORCID</a>
-                                  {{ end }}
-                                  <a class="ts-button ts-button--filled" href="/people/">People Page</a>
-                                </div>
-                              </div>
-                            </article>
-                          {{ end }}
-                        </div>
-                      </div>
-                    {{ end }}
-                  {{ end }}
                 </section>
 
                 <section class="ts-footer">
