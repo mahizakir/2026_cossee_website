@@ -1,5 +1,5 @@
 weight: 3
 name: "Open Science Infrastructure"
 icon: "fas fa-diagram-project"
-url: "/research/#open-science-infrastructure"
+url: "/open-science/"
 description: "Build preregistration pathways, protocols, reusable workflows, reporting guidance, and AI-assisted tools that support transparent, reusable, and updatable research."
