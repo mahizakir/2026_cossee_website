@@ -527,7 +527,7 @@ type = "page"
 
     <div class="research-panel" id="research-panel-focus">
       <div class="research-grid">
-        <article class="research-card research-card--span-4">
+        <article class="research-card research-card--span-4" id="evidence-synthesis">
           <h4>Research Synthesis Hub</h4>
           <p>
             This hub aggregates and synthesizes global evidence to map knowledge, identify gaps, and build stronger comparative understanding across ecology and evolution.
@@ -539,7 +539,7 @@ type = "page"
           </ul>
         </article>
 
-        <article class="research-card research-card--span-4">
+        <article class="research-card research-card--span-4" id="meta-research">
           <h4>Meta-Research Hub</h4>
           <p>
             This hub studies research quality itself, including rigor, bias, replicability, and how scientific systems can become more reliable and more equitable.
@@ -551,7 +551,7 @@ type = "page"
           </ul>
         </article>
 
-        <article class="research-card research-card--span-4">
+        <article class="research-card research-card--span-4" id="open-science-infrastructure">
           <h4>Open Science Infrastructure</h4>
           <p>
             This hub builds the workflows, tools, and community systems that make transparency and reproducibility easier to practice at scale.
@@ -574,7 +574,7 @@ type = "page"
 
     <div class="research-panel" id="research-panel-methods">
       <div class="research-grid">
-        <article class="research-card research-card--span-6">
+        <article class="research-card research-card--span-6" id="statistical-methods">
           <h4>Core expertise</h4>
           <div class="research-chip-list">
             <span class="research-chip">Meta-analysis</span>
@@ -682,6 +682,7 @@ type = "page"
   (function () {
     var switches = Array.prototype.slice.call(document.querySelectorAll('.research-switch'));
     var panels = Array.prototype.slice.call(document.querySelectorAll('.research-panel'));
+    var researchRoot = document.querySelector('.research-page');
 
     function showPanel(panelName) {
       switches.forEach(function (button) {
@@ -696,10 +697,36 @@ type = "page"
       });
     }
 
+    function syncToHash() {
+      if (!researchRoot || !window.location.hash) {
+        return;
+      }
+
+      var targetId = window.location.hash.slice(1);
+      var target = document.getElementById(targetId);
+
+      if (!target) {
+        return;
+      }
+
+      var panel = target.classList.contains('research-panel') ? target : target.closest('.research-panel');
+
+      if (panel) {
+        showPanel(panel.id.replace('research-panel-', ''));
+
+        window.requestAnimationFrame(function () {
+          target.scrollIntoView({ block: 'start', behavior: 'auto' });
+        });
+      }
+    }
+
     switches.forEach(function (button) {
       button.addEventListener('click', function () {
         showPanel(button.getAttribute('data-panel'));
       });
     });
+
+    syncToHash();
+    window.addEventListener('hashchange', syncToHash);
   }());
 </script>

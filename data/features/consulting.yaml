@@ -1,5 +1,5 @@
 weight: 4
-name: "Statistical Innovation"
+name: "Statistical Methods"
 icon: "fas fa-chart-line"
-url: "/research/"
-description: "Develop new quantitative methods for meta-analysis, variance-aware inference, and evidence synthesis."
+url: "/research/#statistical-methods"
+description: "Develop quantitative methods for multilevel and variance-aware meta-analysis, location-scale modelling, and other synthesis challenges in complex biological data."
