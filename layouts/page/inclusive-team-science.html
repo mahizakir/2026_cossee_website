@@ -49,6 +49,8 @@
       "Statistical methods"
       "Collaborative infrastructure"
     }}
+    {{ $leftBackgrounds := first 9 $backgrounds }}
+    {{ $rightBackgrounds := after 9 $backgrounds }}
 
     <div id="all">
       {{ partial "top.html" . }}
@@ -93,6 +95,17 @@
                   padding: 34px 34px 28px;
                 }
 
+                .ts-hero__grid {
+                  display: grid;
+                  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+                  gap: 28px;
+                  align-items: center;
+                }
+
+                .ts-hero__text {
+                  min-width: 0;
+                }
+
                 .ts-eyebrow {
                   display: inline-flex;
                   align-items: center;
@@ -125,6 +138,105 @@
                   line-height: 1.72;
                   color: rgba(244, 250, 246, 0.92);
                   max-width: 64ch;
+                }
+
+                .ts-network {
+                  min-width: 0;
+                }
+
+                .ts-network__panel {
+                  position: relative;
+                  display: grid;
+                  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+                  gap: 16px;
+                  align-items: center;
+                  min-height: 540px;
+                  padding: 22px 18px;
+                  border: 1px solid rgba(255, 255, 255, 0.18);
+                  border-radius: 24px;
+                  background:
+                    radial-gradient(circle at center, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.08) 34%, rgba(255, 255, 255, 0.03) 72%, rgba(255, 255, 255, 0) 100%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+                  overflow: hidden;
+                  isolation: isolate;
+                }
+
+                .ts-network__panel::before {
+                  content: "";
+                  position: absolute;
+                  inset: 0;
+                  background-image:
+                    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+                  background-size: 28px 28px;
+                  opacity: 0.22;
+                  pointer-events: none;
+                }
+
+                .ts-network__lines {
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  z-index: 0;
+                  pointer-events: none;
+                }
+
+                .ts-network__lines line {
+                  stroke: rgba(255, 255, 255, 0.28);
+                  stroke-width: 0.34;
+                }
+
+                .ts-network__stack {
+                  position: relative;
+                  z-index: 1;
+                  display: grid;
+                  gap: 10px;
+                }
+
+                .ts-network__chip,
+                .ts-network__center {
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-align: center;
+                }
+
+                .ts-network__chip {
+                  min-height: 42px;
+                  width: 100%;
+                  border: 1px solid rgba(255, 255, 255, 0.22);
+                  border-radius: 18px;
+                  padding: 8px 12px;
+                  background: rgba(255, 255, 255, 0.12);
+                  backdrop-filter: blur(8px);
+                  color: #ffffff;
+                  font-size: 12px;
+                  font-weight: 700;
+                  line-height: 1.25;
+                  box-shadow: 0 10px 22px rgba(9, 28, 19, 0.1);
+                }
+
+                .ts-network__center-wrap {
+                  position: relative;
+                  z-index: 1;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+
+                .ts-network__center {
+                  min-width: 168px;
+                  min-height: 168px;
+                  border-radius: 999px;
+                  padding: 18px;
+                  background: #ffffff;
+                  border: 1px solid rgba(255, 255, 255, 0.4);
+                  color: var(--ualberta-green);
+                  font-size: 31px;
+                  font-weight: 800;
+                  letter-spacing: -0.03em;
+                  box-shadow: 0 20px 40px rgba(8, 24, 17, 0.2);
                 }
 
                 .ts-principles {
@@ -190,6 +302,11 @@
                 .ts-life__intro {
                   display: block;
                   padding: 24px 28px 0;
+                }
+
+                .ts-life__stack {
+                  display: grid;
+                  gap: 16px;
                 }
 
                 .ts-life__card {
@@ -263,9 +380,10 @@
 
                 .ts-gallery-item {
                   scroll-snap-align: start;
+                  border: 1px solid #e2ebe6;
                   border-radius: 22px;
                   overflow: hidden;
-                  background: #edf5f0;
+                  background: #ffffff;
                   aspect-ratio: 4 / 5;
                   box-shadow: 0 10px 28px rgba(18, 35, 27, 0.07);
                   transition: transform 0.22s ease, box-shadow 0.22s ease;
@@ -387,9 +505,14 @@
                 }
 
                 @media (max-width: 991px) {
+                  .ts-hero__grid,
                   .ts-principles,
                   .ts-footer {
                     grid-template-columns: 1fr;
+                  }
+
+                  .ts-network__panel {
+                    min-height: 500px;
                   }
 
                   .ts-footer__actions {
@@ -411,8 +534,30 @@
                     padding-right: 20px;
                   }
 
+                  .ts-hero__copy {
+                    padding-top: 24px;
+                  }
+
                   .ts-title {
                     font-size: 34px;
+                  }
+
+                  .ts-network__panel {
+                    min-height: 470px;
+                    padding: 16px 12px;
+                    gap: 10px;
+                  }
+
+                  .ts-network__chip {
+                    min-height: 38px;
+                    padding: 7px 10px;
+                    font-size: 11px;
+                  }
+
+                  .ts-network__center {
+                    min-width: 124px;
+                    min-height: 124px;
+                    font-size: 24px;
                   }
 
                   .ts-gallery-rail {
@@ -430,13 +575,54 @@
               <div class="team-science-page">
                 <section class="ts-hero">
                   <div class="ts-hero__copy">
-                    <h2 class="ts-title">The people, perspectives, and day-to-day collaboration behind COSSEE.</h2>
-                    <p class="ts-lead">
-                      COSSEE is not just a collection of projects. It is a working research community built around evidence synthesis, open science, ecology, evolution, statistics, and collaborative tool-building. This page brings together the people who make that work possible, the different backgrounds they bring, and a glimpse of what shared research life actually looks like.
-                    </p>
-                    <p class="ts-lead">
-                      The goal is to show visitors, newcomers, and prospective members how COSSEE combines scientific depth with interdisciplinary teamwork: people working across evidence synthesis, ecology, conservation, palaeoecology, computing, machine learning, statistics, and open-science infrastructure in one connected research environment.
-                    </p>
+                    <div class="ts-hero__grid">
+                      <div class="ts-hero__text">
+                        <h2 class="ts-title">The people, perspectives, and day-to-day collaboration behind COSSEE.</h2>
+                        <p class="ts-lead">
+                          COSSEE is not just a collection of projects. It is a working research community built around evidence synthesis, open science, ecology, evolution, statistics, and collaborative tool-building. This page brings together the people who make that work possible, the different backgrounds they bring, and a glimpse of what shared research life actually looks like.
+                        </p>
+                        <p class="ts-lead">
+                          The goal is to show visitors, newcomers, and prospective members how COSSEE combines scientific depth with interdisciplinary teamwork: people working across evidence synthesis, ecology, conservation, palaeoecology, computing, machine learning, statistics, and open-science infrastructure in one connected research environment.
+                        </p>
+                      </div>
+                      <div class="ts-network" aria-label="COSSEE interdisciplinary network">
+                        <div class="ts-network__panel">
+                          <svg class="ts-network__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                            <line x1="50" y1="50" x2="24" y2="12" />
+                            <line x1="50" y1="50" x2="24" y2="21" />
+                            <line x1="50" y1="50" x2="24" y2="30" />
+                            <line x1="50" y1="50" x2="24" y2="39" />
+                            <line x1="50" y1="50" x2="24" y2="48" />
+                            <line x1="50" y1="50" x2="24" y2="57" />
+                            <line x1="50" y1="50" x2="24" y2="66" />
+                            <line x1="50" y1="50" x2="24" y2="75" />
+                            <line x1="50" y1="50" x2="24" y2="84" />
+                            <line x1="50" y1="50" x2="76" y2="12" />
+                            <line x1="50" y1="50" x2="76" y2="21" />
+                            <line x1="50" y1="50" x2="76" y2="30" />
+                            <line x1="50" y1="50" x2="76" y2="39" />
+                            <line x1="50" y1="50" x2="76" y2="48" />
+                            <line x1="50" y1="50" x2="76" y2="57" />
+                            <line x1="50" y1="50" x2="76" y2="66" />
+                            <line x1="50" y1="50" x2="76" y2="75" />
+                            <line x1="50" y1="50" x2="76" y2="84" />
+                          </svg>
+                          <div class="ts-network__stack ts-network__stack--left">
+                            {{ range $leftBackgrounds }}
+                              <div class="ts-network__chip">{{ . }}</div>
+                            {{ end }}
+                          </div>
+                          <div class="ts-network__center-wrap">
+                            <div class="ts-network__center">COSSEE</div>
+                          </div>
+                          <div class="ts-network__stack ts-network__stack--right">
+                            {{ range $rightBackgrounds }}
+                              <div class="ts-network__chip">{{ . }}</div>
+                            {{ end }}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </section>
 
@@ -470,17 +656,28 @@
                   </div>
 
                   <div class="ts-life__intro">
-                    <article class="ts-life__card">
-                      <h4>A team built across places and perspectives</h4>
-                      <p>
-                        COSSEE brings together people trained in different systems, methods, and countries. That diversity is visible in the scientific questions the lab can tackle, but it is also visible in the ways people learn from one another across roles and projects.
-                      </p>
-                      <div class="ts-country-cloud">
-                        {{ range $countries }}
-                          <span class="ts-country-chip">{{ . }}</span>
-                        {{ end }}
-                      </div>
-                    </article>
+                    <div class="ts-life__stack">
+                      <article class="ts-life__card">
+                        <h4>Backgrounds represented across the team</h4>
+                        <div class="ts-background-grid">
+                          {{ range $backgrounds }}
+                            <span class="ts-background-chip">{{ . }}</span>
+                          {{ end }}
+                        </div>
+                      </article>
+
+                      <article class="ts-life__card">
+                        <h4>A team built across places and perspectives</h4>
+                        <p>
+                          COSSEE brings together people trained in different systems, methods, and countries. That diversity is visible in the scientific questions the lab can tackle, but it is also visible in the ways people learn from one another across roles and projects.
+                        </p>
+                        <div class="ts-country-cloud">
+                          {{ range $countries }}
+                            <span class="ts-country-chip">{{ . }}</span>
+                          {{ end }}
+                        </div>
+                      </article>
+                    </div>
                   </div>
 
                   <div class="ts-gallery-rail" aria-label="Life at COSSEE gallery">
@@ -489,20 +686,6 @@
                         <img src="{{ .image }}" alt="{{ .alt }}">
                       </figure>
                     {{ end }}
-                  </div>
-                </section>
-
-                <section class="ts-section">
-                  <div class="ts-section__head">
-                    <h3>Backgrounds represented across the team</h3>
-                  </div>
-
-                  <div class="ts-backgrounds">
-                    <div class="ts-background-grid">
-                      {{ range $backgrounds }}
-                        <span class="ts-background-chip">{{ . }}</span>
-                      {{ end }}
-                    </div>
                   </div>
                 </section>
 
