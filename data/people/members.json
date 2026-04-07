@@ -11,7 +11,8 @@
     "bio": "Professor of Evolutionary Biology & Synthesis at the University of Alberta, where he leads COSSEE's Canada Excellence Research Chair program in Open Science and Synthesis in Ecology and Evolution.",
     "photo": "/web_files/shinichi.jpeg",
     "detail_id": "shinichi",
-    "detail_group": "current"
+    "detail_group": "current",
+    "orcid": "https://orcid.org/0000-0002-7765-5182"
   },
   {
     "name": "Eduardo Santos",
@@ -56,11 +57,12 @@
     "status_label": "Current",
     "role": "postdocs",
     "role_label": "Postdoc",
-    "email": "ayumi(-dot-)mizuno5(-at-)gmail(-dot-)com",
+    "email": "amizuno(-at-)ualberta(-dot-)ca",
     "bio": "Postdoc focused on bird morphology and diet evolution using behavioral experiments and phylogenetic comparative approaches.",
     "photo": "/web_files/headshot-ayumi-circle-shadow.png",
     "detail_id": "ayumi",
-    "detail_group": "current"
+    "detail_group": "current",
+    "orcid": "https://orcid.org/0000-0003-0822-5637"
   },
   {
     "name": "Marija Purgar Filjak",
@@ -69,7 +71,7 @@
     "status_label": "Current",
     "role": "postdocs",
     "role_label": "Postdoc",
-    "email": "marija.purgar4(-at-)gmail(-dot-)com",
+    "email": "purgarfi(-at-)ualberta(-dot-)ca",
     "bio": "I joined I-DEEL in February 2026 as a Postdoctoral Scholar after finishing my PhD in marine science in my home country, Croatia.",
     "photo": "/web_files/marija.webp",
     "detail_id": "marija-purgar-filjak",
@@ -87,7 +89,7 @@
     "status_label": "Current",
     "role": "postdocs",
     "role_label": "Postdoc",
-    "email": "erick.lundgren(-at-)gmail(-dot-)com",
+    "email": "ejlundgr(-at-)ualberta(-dot-)ca",
     "bio": "I am an field ecologist and conservation biologist interested in how to understand novel ecosystems.",
     "photo": "/web_files/ErickLundgren.jpg",
     "detail_id": "erick",
@@ -106,11 +108,12 @@
     "status_label": "Current",
     "role": "postdocs",
     "role_label": "Postdoc",
-    "email": "santiago(-dot-)ortega(-at-)ualberta(-dot-)ca",
+    "email": "ortegara(-at-)ualberta(-dot-)ca",
     "bio": "Works on life-history plasticity and comparative pace-of-life questions using Bayesian and meta-analytic methods across taxa.",
     "photo": "/web_files/santiago-circle-shadow.png",
     "detail_id": "santi",
-    "detail_group": "current"
+    "detail_group": "current",
+    "orcid": "https://orcid.org/0000-0002-3518-276X"
   },
   {
     "name": "Sergio Poo Hernandez",
@@ -123,7 +126,8 @@
     "bio": "Computing scientist developing tools for biological research and explainable AI, with prior work in neural network methods for bird data.",
     "photo": "/web_files/2025-poo-sergio-shadow.png",
     "detail_id": "sergio",
-    "detail_group": "current"
+    "detail_group": "current",
+    "orcid": "https://orcid.org/0000-0003-0155-645X"
   },
   {
     "name": "Christine Sosiak",
@@ -158,7 +162,7 @@
     "country": "United States",
     "form_role": "PostDoc",
     "google_scholar": "https://scholar.google.com/citations?hl=en&user=70pFu7QAAAAJ&view_op=list_works&gmla=APjjwuYMKSMiIAvzj5sJPIbaBMHaH5ieRMcv8g1vv4T1bber-R_QLdbUaXHli-3PRFOECxMi3nnM-jhzYXoKk2gtTBJq59FrnpTrqlZp-xRqtsG80HjaYTDE83Cu",
-    "orcid": "https://orcid.org/my-orcid?orcid=0000-0001-6573-832X",
+    "orcid": "https://orcid.org/0000-0001-6573-832X",
     "profile_picture_source": "https://drive.google.com/thumbnail?id=1ejUxTzyAIi6FIGF-MxFiSyRcdJ5Y-hGx&sz=w1000"
   },
   {
@@ -194,11 +198,12 @@
     "status_label": "Current",
     "role": "phd",
     "role_label": "PhD Student",
-    "email": "Email available on request",
+    "email": "lenzrive(-at-)ualberta(-dot-)ca",
     "bio": "PhD student studying anthropogenic noise pollution and its effects on animal health and ecosystems through evidence synthesis and meta-analysis.",
     "photo": "/web_files/annal-circle-shadow-01.png",
     "detail_id": "anna",
-    "detail_group": "current"
+    "detail_group": "current",
+    "orcid": "https://orcid.org/0009-0002-5706-7815"
   },
   {
     "name": "Jess Tam",
@@ -246,7 +251,7 @@
     "status_label": "Current",
     "role": "phd",
     "role_label": "PhD Student",
-    "email": "khtmorrison12(-at-)gmail(-dot-)com",
+    "email": "khmorri1(-at-)ualberta(-dot-)ca",
     "bio": "Kyle's research focus has largely been on evidence syntheses methodologies in environmental sciences including tool/guideline development, methodological, and reporting practices, and elevating the utility of evidence syntheses to inform environmental policy-decisions.",
     "photo": "/web_files/kyleMorrison.jpg",
     "detail_id": "Kyle",
@@ -265,7 +270,7 @@
     "role": "phd",
     "role_label": "PhD Student",
     "email": "milenovi(-at-)ualberta(-dot-)ca",
-    "bio": "Aleksandra Milenovi\u0107 is a first year PhD student of Biological Sciences, and is working as a Teaching Assistant for Introduction to Biological Diversity (BIOL108).",
+    "bio": "Aleksandra Milenović is a first year PhD student of Biological Sciences, and is working as a Teaching Assistant for Introduction to Biological Diversity (BIOL108).",
     "photo": "/web_files/aleksandraMilenovic.jpeg",
     "detail_id": "aleksandraM",
     "detail_group": "current",
@@ -288,7 +293,22 @@
     "detail_group": "current",
     "country": "China",
     "form_role": "Master student",
-    "profile_picture_source": "https://drive.google.com/thumbnail?id=13oMELYrFscD5F8RN1IccT3_WUfnx-bwT&sz=w1000"
+    "profile_picture_source": "https://drive.google.com/thumbnail?id=13oMELYrFscD5F8RN1IccT3_WUfnx-bwT&sz=w1000",
+    "orcid": "https://orcid.org/0009-0000-8261-6148"
+  },
+  {
+    "name": "Cassidy Schneider",
+    "pronouns": "",
+    "status": "current",
+    "status_label": "Current",
+    "role": "msc",
+    "role_label": "MSc Student",
+    "email": "cnschnei(-at-)ualberta(-dot-)ca",
+    "bio": "Current MSc student at COSSEE.",
+    "photo": "/web_files/photo-1627704671340-0969d7dba-h_ma49xzt0.jpg",
+    "detail_id": "cassidy-schneider",
+    "detail_group": "current",
+    "orcid": "https://orcid.org/0009-0007-3917-0380"
   },
   {
     "name": "Joseph Cincotta",
@@ -420,7 +440,8 @@
     "bio": "Evolutionary and behavioural ecologist focusing on adaptation to environmental change and global meta-analyses of reproductive strategies in birds.",
     "photo": "/web_files/AnetaProfilePicture.jpeg",
     "detail_id": "aneta",
-    "detail_group": "current"
+    "detail_group": "current",
+    "orcid": "https://orcid.org/0000-0001-6324-6938"
   },
   {
     "name": "Pietro Pollo",
@@ -436,14 +457,14 @@
     "detail_group": "past"
   },
   {
-    "name": "\u200b \u200b April Martinig",
+    "name": "​ ​ April Martinig",
     "pronouns": "Past member",
     "status": "past",
     "status_label": "Past",
     "role": "others",
     "role_label": "Archive",
     "email": "",
-    "bio": "Email: aprilmartinig(-at-)hotmail(-dot-)com I work at the intersection of animal behavioural ecology and applied ecology. More specifically, I\u2019m interested in understa...",
+    "bio": "Email: aprilmartinig(-at-)hotmail(-dot-)com I work at the intersection of animal behavioural ecology and applied ecology. More specifically, I’m interested in understa...",
     "photo": "/web_files/april-circle-shadow2.png",
     "detail_id": "april-martinig",
     "detail_group": "past"
@@ -456,7 +477,7 @@
     "role": "others",
     "role_label": "Archive",
     "email": "",
-    "bio": "Email: szymek(-dot-)drobniak(-at-)gmail(-dot-)com \u200b Polish by birth, world wanderer by occupation, artist deep inside. In my science I focus mostly on phenotypic plast...",
+    "bio": "Email: szymek(-dot-)drobniak(-at-)gmail(-dot-)com ​ Polish by birth, world wanderer by occupation, artist deep inside. In my science I focus mostly on phenotypic plast...",
     "photo": "/web_files/szymek-circle-shadow.png",
     "detail_id": "szymek-drobniak",
     "detail_group": "past"
@@ -469,7 +490,7 @@
     "role": "others",
     "role_label": "Archive",
     "email": "",
-    "bio": "Email: philip (-dot-) downing (-at-) oulu (-dot-) fi Instagram: @pip.squiggles (www.instagram.com/pip.squiggles/) \u200bI am a visiting research fellow in the I-DEEL lab. I...",
+    "bio": "Email: philip (-dot-) downing (-at-) oulu (-dot-) fi Instagram: @pip.squiggles (www.instagram.com/pip.squiggles/) ​I am a visiting research fellow in the I-DEEL lab. I...",
     "photo": "/web_files/philip-circle-shadow.png",
     "detail_id": "philip-downing",
     "detail_group": "past"
@@ -534,7 +555,7 @@
     "role": "others",
     "role_label": "Archive",
     "email": "",
-    "bio": "\ufeff Email: fonti (-dot-)kar (-at-)mq (-dot-)edu (-dot-)au Fonti's PhD focused on the importance of inter-individual variation for the evolution of phenotypic plasticity....",
+    "bio": "﻿ Email: fonti (-dot-)kar (-at-)mq (-dot-)edu (-dot-)au Fonti's PhD focused on the importance of inter-individual variation for the evolution of phenotypic plasticity....",
     "photo": "/web_files/fonti-circle-shadow.png",
     "detail_id": "fonti-kar",
     "detail_group": "past"
@@ -722,7 +743,7 @@
     "role": "others",
     "role_label": "Archive",
     "email": "",
-    "bio": "Email: joshua(-dot-)markovski(-at-)gmail(-dot-)com Josh joined Shinichi\u2019s lab early 2020 as an undergraduate student in an Advanced Science degree at UNSW. He worked o...",
+    "bio": "Email: joshua(-dot-)markovski(-at-)gmail(-dot-)com Josh joined Shinichi’s lab early 2020 as an undergraduate student in an Advanced Science degree at UNSW. He worked o...",
     "photo": "/web_files/joshua-markovski-circle-shadow.png",
     "detail_id": "joshua-markovski",
     "detail_group": "past"
@@ -735,7 +756,7 @@
     "role": "others",
     "role_label": "Archive",
     "email": "",
-    "bio": "Email: dax(-dot-)kellie (-at-) gmail (-dot-) com \u200b Dax completed his PhD in the E&ERC at UNSW, which aimed to understand how cultural and evolutionary factors influenc...",
+    "bio": "Email: dax(-dot-)kellie (-at-) gmail (-dot-) com ​ Dax completed his PhD in the E&ERC at UNSW, which aimed to understand how cultural and evolutionary factors influenc...",
     "photo": "/web_files/dax-circle-shadow.png",
     "detail_id": "dax-kellie",
     "detail_group": "past"
@@ -780,7 +801,7 @@
     "detail_group": "past"
   },
   {
-    "name": "\ufeff Daniel Noble \ufeff",
+    "name": "﻿ Daniel Noble ﻿",
     "pronouns": "Past member",
     "status": "past",
     "status_label": "Past",
@@ -800,7 +821,7 @@
     "role": "others",
     "role_label": "Archive",
     "email": "",
-    "bio": "Email: a (-dot-)aloy (-at-)unsw(-dot-)edu(-dot-)au \u200bAfter years doing field ecology, I will be shifting towards laboratory work on environmental epigenetics using the...",
+    "bio": "Email: a (-dot-)aloy (-at-)unsw(-dot-)edu(-dot-)au ​After years doing field ecology, I will be shifting towards laboratory work on environmental epigenetics using the...",
     "photo": "/web_files/alexa-circle-shadow_1.png",
     "detail_id": "alex-b-aloy",
     "detail_group": "past"
@@ -813,7 +834,7 @@
     "role": "others",
     "role_label": "Archive",
     "email": "",
-    "bio": "Email: gihan(-dot-)samarasinghe(-at-)unsw(-dot-)edu(-dot-)au I joined Shinichi Nakagawa\u2019s group in October 2017 as a Research Associate, for one year. I was working wi...",
+    "bio": "Email: gihan(-dot-)samarasinghe(-at-)unsw(-dot-)edu(-dot-)au I joined Shinichi Nakagawa’s group in October 2017 as a Research Associate, for one year. I was working wi...",
     "photo": "/web_files/gihan-circle-shadow_2.png",
     "detail_id": "gihan-samarasinghe",
     "detail_group": "past"
