@@ -369,13 +369,22 @@
                 .ts-gallery-rail {
                   display: grid;
                   grid-auto-flow: column;
-                  grid-auto-columns: minmax(260px, 26vw);
+                  grid-auto-columns: minmax(220px, 22vw);
                   gap: 16px;
                   overflow-x: auto;
-                  padding: 18px 28px 24px;
+                  padding: 18px;
                   scroll-snap-type: x mandatory;
                   scrollbar-width: thin;
                   scrollbar-color: #aec4b5 transparent;
+                }
+
+                .ts-gallery-shell {
+                  margin: 18px 28px 0;
+                  border: 1px solid #e2ebe6;
+                  border-radius: 22px;
+                  background: #ffffff;
+                  overflow: hidden;
+                  box-shadow: 0 12px 30px rgba(18, 35, 27, 0.04);
                 }
 
                 .ts-gallery-item {
@@ -520,7 +529,7 @@
                   }
 
                   .ts-gallery-rail {
-                    grid-auto-columns: minmax(240px, 54vw);
+                    grid-auto-columns: minmax(220px, 48vw);
                   }
                 }
 
@@ -561,9 +570,12 @@
                   }
 
                   .ts-gallery-rail {
-                    grid-auto-columns: minmax(220px, 78vw);
-                    padding-left: 20px;
-                    padding-right: 20px;
+                    grid-auto-columns: minmax(210px, 72vw);
+                  }
+
+                  .ts-gallery-shell {
+                    margin-left: 20px;
+                    margin-right: 20px;
                   }
 
                   .ts-gallery-item:nth-child(3n + 1) {
@@ -680,12 +692,14 @@
                     </div>
                   </div>
 
-                  <div class="ts-gallery-rail" aria-label="Life at COSSEE gallery">
-                    {{ range $gallery }}
-                      <figure class="ts-gallery-item">
-                        <img src="{{ .image }}" alt="{{ .alt }}">
-                      </figure>
-                    {{ end }}
+                  <div class="ts-gallery-shell">
+                    <div class="ts-gallery-rail" aria-label="Life at COSSEE gallery">
+                      {{ range $gallery }}
+                        <figure class="ts-gallery-item">
+                          <img src="{{ .image }}" alt="{{ .alt }}">
+                        </figure>
+                      {{ end }}
+                    </div>
                   </div>
                 </section>
 
