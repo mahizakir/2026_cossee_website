@@ -1,5 +1,5 @@
 weight: 2
-name: "Meta-Research"
+name: "Research Overview"
 icon: "fas fa-magnifying-glass-chart"
-url: "/research/#meta-research"
-description: "Study bias, reporting quality, reproducibility, and evaluation systems to understand how scientific practice shapes the reliability of published evidence."
+url: "/research/"
+description: "See how COSSEE combines evidence synthesis, meta-research, open science, and methodological development across diverse basic and applied research questions."

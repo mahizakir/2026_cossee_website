@@ -1,5 +1,5 @@
 weight: 1
-name: "Evidence Synthesis"
+name: "Protocols"
 icon: "fas fa-layer-group"
 url: "/protocols/"
-description: "Use systematic reviews, meta-analysis, evidence maps, and research weaving to integrate findings, identify knowledge gaps, and answer broad questions across ecology and evolution."
+description: "Browse registered reports, published protocols, and structured project plans that support transparent, reproducible, and well-documented research."
