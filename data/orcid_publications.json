@@ -2,10 +2,37 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-04-09T10:37:49Z",
-  "generated_at_display": "April 09, 2026 at 10:37 UTC",
-  "works_count": 433,
+  "generated_at": "2026-04-10T10:32:06Z",
+  "generated_at_display": "April 10, 2026 at 10:32 UTC",
+  "works_count": 434,
   "latest": [
+    {
+      "put_code": 211212258,
+      "title": "The impacts of organochlorine pesticides on adverse human health outcomes: A second-order synthesis of mean effects and heterogeneity",
+      "authors": [
+        "Kyle Morrison",
+        "Lorenzo Ricolfi",
+        "Yefeng Yang",
+        "Ayumi Mizuno",
+        "Pietro Pollo",
+        "Malgorzata Lagisz",
+        "Shinichi Nakagawa"
+      ],
+      "authors_display": "Kyle Morrison, Lorenzo Ricolfi, Yefeng Yang, Ayumi Mizuno, Pietro Pollo, Malgorzata Lagisz, Shinichi Nakagawa",
+      "journal_title": "Journal of Hazardous Materials",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "05",
+      "publication_day": "00",
+      "publication_date_display": "May 2026",
+      "publication_date_iso": "2026-05-00",
+      "doi": "10.1016/j.jhazmat.2026.141794",
+      "doi_url": "https://doi.org/10.1016/j.jhazmat.2026.141794",
+      "best_url": "https://doi.org/10.1016/j.jhazmat.2026.141794",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/211212258"
+    },
     {
       "put_code": 207760239,
       "title": "Avoiding misleading estimates of among‐individual variance caused by non‐random sampling of individuals in a changeable environment",
@@ -143,42 +170,40 @@
       "best_url": "https://doi.org/10.64898/2026.02.27.708573",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/207201659"
-    },
-    {
-      "put_code": 206522410,
-      "title": "A new effect size for meta-analysis of magnitude: lnM",
-      "authors": [
-        "Shinichi Nakagawa",
-        "Ayumi Mizuno",
-        "Coralie Williams",
-        "Malgorzata Lagisz",
-        "Rose O'Dea",
-        "Daniel Noble",
-        "Alistair Senior",
-        "Erick Lundgren",
-        "Santiago Ortega"
-      ],
-      "authors_display": "Shinichi Nakagawa, Ayumi Mizuno, Coralie Williams, Malgorzata Lagisz, Rose O'Dea, Daniel Noble, Alistair Senior, Erick Lundgren, Santiago Ortega",
-      "journal_title": null,
-      "type": "preprint",
-      "type_display": "Preprint",
-      "publication_year": "2026",
-      "publication_month": "02",
-      "publication_day": "23",
-      "publication_date_display": "February 23, 2026",
-      "publication_date_iso": "2026-02-23",
-      "doi": "10.32942/x24666",
-      "doi_url": "https://doi.org/10.32942/x24666",
-      "best_url": "https://doi.org/10.32942/X24666",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/206522410"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 12,
+      "count": 13,
       "items": [
+        {
+          "put_code": 211212258,
+          "title": "The impacts of organochlorine pesticides on adverse human health outcomes: A second-order synthesis of mean effects and heterogeneity",
+          "authors": [
+            "Kyle Morrison",
+            "Lorenzo Ricolfi",
+            "Yefeng Yang",
+            "Ayumi Mizuno",
+            "Pietro Pollo",
+            "Malgorzata Lagisz",
+            "Shinichi Nakagawa"
+          ],
+          "authors_display": "Kyle Morrison, Lorenzo Ricolfi, Yefeng Yang, Ayumi Mizuno, Pietro Pollo, Malgorzata Lagisz, Shinichi Nakagawa",
+          "journal_title": "Journal of Hazardous Materials",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "05",
+          "publication_day": "00",
+          "publication_date_display": "May 2026",
+          "publication_date_iso": "2026-05-00",
+          "doi": "10.1016/j.jhazmat.2026.141794",
+          "doi_url": "https://doi.org/10.1016/j.jhazmat.2026.141794",
+          "best_url": "https://doi.org/10.1016/j.jhazmat.2026.141794",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/211212258"
+        },
         {
           "put_code": 207760239,
           "title": "Avoiding misleading estimates of among‐individual variance caused by non‐random sampling of individuals in a changeable environment",
@@ -12072,7 +12097,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 362,
+    "journal-article": 363,
     "other": 6,
     "preprint": 63
   }
