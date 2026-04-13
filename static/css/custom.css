@@ -268,41 +268,53 @@ a:focus {
     color: var(--ualberta-green-deep);
 }
 
+.home-carousel .item .row {
+    align-items: stretch;
+    display: flex;
+}
+
+.home-carousel .item .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .home-carousel .carousel-visual {
     align-items: center;
     display: flex;
+    height: 100%;
     justify-content: center;
-    min-height: 250px;
+    min-height: 0;
+    padding: 8px 0;
 }
 
 .home-carousel .carousel-visual img {
+    display: block;
+    height: auto;
     margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    width: auto;
 }
 
 .home-carousel .item-featured-logo .carousel-visual--featured {
     align-items: center;
     justify-content: center;
-    min-height: 320px;
+    min-height: 0;
     padding-left: 18px;
     text-align: center;
 }
 
 .home-carousel .item-featured-logo .right {
     align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 320px;
+    min-height: 0;
     text-align: left;
 }
 
 .home-carousel .item-featured-logo .carousel-visual--featured img {
     background: transparent;
-    display: block;
-    max-height: 320px;
-    max-width: 92%;
-    object-fit: contain;
-    width: auto;
+    max-width: 88%;
 }
 
 .icon {
@@ -924,23 +936,39 @@ a:focus {
         font-size: 15px;
     }
 
+    .home-carousel .item .row {
+        align-items: center;
+    }
+
     .home-carousel .item-featured-logo .right,
     .home-carousel .item-featured-logo .carousel-visual--featured {
-        min-height: 280px;
+        min-height: 0;
     }
 
     .home-carousel .item-featured-logo .carousel-visual--featured img {
-        max-height: 260px;
-        max-width: 90%;
-        width: auto;
+        max-width: 84%;
     }
 
 }
 
 @media (max-width: 767px) {
+    .home-carousel .item .row {
+        display: block;
+    }
+
+    .home-carousel .carousel-visual,
     .home-carousel .item-featured-logo .right,
     .home-carousel .item-featured-logo .carousel-visual--featured {
         min-height: auto;
+    }
+
+    .home-carousel .carousel-visual,
+    .home-carousel .item-featured-logo .carousel-visual--featured {
+        padding: 18px 0 6px;
+    }
+
+    .home-carousel .item-featured-logo .carousel-visual--featured {
+        padding-left: 0;
     }
 
     .home-carousel h1 {
@@ -951,6 +979,11 @@ a:focus {
     .home-carousel .item li {
         font-size: 14px;
         line-height: 1.55;
+    }
+
+    .home-carousel .carousel-visual img,
+    .home-carousel .item-featured-logo .carousel-visual--featured img {
+        max-width: 82%;
     }
 
     .blog-hero {
