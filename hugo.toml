@@ -140,10 +140,10 @@ pluralizelisttitles = false
   dropdown_mouse_over = false
   disabled_logo = false
   logo_text = "COSSEE"
-  logo = "img/cossee-mahi1.svg"
-  logo_small = "img/cossee-mahi1.svg"
-  favicon = "img/cossee-mahi1.svg"
-  apple_touch_icon = "img/cossee-mahi1.svg"
+  logo = "img/cossee_logo_AM.svg"
+  logo_small = "img/cossee_logo_AM.svg"
+  favicon = "img/cossee_logo_AM.svg"
+  apple_touch_icon = "img/cossee_logo_AM.svg"
   contact_url = "/contact/"
   address = """<p class="text-uppercase"><strong>COSSEE Lab</strong>
       <br>Department of Biological Sciences
