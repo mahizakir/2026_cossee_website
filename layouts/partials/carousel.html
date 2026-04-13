@@ -10,26 +10,19 @@
                 data-slide-speed="{{ default 2000 .Site.Params.CarouselHomepage.slide_speed }}"
                 data-pagination-speed="{{ default 1000 .Site.Params.CarouselHomepage.pagination_speed }}">
                 {{ range $index, $item := sort .Site.Data.carousel "weight" }}
-                {{ $plainTitle := $item.title | plainify | replaceRE "\\s+" " " }}
                 <div class="item{{ if eq $index 0 }} item-featured-logo{{ end }}">
                     {{ if $item.href }}
-                    <a href="{{ $item.href }}"{{ if hasPrefix $item.href "http" }} target="_blank"{{ end }} title="{{ $plainTitle }}">
+                    <a href="{{ $item.href }}"{{ if hasPrefix $item.href "http" }} target="_blank"{{ end }} title="{{ $item.title | safeHTML }}">
                     {{ end }}
-                        <div class="carousel-slide{{ if eq $index 0 }} carousel-slide--featured{{ end }}">
-                            <div class="carousel-slide__copy">
-                                <span class="carousel-slide__eyebrow">{{ if eq $index 0 }}Lab Overview{{ else }}Explore COSSEE{{ end }}</span>
-                                <h1 class="carousel-slide__title">{{ $item.title | safeHTML }}</h1>
-                                <div class="carousel-slide__body">
+                        <div class="row carousel-row{{ if eq $index 0 }} carousel-row--featured{{ end }}">
+                            <div class="col-sm-5 right carousel-copy">
+                                <h1>{{ $item.title | safeHTML }}</h1>
+                                <div class="carousel-copy__body">
                                     {{ $item.description | safeHTML }}
                                 </div>
-                                {{ if $item.href }}
-                                <span class="carousel-slide__cta">Explore</span>
-                                {{ end }}
                             </div>
-                            <div class="carousel-slide__media{{ if eq $index 0 }} carousel-slide__media--featured{{ end }}">
-                                <div class="carousel-slide__media-frame">
-                                    <img class="img-responsive" src="{{ $item.image }}" alt="{{ $plainTitle }}">
-                                </div>
+                            <div class="col-sm-7 carousel-visual{{ if eq $index 0 }} carousel-visual--featured{{ end }}">
+                                <img class="img-responsive" src="{{ $item.image }}" alt="">
                             </div>
                         </div>
                     {{ if $item.href }}
