@@ -142,8 +142,8 @@ pluralizelisttitles = false
   logo_text = "COSSEE"
   logo = "img/cossee_logo_AM.svg"
   logo_small = "img/cossee_logo_AM.svg"
-  favicon = "img/cossee_logo_AM.svg"
-  apple_touch_icon = "img/cossee_logo_AM.svg"
+  favicon = "img/favicon.svg"
+  apple_touch_icon = "img/favicon.svg"
   contact_url = "/contact/"
   address = """<p class="text-uppercase"><strong>COSSEE Lab</strong>
       <br>Department of Biological Sciences

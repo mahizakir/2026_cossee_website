@@ -264,11 +264,11 @@ a:focus {
 }
 
 .home-carousel {
-    background: linear-gradient(135deg, #fff8d6 0%, #f7e89b 55%, #eed46a 100%);
+    background: linear-gradient(135deg, #fffdf1 0%, #fbf1bf 52%, #f1dd86 100%);
 }
 
 .home-carousel .dark-mask {
-    background: linear-gradient(135deg, rgba(255, 248, 214, 0.18) 0%, rgba(242, 205, 0, 0.08) 100%);
+    background: linear-gradient(135deg, rgba(255, 252, 236, 0.16) 0%, rgba(245, 214, 89, 0.05) 100%);
 }
 
 .home-carousel .owl-carousel {
