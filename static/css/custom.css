@@ -280,8 +280,10 @@ a:focus {
 }
 
 .home-carousel .item-featured-logo .carousel-visual--featured {
+    align-items: center;
     justify-content: center;
     min-height: 320px;
+    padding-left: 18px;
     text-align: center;
 }
 
@@ -298,9 +300,9 @@ a:focus {
     background: transparent;
     display: block;
     max-height: 320px;
-    max-width: 100%;
+    max-width: 92%;
     object-fit: contain;
-    width: 100%;
+    width: auto;
 }
 
 .icon {
@@ -929,8 +931,8 @@ a:focus {
 
     .home-carousel .item-featured-logo .carousel-visual--featured img {
         max-height: 260px;
-        max-width: 100%;
-        width: 100%;
+        max-width: 90%;
+        width: auto;
     }
 
 }
