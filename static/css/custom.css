@@ -293,7 +293,7 @@ a:focus {
     height: auto;
     margin: 0 auto;
     max-height: 100%;
-    max-width: 100%;
+    max-width: 94%;
     object-fit: contain;
     width: auto;
 }
@@ -946,7 +946,7 @@ a:focus {
     }
 
     .home-carousel .item-featured-logo .carousel-visual--featured img {
-        max-width: 84%;
+        max-width: 80%;
     }
 
 }
@@ -983,7 +983,7 @@ a:focus {
 
     .home-carousel .carousel-visual img,
     .home-carousel .item-featured-logo .carousel-visual--featured img {
-        max-width: 82%;
+        max-width: 78%;
     }
 
     .blog-hero {
