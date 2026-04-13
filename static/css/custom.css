@@ -289,14 +289,16 @@ a:focus {
 }
 
 .home-carousel .carousel-copy {
+    align-items: flex-end;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-right: 10px;
+    text-align: right;
 }
 
 .home-carousel .item-featured-logo .carousel-copy {
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 .home-carousel .carousel-copy__body {
@@ -364,19 +366,7 @@ a:focus {
 }
 
 .home-carousel .carousel-copy__body li {
-    padding-left: 18px;
-    position: relative;
-}
-
-.home-carousel .carousel-copy__body li::before {
-    background: rgba(29, 71, 42, 0.82);
-    border-radius: 999px;
-    content: "";
-    height: 6px;
-    left: 0;
-    position: absolute;
-    top: 9px;
-    width: 6px;
+    padding-left: 0;
 }
 
 .icon {
