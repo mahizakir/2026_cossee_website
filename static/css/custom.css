@@ -120,8 +120,17 @@ a:focus {
 }
 
 .navbar-brand.home img {
-    max-height: 52px;
+    display: block;
+    max-height: 64px;
     width: auto;
+}
+
+.navbar-brand.home {
+    align-items: center;
+    display: flex;
+    height: 78px;
+    padding-bottom: 7px;
+    padding-top: 7px;
 }
 
 .navbar-default .navbar-nav > .active > a,
