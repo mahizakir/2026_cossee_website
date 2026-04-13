@@ -125,6 +125,17 @@ a:focus {
     width: auto;
 }
 
+.navbar-brand__logo-svg {
+    display: block;
+    line-height: 0;
+}
+
+.navbar-brand__logo-svg svg {
+    display: block;
+    height: 64px;
+    width: auto;
+}
+
 .navbar-brand.home {
     align-items: center;
     display: flex;
