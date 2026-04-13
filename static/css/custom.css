@@ -263,7 +263,7 @@ a:focus {
 }
 
 .home-carousel .owl-carousel {
-    padding: 18px 0 4px;
+    padding: 26px 0 10px;
 }
 
 .home-carousel .item > a {
@@ -285,7 +285,7 @@ a:focus {
 .home-carousel .carousel-row {
     align-items: center;
     display: flex;
-    min-height: 250px;
+    min-height: 320px;
 }
 
 .home-carousel .carousel-copy {
@@ -293,7 +293,7 @@ a:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 10px;
+    padding-right: 16px;
     text-align: right;
 }
 
@@ -309,47 +309,47 @@ a:focus {
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: 250px;
-    padding-left: 12px;
+    min-height: 320px;
+    padding-left: 20px;
 }
 
 .home-carousel .carousel-visual img {
     display: block;
     height: auto;
     margin: 0 auto;
-    max-height: 230px;
+    max-height: 290px;
     max-width: 78%;
     object-fit: contain;
     width: auto;
 }
 
 .home-carousel .carousel-row--featured {
-    min-height: 270px;
+    min-height: 340px;
 }
 
 .home-carousel .carousel-visual--featured {
-    min-height: 270px;
-    padding-left: 22px;
+    min-height: 340px;
+    padding-left: 28px;
 }
 
 .home-carousel .carousel-visual--featured img {
-    max-height: 248px;
+    max-height: 308px;
     max-width: 82%;
 }
 
 .home-carousel h1 {
-    font-size: 36px;
+    font-size: 42px;
     line-height: 1.08;
-    margin: 0 0 14px;
+    margin: 0 0 18px;
     text-transform: none;
 }
 
 .home-carousel .item p,
 .home-carousel .item li {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 500;
     letter-spacing: 0;
-    line-height: 1.55;
+    line-height: 1.6;
     text-transform: none;
 }
 
@@ -964,32 +964,32 @@ a:focus {
     }
 
     .home-carousel h1 {
-        font-size: 30px;
+        font-size: 34px;
     }
 
     .home-carousel .item p,
     .home-carousel .item li {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .home-carousel .carousel-row,
     .home-carousel .carousel-row--featured {
-        min-height: 230px;
+        min-height: 280px;
     }
 
     .home-carousel .carousel-visual,
     .home-carousel .carousel-visual--featured {
-        min-height: 230px;
-        padding-left: 12px;
+        min-height: 280px;
+        padding-left: 16px;
     }
 
     .home-carousel .carousel-visual img {
-        max-height: 205px;
+        max-height: 238px;
         max-width: 80%;
     }
 
     .home-carousel .carousel-visual--featured img {
-        max-height: 214px;
+        max-height: 248px;
         max-width: 82%;
     }
 
@@ -1007,24 +1007,24 @@ a:focus {
     }
 
     .home-carousel h1 {
-        font-size: 26px;
+        font-size: 30px;
     }
 
     .home-carousel .item p,
     .home-carousel .item li {
-        font-size: 14px;
-        line-height: 1.55;
+        font-size: 15px;
+        line-height: 1.6;
     }
 
     .home-carousel .carousel-visual,
     .home-carousel .carousel-visual--featured {
         min-height: auto;
-        padding: 16px 0 4px;
+        padding: 20px 0 8px;
     }
 
     .home-carousel .carousel-visual img,
     .home-carousel .carousel-visual--featured img {
-        max-height: 180px;
+        max-height: 210px;
         max-width: 66%;
     }
 
