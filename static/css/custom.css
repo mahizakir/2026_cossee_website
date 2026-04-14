@@ -25,6 +25,7 @@ body {
 #heading-breadcrumbs {
     background-color: #fcf5cf;
     background-image:
+        url('/img/texture-green.png'),
         linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08)),
         linear-gradient(135deg, #fffef7 0%, #fcf5cf 52%, #f5e5a0 100%);
     background-blend-mode: multiply;
