@@ -1,5 +1,6 @@
 .root,
 :root {
+    --site-font-sans: "Roboto", Helvetica, Arial, sans-serif;
     --ualberta-green: #275d38;
     --ualberta-green-deep: #1d472a;
     --ualberta-green-soft: #e8f0e8;
@@ -20,6 +21,40 @@
 body {
     background: var(--ualberta-paper);
     color: var(--ualberta-ink);
+    font-family: var(--site-font-sans);
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+.btn,
+.navbar-default .navbar-nav > li > a,
+#heading-breadcrumbs h1,
+.box-simple h3,
+.blog-card h2,
+.blog-post-modern__header h1,
+.home-carousel h1,
+.home-carousel .item p,
+.home-carousel .item li,
+#footer h4,
+#footer p,
+#copyright p {
+    font-family: var(--site-font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--site-font-sans);
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 #heading-breadcrumbs {
