@@ -23,14 +23,14 @@ body {
 }
 
 #heading-breadcrumbs {
-    background-color: #dde8dd;
+    background-color: #fcf5cf;
     background-image:
-        url('/img/texture-green.png'),
-        linear-gradient(135deg, #dce8dc 0%, #edf4eb 100%);
+        linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08)),
+        linear-gradient(135deg, #fffef7 0%, #fcf5cf 52%, #f5e5a0 100%);
     background-blend-mode: multiply;
     background-position: center center;
     background-repeat: repeat;
-    border-bottom: 1px solid rgba(39, 93, 56, 0.12);
+    border-bottom: 1px solid rgba(177, 145, 32, 0.18);
     margin-bottom: 26px;
     padding: 22px 0;
 }
