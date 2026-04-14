@@ -58,11 +58,11 @@ h6 {
 }
 
 #heading-breadcrumbs {
-    background-color: #fcf5cf;
+    background-color: #f7f6ef;
     background-image:
         url('/img/texture-green.png'),
-        linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.08)),
-        linear-gradient(135deg, #fffef7 0%, #fcf5cf 52%, #f5e5a0 100%);
+        linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06)),
+        linear-gradient(135deg, #f7f6ef 0%, #f7f6ef 42%, #f5e5a0 100%);
     background-blend-mode: multiply;
     background-position: center center;
     background-repeat: repeat;
