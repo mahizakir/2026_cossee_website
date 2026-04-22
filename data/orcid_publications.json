@@ -2,10 +2,34 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-04-21T10:48:20Z",
-  "generated_at_display": "April 21, 2026 at 10:48 UTC",
-  "works_count": 434,
+  "generated_at": "2026-04-22T10:44:35Z",
+  "generated_at_display": "April 22, 2026 at 10:44 UTC",
+  "works_count": 435,
   "latest": [
+    {
+      "put_code": 212476743,
+      "title": "Interactive effects of heat and drought on wheat yield change from synergistic to antagonistic as their severity increases",
+      "authors": [
+        "Arisede Chisaka",
+        "John P. Hammond",
+        "Shinichi Nakagawa",
+        "Jacob Bishop"
+      ],
+      "authors_display": "Arisede Chisaka, John P. Hammond, Shinichi Nakagawa, Jacob Bishop",
+      "journal_title": "Agricultural and Forest Meteorology",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "06",
+      "publication_day": "00",
+      "publication_date_display": "June 2026",
+      "publication_date_iso": "2026-06-00",
+      "doi": "10.1016/j.agrformet.2026.111189",
+      "doi_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
+      "best_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212476743"
+    },
     {
       "put_code": 211212258,
       "title": "The impacts of organochlorine pesticides on adverse human health outcomes: A second-order synthesis of mean effects and heterogeneity",
@@ -143,40 +167,37 @@
       "best_url": "https://doi.org/10.32942/X27D4F",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/210174371"
-    },
-    {
-      "put_code": 207201659,
-      "title": "Music exposure reduces anxiety- and depression-like behavior in rodents: a systematic review and multilevel meta-analysis",
-      "authors": [
-        "Santiago Ortega",
-        "Anna Lenz",
-        "Erick Lundgren",
-        "Ayumi Mizuno",
-        "Sergio Poo Hernandez",
-        "Shinichi Nakagawa",
-        "Malgorzata Lagisz"
-      ],
-      "authors_display": "Santiago Ortega, Anna Lenz, Erick Lundgren, Ayumi Mizuno, Sergio Poo Hernandez, Shinichi Nakagawa, Malgorzata Lagisz",
-      "journal_title": null,
-      "type": "preprint",
-      "type_display": "Preprint",
-      "publication_year": "2026",
-      "publication_month": "03",
-      "publication_day": "02",
-      "publication_date_display": "March 2, 2026",
-      "publication_date_iso": "2026-03-02",
-      "doi": "10.64898/2026.02.27.708573",
-      "doi_url": "https://doi.org/10.64898/2026.02.27.708573",
-      "best_url": "https://doi.org/10.64898/2026.02.27.708573",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/207201659"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 13,
+      "count": 14,
       "items": [
+        {
+          "put_code": 212476743,
+          "title": "Interactive effects of heat and drought on wheat yield change from synergistic to antagonistic as their severity increases",
+          "authors": [
+            "Arisede Chisaka",
+            "John P. Hammond",
+            "Shinichi Nakagawa",
+            "Jacob Bishop"
+          ],
+          "authors_display": "Arisede Chisaka, John P. Hammond, Shinichi Nakagawa, Jacob Bishop",
+          "journal_title": "Agricultural and Forest Meteorology",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "06",
+          "publication_day": "00",
+          "publication_date_display": "June 2026",
+          "publication_date_iso": "2026-06-00",
+          "doi": "10.1016/j.agrformet.2026.111189",
+          "doi_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
+          "best_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212476743"
+        },
         {
           "put_code": 211212258,
           "title": "The impacts of organochlorine pesticides on adverse human health outcomes: A second-order synthesis of mean effects and heterogeneity",
@@ -12097,7 +12118,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 363,
+    "journal-article": 364,
     "other": 6,
     "preprint": 63
   }
