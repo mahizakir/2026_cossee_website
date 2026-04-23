@@ -89,6 +89,12 @@ pluralizelisttitles = false
     parent = "menu.open-science"
 
   [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 4
+    parent = "menu.open-science"
+
+  [[menu.main]]
     name = "Contact"
     url = "/contact/"
     weight = 8

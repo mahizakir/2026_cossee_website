@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "headers.html" . }}
+    {{ partial "custom_headers.html" . }}
+  </head>
+  <body>
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+      {{ partial "breadcrumbs.html" . }}
+
+      <div id="content">
+        <div class="container">
+          {{ $projects := .RegularPages.ByWeight }}
+          <section class="projects-hub">
+            <div class="projects-hub__hero">
+              <div class="projects-hub__copy">
+                <span class="projects-hub__eyebrow">COSSEE Projects</span>
+                <h1>{{ .Title }}</h1>
+                <p>{{ .Content | plainify }}</p>
+              </div>
+              <div class="projects-hub__summary">
+                <div class="projects-hub__stat">
+                  <strong>{{ len $projects }}</strong>
+                  <span>Project pages scaffolded</span>
+                </div>
+                <div class="projects-hub__stat">
+                  <strong>15</strong>
+                  <span>Ready-to-edit project folders</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="projects-grid">
+              {{ range $projects }}
+              <article class="project-card">
+                <div class="project-card__meta">
+                  <span class="project-card__code">{{ .Params.project_code | default .Title }}</span>
+                  {{ with .Params.status }}<span class="project-card__status">{{ . }}</span>{{ end }}
+                </div>
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+                <div class="project-card__footer">
+                  {{ with .Params.lead }}<span>Lead: {{ . }}</span>{{ end }}
+                  <a href="{{ .RelPermalink }}">Open project</a>
+                </div>
+              </article>
+              {{ end }}
+            </div>
+          </section>
+        </div>
+      </div>
+
+      {{ partial "footer.html" . }}
+    </div>
+
+    <style>
+      .projects-hub {
+        margin: 0 auto;
+        max-width: 1180px;
+        padding-bottom: 28px;
+      }
+      .projects-hub__hero {
+        align-items: end;
+        background:
+          radial-gradient(circle at top left, rgba(231, 189, 74, 0.22), transparent 36%),
+          linear-gradient(135deg, rgba(255, 251, 240, 0.96), rgba(255, 255, 255, 0.98));
+        border: 1px solid rgba(39, 93, 56, 0.1);
+        border-radius: 28px;
+        box-shadow: 0 18px 42px rgba(24, 38, 29, 0.06);
+        display: grid;
+        gap: 22px;
+        grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.7fr);
+        margin-bottom: 24px;
+        padding: 28px;
+      }
+      .projects-hub__eyebrow {
+        color: #8c6b11;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+      }
+      .projects-hub__copy h1 {
+        color: #1f3727;
+        font-size: 44px;
+        line-height: 1.05;
+        margin: 0 0 14px;
+      }
+      .projects-hub__copy p {
+        color: #44594a;
+        font-size: 17px;
+        line-height: 1.8;
+        margin: 0;
+        max-width: 760px;
+      }
+      .projects-hub__summary {
+        display: grid;
+        gap: 12px;
+      }
+      .projects-hub__stat {
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid rgba(39, 93, 56, 0.1);
+        border-radius: 20px;
+        padding: 16px 18px;
+      }
+      .projects-hub__stat strong {
+        color: #1f3727;
+        display: block;
+        font-size: 30px;
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .projects-hub__stat span {
+        color: #4f6356;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .projects-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .project-card {
+        background: #fff;
+        border: 1px solid rgba(39, 93, 56, 0.1);
+        border-radius: 22px;
+        box-shadow: 0 12px 28px rgba(19, 34, 26, 0.04);
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        min-height: 220px;
+        padding: 22px;
+      }
+      .project-card__meta,
+      .project-card__footer {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 12px;
+        justify-content: space-between;
+      }
+      .project-card__code,
+      .project-card__status {
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        padding: 7px 11px;
+        text-transform: uppercase;
+      }
+      .project-card__code {
+        background: rgba(231, 189, 74, 0.18);
+        color: #8a6706;
+      }
+      .project-card__status {
+        background: rgba(39, 93, 56, 0.08);
+        color: #29563a;
+      }
+      .project-card h2 {
+        font-size: 26px;
+        line-height: 1.18;
+        margin: 0;
+      }
+      .project-card h2 a,
+      .project-card__footer a {
+        color: #1f3727;
+      }
+      .project-card p,
+      .project-card__footer span {
+        color: #4b5f52;
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0;
+      }
+      .project-card__footer a {
+        font-weight: 700;
+      }
+      @media (max-width: 991px) {
+        .projects-hub__hero,
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 767px) {
+        .projects-hub__hero {
+          border-radius: 22px;
+          padding: 20px;
+        }
+        .projects-hub__copy h1 {
+          font-size: 34px;
+        }
+        .project-card {
+          border-radius: 18px;
+          min-height: 0;
+          padding: 18px;
+        }
+        .project-card h2 {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </body>
+</html>
