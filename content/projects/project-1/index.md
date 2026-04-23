@@ -13,6 +13,8 @@ lead = "TBD"
 
 This is the first dedicated project page in the new COSSEE projects section. It is set up as a branch bundle, which means we can add project-specific images, downloads, diagrams, and supporting content directly inside this folder as the page develops.
 
+The initial `ant_data` project assets have now been imported into this folder, including photographs, one video file, and the source Word document from your Downloads folder.
+
 ## What this page is ready for
 
 - A custom project title and short summary
