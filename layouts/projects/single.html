@@ -23,714 +23,1030 @@
         {{ $gallery = $gallery | append . }}
       {{ end }}
     {{ end }}
-    {{ $heroThumbs := first 3 $gallery }}
-    {{ $featuredStill := "" }}
-    {{ if gt (len $gallery) 0 }}
-      {{ $featuredStill = index $gallery 0 }}
-    {{ end }}
 
     <div id="all">
       {{ partial "top.html" . }}
       {{ partial "nav.html" . }}
-      {{ partial "breadcrumbs.html" . }}
 
-      <div id="content">
+      <div id="content" class="gw-page">
+        <div class="gw-scroll-progress" aria-hidden="true"><span></span></div>
+
+        <section class="gw-hero" {{ if $heroImage }}style="background-image: linear-gradient(180deg, rgba(12, 28, 19, 0.55) 0%, rgba(12, 28, 19, 0.72) 100%), url('{{ $heroImage }}');"{{ end }}>
+          <div class="container gw-hero__inner">
+            <a class="gw-back" href="/projects/"><span aria-hidden="true">&#8592;</span> All projects</a>
+            <div class="gw-hero__tag-row">
+              {{ with .Params.project_code }}<span class="gw-tag gw-tag--gold">{{ . }}</span>{{ end }}
+              {{ with .Params.status }}<span class="gw-tag">{{ . }}</span>{{ end }}
+              <span class="gw-tag gw-tag--soft">Citizen science · K-12</span>
+            </div>
+            {{ if .Params.subtitle }}
+              <h1 class="gw-hero__title">{{ .Params.subtitle }}</h1>
+              <p class="gw-hero__shortname">Project {{ .Title }}</p>
+            {{ else }}
+              <h1 class="gw-hero__title">{{ .Title }}</h1>
+            {{ end }}
+            {{ with .Params.summary }}<p class="gw-hero__lede">{{ . }}</p>{{ end }}
+            <div class="gw-hero__actions">
+              {{ with .Params.contact_email }}
+              <a class="gw-btn gw-btn--primary" href="mailto:{{ . }}?subject=Project%20Gateway%20interest">
+                <span>Email to join</span>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              {{ end }}
+              <a class="gw-btn gw-btn--ghost" href="#how-it-works">How it works</a>
+            </div>
+          </div>
+          <button class="gw-hero__scroll" type="button" aria-label="Scroll to details" onclick="document.getElementById('gw-facts').scrollIntoView({behavior:'smooth'})">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </section>
+
         <div class="container">
-          <article class="project-page project-page--rich">
-            <a class="project-page__back" href="/projects/">Back to projects</a>
+          <section class="gw-facts" id="gw-facts">
+            {{ with .Params.audience }}
+            <div class="gw-fact"><span>Who</span><strong>{{ . }}</strong></div>
+            {{ end }}
+            {{ with .Params.location }}
+            <div class="gw-fact"><span>Where</span><strong>{{ . }}</strong></div>
+            {{ end }}
+            {{ with .Params.timing }}
+            <div class="gw-fact"><span>When</span><strong>{{ . }}</strong></div>
+            {{ end }}
+            {{ with .Params.commitment }}
+            <div class="gw-fact"><span>Time commitment</span><strong>{{ . }}</strong></div>
+            {{ end }}
+          </section>
 
-            <header class="project-hero">
-              <div class="project-hero__copy">
-                {{ with .Params.project_code }}<span class="project-hero__eyebrow">{{ . }}</span>{{ end }}
-                <h1>{{ .Title }}</h1>
-                {{ with .Params.subtitle }}<p class="project-hero__subtitle">{{ . }}</p>{{ end }}
-                {{ with .Params.summary }}<p class="project-hero__summary">{{ . }}</p>{{ end }}
+          <nav class="gw-anchornav" aria-label="On this page">
+            <a href="#story">The science</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#participation">Participation</a>
+            <a href="#timeline">Timeline</a>
+            <a href="#media">Field media</a>
+            <a href="#join">Join</a>
+          </nav>
 
-                <div class="project-hero__actions">
-                  <a class="project-button project-button--filled" href="#gateway-join">Join the project</a>
-                  <a class="project-button" href="#gateway-gallery">View ant media</a>
-                </div>
+          <section class="gw-section" id="story">
+            <div class="gw-section__head">
+              <span class="gw-eyebrow">The science</span>
+              <h2>A province-wide search for an ant supercolony's edge</h2>
+            </div>
+            <div class="gw-prose">
+              {{ .Content }}
+            </div>
+            <aside class="gw-callout">
+              <div class="gw-callout__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 6.5L21 11l-5 4.5L17.5 22 12 18.5 6.5 22 8 15.5 3 11l6.5-1.5L12 3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
               </div>
-
-              <div class="project-hero__visual">
-                {{ if $heroImage }}
-                <div class="project-hero__image-shell">
-                  <img src="{{ $heroImage }}" alt="{{ .Title }}" class="project-hero__image">
-                </div>
-                {{ end }}
-                {{ if gt (len $heroThumbs) 0 }}
-                <div class="project-hero__thumbs">
-                  {{ range $heroThumbs }}
-                  <a class="project-hero__thumb" href="{{ .RelPermalink }}" target="_blank" rel="noopener">
-                    <img src="{{ .RelPermalink }}" alt="Gateway field photo" loading="lazy">
-                  </a>
-                  {{ end }}
-                </div>
-                {{ end }}
-                <div class="project-hero__floating-card">
-                  {{ with .Params.status }}
-                  <div class="project-hero__mini-stat">
-                    <span>Status</span>
-                    <strong>{{ . }}</strong>
-                  </div>
-                  {{ end }}
-                  {{ with .Params.timing }}
-                  <div class="project-hero__mini-stat">
-                    <span>Timing</span>
-                    <strong>{{ . }}</strong>
-                  </div>
-                  {{ end }}
-                </div>
+              <div>
+                <strong>Why it matters.</strong> Supercolonies elsewhere in the world can span entire countries. Each trial your class runs helps draw the real boundary of a colony that may stretch across Alberta.
               </div>
-            </header>
+            </aside>
+          </section>
 
-            <nav class="project-anchor-nav" aria-label="Gateway page sections">
-              <a href="#gateway-story">Project story</a>
-              <a href="#gateway-participation">Participation</a>
-              <a href="#gateway-timeline">Timeline</a>
-              <a href="#gateway-gallery">Photos and video</a>
-              <a href="#gateway-join">Join</a>
-            </nav>
+          <section class="gw-section" id="how-it-works">
+            <div class="gw-section__head">
+              <span class="gw-eyebrow">Workflow</span>
+              <h2>How it works for your classroom</h2>
+              <p class="gw-section__sub">Four simple steps from first contact to shared data.</p>
+            </div>
+            <ol class="gw-steps">
+              <li class="gw-step">
+                <div class="gw-step__num">1</div>
+                <h3>Sign up</h3>
+                <p>Email the research team or fill the interest form (coming soon). Share your grade, school, and preferred timing.</p>
+              </li>
+              <li class="gw-step">
+                <div class="gw-step__num">2</div>
+                <h3>Materials delivered</h3>
+                <p>The team brings ants, observation boxes, flexible tweezers, data sheets, and the protocol straight to your classroom.</p>
+              </li>
+              <li class="gw-step">
+                <div class="gw-step__num">3</div>
+                <h3>Run the trials</h3>
+                <p>Students work in small groups, introduce supercolony ants to local ants, and record 10 minutes of behaviour.</p>
+              </li>
+              <li class="gw-step">
+                <div class="gw-step__num">4</div>
+                <h3>Share the data</h3>
+                <p>Observations feed the Alberta-wide dataset. Student contributions are acknowledged in the resulting publication.</p>
+              </li>
+            </ol>
+          </section>
 
-            {{ with .Params.highlights }}
-            <section class="project-stats">
-              {{ range . }}
-              <article class="project-stat">
-                <span>{{ .label }}</span>
-                <strong>{{ .value }}</strong>
+          <section class="gw-section" id="participation">
+            <div class="gw-section__head">
+              <span class="gw-eyebrow">Participation</span>
+              <h2>What you get, what students do</h2>
+            </div>
+            <div class="gw-two-col">
+              {{ with .Params.what_we_provide }}
+              <article class="gw-card">
+                <div class="gw-card__head">
+                  <div class="gw-card__badge" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4zm0 5l9 4 9-4M3 17l9 4 9-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <h3>Provided by the research team</h3>
+                </div>
+                <ul class="gw-checklist">
+                  {{ range . }}<li>{{ . }}</li>{{ end }}
+                </ul>
               </article>
               {{ end }}
-            </section>
+              {{ with .Params.what_students_do }}
+              <article class="gw-card">
+                <div class="gw-card__head">
+                  <div class="gw-card__badge gw-card__badge--gold" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v16m-8-8h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                  </div>
+                  <h3>What students do</h3>
+                </div>
+                <ul class="gw-checklist gw-checklist--gold">
+                  {{ range . }}<li>{{ . }}</li>{{ end }}
+                </ul>
+              </article>
+              {{ end }}
+            </div>
+          </section>
+
+          {{ with .Params.timeline_steps }}
+          <section class="gw-section" id="timeline">
+            <div class="gw-section__head">
+              <span class="gw-eyebrow">When it happens</span>
+              <h2>Project timeline</h2>
+              <p class="gw-section__sub">Pick a window that fits your school calendar.</p>
+            </div>
+            <ol class="gw-timeline">
+              {{ range . }}
+              <li class="gw-timeline__item">
+                <div class="gw-timeline__dot" aria-hidden="true"></div>
+                <div class="gw-timeline__phase">{{ .phase }}</div>
+                <p>{{ .detail }}</p>
+              </li>
+              {{ end }}
+            </ol>
+          </section>
+          {{ end }}
+
+          {{ if or $heroVideo (gt (len $gallery) 0) }}
+          <section class="gw-section" id="media">
+            <div class="gw-section__head">
+              <span class="gw-eyebrow">Field media</span>
+              <h2>From the ant archive</h2>
+              <p class="gw-section__sub">Photos and video captured across multiple seasons in Fish Creek Provincial Park.</p>
+            </div>
+
+            {{ if $heroVideo }}
+            <figure class="gw-video">
+              <video controls playsinline preload="metadata" poster="{{ $heroImage }}">
+                <source src="{{ $heroVideo }}" type="video/mp4">
+              </video>
+              <figcaption>Field footage &mdash; context for classroom teams before trials begin.</figcaption>
+            </figure>
             {{ end }}
 
-            <div class="project-layout">
-              <div class="project-layout__main">
-                <section class="project-copy-card" id="gateway-story">
-                  <div class="project-prose">
-                    {{ .Content }}
-                  </div>
-                </section>
-
-                <div class="project-split-grid" id="gateway-participation">
-                  {{ with .Params.what_we_provide }}
-                  <section class="project-info-card">
-                    <div class="project-section-head">
-                      <span>Support</span>
-                      <h2>What the research team will provide</h2>
-                    </div>
-                    <ul class="project-bullet-list">
-                      {{ range . }}<li>{{ . }}</li>{{ end }}
-                    </ul>
-                  </section>
-                  {{ end }}
-
-                  {{ with .Params.what_students_do }}
-                  <section class="project-info-card">
-                    <div class="project-section-head">
-                      <span>Participation</span>
-                      <h2>What students will do</h2>
-                    </div>
-                    <ul class="project-bullet-list">
-                      {{ range . }}<li>{{ . }}</li>{{ end }}
-                    </ul>
-                  </section>
-                  {{ end }}
-                </div>
-
-                {{ with .Params.timeline_steps }}
-                <section class="project-info-card" id="gateway-timeline">
-                  <div class="project-section-head">
-                    <span>Schedule</span>
-                    <h2>Project timing</h2>
-                  </div>
-                  <div class="project-timeline">
-                    {{ range . }}
-                    <article class="project-timeline__item">
-                      <div class="project-timeline__phase">{{ .phase }}</div>
-                      <p>{{ .detail }}</p>
-                    </article>
-                    {{ end }}
-                  </div>
-                </section>
-                {{ end }}
-
-                {{ if or $heroVideo (gt (len $gallery) 0) }}
-                <section class="project-media" id="gateway-gallery">
-                  <div class="project-section-head">
-                    <span>Field media</span>
-                    <h2>Ant observations from the project archive</h2>
-                  </div>
-
-                  {{ with $featuredStill }}
-                  <div class="project-media__feature">
-                    <div class="project-media__feature-image">
-                      <img src="{{ .RelPermalink }}" alt="Gateway featured ant photo" loading="lazy">
-                    </div>
-                    <div class="project-media__feature-copy">
-                      <span>Featured image</span>
-                      <h3>Close-up observations from the ant archive</h3>
-                      <p>The photography does more of the storytelling here now, so visitors can quickly understand the species, the field context, and the visual character of the project before they read the full details.</p>
-                    </div>
-                  </div>
-                  {{ end }}
-
-                  {{ if $heroVideo }}
-                  <div class="project-video-card">
-                    <div class="project-video-card__copy">
-                      <h3>Video from the ant archive</h3>
-                      <p>This footage can help teachers and students get a feel for the species and field context before classroom trials begin.</p>
-                    </div>
-                    <video controls playsinline preload="metadata" class="project-video-card__player">
-                      <source src="{{ $heroVideo }}" type="video/mp4">
-                    </video>
-                  </div>
-                  {{ end }}
-
-                  {{ if gt (len $gallery) 0 }}
-                  <div class="project-gallery-grid">
-                    {{ range $gallery }}
-                    <a class="project-gallery-item" href="{{ .RelPermalink }}" target="_blank" rel="noopener">
-                      <img src="{{ .RelPermalink }}" alt="Gateway ant project media" loading="lazy">
-                    </a>
-                    {{ end }}
-                  </div>
-                  {{ end }}
-                </section>
-                {{ end }}
-              </div>
-
-              <aside class="project-layout__side">
-                <section class="project-side-card" id="gateway-join">
-                  <div class="project-section-head project-section-head--side">
-                    <span>Get involved</span>
-                    <h2>Interested in joining Gateway?</h2>
-                  </div>
-                  <p>The Google interest form is being prepared next. For now, this page is ready so teachers can understand the project, timing, and classroom commitment before the form goes live.</p>
-                  {{ with .Params.contact_email }}
-                  <a class="project-button project-button--filled project-button--block" href="mailto:{{ . }}">Email the team</a>
-                  {{ end }}
-                  <div class="project-note">The upcoming form will collect teacher name, school and city, grade taught, timing preference, email, and any questions.</div>
-                </section>
-
-                <section class="project-side-card">
-                  <div class="project-section-head project-section-head--side">
-                    <span>Quick facts</span>
-                    <h2>At a glance</h2>
-                  </div>
-                  <dl class="project-facts">
-                    {{ with .Params.audience }}<div><dt>Who</dt><dd>{{ . }}</dd></div>{{ end }}
-                    {{ with .Params.location }}<div><dt>Where</dt><dd>{{ . }}</dd></div>{{ end }}
-                    {{ with .Params.timing }}<div><dt>When</dt><dd>{{ . }}</dd></div>{{ end }}
-                    {{ with .Params.commitment }}<div><dt>Time</dt><dd>{{ . }}</dd></div>{{ end }}
-                    {{ with .Params.lead }}<div><dt>Led by</dt><dd>{{ . }}</dd></div>{{ end }}
-                  </dl>
-                </section>
-
-                {{ with .Params.form_fields }}
-                <section class="project-side-card">
-                  <div class="project-section-head project-section-head--side">
-                    <span>Form prep</span>
-                    <h2>What the upcoming form will ask</h2>
-                  </div>
-                  <ul class="project-mini-list">
-                    {{ range . }}<li>{{ . }}</li>{{ end }}
-                  </ul>
-                </section>
-                {{ end }}
-              </aside>
+            {{ if gt (len $gallery) 0 }}
+            <div class="gw-gallery">
+              {{ range $gallery }}
+              <a class="gw-gallery__item" href="{{ .RelPermalink }}" target="_blank" rel="noopener" aria-label="Open field photo">
+                <img src="{{ .RelPermalink }}" alt="Gateway field observation" loading="lazy">
+                <span class="gw-gallery__expand" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 10V4h6M14 4h6v6M20 14v6h-6M10 20H4v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </a>
+              {{ end }}
             </div>
-          </article>
+            {{ end }}
+          </section>
+          {{ end }}
+
+          <section class="gw-join" id="join">
+            <div class="gw-join__copy">
+              <span class="gw-eyebrow gw-eyebrow--light">Get involved</span>
+              <h2>Ready to bring GATEWAY to your classroom?</h2>
+              <p>The Google interest form is coming next. In the meantime, email the team directly &mdash; we&rsquo;ll walk you through timing, materials, and classroom support.</p>
+              {{ with .Params.contact_email }}
+              <div class="gw-join__actions">
+                <a class="gw-btn gw-btn--primary gw-btn--lg" href="mailto:{{ . }}?subject=Project%20Gateway%20interest">
+                  <span>Email {{ . }}</span>
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <span class="gw-join__badge">Form coming soon</span>
+              </div>
+              {{ end }}
+            </div>
+            {{ with .Params.form_fields }}
+            <aside class="gw-join__form">
+              <div class="gw-join__form-head">
+                <span>What we&rsquo;ll ask on the form</span>
+                <h3>A quick preview</h3>
+              </div>
+              <ul>
+                {{ range . }}<li>{{ . }}</li>{{ end }}
+              </ul>
+            </aside>
+            {{ end }}
+          </section>
         </div>
+
+        <button class="gw-to-top" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
 
       {{ partial "footer.html" . }}
     </div>
 
     <style>
-      .project-page--rich {
-        margin: 0 auto;
-        max-width: 1180px;
-        padding-bottom: 34px;
+      :root {
+        --gw-green: #245436;
+        --gw-green-dark: #163223;
+        --gw-green-soft: rgba(36, 84, 54, 0.08);
+        --gw-gold: #caa03a;
+        --gw-gold-soft: rgba(202, 160, 58, 0.18);
+        --gw-ink: #1a2b22;
+        --gw-muted: #556b5d;
+        --gw-line: rgba(36, 84, 54, 0.12);
+        --gw-bg: #fbfaf5;
       }
-      .project-page__back {
-        color: #516759;
-        display: inline-block;
+      .gw-page { background: var(--gw-bg); }
+      .gw-page .container { max-width: 1180px; }
+      .gw-scroll-progress {
+        height: 3px;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 60;
+      }
+      .gw-scroll-progress span {
+        background: linear-gradient(90deg, var(--gw-green), var(--gw-gold));
+        display: block;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        width: 100%;
+      }
+
+      /* Hero */
+      .gw-hero {
+        background-color: #0f2118;
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+        padding: 96px 0 120px;
+        position: relative;
+      }
+      .gw-hero::after {
+        background: linear-gradient(180deg, transparent 60%, var(--gw-bg) 100%);
+        bottom: 0;
+        content: "";
+        height: 140px;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+      }
+      .gw-hero__inner { position: relative; z-index: 2; }
+      .gw-back {
+        color: rgba(255, 255, 255, 0.82);
+        display: inline-flex;
+        font-size: 13px;
         font-weight: 700;
-        margin-bottom: 18px;
+        gap: 8px;
+        letter-spacing: 0.04em;
+        margin-bottom: 28px;
+        text-transform: uppercase;
       }
-      .project-anchor-nav {
-        backdrop-filter: blur(12px);
-        background: rgba(255, 255, 255, 0.88);
-        border: 1px solid rgba(39, 93, 56, 0.1);
-        border-radius: 999px;
-        box-shadow: 0 16px 28px rgba(22, 37, 28, 0.05);
+      .gw-back:hover, .gw-back:focus { color: #fff; text-decoration: none; }
+      .gw-hero__tag-row {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
-        margin: 0 0 22px;
-        padding: 10px;
-        position: sticky;
-        top: 82px;
-        z-index: 20;
-      }
-      .project-anchor-nav a {
-        border-radius: 999px;
-        color: #264835;
-        font-size: 14px;
-        font-weight: 800;
-        line-height: 1;
-        padding: 11px 14px;
-        text-decoration: none;
-      }
-      .project-anchor-nav a:hover,
-      .project-anchor-nav a:focus {
-        background: rgba(39, 93, 56, 0.08);
-      }
-      .project-hero {
-        align-items: stretch;
-        background:
-          radial-gradient(circle at top left, rgba(233, 189, 63, 0.24), transparent 34%),
-          linear-gradient(135deg, #f7fbf1 0%, #ffffff 52%, #fffaf0 100%);
-        border: 1px solid rgba(39, 93, 56, 0.12);
-        border-radius: 32px;
-        box-shadow: 0 24px 56px rgba(23, 39, 29, 0.08);
-        display: grid;
-        gap: 28px;
-        grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+        gap: 8px;
         margin-bottom: 22px;
+      }
+      .gw-tag {
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 999px;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        padding: 7px 13px;
+        text-transform: uppercase;
+      }
+      .gw-tag--gold {
+        background: var(--gw-gold);
+        border-color: var(--gw-gold);
+        color: var(--gw-green-dark);
+      }
+      .gw-tag--soft { background: rgba(255, 255, 255, 0.08); border-style: dashed; }
+      .gw-hero__title {
+        color: #fff;
+        font-size: 54px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        line-height: 1.04;
+        margin: 0 0 10px;
+        max-width: 900px;
+      }
+      .gw-hero__shortname {
+        color: var(--gw-gold);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.22em;
+        margin: 0 0 18px;
+        text-transform: uppercase;
+      }
+      .gw-hero__lede {
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 0;
+        max-width: 740px;
+      }
+      .gw-hero__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+      .gw-btn {
+        align-items: center;
+        border-radius: 999px;
+        display: inline-flex;
+        font-size: 15px;
+        font-weight: 800;
+        gap: 10px;
+        justify-content: center;
+        letter-spacing: 0.02em;
+        padding: 14px 22px;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+      }
+      .gw-btn svg { height: 18px; width: 18px; }
+      .gw-btn--primary {
+        background: var(--gw-gold);
+        color: var(--gw-green-dark);
+      }
+      .gw-btn--primary:hover, .gw-btn--primary:focus {
+        box-shadow: 0 18px 34px rgba(202, 160, 58, 0.35);
+        color: var(--gw-green-dark);
+        text-decoration: none;
+        transform: translateY(-2px);
+      }
+      .gw-btn--ghost {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        color: #fff;
+      }
+      .gw-btn--ghost:hover, .gw-btn--ghost:focus {
+        background: rgba(255, 255, 255, 0.18);
+        color: #fff;
+        text-decoration: none;
+        transform: translateY(-2px);
+      }
+      .gw-btn--lg { font-size: 16px; padding: 16px 26px; }
+      .gw-hero__scroll {
+        animation: gw-bob 2s ease-in-out infinite;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        border-radius: 50%;
+        bottom: 40px;
+        color: #fff;
+        cursor: pointer;
+        height: 46px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 46px;
+        z-index: 2;
+      }
+      .gw-hero__scroll svg { height: 22px; width: 22px; }
+      @keyframes gw-bob {
+        0%, 100% { transform: translate(-50%, 0); }
+        50% { transform: translate(-50%, 6px); }
+      }
+
+      /* Facts bar (overlaps hero) */
+      .gw-facts {
+        background: #fff;
+        border: 1px solid var(--gw-line);
+        border-radius: 22px;
+        box-shadow: 0 28px 60px rgba(19, 34, 26, 0.1);
+        display: grid;
+        gap: 0;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin: -70px auto 40px;
         overflow: hidden;
-        padding: 32px;
+        position: relative;
+        z-index: 3;
       }
-      .project-hero__copy {
-        align-self: center;
+      .gw-fact {
+        padding: 22px 24px;
+        position: relative;
       }
-      .project-hero__eyebrow {
-        color: #8d6b0f;
-        display: inline-block;
+      .gw-fact + .gw-fact::before {
+        background: var(--gw-line);
+        bottom: 18px;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 18px;
+        width: 1px;
+      }
+      .gw-fact span {
+        color: var(--gw-muted);
+        display: block;
         font-size: 11px;
         font-weight: 800;
         letter-spacing: 0.14em;
-        margin-bottom: 14px;
+        margin-bottom: 8px;
         text-transform: uppercase;
       }
-      .project-hero h1 {
-        color: #173427;
-        font-size: 58px;
-        line-height: 0.95;
-        margin: 0 0 12px;
-        text-transform: uppercase;
+      .gw-fact strong {
+        color: var(--gw-ink);
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.4;
       }
-      .project-hero__subtitle {
-        color: #315642;
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 1.35;
-        margin: 0 0 16px;
-        max-width: 620px;
-      }
-      .project-hero__summary {
-        color: #455a4b;
-        font-size: 18px;
-        line-height: 1.8;
-        margin: 0;
-        max-width: 700px;
-      }
-      .project-hero__actions {
+
+      /* Anchor nav */
+      .gw-anchornav {
+        backdrop-filter: blur(14px);
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid var(--gw-line);
+        border-radius: 999px;
+        box-shadow: 0 14px 28px rgba(19, 34, 26, 0.06);
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 24px;
+        gap: 6px;
+        margin-bottom: 48px;
+        padding: 8px;
+        position: sticky;
+        top: 88px;
+        z-index: 40;
       }
-      .project-button {
-        border: 1px solid rgba(39, 93, 56, 0.16);
+      .gw-anchornav a {
         border-radius: 999px;
-        color: #214432;
-        display: inline-flex;
-        font-weight: 800;
-        justify-content: center;
-        padding: 12px 18px;
-        text-decoration: none;
-        transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-      }
-      .project-button:hover,
-      .project-button:focus {
-        box-shadow: 0 14px 28px rgba(24, 39, 29, 0.08);
-        transform: translateY(-1px);
-      }
-      .project-button--filled {
-        background: #255d38;
-        border-color: #255d38;
-        color: #fff;
-      }
-      .project-button--block {
-        width: 100%;
-      }
-      .project-hero__visual {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        justify-content: center;
-        min-width: 0;
-        position: relative;
-      }
-      .project-hero__image-shell {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(250, 244, 224, 0.92));
-        border: 1px solid rgba(39, 93, 56, 0.1);
-        border-radius: 28px;
-        min-height: 100%;
-        overflow: hidden;
-        padding: 12px;
-      }
-      .project-hero__image {
-        border-radius: 20px;
-        display: block;
-        height: 100%;
-        max-height: 460px;
-        object-fit: cover;
-        width: 100%;
-      }
-      .project-hero__thumbs {
-        display: grid;
-        gap: 10px;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-      .project-hero__thumb {
-        border-radius: 16px;
-        display: block;
-        overflow: hidden;
-      }
-      .project-hero__thumb img {
-        display: block;
-        height: 118px;
-        object-fit: cover;
-        transition: transform 0.22s ease;
-        width: 100%;
-      }
-      .project-hero__thumb:hover img,
-      .project-hero__thumb:focus img {
-        transform: scale(1.05);
-      }
-      .project-hero__floating-card {
-        display: grid;
-        gap: 12px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .project-hero__mini-stat {
-        background: rgba(255, 255, 255, 0.9);
-        border: 1px solid rgba(39, 93, 56, 0.1);
-        border-radius: 20px;
-        padding: 16px 18px;
-      }
-      .project-hero__mini-stat span {
-        color: #6b836f;
-        display: block;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        margin-bottom: 6px;
-        text-transform: uppercase;
-      }
-      .project-hero__mini-stat strong {
-        color: #173427;
-        display: block;
-        font-size: 16px;
-        line-height: 1.45;
-      }
-      .project-stats {
-        display: grid;
-        gap: 16px;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        margin-bottom: 22px;
-      }
-      .project-stat {
-        background: #fff;
-        border: 1px solid rgba(39, 93, 56, 0.1);
-        border-radius: 24px;
-        box-shadow: 0 14px 30px rgba(19, 34, 26, 0.04);
-        padding: 20px;
-      }
-      .project-stat span {
-        color: #78907d;
-        display: block;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        margin-bottom: 8px;
-        text-transform: uppercase;
-      }
-      .project-stat strong {
-        color: #1d392b;
-        font-size: 20px;
-        line-height: 1.45;
-      }
-      .project-layout {
-        display: grid;
-        gap: 22px;
-        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.68fr);
-      }
-      .project-layout__main,
-      .project-layout__side {
-        display: grid;
-        gap: 22px;
-      }
-      .project-copy-card,
-      .project-info-card,
-      .project-side-card,
-      .project-media {
-        background: #fff;
-        border: 1px solid rgba(39, 93, 56, 0.08);
-        border-radius: 28px;
-        box-shadow: 0 14px 32px rgba(19, 34, 26, 0.05);
-        overflow: hidden;
-        padding: 26px;
-      }
-      .project-prose {
-        color: #36493d;
-        font-size: 18px;
-        line-height: 1.86;
-      }
-      .project-prose h2,
-      .project-prose h3 {
-        color: #173427;
-        margin-top: 30px;
-      }
-      .project-prose h2:first-child {
-        margin-top: 0;
-      }
-      .project-section-head {
-        margin-bottom: 16px;
-      }
-      .project-section-head span {
-        color: #8d6b0f;
-        display: inline-block;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.12em;
-        margin-bottom: 8px;
-        text-transform: uppercase;
-      }
-      .project-section-head h2,
-      .project-video-card__copy h3 {
-        color: #173427;
-        font-size: 28px;
-        line-height: 1.15;
-        margin: 0;
-      }
-      .project-section-head--side h2 {
-        font-size: 24px;
-      }
-      .project-split-grid {
-        display: grid;
-        gap: 22px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .project-bullet-list,
-      .project-mini-list {
-        margin: 0;
-        padding-left: 20px;
-      }
-      .project-bullet-list li,
-      .project-mini-list li,
-      .project-note,
-      .project-side-card p {
-        color: #4d6154;
-        font-size: 16px;
-        line-height: 1.8;
-      }
-      .project-bullet-list li + li,
-      .project-mini-list li + li {
-        margin-top: 10px;
-      }
-      .project-timeline {
-        display: grid;
-        gap: 14px;
-      }
-      .project-timeline__item {
-        background: linear-gradient(135deg, rgba(247, 251, 241, 0.9), rgba(255, 250, 240, 0.9));
-        border: 1px solid rgba(39, 93, 56, 0.08);
-        border-radius: 20px;
-        padding: 16px 18px;
-      }
-      .project-timeline__phase {
-        color: #214432;
+        color: var(--gw-green);
         font-size: 13px;
         font-weight: 800;
-        letter-spacing: 0.06em;
-        margin-bottom: 6px;
-        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        padding: 10px 16px;
+        text-decoration: none;
+        transition: background 0.2s ease, color 0.2s ease;
       }
-      .project-timeline__item p {
-        color: #4d6154;
-        font-size: 16px;
-        line-height: 1.75;
-        margin: 0;
+      .gw-anchornav a:hover, .gw-anchornav a:focus {
+        background: var(--gw-green-soft);
+        color: var(--gw-green-dark);
+        text-decoration: none;
       }
-      .project-video-card {
-        align-items: start;
-        background: linear-gradient(135deg, rgba(247, 251, 241, 0.92), rgba(255, 250, 240, 0.92));
-        border: 1px solid rgba(39, 93, 56, 0.08);
-        border-radius: 24px;
-        display: grid;
-        gap: 18px;
-        grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
-        margin-bottom: 18px;
-        padding: 18px;
+      .gw-anchornav a.is-active {
+        background: var(--gw-green);
+        color: #fff;
       }
-      .project-media__feature {
-        align-items: stretch;
-        background: linear-gradient(135deg, rgba(248, 251, 244, 0.95), rgba(255, 250, 241, 0.95));
-        border: 1px solid rgba(39, 93, 56, 0.08);
-        border-radius: 26px;
-        display: grid;
-        gap: 18px;
-        grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.72fr);
-        margin-bottom: 18px;
-        overflow: hidden;
-        padding: 18px;
+
+      /* Sections */
+      .gw-section {
+        margin-bottom: 68px;
+        scroll-margin-top: 120px;
       }
-      .project-media__feature-image img {
-        border-radius: 18px;
-        display: block;
-        height: 100%;
-        max-height: 420px;
-        object-fit: cover;
-        width: 100%;
-      }
-      .project-media__feature-copy {
-        align-self: center;
-      }
-      .project-media__feature-copy span {
-        color: #8d6b0f;
+      .gw-section__head { margin-bottom: 26px; max-width: 780px; }
+      .gw-eyebrow {
+        color: var(--gw-gold);
         display: inline-block;
         font-size: 11px;
         font-weight: 800;
-        letter-spacing: 0.12em;
-        margin-bottom: 8px;
+        letter-spacing: 0.18em;
+        margin-bottom: 10px;
         text-transform: uppercase;
       }
-      .project-media__feature-copy h3 {
-        color: #173427;
-        font-size: 30px;
-        line-height: 1.12;
-        margin: 0 0 12px;
-      }
-      .project-media__feature-copy p {
-        color: #4d6154;
-        font-size: 16px;
-        line-height: 1.82;
+      .gw-eyebrow--light { color: var(--gw-gold); }
+      .gw-section__head h2 {
+        color: var(--gw-ink);
+        font-size: 36px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        line-height: 1.1;
         margin: 0;
       }
-      .project-video-card__copy p {
-        color: #4d6154;
-        font-size: 16px;
-        line-height: 1.78;
+      .gw-section__sub {
+        color: var(--gw-muted);
+        font-size: 17px;
+        line-height: 1.6;
         margin: 10px 0 0;
       }
-      .project-video-card__player {
-        border-radius: 18px;
-        display: block;
-        width: 100%;
+      .gw-prose {
+        color: #37493e;
+        font-size: 18px;
+        line-height: 1.82;
       }
-      .project-gallery-grid {
+      .gw-prose p:first-of-type::first-letter {
+        color: var(--gw-green);
+        float: left;
+        font-size: 64px;
+        font-weight: 800;
+        line-height: 0.95;
+        margin: 6px 12px 0 0;
+      }
+      .gw-prose h2, .gw-prose h3 {
+        color: var(--gw-ink);
+        margin-top: 36px;
+      }
+      .gw-prose h2 { font-size: 26px; }
+      .gw-prose h3 { font-size: 20px; }
+
+      .gw-callout {
+        align-items: center;
+        background: linear-gradient(135deg, rgba(36, 84, 54, 0.06), rgba(202, 160, 58, 0.1));
+        border: 1px solid var(--gw-line);
+        border-left: 4px solid var(--gw-gold);
+        border-radius: 20px;
+        color: var(--gw-ink);
+        display: flex;
+        font-size: 16px;
+        gap: 18px;
+        line-height: 1.7;
+        margin-top: 30px;
+        padding: 22px 26px;
+      }
+      .gw-callout__icon {
+        align-items: center;
+        background: var(--gw-green-dark);
+        border-radius: 14px;
+        color: var(--gw-gold);
+        display: inline-flex;
+        flex-shrink: 0;
+        height: 48px;
+        justify-content: center;
+        width: 48px;
+      }
+      .gw-callout__icon svg { height: 24px; width: 24px; }
+
+      /* Steps */
+      .gw-steps {
+        counter-reset: gw-step;
         display: grid;
-        gap: 14px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .project-gallery-item {
-        border-radius: 18px;
-        display: block;
-        overflow: hidden;
+        gap: 20px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        list-style: none;
+        margin: 0;
+        padding: 0;
         position: relative;
       }
-      .project-gallery-item img {
-        display: block;
-        height: 300px;
-        object-fit: cover;
-        transition: transform 0.25s ease;
-        width: 100%;
+      .gw-steps::before {
+        background: linear-gradient(90deg, var(--gw-green) 0%, var(--gw-gold) 100%);
+        content: "";
+        height: 2px;
+        left: 6%;
+        opacity: 0.25;
+        position: absolute;
+        right: 6%;
+        top: 30px;
+        z-index: 0;
       }
-      .project-gallery-item:hover img,
-      .project-gallery-item:focus img {
-        transform: scale(1.04);
+      .gw-step {
+        background: #fff;
+        border: 1px solid var(--gw-line);
+        border-radius: 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 22px;
+        position: relative;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        z-index: 1;
       }
-      .project-note {
-        background: rgba(245, 248, 242, 0.92);
-        border-radius: 16px;
-        margin-top: 14px;
-        padding: 14px 16px;
+      .gw-step:hover {
+        border-color: var(--gw-green);
+        box-shadow: 0 22px 40px rgba(19, 34, 26, 0.1);
+        transform: translateY(-4px);
       }
-      .project-facts {
-        display: grid;
-        gap: 14px;
+      .gw-step__num {
+        align-items: center;
+        background: var(--gw-green);
+        border-radius: 50%;
+        color: #fff;
+        display: inline-flex;
+        font-size: 18px;
+        font-weight: 800;
+        height: 40px;
+        justify-content: center;
+        margin-bottom: 6px;
+        width: 40px;
+      }
+      .gw-step:nth-child(even) .gw-step__num { background: var(--gw-gold); color: var(--gw-green-dark); }
+      .gw-step h3 {
+        color: var(--gw-ink);
+        font-size: 18px;
+        font-weight: 800;
         margin: 0;
       }
-      .project-facts div {
-        border-bottom: 1px solid rgba(39, 93, 56, 0.08);
-        padding-bottom: 14px;
-      }
-      .project-facts div:last-child {
-        border-bottom: 0;
-        padding-bottom: 0;
-      }
-      .project-facts dt {
-        color: #7a907e;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 0.08em;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-      }
-      .project-facts dd {
-        color: #214432;
-        font-size: 16px;
+      .gw-step p {
+        color: var(--gw-muted);
+        font-size: 15px;
         line-height: 1.65;
         margin: 0;
       }
+
+      /* Two-col cards */
+      .gw-two-col {
+        display: grid;
+        gap: 22px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .gw-card {
+        background: #fff;
+        border: 1px solid var(--gw-line);
+        border-radius: 24px;
+        padding: 28px;
+        transition: box-shadow 0.25s ease, transform 0.25s ease;
+      }
+      .gw-card:hover {
+        box-shadow: 0 22px 44px rgba(19, 34, 26, 0.08);
+        transform: translateY(-2px);
+      }
+      .gw-card__head {
+        align-items: center;
+        display: flex;
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+      .gw-card__badge {
+        align-items: center;
+        background: var(--gw-green-soft);
+        border-radius: 14px;
+        color: var(--gw-green);
+        display: inline-flex;
+        height: 44px;
+        justify-content: center;
+        width: 44px;
+      }
+      .gw-card__badge--gold {
+        background: var(--gw-gold-soft);
+        color: #916d0e;
+      }
+      .gw-card__badge svg { height: 22px; width: 22px; }
+      .gw-card h3 {
+        color: var(--gw-ink);
+        font-size: 20px;
+        font-weight: 800;
+        margin: 0;
+      }
+      .gw-checklist {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .gw-checklist li {
+        color: #3f5448;
+        font-size: 16px;
+        line-height: 1.65;
+        padding: 10px 0 10px 32px;
+        position: relative;
+      }
+      .gw-checklist li + li { border-top: 1px solid var(--gw-line); }
+      .gw-checklist li::before {
+        background: var(--gw-green);
+        border-radius: 50%;
+        color: #fff;
+        content: "\2714";
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: 800;
+        height: 20px;
+        left: 0;
+        position: absolute;
+        top: 12px;
+        width: 20px;
+      }
+      .gw-checklist--gold li::before { background: var(--gw-gold); color: var(--gw-green-dark); }
+
+      /* Timeline */
+      .gw-timeline {
+        display: grid;
+        gap: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      .gw-timeline::before {
+        background: linear-gradient(180deg, var(--gw-green), var(--gw-gold));
+        content: "";
+        left: 19px;
+        opacity: 0.35;
+        position: absolute;
+        top: 12px;
+        bottom: 12px;
+        width: 2px;
+      }
+      .gw-timeline__item {
+        padding: 14px 0 14px 56px;
+        position: relative;
+      }
+      .gw-timeline__dot {
+        background: var(--gw-green);
+        border: 3px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 0 2px var(--gw-green);
+        height: 16px;
+        left: 12px;
+        position: absolute;
+        top: 22px;
+        width: 16px;
+      }
+      .gw-timeline__item:nth-child(even) .gw-timeline__dot {
+        background: var(--gw-gold);
+        box-shadow: 0 0 0 2px var(--gw-gold);
+      }
+      .gw-timeline__phase {
+        color: var(--gw-green-dark);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        margin-bottom: 6px;
+        text-transform: uppercase;
+      }
+      .gw-timeline__item p {
+        color: #3f5448;
+        font-size: 16px;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      /* Video + gallery */
+      .gw-video {
+        background: var(--gw-green-dark);
+        border-radius: 24px;
+        margin: 0 0 24px;
+        overflow: hidden;
+        padding: 12px 12px 0;
+      }
+      .gw-video video {
+        border-radius: 16px;
+        display: block;
+        width: 100%;
+      }
+      .gw-video figcaption {
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        padding: 14px 12px 16px;
+        text-align: center;
+      }
+      .gw-gallery {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .gw-gallery__item {
+        border-radius: 18px;
+        display: block;
+        overflow: hidden;
+        position: relative;
+      }
+      .gw-gallery__item img {
+        display: block;
+        height: 260px;
+        object-fit: cover;
+        transition: transform 0.35s ease;
+        width: 100%;
+      }
+      .gw-gallery__item:hover img,
+      .gw-gallery__item:focus img {
+        transform: scale(1.06);
+      }
+      .gw-gallery__expand {
+        align-items: center;
+        background: rgba(15, 33, 24, 0.88);
+        border-radius: 50%;
+        color: #fff;
+        display: inline-flex;
+        height: 38px;
+        justify-content: center;
+        opacity: 0;
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        transition: opacity 0.2s ease;
+        width: 38px;
+      }
+      .gw-gallery__expand svg { height: 18px; width: 18px; }
+      .gw-gallery__item:hover .gw-gallery__expand,
+      .gw-gallery__item:focus .gw-gallery__expand {
+        opacity: 1;
+      }
+
+      /* Join */
+      .gw-join {
+        background: linear-gradient(135deg, var(--gw-green-dark) 0%, var(--gw-green) 60%, #2d7048 100%);
+        border-radius: 32px;
+        color: #fff;
+        display: grid;
+        gap: 28px;
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        margin: 20px 0 60px;
+        overflow: hidden;
+        padding: 44px 44px 48px;
+        position: relative;
+      }
+      .gw-join::before {
+        background: radial-gradient(circle, rgba(202, 160, 58, 0.3) 0%, transparent 70%);
+        content: "";
+        height: 400px;
+        position: absolute;
+        right: -80px;
+        top: -100px;
+        width: 400px;
+      }
+      .gw-join__copy { position: relative; z-index: 1; }
+      .gw-join__copy h2 {
+        color: #fff;
+        font-size: 34px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+        line-height: 1.1;
+        margin: 0 0 14px;
+      }
+      .gw-join__copy p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 17px;
+        line-height: 1.7;
+        margin: 0 0 22px;
+        max-width: 520px;
+      }
+      .gw-join__actions {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .gw-join__badge {
+        background: rgba(255, 255, 255, 0.16);
+        border: 1px dashed rgba(255, 255, 255, 0.38);
+        border-radius: 999px;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        padding: 8px 14px;
+        text-transform: uppercase;
+      }
+      .gw-join__form {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 22px;
+        padding: 24px;
+        position: relative;
+        z-index: 1;
+      }
+      .gw-join__form-head { margin-bottom: 14px; }
+      .gw-join__form-head span {
+        color: var(--gw-gold);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .gw-join__form-head h3 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 800;
+        margin: 6px 0 0;
+      }
+      .gw-join__form ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .gw-join__form li {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 14px;
+        line-height: 1.55;
+        padding: 8px 0 8px 22px;
+        position: relative;
+      }
+      .gw-join__form li + li { border-top: 1px solid rgba(255, 255, 255, 0.12); }
+      .gw-join__form li::before {
+        color: var(--gw-gold);
+        content: "\2022";
+        font-size: 18px;
+        left: 0;
+        position: absolute;
+        top: 6px;
+      }
+
+      /* Back to top */
+      .gw-to-top {
+        align-items: center;
+        background: var(--gw-green);
+        border: 0;
+        border-radius: 50%;
+        bottom: 28px;
+        box-shadow: 0 18px 32px rgba(19, 34, 26, 0.25);
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        height: 48px;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;
+        right: 28px;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+        transform: translateY(10px);
+        width: 48px;
+        z-index: 50;
+      }
+      .gw-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+      .gw-to-top svg { height: 22px; width: 22px; }
+      .gw-to-top:hover { background: var(--gw-green-dark); }
+
+      /* Reveal on scroll */
+      .gw-section, .gw-facts, .gw-join {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .gw-section.is-visible, .gw-facts.is-visible, .gw-join.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .gw-section, .gw-facts, .gw-join, .gw-hero__scroll { opacity: 1 !important; transform: none !important; animation: none !important; transition: none !important; }
+      }
+
       @media (max-width: 1100px) {
-        .project-stats {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-        .project-layout,
-        .project-hero,
-        .project-video-card,
-        .project-media__feature {
-          grid-template-columns: 1fr;
-        }
+        .gw-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .gw-steps::before { display: none; }
+        .gw-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .gw-fact + .gw-fact::before { display: none; }
+        .gw-fact { border-bottom: 1px solid var(--gw-line); }
+        .gw-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .gw-join { grid-template-columns: 1fr; padding: 36px; }
       }
       @media (max-width: 767px) {
-        .project-anchor-nav {
-          border-radius: 22px;
-          top: 72px;
-        }
-        .project-hero,
-        .project-copy-card,
-        .project-info-card,
-        .project-side-card,
-        .project-media {
-          border-radius: 22px;
-          padding: 20px;
-        }
-        .project-hero h1 {
-          font-size: 42px;
-        }
-        .project-hero__subtitle {
-          font-size: 18px;
-        }
-        .project-hero__summary,
-        .project-prose {
-          font-size: 17px;
-        }
-        .project-hero__thumbs,
-        .project-hero__floating-card,
-        .project-stats,
-        .project-split-grid,
-        .project-gallery-grid {
-          grid-template-columns: 1fr;
-        }
-        .project-gallery-item img {
-          height: 240px;
-        }
+        .gw-hero { padding: 72px 0 90px; }
+        .gw-hero__title { font-size: 36px; }
+        .gw-hero__lede { font-size: 17px; }
+        .gw-facts { grid-template-columns: 1fr; margin-top: -50px; }
+        .gw-section { margin-bottom: 48px; }
+        .gw-section__head h2 { font-size: 28px; }
+        .gw-two-col, .gw-steps { grid-template-columns: 1fr; }
+        .gw-gallery { grid-template-columns: 1fr; }
+        .gw-gallery__item img { height: 220px; }
+        .gw-join { padding: 28px; margin-bottom: 40px; }
+        .gw-join__copy h2 { font-size: 26px; }
+        .gw-anchornav { top: 72px; }
+        .gw-prose { font-size: 17px; }
+        .gw-prose p:first-of-type::first-letter { font-size: 48px; }
       }
     </style>
+
+    <script>
+      (function () {
+        // Scroll progress
+        var progress = document.querySelector('.gw-scroll-progress span');
+        var toTop = document.querySelector('.gw-to-top');
+        var nav = document.querySelectorAll('.gw-anchornav a');
+        var sections = Array.from(document.querySelectorAll('.gw-section[id], .gw-join[id]'));
+        function onScroll() {
+          var h = document.documentElement;
+          var scrolled = h.scrollTop || document.body.scrollTop;
+          var height = h.scrollHeight - h.clientHeight;
+          var pct = height > 0 ? scrolled / height : 0;
+          if (progress) progress.style.transform = 'scaleX(' + pct + ')';
+          if (toTop) toTop.classList.toggle('is-visible', scrolled > 600);
+          var cur = null;
+          for (var i = 0; i < sections.length; i++) {
+            var rect = sections[i].getBoundingClientRect();
+            if (rect.top <= 160) cur = sections[i].id;
+          }
+          nav.forEach(function (a) {
+            a.classList.toggle('is-active', cur && a.getAttribute('href') === '#' + cur);
+          });
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // Reveal on scroll
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+            });
+          }, { threshold: 0.08 });
+          document.querySelectorAll('.gw-section, .gw-facts, .gw-join').forEach(function (el) { io.observe(el); });
+        } else {
+          document.querySelectorAll('.gw-section, .gw-facts, .gw-join').forEach(function (el) { el.classList.add('is-visible'); });
+        }
+      })();
+    </script>
   </body>
 </html>
