@@ -79,4 +79,4 @@ Because the behaviour is visible, structured, and measurable, the experiment is 
 
 ## How to join
 
-Fill out the interest form and the research team will follow up to coordinate timing, materials, and classroom support. The form asks for your name, school and city, grade taught, preferred participation window, contact email, and any questions you'd like the team to answer.
+Fill out the [interest form](https://docs.google.com/forms/d/e/1FAIpQLSd2VkB_VbK_y5YVYHbzWMz3ZTn_5c5vz1dZXAAnQgThgm0OnQ/viewform) and the research team will follow up to coordinate timing, materials, and classroom support. The form asks for your name, school and city, grade taught, preferred participation window, contact email, and any questions you'd like the team to answer.
