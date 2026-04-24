@@ -24,10 +24,6 @@
           {{ end }}
 
           <section class="projects-hub">
-            <header class="projects-hub__header">
-              <h1>{{ .Title }}</h1>
-            </header>
-
             {{ if gt (len $featured) 0 }}
             <div class="projects-featured">
               {{ range $featured }}
@@ -108,16 +104,6 @@
         max-width: 1180px;
         padding-bottom: 40px;
       }
-      .projects-hub__header {
-        margin-bottom: 26px;
-      }
-      .projects-hub__header h1 {
-        color: #1f3727;
-        font-size: 44px;
-        line-height: 1.05;
-        margin: 0;
-      }
-
       /* ===== Featured cards ===== */
       .projects-featured {
         display: grid;
@@ -421,9 +407,6 @@
         }
       }
       @media (max-width: 767px) {
-        .projects-hub__header h1 {
-          font-size: 34px;
-        }
         .featured-card__body {
           padding: 22px;
         }
