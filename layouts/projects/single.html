@@ -23,6 +23,11 @@
         {{ $gallery = $gallery | append . }}
       {{ end }}
     {{ end }}
+    {{ $heroThumbs := first 3 $gallery }}
+    {{ $featuredStill := "" }}
+    {{ if gt (len $gallery) 0 }}
+      {{ $featuredStill = index $gallery 0 }}
+    {{ end }}
 
     <div id="all">
       {{ partial "top.html" . }}
@@ -53,6 +58,15 @@
                   <img src="{{ $heroImage }}" alt="{{ .Title }}" class="project-hero__image">
                 </div>
                 {{ end }}
+                {{ if gt (len $heroThumbs) 0 }}
+                <div class="project-hero__thumbs">
+                  {{ range $heroThumbs }}
+                  <a class="project-hero__thumb" href="{{ .RelPermalink }}" target="_blank" rel="noopener">
+                    <img src="{{ .RelPermalink }}" alt="Gateway field photo" loading="lazy">
+                  </a>
+                  {{ end }}
+                </div>
+                {{ end }}
                 <div class="project-hero__floating-card">
                   {{ with .Params.status }}
                   <div class="project-hero__mini-stat">
@@ -70,6 +84,14 @@
               </div>
             </header>
 
+            <nav class="project-anchor-nav" aria-label="Gateway page sections">
+              <a href="#gateway-story">Project story</a>
+              <a href="#gateway-participation">Participation</a>
+              <a href="#gateway-timeline">Timeline</a>
+              <a href="#gateway-gallery">Photos and video</a>
+              <a href="#gateway-join">Join</a>
+            </nav>
+
             {{ with .Params.highlights }}
             <section class="project-stats">
               {{ range . }}
@@ -83,13 +105,13 @@
 
             <div class="project-layout">
               <div class="project-layout__main">
-                <section class="project-copy-card">
+                <section class="project-copy-card" id="gateway-story">
                   <div class="project-prose">
                     {{ .Content }}
                   </div>
                 </section>
 
-                <div class="project-split-grid">
+                <div class="project-split-grid" id="gateway-participation">
                   {{ with .Params.what_we_provide }}
                   <section class="project-info-card">
                     <div class="project-section-head">
@@ -116,7 +138,7 @@
                 </div>
 
                 {{ with .Params.timeline_steps }}
-                <section class="project-info-card">
+                <section class="project-info-card" id="gateway-timeline">
                   <div class="project-section-head">
                     <span>Schedule</span>
                     <h2>Project timing</h2>
@@ -138,6 +160,19 @@
                     <span>Field media</span>
                     <h2>Ant observations from the project archive</h2>
                   </div>
+
+                  {{ with $featuredStill }}
+                  <div class="project-media__feature">
+                    <div class="project-media__feature-image">
+                      <img src="{{ .RelPermalink }}" alt="Gateway featured ant photo" loading="lazy">
+                    </div>
+                    <div class="project-media__feature-copy">
+                      <span>Featured image</span>
+                      <h3>Close-up observations from the ant archive</h3>
+                      <p>The photography does more of the storytelling here now, so visitors can quickly understand the species, the field context, and the visual character of the project before they read the full details.</p>
+                    </div>
+                  </div>
+                  {{ end }}
 
                   {{ if $heroVideo }}
                   <div class="project-video-card">
@@ -222,6 +257,34 @@
         display: inline-block;
         font-weight: 700;
         margin-bottom: 18px;
+      }
+      .project-anchor-nav {
+        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.88);
+        border: 1px solid rgba(39, 93, 56, 0.1);
+        border-radius: 999px;
+        box-shadow: 0 16px 28px rgba(22, 37, 28, 0.05);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 0 22px;
+        padding: 10px;
+        position: sticky;
+        top: 82px;
+        z-index: 20;
+      }
+      .project-anchor-nav a {
+        border-radius: 999px;
+        color: #264835;
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 1;
+        padding: 11px 14px;
+        text-decoration: none;
+      }
+      .project-anchor-nav a:hover,
+      .project-anchor-nav a:focus {
+        background: rgba(39, 93, 56, 0.08);
       }
       .project-hero {
         align-items: stretch;
@@ -325,6 +388,27 @@
         max-height: 460px;
         object-fit: cover;
         width: 100%;
+      }
+      .project-hero__thumbs {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .project-hero__thumb {
+        border-radius: 16px;
+        display: block;
+        overflow: hidden;
+      }
+      .project-hero__thumb img {
+        display: block;
+        height: 118px;
+        object-fit: cover;
+        transition: transform 0.22s ease;
+        width: 100%;
+      }
+      .project-hero__thumb:hover img,
+      .project-hero__thumb:focus img {
+        transform: scale(1.05);
       }
       .project-hero__floating-card {
         display: grid;
@@ -492,6 +576,50 @@
         margin-bottom: 18px;
         padding: 18px;
       }
+      .project-media__feature {
+        align-items: stretch;
+        background: linear-gradient(135deg, rgba(248, 251, 244, 0.95), rgba(255, 250, 241, 0.95));
+        border: 1px solid rgba(39, 93, 56, 0.08);
+        border-radius: 26px;
+        display: grid;
+        gap: 18px;
+        grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.72fr);
+        margin-bottom: 18px;
+        overflow: hidden;
+        padding: 18px;
+      }
+      .project-media__feature-image img {
+        border-radius: 18px;
+        display: block;
+        height: 100%;
+        max-height: 420px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .project-media__feature-copy {
+        align-self: center;
+      }
+      .project-media__feature-copy span {
+        color: #8d6b0f;
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+      }
+      .project-media__feature-copy h3 {
+        color: #173427;
+        font-size: 30px;
+        line-height: 1.12;
+        margin: 0 0 12px;
+      }
+      .project-media__feature-copy p {
+        color: #4d6154;
+        font-size: 16px;
+        line-height: 1.82;
+        margin: 0;
+      }
       .project-video-card__copy p {
         color: #4d6154;
         font-size: 16px;
@@ -506,7 +634,7 @@
       .project-gallery-grid {
         display: grid;
         gap: 14px;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .project-gallery-item {
         border-radius: 18px;
@@ -516,7 +644,7 @@
       }
       .project-gallery-item img {
         display: block;
-        height: 220px;
+        height: 300px;
         object-fit: cover;
         transition: transform 0.25s ease;
         width: 100%;
@@ -564,11 +692,16 @@
         }
         .project-layout,
         .project-hero,
-        .project-video-card {
+        .project-video-card,
+        .project-media__feature {
           grid-template-columns: 1fr;
         }
       }
       @media (max-width: 767px) {
+        .project-anchor-nav {
+          border-radius: 22px;
+          top: 72px;
+        }
         .project-hero,
         .project-copy-card,
         .project-info-card,
@@ -587,6 +720,7 @@
         .project-prose {
           font-size: 17px;
         }
+        .project-hero__thumbs,
         .project-hero__floating-card,
         .project-stats,
         .project-split-grid,

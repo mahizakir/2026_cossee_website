@@ -2,6 +2,7 @@
 title = "Gateway"
 date = 2026-04-24
 draft = false
+aliases = ["/projects/project-1/"]
 weight = 1
 summary = "GATEWAY invites Alberta classrooms to help map the boundaries of a potentially province-scale ant supercolony through hands-on aggression trials."
 project_code = "GATEWAY"
