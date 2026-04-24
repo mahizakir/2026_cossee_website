@@ -47,12 +47,17 @@
             {{ end }}
             {{ with .Params.summary }}<p class="gw-hero__lede">{{ . }}</p>{{ end }}
             <div class="gw-hero__actions">
-              {{ with .Params.contact_email }}
+              {{ if .Params.interest_form_url }}
+              <a class="gw-btn gw-btn--primary" href="{{ .Params.interest_form_url }}" target="_blank" rel="noopener">
+                <span>Fill the interest form</span>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              {{ else }}{{ with .Params.contact_email }}
               <a class="gw-btn gw-btn--primary" href="mailto:{{ . }}?subject=Project%20Gateway%20interest">
                 <span>Email to join</span>
                 <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
-              {{ end }}
+              {{ end }}{{ end }}
               <a class="gw-btn gw-btn--ghost" href="#how-it-works">How it works</a>
             </div>
           </div>
@@ -224,21 +229,23 @@
             <div class="gw-join__copy">
               <span class="gw-eyebrow gw-eyebrow--light">Get involved</span>
               <h2>Ready to bring GATEWAY to your classroom?</h2>
-              <p>The Google interest form is coming next. In the meantime, email the team directly &mdash; we&rsquo;ll walk you through timing, materials, and classroom support.</p>
-              {{ with .Params.contact_email }}
+              <p>Fill out the interest form and the research team will follow up to plan timing, materials, and classroom support. Prefer email? You can reach the team directly too.</p>
               <div class="gw-join__actions">
-                <a class="gw-btn gw-btn--primary gw-btn--lg" href="mailto:{{ . }}?subject=Project%20Gateway%20interest">
-                  <span>Email {{ . }}</span>
+                {{ with .Params.interest_form_url }}
+                <a class="gw-btn gw-btn--primary gw-btn--lg" href="{{ . }}" target="_blank" rel="noopener">
+                  <span>Open the interest form</span>
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <span class="gw-join__badge">Form coming soon</span>
+                {{ end }}
+                {{ with .Params.contact_email }}
+                <a class="gw-btn gw-btn--ghost gw-btn--lg" href="mailto:{{ . }}?subject=Project%20Gateway%20interest">Email {{ . }}</a>
+                {{ end }}
               </div>
-              {{ end }}
             </div>
             {{ with .Params.form_fields }}
             <aside class="gw-join__form">
               <div class="gw-join__form-head">
-                <span>What we&rsquo;ll ask on the form</span>
+                <span>What the form asks</span>
                 <h3>A quick preview</h3>
               </div>
               <ul>

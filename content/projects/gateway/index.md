@@ -14,6 +14,7 @@ location = "Across Alberta"
 timing = "June to October 2026"
 commitment = "Approximately 2 to 3 hours"
 contact_email = "csosiak@ualberta.ca"
+interest_form_url = "https://docs.google.com/forms/d/e/1FAIpQLSd2VkB_VbK_y5YVYHbzWMz3ZTn_5c5vz1dZXAAnQgThgm0OnQ/viewform"
 hero_image = "ant/DSC_1662.JPG"
 hero_video = "ant/20260419_110233 (1).mp4"
 gallery_images = [
@@ -76,6 +77,6 @@ Students compare ants from the Fish Creek supercolony with ants of the same spec
 
 Because the behaviour is visible, structured, and measurable, the experiment is especially well suited to classroom teams. It creates a tangible link between animal behaviour, biogeography, and evidence generation.
 
-## What happens next
+## How to join
 
-A Google interest form will be added next. That form will gather the teacher, school, grade, timing preference, contact email, and any questions so the research team can coordinate participation and classroom support.
+Fill out the interest form and the research team will follow up to coordinate timing, materials, and classroom support. The form asks for your name, school and city, grade taught, preferred participation window, contact email, and any questions you'd like the team to answer.
