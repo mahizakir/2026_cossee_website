@@ -34,8 +34,14 @@
                   {{ $heroImg = .RelPermalink }}
                 {{ end }}
               {{ end }}
+              {{ $href := .RelPermalink }}
+              {{ $extra := "" }}
+              {{ with .Params.external_url }}
+                {{ $href = . }}
+                {{ $extra = "target=\"_blank\" rel=\"noopener\"" }}
+              {{ end }}
               <article class="featured-card" tabindex="0">
-                <a class="featured-card__link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }} project page"></a>
+                <a class="featured-card__link" href="{{ $href }}" {{ $extra | safeHTMLAttr }} aria-label="Open {{ .Title }} project page"></a>
                 {{ if $heroImg }}
                 <div class="featured-card__media">
                   <img src="{{ $heroImg }}" alt="{{ .Title }} project visual" loading="lazy">
@@ -78,7 +84,13 @@
               </div>
               <div class="projects-indev__grid">
                 {{ range $inDev }}
-                <a class="indev-card" href="{{ .RelPermalink }}">
+                {{ $href := .RelPermalink }}
+                {{ $extra := "" }}
+                {{ with .Params.external_url }}
+                  {{ $href = . }}
+                  {{ $extra = "target=\"_blank\" rel=\"noopener\"" }}
+                {{ end }}
+                <a class="indev-card" href="{{ $href }}" {{ $extra | safeHTMLAttr }}>
                   <div class="indev-card__meta">
                     <span class="indev-card__code">{{ .Params.project_code | default .Title }}</span>
                     {{ with .Params.status }}<span class="indev-card__status">{{ . }}</span>{{ end }}

@@ -1,3 +1,22 @@
+{{ if .Params.external_url }}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url={{ .Params.external_url | safeURL }}">
+    <link rel="canonical" href="{{ .Params.external_url | safeURL }}">
+    <meta name="robots" content="noindex">
+    <title>Redirecting to {{ .Params.external_url }}</title>
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 40px; color: #1a2b22; }
+      a { color: #245436; }
+    </style>
+  </head>
+  <body>
+    <p>Redirecting to <a href="{{ .Params.external_url | safeURL }}">{{ .Params.external_url }}</a>…</p>
+  </body>
+</html>
+{{ else }}
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   <head>
@@ -1059,3 +1078,4 @@
     </script>
   </body>
 </html>
+{{ end }}
