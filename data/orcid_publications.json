@@ -2,10 +2,33 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-04-27T11:21:01Z",
-  "generated_at_display": "April 27, 2026 at 11:21 UTC",
-  "works_count": 435,
+  "generated_at": "2026-04-28T11:20:25Z",
+  "generated_at_display": "April 28, 2026 at 11:20 UTC",
+  "works_count": 436,
   "latest": [
+    {
+      "put_code": 212973195,
+      "title": "Ungeneralizable generalizations? A meta-meta-analysis of the influence of taxonomic bias on the study of behaviour",
+      "authors": [
+        "Ned A. Dochtermann",
+        "M.A. Sekhar",
+        "S. Nakagawa"
+      ],
+      "authors_display": "Ned A. Dochtermann, M.A. Sekhar, S. Nakagawa",
+      "journal_title": "Animal Behaviour",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "06",
+      "publication_day": "00",
+      "publication_date_display": "June 2026",
+      "publication_date_iso": "2026-06-00",
+      "doi": "10.1016/j.anbehav.2026.123542",
+      "doi_url": "https://doi.org/10.1016/j.anbehav.2026.123542",
+      "best_url": "https://doi.org/10.1016/j.anbehav.2026.123542",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212973195"
+    },
     {
       "put_code": 212476743,
       "title": "Interactive effects of heat and drought on wheat yield change from synergistic to antagonistic as their severity increases",
@@ -140,40 +163,36 @@
       "best_url": "https://doi.org/10.32942/X2C37Q",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/210174370"
-    },
-    {
-      "put_code": 210174371,
-      "title": "Open Code in Ecology and Evolutionary Biology: An Evidence-Based Appraisal by SORTEE",
-      "authors": [
-        "Edward Ivimey-Cook",
-        "Kevin Bairos-Novak",
-        "Daniel Morillo",
-        "Shinichi Nakagawa",
-        "Julia Sharapi",
-        "Elina Takola",
-        "Joel Pick"
-      ],
-      "authors_display": "Edward Ivimey-Cook, Kevin Bairos-Novak, Daniel Morillo, Shinichi Nakagawa, Julia Sharapi, Elina Takola, Joel Pick",
-      "journal_title": null,
-      "type": "preprint",
-      "type_display": "Preprint",
-      "publication_year": "2026",
-      "publication_month": "03",
-      "publication_day": "30",
-      "publication_date_display": "March 30, 2026",
-      "publication_date_iso": "2026-03-30",
-      "doi": "10.32942/x27d4f",
-      "doi_url": "https://doi.org/10.32942/x27d4f",
-      "best_url": "https://doi.org/10.32942/X27D4F",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/210174371"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 14,
+      "count": 15,
       "items": [
+        {
+          "put_code": 212973195,
+          "title": "Ungeneralizable generalizations? A meta-meta-analysis of the influence of taxonomic bias on the study of behaviour",
+          "authors": [
+            "Ned A. Dochtermann",
+            "M.A. Sekhar",
+            "S. Nakagawa"
+          ],
+          "authors_display": "Ned A. Dochtermann, M.A. Sekhar, S. Nakagawa",
+          "journal_title": "Animal Behaviour",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "06",
+          "publication_day": "00",
+          "publication_date_display": "June 2026",
+          "publication_date_iso": "2026-06-00",
+          "doi": "10.1016/j.anbehav.2026.123542",
+          "doi_url": "https://doi.org/10.1016/j.anbehav.2026.123542",
+          "best_url": "https://doi.org/10.1016/j.anbehav.2026.123542",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212973195"
+        },
         {
           "put_code": 212476743,
           "title": "Interactive effects of heat and drought on wheat yield change from synergistic to antagonistic as their severity increases",
@@ -12118,7 +12137,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 364,
+    "journal-article": 365,
     "other": 6,
     "preprint": 63
   }
