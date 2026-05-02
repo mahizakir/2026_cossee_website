@@ -2,9 +2,9 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-05-01T10:49:11Z",
-  "generated_at_display": "May 01, 2026 at 10:49 UTC",
-  "works_count": 436,
+  "generated_at": "2026-05-02T10:14:22Z",
+  "generated_at_display": "May 02, 2026 at 10:14 UTC",
+  "works_count": 437,
   "latest": [
     {
       "put_code": 212973195,
@@ -52,6 +52,37 @@
       "best_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212476743"
+    },
+    {
+      "put_code": 213482849,
+      "title": "Synthesis of Anthropogenic Impacts on Birds - Systematic Map and Bibliometric Analysis of Meta-Analyses",
+      "authors": [
+        "Renato Vidić",
+        "Marion Chatelain",
+        "Olivia Smith",
+        "Marta Szulkin",
+        "Danijela Zanko",
+        "Nicole Lussier",
+        "Ayumi Mizuno",
+        "Davide Dominoni",
+        "Marcel Visser",
+        "Shinichi Nakagawa",
+        "Antica Culina"
+      ],
+      "authors_display": "Renato Vidić, Marion Chatelain, Olivia Smith, Marta Szulkin, Danijela Zanko, Nicole Lussier, Ayumi Mizuno, Davide Dominoni, Marcel Visser, Shinichi Nakagawa, Antica Culina",
+      "journal_title": null,
+      "type": "preprint",
+      "type_display": "Preprint",
+      "publication_year": "2026",
+      "publication_month": "05",
+      "publication_day": "01",
+      "publication_date_display": "May 1, 2026",
+      "publication_date_iso": "2026-05-01",
+      "doi": "10.32942/x2h96n",
+      "doi_url": "https://doi.org/10.32942/x2h96n",
+      "best_url": "https://doi.org/10.32942/X2H96N",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/213482849"
     },
     {
       "put_code": 211212258,
@@ -136,39 +167,12 @@
       "best_url": "https://doi.org/10.31222/osf.io/ezgj5_v1",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/210349278"
-    },
-    {
-      "put_code": 210174370,
-      "title": "Pre-registration and Registered Reports in Ecology and Evolutionary Biology: An Evidence-Based Appraisal by SORTEE",
-      "authors": [
-        "Joel Pick",
-        "Elina Takola",
-        "Kevin Bairos-Novak",
-        "Edward Ivimey-Cook",
-        "Daniel Morillo",
-        "Shinichi Nakagawa",
-        "Julia Sharapi"
-      ],
-      "authors_display": "Joel Pick, Elina Takola, Kevin Bairos-Novak, Edward Ivimey-Cook, Daniel Morillo, Shinichi Nakagawa, Julia Sharapi",
-      "journal_title": null,
-      "type": "preprint",
-      "type_display": "Preprint",
-      "publication_year": "2026",
-      "publication_month": "03",
-      "publication_day": "30",
-      "publication_date_display": "March 30, 2026",
-      "publication_date_iso": "2026-03-30",
-      "doi": "10.32942/x2c37q",
-      "doi_url": "https://doi.org/10.32942/x2c37q",
-      "best_url": "https://doi.org/10.32942/X2C37Q",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/210174370"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 15,
+      "count": 16,
       "items": [
         {
           "put_code": 212973195,
@@ -216,6 +220,37 @@
           "best_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212476743"
+        },
+        {
+          "put_code": 213482849,
+          "title": "Synthesis of Anthropogenic Impacts on Birds - Systematic Map and Bibliometric Analysis of Meta-Analyses",
+          "authors": [
+            "Renato Vidić",
+            "Marion Chatelain",
+            "Olivia Smith",
+            "Marta Szulkin",
+            "Danijela Zanko",
+            "Nicole Lussier",
+            "Ayumi Mizuno",
+            "Davide Dominoni",
+            "Marcel Visser",
+            "Shinichi Nakagawa",
+            "Antica Culina"
+          ],
+          "authors_display": "Renato Vidić, Marion Chatelain, Olivia Smith, Marta Szulkin, Danijela Zanko, Nicole Lussier, Ayumi Mizuno, Davide Dominoni, Marcel Visser, Shinichi Nakagawa, Antica Culina",
+          "journal_title": null,
+          "type": "preprint",
+          "type_display": "Preprint",
+          "publication_year": "2026",
+          "publication_month": "05",
+          "publication_day": "01",
+          "publication_date_display": "May 1, 2026",
+          "publication_date_iso": "2026-05-01",
+          "doi": "10.32942/x2h96n",
+          "doi_url": "https://doi.org/10.32942/x2h96n",
+          "best_url": "https://doi.org/10.32942/X2H96N",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/213482849"
         },
         {
           "put_code": 211212258,
@@ -12139,6 +12174,6 @@
     "book-chapter": 1,
     "journal-article": 365,
     "other": 6,
-    "preprint": 63
+    "preprint": 64
   }
 }
