@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Checklist Automator icon">
+  <!-- Cossee-inspired multi-color illustrative mark:
+       a research notebook (manuscript) with three checked items in
+       cossee palette colors, plus a botanical sprig growing up out
+       of the page — research that audits itself while it grows. -->
+
+  <!-- ─────────── back card (faded, like a stack of papers) ─────────── -->
+  <rect x="34" y="20" width="60" height="78" rx="4"
+        fill="#dceadf" stroke="#8b9282" stroke-width="0.5" stroke-opacity="0.4"/>
+  <rect x="30" y="24" width="60" height="78" rx="4"
+        fill="#f1f2ec" stroke="#8b9282" stroke-width="0.6" stroke-opacity="0.6"/>
+
+  <!-- ─────────── front card / manuscript page ─────────── -->
+  <rect x="26" y="28" width="60" height="78" rx="5"
+        fill="#f6faf5" stroke="#44604c" stroke-width="0.9"/>
+
+  <!-- folded corner top-right of the front page (nice paper detail) -->
+  <path d="M 80 28 L 86 28 L 86 34 Z" fill="#dceadf" stroke="#44604c" stroke-width="0.9"/>
+  <path d="M 80 28 L 80 34 L 86 34" fill="none" stroke="#44604c" stroke-width="0.9" stroke-linejoin="round"/>
+
+  <!-- ── checklist rows on the front page ── -->
+  <!-- row 1: olive check (#7b933f) -->
+  <rect x="32" y="42" width="7" height="7" rx="1.5"
+        fill="none" stroke="#7b933f" stroke-width="1.4"/>
+  <path d="M 33.5 45.5 L 35.5 47.5 L 38 43.5"
+        fill="none" stroke="#7b933f" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="42" y1="46" x2="74" y2="46"
+        stroke="#a4a985" stroke-width="2.2" stroke-linecap="round" stroke-opacity="0.7"/>
+
+  <!-- row 2: teal check (#69aeb1) -->
+  <rect x="32" y="55" width="7" height="7" rx="1.5"
+        fill="none" stroke="#69aeb1" stroke-width="1.4"/>
+  <path d="M 33.5 58.5 L 35.5 60.5 L 38 56.5"
+        fill="none" stroke="#69aeb1" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="42" y1="59" x2="78" y2="59"
+        stroke="#bac5d2" stroke-width="2.2" stroke-linecap="round" stroke-opacity="0.85"/>
+
+  <!-- row 3: sage check (#6cb79f) -->
+  <rect x="32" y="68" width="7" height="7" rx="1.5"
+        fill="none" stroke="#4f9c83" stroke-width="1.4"/>
+  <path d="M 33.5 71.5 L 35.5 73.5 L 38 69.5"
+        fill="none" stroke="#4f9c83" stroke-width="1.6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="42" y1="72" x2="70" y2="72"
+        stroke="#c1ded2" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- row 4: empty checkbox (yet to be reviewed) -->
+  <rect x="32" y="81" width="7" height="7" rx="1.5"
+        fill="none" stroke="#8b9282" stroke-width="1.2" stroke-opacity="0.7"/>
+  <line x1="42" y1="85" x2="64" y2="85"
+        stroke="#8b9282" stroke-width="2" stroke-linecap="round" stroke-opacity="0.4"/>
+
+  <!-- ─────────── botanical sprig growing up from the page (cossee feel) ─────────── -->
+  <!-- main stem — slate-blue, like cossee's COSSEE letterforms -->
+  <path d="M 60 26 C 58 18, 64 14, 60 6"
+        fill="none" stroke="#678aa4" stroke-width="1.5"
+        stroke-linecap="round"/>
+
+  <!-- left leaf, olive -->
+  <path d="M 59 19
+           C 53 17, 51 12, 53 9
+           C 56 11, 58 14, 59 19 Z"
+        fill="#97a65c" stroke="#7b933f" stroke-width="0.8"/>
+
+  <!-- right leaf, sage -->
+  <path d="M 60 14
+           C 66 12, 70 14, 70 9
+           C 67 7, 63 8, 60 14 Z"
+        fill="#bed39c" stroke="#7b933f" stroke-width="0.8"/>
+
+  <!-- terminal flower / tiny sage check at the top of the sprig -->
+  <circle cx="59.5" cy="7" r="3.2" fill="#6cb79f" stroke="#44604c" stroke-width="0.7"/>
+  <path d="M 57.8 7 L 59 8.3 L 61.4 5.6"
+        fill="none" stroke="#ffffff" stroke-width="1.1"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ─────────── tiny scientific marginalia (bottom-right of page) ─────────── -->
+  <!-- a delicate little measurement diagram — nod to cossee's stick-figure illustrations -->
+  <g stroke="#678aa4" stroke-width="0.6" stroke-linecap="round" fill="none">
+    <line x1="68" y1="98" x2="78" y2="98"/>
+    <line x1="68" y1="96.5" x2="68" y2="99.5"/>
+    <line x1="78" y1="96.5" x2="78" y2="99.5"/>
+  </g>
+  <text x="73" y="103" font-family="ui-serif, Georgia, serif" font-size="3.5"
+        fill="#678aa4" text-anchor="middle" font-style="italic">k = 3</text>
+
+  <!-- a tiny acorn/dot in the bottom-left corner (cossee’s palette uses warm yellows) -->
+  <circle cx="32" cy="98" r="1.4" fill="#deddba" stroke="#95948e" stroke-width="0.4"/>
+  <circle cx="35" cy="100" r="1" fill="#c6c380" stroke="#95948e" stroke-width="0.3"/>
+</svg>
