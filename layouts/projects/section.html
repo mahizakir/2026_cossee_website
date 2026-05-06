@@ -43,7 +43,8 @@
               <article class="featured-card" tabindex="0">
                 <a class="featured-card__link" href="{{ $href }}" {{ $extra | safeHTMLAttr }} aria-label="Open {{ .Title }} project page"></a>
                 {{ if $heroImg }}
-                <div class="featured-card__media">
+                {{ $fit := .Params.hero_image_fit | default "cover" }}
+                <div class="featured-card__media" data-fit="{{ $fit }}">
                   <img src="{{ $heroImg }}" alt="{{ .Title }} project visual" loading="lazy">
                   {{ with .Params.status }}<span class="featured-card__status-pill">{{ . }}</span>{{ end }}
                 </div>
@@ -168,9 +169,23 @@
         transition: transform 0.5s ease;
         width: 100%;
       }
+      .featured-card__media[data-fit="contain"] {
+        background:
+          radial-gradient(circle at center, rgba(108, 183, 159, 0.10) 0%, transparent 70%),
+          linear-gradient(135deg, #f6faf5 0%, #eef3ec 100%);
+        border-right: 1px solid rgba(39, 93, 56, 0.08);
+      }
+      .featured-card__media[data-fit="contain"] img {
+        object-fit: contain;
+        padding: 36px;
+      }
       .featured-card:hover .featured-card__media img,
       .featured-card:focus-within .featured-card__media img {
         transform: scale(1.05);
+      }
+      .featured-card:hover .featured-card__media[data-fit="contain"] img,
+      .featured-card:focus-within .featured-card__media[data-fit="contain"] img {
+        transform: scale(1.04);
       }
       .featured-card__status-pill {
         background: rgba(255, 255, 255, 0.94);
