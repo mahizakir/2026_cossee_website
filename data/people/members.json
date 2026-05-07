@@ -282,6 +282,24 @@
     "profile_picture_source": "https://drive.google.com/thumbnail?id=1yZYa10-GBtdxM4kpNnTtL2mh9vk2waN9&sz=w1000"
   },
   {
+    "name": "Josh Pritchard Cairns",
+    "pronouns": "he/him/his",
+    "status": "current",
+    "status_label": "Current",
+    "role": "phd",
+    "role_label": "PhD Student",
+    "email": "jjpritch(-at-)ualberta(-dot-)ca",
+    "bio": "PhD student with a background in invasion biology, now researching the importance of coevolution in providing resistance to ecosystems exposed to anthropogenic and climatic stressors.",
+    "photo": "/web_files/josh-pritchard-cairns.jpg",
+    "detail_id": "josh-pritchard-cairns",
+    "detail_group": "current",
+    "country": "England",
+    "form_role": "PhD student",
+    "google_scholar": "https://scholar.google.co.uk/citations?hl=en&user=4nn6JGIAAAAJ&view_op=list_works&gmla=AIqSsVsq8XViujGWV8CPZv1_MC6dGR92RVts0kGRFOaA8hWdxUO-K62RTKld1B4jE7fS-0EbWN4ZG5TTio7RYU_cuEh2uuN0HiAB-ErpzBWPFwiHqeaWfdfgXH90Ue2aEAw",
+    "orcid": "https://orcid.org/0009-0005-3897-4403",
+    "profile_picture_source": "https://drive.google.com/open?id=1lvkWgQeVAfn-EJ8WGgxtnL_RQWaYqVjs"
+  },
+  {
     "name": "Hao Qin",
     "pronouns": "he/him/his",
     "status": "current",
