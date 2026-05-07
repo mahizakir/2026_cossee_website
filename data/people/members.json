@@ -313,6 +313,21 @@
     "orcid": "https://orcid.org/0009-0007-3917-0380"
   },
   {
+    "name": "Montana Lawrence",
+    "pronouns": "they/he/she",
+    "status": "current",
+    "status_label": "Current",
+    "role": "undergrad",
+    "role_label": "Undergrad",
+    "email": "smlawren(-at-)ualberta(-dot-)ca",
+    "bio": "Montana Lawrence is an undergraduate researcher and I-STEAM intern at the University of Alberta, completing a BA (Honours) in Native Studies and Political Science.",
+    "photo": "/web_files/montana-lawrence.jpg",
+    "detail_id": "montana-lawrence",
+    "detail_group": "current",
+    "country": "Canada",
+    "form_role": "Undergrad student"
+  },
+  {
     "name": "Joseph Cincotta",
     "pronouns": "he/him",
     "status": "past",
