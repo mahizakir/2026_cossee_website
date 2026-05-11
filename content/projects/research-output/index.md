@@ -15,6 +15,7 @@ commitment = "A few minutes per update"
 external_url = "https://researchoutput.cossee.org/"
 hero_image = "research-output-logo.svg"
 hero_image_fit = "contain"
+hero_image_variant = "centered-large"
 highlights = [
   { label = "What to record", value = "Presentations, publications, funding, and other COSSEE research outputs" },
   { label = "How to sign in", value = "Use your University of Alberta email account" },

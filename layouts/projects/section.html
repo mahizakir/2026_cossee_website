@@ -44,7 +44,8 @@
                 <a class="featured-card__link" href="{{ $href }}" {{ $extra | safeHTMLAttr }} aria-label="Open {{ .Title }} project page"></a>
                 {{ if $heroImg }}
                 {{ $fit := .Params.hero_image_fit | default "cover" }}
-                <div class="featured-card__media" data-fit="{{ $fit }}">
+                {{ $variant := .Params.hero_image_variant | default "" }}
+                <div class="featured-card__media" data-fit="{{ $fit }}"{{ with $variant }} data-variant="{{ . }}"{{ end }}>
                   <img src="{{ $heroImg }}" alt="{{ .Title }} project visual" loading="lazy">
                   {{ with .Params.status }}<span class="featured-card__status-pill">{{ . }}</span>{{ end }}
                 </div>
@@ -178,6 +179,19 @@
       .featured-card__media[data-fit="contain"] img {
         object-fit: contain;
         padding: 36px;
+      }
+      .featured-card__media[data-fit="contain"][data-variant="centered-large"] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .featured-card__media[data-fit="contain"][data-variant="centered-large"] img {
+        inset: auto;
+        max-width: min(92%, 680px);
+        max-height: 92%;
+        padding: 20px;
+        width: auto;
+        height: auto;
       }
       .featured-card:hover .featured-card__media img,
       .featured-card:focus-within .featured-card__media img {
