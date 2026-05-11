@@ -2,7 +2,7 @@
 title = "Project 3"
 date = 2026-04-23
 draft = false
-weight = 3
+weight = 4
 summary = "Placeholder page for the third COSSEE project."
 project_code = "Project 03"
 status = "Planned"
