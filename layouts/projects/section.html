@@ -184,14 +184,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: 320px;
       }
       .featured-card__media[data-fit="contain"][data-variant="centered-large"] img {
         inset: auto;
-        max-width: min(98%, 760px);
-        max-height: 98%;
-        padding: 8px;
-        width: auto;
+        max-width: none;
+        max-height: none;
+        padding: 0 4px;
+        width: calc(100% - 8px);
         height: auto;
+        object-position: center center;
       }
       .featured-card:hover .featured-card__media img,
       .featured-card:focus-within .featured-card__media img {
