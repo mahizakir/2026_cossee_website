@@ -50,6 +50,12 @@ pluralizelisttitles = false
     parent = "menu.research"
 
   [[menu.main]]
+    name = "Team"
+    url = "https://cossee.org/inclusive-team-science/"
+    weight = 3
+    parent = "menu.research"
+
+  [[menu.main]]
     name = "People"
     url = "/people/"
     weight = 4
