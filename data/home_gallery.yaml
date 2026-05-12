@@ -4,6 +4,10 @@ autoplay: true
 slide_speed: 2400
 pagination_speed: 900
 items:
+  - image: "/web_files/IMG_3405.jpg"
+    alt: "COSSEE team whiteboard discussion"
+  - image: "/web_files/IMG_3484.jpg"
+    alt: "COSSEE group activity in the workspace"
   - image: "/web_files/IMG_7534.webp"
     alt: "COSSEE lab photo 1"
   - image: "/web_files/IMG_0611.webp"
