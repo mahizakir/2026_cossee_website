@@ -2,9 +2,9 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-05-13T11:37:56Z",
-  "generated_at_display": "May 13, 2026 at 11:37 UTC",
-  "works_count": 437,
+  "generated_at": "2026-05-14T11:24:16Z",
+  "generated_at_display": "May 14, 2026 at 11:24 UTC",
+  "works_count": 439,
   "latest": [
     {
       "put_code": 212973195,
@@ -52,6 +52,33 @@
       "best_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212476743"
+    },
+    {
+      "put_code": 214608695,
+      "title": "Reciprocity: A transparent universal credit system to incentivize peer review",
+      "authors": [
+        "Angela T Moles",
+        "Russell Bonduriansky",
+        "Stephen Bonser",
+        "Daniel Stein Falster",
+        "Shinichi Nakagawa",
+        "Nigel Andrew",
+        "Malgorzata Lagisz"
+      ],
+      "authors_display": "Angela T Moles, Russell Bonduriansky, Stephen Bonser, Daniel Stein Falster, Shinichi Nakagawa, Nigel Andrew, Malgorzata Lagisz",
+      "journal_title": null,
+      "type": "preprint",
+      "type_display": "Preprint",
+      "publication_year": "2026",
+      "publication_month": "05",
+      "publication_day": "11",
+      "publication_date_display": "May 11, 2026",
+      "publication_date_iso": "2026-05-11",
+      "doi": "10.31222/osf.io/5qrmh_v1",
+      "doi_url": "https://doi.org/10.31222/osf.io/5qrmh_v1",
+      "best_url": "https://doi.org/10.31222/osf.io/5qrmh_v1",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214608695"
     },
     {
       "put_code": 213482849,
@@ -139,40 +166,12 @@
       "best_url": "https://doi.org/10.1111/2041-210x.70202",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/207760239"
-    },
-    {
-      "put_code": 210349278,
-      "title": "Understanding Reproducibility in the Canadian Research Ecosystem: A cross-sectional survey",
-      "authors": [
-        "AlMamoune Alaoui",
-        "Kelly Denise Cobey",
-        "Anna Catharina Vieira Armond",
-        "Shinichi Nakagawa",
-        "Fatoumata Bah",
-        "David Moher",
-        "Pushti Desai",
-        "Jacqueline Littlewood"
-      ],
-      "authors_display": "AlMamoune Alaoui, Kelly Denise Cobey, Anna Catharina Vieira Armond, Shinichi Nakagawa, Fatoumata Bah, David Moher, Pushti Desai, Jacqueline Littlewood",
-      "journal_title": null,
-      "type": "preprint",
-      "type_display": "Preprint",
-      "publication_year": "2026",
-      "publication_month": "03",
-      "publication_day": "31",
-      "publication_date_display": "March 31, 2026",
-      "publication_date_iso": "2026-03-31",
-      "doi": "10.31222/osf.io/ezgj5_v1",
-      "doi_url": "https://doi.org/10.31222/osf.io/ezgj5_v1",
-      "best_url": "https://doi.org/10.31222/osf.io/ezgj5_v1",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/210349278"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 16,
+      "count": 17,
       "items": [
         {
           "put_code": 212973195,
@@ -220,6 +219,33 @@
           "best_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212476743"
+        },
+        {
+          "put_code": 214608695,
+          "title": "Reciprocity: A transparent universal credit system to incentivize peer review",
+          "authors": [
+            "Angela T Moles",
+            "Russell Bonduriansky",
+            "Stephen Bonser",
+            "Daniel Stein Falster",
+            "Shinichi Nakagawa",
+            "Nigel Andrew",
+            "Malgorzata Lagisz"
+          ],
+          "authors_display": "Angela T Moles, Russell Bonduriansky, Stephen Bonser, Daniel Stein Falster, Shinichi Nakagawa, Nigel Andrew, Malgorzata Lagisz",
+          "journal_title": null,
+          "type": "preprint",
+          "type_display": "Preprint",
+          "publication_year": "2026",
+          "publication_month": "05",
+          "publication_day": "11",
+          "publication_date_display": "May 11, 2026",
+          "publication_date_iso": "2026-05-11",
+          "doi": "10.31222/osf.io/5qrmh_v1",
+          "doi_url": "https://doi.org/10.31222/osf.io/5qrmh_v1",
+          "best_url": "https://doi.org/10.31222/osf.io/5qrmh_v1",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214608695"
         },
         {
           "put_code": 213482849,
@@ -3165,7 +3191,7 @@
     },
     {
       "year": "2022",
-      "count": 40,
+      "count": 41,
       "items": [
         {
           "put_code": 124534009,
@@ -4007,6 +4033,33 @@
           "best_url": "https://doi.org/10.1242/jeb.243225",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/109486245"
+        },
+        {
+          "put_code": 214518509,
+          "title": "Developmental plasticity in thermal tolerance is insufficient to compensate for rising temperatures: a meta-analysis",
+          "authors": [
+            "Patrice Pottier",
+            "Samantha Burke",
+            "Rose Zhang",
+            "Daniel Noble",
+            "Lisa Schwanz",
+            "Szymon Drobniak",
+            "Shinichi Nakagawa"
+          ],
+          "authors_display": "Patrice Pottier, Samantha Burke, Rose Zhang, Daniel Noble, Lisa Schwanz, Szymon Drobniak, Shinichi Nakagawa",
+          "journal_title": null,
+          "type": "preprint",
+          "type_display": "Preprint",
+          "publication_year": "2022",
+          "publication_month": "02",
+          "publication_day": "24",
+          "publication_date_display": "February 24, 2022",
+          "publication_date_iso": "2022-02-24",
+          "doi": "10.22541/au.164573834.49438532/v1",
+          "doi_url": "https://doi.org/10.22541/au.164573834.49438532/v1",
+          "best_url": "https://doi.org/10.22541/au.164573834.49438532/v1",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214518509"
         },
         {
           "put_code": 121174841,
@@ -12174,6 +12227,6 @@
     "book-chapter": 1,
     "journal-article": 365,
     "other": 6,
-    "preprint": 64
+    "preprint": 66
   }
 }
