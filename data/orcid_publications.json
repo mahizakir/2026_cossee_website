@@ -2,9 +2,9 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-05-14T11:24:16Z",
-  "generated_at_display": "May 14, 2026 at 11:24 UTC",
-  "works_count": 439,
+  "generated_at": "2026-05-15T11:32:06Z",
+  "generated_at_display": "May 15, 2026 at 11:32 UTC",
+  "works_count": 440,
   "latest": [
     {
       "put_code": 212973195,
@@ -139,39 +139,35 @@
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/211212258"
     },
     {
-      "put_code": 207760239,
-      "title": "Avoiding misleading estimates of among‐individual variance caused by non‐random sampling of individuals in a changeable environment",
+      "put_code": 214723791,
+      "title": "Biological and methodological pitfalls of meta-analyses in ecology and evolution: lessons from eyespot function studies",
       "authors": [
-        "Denis Réale",
-        "Hassen Allegue",
-        "Yimen G. Araya‐Ajoy",
-        "Ned A. Dochtermann",
-        "Shinichi Nakagawa",
-        "Joel L. Pick",
-        "Holger Schielzeth",
-        "David F. Westneat",
-        "Niels J. Dingemanse"
+        "Ayumi Mizuno",
+        "Pietro Pollo",
+        "Malgorzata Lagisz",
+        "Masayo Soma",
+        "Shinichi Nakagawa"
       ],
-      "authors_display": "Denis Réale, Hassen Allegue, Yimen G. Araya‐Ajoy, Ned A. Dochtermann, Shinichi Nakagawa, Joel L. Pick, Holger Schielzeth, David F. Westneat, Niels J. Dingemanse",
-      "journal_title": "Methods in Ecology and Evolution",
+      "authors_display": "Ayumi Mizuno, Pietro Pollo, Malgorzata Lagisz, Masayo Soma, Shinichi Nakagawa",
+      "journal_title": "Animal Behaviour",
       "type": "journal-article",
       "type_display": "Journal Article",
       "publication_year": "2026",
-      "publication_month": "04",
+      "publication_month": "05",
       "publication_day": "00",
-      "publication_date_display": "April 2026",
-      "publication_date_iso": "2026-04-00",
-      "doi": "10.1111/2041-210x.70202",
-      "doi_url": "https://doi.org/10.1111/2041-210x.70202",
-      "best_url": "https://doi.org/10.1111/2041-210x.70202",
+      "publication_date_display": "May 2026",
+      "publication_date_iso": "2026-05-00",
+      "doi": "10.1016/j.anbehav.2025.123448",
+      "doi_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
+      "best_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
       "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/207760239"
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214723791"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 17,
+      "count": 18,
       "items": [
         {
           "put_code": 212973195,
@@ -304,6 +300,31 @@
           "best_url": "https://doi.org/10.1016/j.jhazmat.2026.141794",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/211212258"
+        },
+        {
+          "put_code": 214723791,
+          "title": "Biological and methodological pitfalls of meta-analyses in ecology and evolution: lessons from eyespot function studies",
+          "authors": [
+            "Ayumi Mizuno",
+            "Pietro Pollo",
+            "Malgorzata Lagisz",
+            "Masayo Soma",
+            "Shinichi Nakagawa"
+          ],
+          "authors_display": "Ayumi Mizuno, Pietro Pollo, Malgorzata Lagisz, Masayo Soma, Shinichi Nakagawa",
+          "journal_title": "Animal Behaviour",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "05",
+          "publication_day": "00",
+          "publication_date_display": "May 2026",
+          "publication_date_iso": "2026-05-00",
+          "doi": "10.1016/j.anbehav.2025.123448",
+          "doi_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
+          "best_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214723791"
         },
         {
           "put_code": 207760239,
@@ -12225,7 +12246,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 365,
+    "journal-article": 366,
     "other": 6,
     "preprint": 66
   }
