@@ -1,0 +1,48 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" fill="none">
+
+  <!-- Outer seal ring -->
+  <circle cx="70" cy="70" r="64" stroke="#2B2B2B" stroke-width="3"/>
+  <circle cx="70" cy="70" r="58" stroke="#3A3A3A" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Inner engraved texture dots -->
+  <circle cx="35" cy="70" r="1.2" fill="#3A3A3A" opacity="0.25"/>
+  <circle cx="45" cy="50" r="1.2" fill="#3A3A3A" opacity="0.25"/>
+  <circle cx="95" cy="55" r="1.2" fill="#3A3A3A" opacity="0.25"/>
+  <circle cx="105" cy="75" r="1.2" fill="#3A3A3A" opacity="0.25"/>
+  <circle cx="60" cy="105" r="1.2" fill="#3A3A3A" opacity="0.25"/>
+
+  <!-- Database cylinder (engraved style) -->
+  <ellipse cx="70" cy="95" rx="30" ry="9" stroke="#1F1F1F" stroke-width="2"/>
+  <path d="M40 55V95C40 101 53 108 70 108C87 108 100 101 100 95V55"
+        stroke="#1F1F1F" stroke-width="2" fill="none"/>
+  <ellipse cx="70" cy="55" rx="30" ry="9" stroke="#1F1F1F" stroke-width="2"/>
+
+  <!-- Fossil leaf (fossil imprint style) -->
+  <path d="M70 38
+           C56 44, 48 58, 50 72
+           C52 88, 62 98, 70 102
+           C78 98, 88 88, 90 72
+           C92 58, 84 44, 70 38Z"
+        fill="#D8D2C2" stroke="#2B2B2B" stroke-width="2"/>
+
+  <!-- Fossil vein engraving -->
+  <path d="M70 42V100" stroke="#2B2B2B" stroke-width="1.5"/>
+  <path d="M70 60C62 56, 56 50, 54 46" stroke="#2B2B2B" stroke-width="1.2"/>
+  <path d="M70 68C78 64, 84 58, 86 54" stroke="#2B2B2B" stroke-width="1.2"/>
+  <path d="M70 78C62 78, 56 84, 54 88" stroke="#2B2B2B" stroke-width="1.2"/>
+  <path d="M70 78C78 78, 84 84, 86 88" stroke="#2B2B2B" stroke-width="1.2"/>
+
+  <!-- Stylized fossil insect (imprint-like beetle) -->
+  <path d="M104 42
+           C100 40, 96 42, 96 46
+           C96 50, 100 52, 104 50
+           C108 48, 108 44, 104 42Z"
+        fill="#C7C1B3" stroke="#2B2B2B" stroke-width="1.5"/>
+  <path d="M102 50V58" stroke="#2B2B2B" stroke-width="1.2"/>
+  <path d="M102 54L96 58" stroke="#2B2B2B" stroke-width="1"/>
+  <path d="M102 54L108 58" stroke="#2B2B2B" stroke-width="1"/>
+
+  <!-- Subtle label text band (no font dependency, engraved feel) -->
+  <path d="M25 120C40 128, 100 128, 115 120" stroke="#2B2B2B" stroke-width="1.5" opacity="0.6"/>
+
+</svg>

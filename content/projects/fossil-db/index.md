@@ -14,6 +14,8 @@ location = "Web app"
 timing = "Active development"
 commitment = "Browse, annotate, and contribute fossil records"
 external_url = "https://fossils.cossee.org/"
+hero_image = "fossil-db-logo.png"
+hero_image_fit = "contain"
 highlights = [
   { label = "What it does", value = "Manages metadata and images for plant–insect fossil specimens" },
   { label = "Why it matters", value = "Tracks insect-damage traces across the K–Pg extinction (66 Ma) to study ecosystem recovery" },
