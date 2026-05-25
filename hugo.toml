@@ -56,6 +56,12 @@ pluralizelisttitles = false
     parent = "menu.research"
 
   [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 4
+    parent = "menu.research"
+
+  [[menu.main]]
     name = "People"
     url = "/people/"
     weight = 4
