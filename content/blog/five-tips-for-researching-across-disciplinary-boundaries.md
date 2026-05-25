@@ -1,7 +1,7 @@
 +++
 title = "Five Tips for Researching Across Disciplinary Boundaries"
 date = 2026-04-22
-authors = ["Aleksandra Milenovic"]
+authors = ["Aleksandra Milenović"]
 banner = "/web_files/aprilblogpost-2026_orig.jpg"
 summary = "A practical reflection on how to work across disciplinary boundaries, from positionality and reading habits to language, respect, and intellectual flexibility."
 +++
