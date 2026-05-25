@@ -9,6 +9,8 @@
       </div>
 
       <div class="lab-life-home__carousel-wrap">
+        <button class="lab-life-home__nav lab-life-home__nav--prev" type="button" aria-label="Previous gallery image">&#8249;</button>
+        <button class="lab-life-home__nav lab-life-home__nav--next" type="button" aria-label="Next gallery image">&#8250;</button>
         <div class="lab-life-carousel owl-carousel"
           data-autoplay="{{ .autoplay }}"
           data-slide-speed="{{ .slide_speed }}"
@@ -85,52 +87,47 @@
       object-fit: cover;
       width: 100%;
     }
+    .lab-life-home__nav {
+      background: transparent;
+      border: 0;
+      color: rgba(255, 255, 255, 0.96);
+      cursor: pointer;
+      font-size: 56px;
+      font-weight: 300;
+      height: 56px;
+      line-height: 0.9;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      text-align: center;
+      text-indent: 0;
+      text-shadow: 0 10px 20px rgba(20, 34, 27, 0.34);
+      top: 50%;
+      transform: translateY(-50%) scale(1);
+      transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+      width: 56px;
+      z-index: 4;
+    }
+    .lab-life-home__nav:hover,
+    .lab-life-home__nav:focus {
+      color: #fff;
+      opacity: 0.8;
+      outline: none;
+      transform: translateY(-50%) scale(1.05);
+    }
+    .lab-life-home__nav--prev {
+      left: 12px;
+    }
+    .lab-life-home__nav--next {
+      right: 12px;
+    }
     .lab-life-home .owl-theme .owl-controls {
       margin-top: 14px;
       position: relative;
       text-align: center;
     }
     .lab-life-home .owl-theme .owl-controls .owl-buttons {
-      inset: 0;
-      position: absolute;
-      width: 100%;
-      z-index: 4;
-    }
-    .lab-life-home .owl-theme .owl-controls .owl-buttons div {
-      background: transparent;
-      border: 0;
-      box-shadow: none;
-      color: rgba(255, 255, 255, 0.96);
-      display: block;
-      font-size: 56px;
-      font-weight: 300;
-      height: 56px;
-      line-height: 0.9;
-      margin: 0;
-      opacity: 1;
-      padding: 0;
-      pointer-events: auto;
-      position: absolute;
-      text-align: center;
-      text-indent: 0;
-      text-shadow: 0 10px 20px rgba(20, 34, 27, 0.34);
-      transform: scale(1);
-      transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
-      width: 56px;
-    }
-    .lab-life-home .owl-theme .owl-controls .owl-buttons .owl-prev {
-      left: 12px;
-      top: calc(-50% - 12px);
-    }
-    .lab-life-home .owl-theme .owl-controls .owl-buttons .owl-next {
-      right: 12px;
-      top: calc(-50% - 12px);
-    }
-    .lab-life-home .owl-theme .owl-controls.clickable .owl-buttons div:hover,
-    .lab-life-home .owl-theme .owl-controls .owl-buttons div:focus {
-      color: #fff;
-      opacity: 0.8;
-      transform: scale(1.05);
+      display: none;
     }
     .lab-life-home .owl-theme .owl-controls .owl-pagination {
       margin-top: 0;
@@ -168,24 +165,19 @@
       .lab-life-home__slide img {
         border-radius: 18px;
       }
-      .lab-life-home .owl-theme .owl-controls {
-        margin-top: 12px;
-      }
-      .lab-life-home .owl-theme .owl-controls .owl-buttons {
-        width: 100%;
-      }
-      .lab-life-home .owl-theme .owl-controls .owl-buttons div {
+      .lab-life-home__nav {
         font-size: 40px;
         height: 40px;
         width: 40px;
       }
-      .lab-life-home .owl-theme .owl-controls .owl-buttons .owl-prev {
+      .lab-life-home__nav--prev {
         left: 8px;
-        top: calc(-50% - 6px);
       }
-      .lab-life-home .owl-theme .owl-controls .owl-buttons .owl-next {
+      .lab-life-home__nav--next {
         right: 8px;
-        top: calc(-50% - 6px);
+      }
+      .lab-life-home .owl-theme .owl-controls {
+        margin-top: 12px;
       }
     }
   </style>
@@ -197,8 +189,7 @@
       if (!$carousel.length || $carousel.data('owlCarousel')) return;
 
       $carousel.owlCarousel({
-        navigation: true,
-        navigationText: ['&#8249;', '&#8250;'],
+        navigation: false,
         slideSpeed: ($carousel.attr('data-slide-speed') || 2400),
         paginationSpeed: ($carousel.attr('data-pagination-speed') || 900),
         autoPlay: ($carousel.attr('data-autoplay') || 'true') === 'true',
@@ -206,6 +197,14 @@
         singleItem: true,
         lazyLoad: false,
         addClassActive: true
+      });
+
+      var $wrap = $carousel.closest('.lab-life-home__carousel-wrap');
+      $wrap.find('.lab-life-home__nav--prev').on('click', function () {
+        $carousel.trigger('owl.prev');
+      });
+      $wrap.find('.lab-life-home__nav--next').on('click', function () {
+        $carousel.trigger('owl.next');
       });
     });
   </script>
