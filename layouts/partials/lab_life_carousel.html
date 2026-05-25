@@ -70,6 +70,7 @@
     }
     .lab-life-home__carousel-wrap {
       min-width: 0;
+      padding-bottom: 4px;
       position: relative;
     }
     .lab-life-home__slide {
@@ -85,16 +86,15 @@
       width: 100%;
     }
     .lab-life-home .owl-theme .owl-controls {
-      inset: 50% 0 auto;
-      margin-top: 0;
-      position: absolute;
-      transform: translateY(-50%);
-      width: 100%;
-      z-index: 4;
+      margin-top: 14px;
+      position: relative;
+      text-align: center;
     }
     .lab-life-home .owl-theme .owl-controls .owl-buttons {
-      position: relative;
+      inset: 0;
+      position: absolute;
       width: 100%;
+      z-index: 4;
     }
     .lab-life-home .owl-theme .owl-controls .owl-buttons div {
       background: transparent;
@@ -109,6 +109,7 @@
       margin: 0;
       opacity: 1;
       padding: 0;
+      pointer-events: auto;
       position: absolute;
       text-align: center;
       text-indent: 0;
@@ -119,9 +120,11 @@
     }
     .lab-life-home .owl-theme .owl-controls .owl-buttons .owl-prev {
       left: 12px;
+      top: calc(-50% - 12px);
     }
     .lab-life-home .owl-theme .owl-controls .owl-buttons .owl-next {
       right: 12px;
+      top: calc(-50% - 12px);
     }
     .lab-life-home .owl-theme .owl-controls.clickable .owl-buttons div:hover,
     .lab-life-home .owl-theme .owl-controls .owl-buttons div:focus {
@@ -130,10 +133,8 @@
       transform: scale(1.05);
     }
     .lab-life-home .owl-theme .owl-controls .owl-pagination {
-      margin-top: calc(50% + 190px);
-      pointer-events: auto;
+      margin-top: 0;
       position: relative;
-      text-align: center;
     }
     .lab-life-home .owl-theme .owl-controls .owl-page span {
       background: rgba(39, 93, 56, 0.2);
@@ -168,11 +169,7 @@
         border-radius: 18px;
       }
       .lab-life-home .owl-theme .owl-controls {
-        inset: auto 0 12px;
-        transform: none;
-      }
-      .lab-life-home .owl-theme .owl-controls .owl-pagination {
-        margin-top: 210px;
+        margin-top: 12px;
       }
       .lab-life-home .owl-theme .owl-controls .owl-buttons {
         width: 100%;
@@ -184,9 +181,11 @@
       }
       .lab-life-home .owl-theme .owl-controls .owl-buttons .owl-prev {
         left: 8px;
+        top: calc(-50% - 6px);
       }
       .lab-life-home .owl-theme .owl-controls .owl-buttons .owl-next {
         right: 8px;
+        top: calc(-50% - 6px);
       }
     }
   </style>
