@@ -88,6 +88,36 @@
       margin-top: 14px;
       text-align: left;
     }
+    .lab-life-home .owl-theme .owl-controls .owl-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-bottom: 12px;
+    }
+    .lab-life-home .owl-theme .owl-controls .owl-buttons div {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(39, 93, 56, 0.16);
+      border-radius: 999px;
+      box-shadow: 0 10px 20px rgba(20, 34, 27, 0.1);
+      color: var(--ualberta-green-deep);
+      display: inline-flex;
+      font-size: 28px;
+      height: 46px;
+      justify-content: center;
+      line-height: 1;
+      margin: 0;
+      opacity: 1;
+      padding: 0;
+      transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+      width: 46px;
+    }
+    .lab-life-home .owl-theme .owl-controls.clickable .owl-buttons div:hover,
+    .lab-life-home .owl-theme .owl-controls .owl-buttons div:focus {
+      background: var(--ualberta-green);
+      color: #fff;
+      transform: translateY(-1px);
+    }
     .lab-life-home .owl-theme .owl-controls .owl-page span {
       background: rgba(39, 93, 56, 0.2);
       height: 10px;
@@ -120,6 +150,13 @@
       .lab-life-home__slide img {
         border-radius: 18px;
       }
+      .lab-life-home .owl-theme .owl-controls .owl-buttons {
+        justify-content: center;
+      }
+      .lab-life-home .owl-theme .owl-controls .owl-buttons div {
+        height: 42px;
+        width: 42px;
+      }
     }
   </style>
 
@@ -130,7 +167,8 @@
       if (!$carousel.length || $carousel.data('owlCarousel')) return;
 
       $carousel.owlCarousel({
-        navigation: false,
+        navigation: true,
+        navigationText: ['&#8249;', '&#8250;'],
         slideSpeed: ($carousel.attr('data-slide-speed') || 2400),
         paginationSpeed: ($carousel.attr('data-pagination-speed') || 900),
         autoPlay: ($carousel.attr('data-autoplay') || 'true') === 'true',
