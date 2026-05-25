@@ -8,9 +8,9 @@
         <p>{{ .subtitle }}</p>
       </div>
 
-      <div class="lab-life-home__carousel-wrap">
-        <button class="lab-life-home__nav lab-life-home__nav--prev" type="button" aria-label="Previous gallery image">&#8249;</button>
-        <button class="lab-life-home__nav lab-life-home__nav--next" type="button" aria-label="Next gallery image">&#8250;</button>
+      <div class="lab-life-home__carousel-wrap" tabindex="0" aria-label="Lab gallery carousel. Use left and right arrow keys to change photos.">
+        <button class="lab-life-home__nav lab-life-home__nav--prev" type="button" aria-label="Previous gallery image"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+        <button class="lab-life-home__nav lab-life-home__nav--next" type="button" aria-label="Next gallery image"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
         <div class="lab-life-carousel owl-carousel"
           data-autoplay="{{ .autoplay }}"
           data-slide-speed="{{ .slide_speed }}"
@@ -72,8 +72,13 @@
     }
     .lab-life-home__carousel-wrap {
       min-width: 0;
+      outline: none;
       padding-bottom: 4px;
       position: relative;
+    }
+    .lab-life-home__carousel-wrap:focus-visible {
+      box-shadow: 0 0 0 3px rgba(39, 93, 56, 0.18);
+      border-radius: 24px;
     }
     .lab-life-home__slide {
       padding: 4px;
@@ -92,10 +97,9 @@
       border: 0;
       color: rgba(255, 255, 255, 0.96);
       cursor: pointer;
-      font-size: 56px;
-      font-weight: 300;
+      font-size: 34px;
       height: 56px;
-      line-height: 0.9;
+      line-height: 1;
       margin: 0;
       padding: 0;
       position: absolute;
@@ -107,6 +111,10 @@
       transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
       width: 56px;
       z-index: 4;
+    }
+    .lab-life-home__nav i {
+      display: block;
+      line-height: 1;
     }
     .lab-life-home__nav:hover,
     .lab-life-home__nav:focus {
@@ -166,7 +174,7 @@
         border-radius: 18px;
       }
       .lab-life-home__nav {
-        font-size: 40px;
+        font-size: 24px;
         height: 40px;
         width: 40px;
       }
@@ -205,6 +213,16 @@
       });
       $wrap.find('.lab-life-home__nav--next').on('click', function () {
         $carousel.trigger('owl.next');
+      });
+      $wrap.on('keydown', function (event) {
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault();
+          $carousel.trigger('owl.prev');
+        }
+        if (event.key === 'ArrowRight') {
+          event.preventDefault();
+          $carousel.trigger('owl.next');
+        }
       });
     });
   </script>
