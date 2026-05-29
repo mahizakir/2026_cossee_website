@@ -62,7 +62,7 @@ pluralizelisttitles = false
     parent = "menu.research"
 
   [[menu.main]]
-    name = "Open Scholarship + Meta-science Workshops"
+    name = "Workshops"
     url = "/workshops/"
     weight = 5
     parent = "menu.research"
