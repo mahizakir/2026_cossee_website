@@ -1,5 +1,5 @@
 weight: 1
-name: "Protocols"
-icon: "fas fa-layer-group"
-url: "/protocols/"
-description: "Browse registered reports, published protocols, and structured project plans that support transparent, reproducible, and well-documented research."
+name: "Open Scholarship + Meta-science Workshops"
+icon: "fas fa-people-arrows"
+url: "/workshops/"
+description: "A public home for COSSEE workshop materials, templates, and resources on transparent, reproducible, and well-documented research."
