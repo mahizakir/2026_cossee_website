@@ -2,8 +2,8 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-05-29T12:29:57Z",
-  "generated_at_display": "May 29, 2026 at 12:29 UTC",
+  "generated_at": "2026-05-30T10:55:37Z",
+  "generated_at_display": "May 30, 2026 at 10:55 UTC",
   "works_count": 440,
   "latest": [
     {
@@ -52,6 +52,31 @@
       "best_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212476743"
+    },
+    {
+      "put_code": 214723791,
+      "title": "Biological and methodological pitfalls of meta-analyses in ecology and evolution: lessons from eyespot function studies",
+      "authors": [
+        "Ayumi Mizuno",
+        "Pietro Pollo",
+        "Malgorzata Lagisz",
+        "Masayo Soma",
+        "Shinichi Nakagawa"
+      ],
+      "authors_display": "Ayumi Mizuno, Pietro Pollo, Malgorzata Lagisz, Masayo Soma, Shinichi Nakagawa",
+      "journal_title": "Animal Behaviour",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "06",
+      "publication_day": "00",
+      "publication_date_display": "June 2026",
+      "publication_date_iso": "2026-06-00",
+      "doi": "10.1016/j.anbehav.2025.123448",
+      "doi_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
+      "best_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214723791"
     },
     {
       "put_code": 214608695,
@@ -137,31 +162,6 @@
       "best_url": "https://doi.org/10.1016/j.jhazmat.2026.141794",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/211212258"
-    },
-    {
-      "put_code": 214723791,
-      "title": "Biological and methodological pitfalls of meta-analyses in ecology and evolution: lessons from eyespot function studies",
-      "authors": [
-        "Ayumi Mizuno",
-        "Pietro Pollo",
-        "Malgorzata Lagisz",
-        "Masayo Soma",
-        "Shinichi Nakagawa"
-      ],
-      "authors_display": "Ayumi Mizuno, Pietro Pollo, Malgorzata Lagisz, Masayo Soma, Shinichi Nakagawa",
-      "journal_title": "Animal Behaviour",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "05",
-      "publication_day": "00",
-      "publication_date_display": "May 2026",
-      "publication_date_iso": "2026-05-00",
-      "doi": "10.1016/j.anbehav.2025.123448",
-      "doi_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
-      "best_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214723791"
     }
   ],
   "years": [
@@ -215,6 +215,31 @@
           "best_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212476743"
+        },
+        {
+          "put_code": 214723791,
+          "title": "Biological and methodological pitfalls of meta-analyses in ecology and evolution: lessons from eyespot function studies",
+          "authors": [
+            "Ayumi Mizuno",
+            "Pietro Pollo",
+            "Malgorzata Lagisz",
+            "Masayo Soma",
+            "Shinichi Nakagawa"
+          ],
+          "authors_display": "Ayumi Mizuno, Pietro Pollo, Malgorzata Lagisz, Masayo Soma, Shinichi Nakagawa",
+          "journal_title": "Animal Behaviour",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "06",
+          "publication_day": "00",
+          "publication_date_display": "June 2026",
+          "publication_date_iso": "2026-06-00",
+          "doi": "10.1016/j.anbehav.2025.123448",
+          "doi_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
+          "best_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214723791"
         },
         {
           "put_code": 214608695,
@@ -300,31 +325,6 @@
           "best_url": "https://doi.org/10.1016/j.jhazmat.2026.141794",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/211212258"
-        },
-        {
-          "put_code": 214723791,
-          "title": "Biological and methodological pitfalls of meta-analyses in ecology and evolution: lessons from eyespot function studies",
-          "authors": [
-            "Ayumi Mizuno",
-            "Pietro Pollo",
-            "Malgorzata Lagisz",
-            "Masayo Soma",
-            "Shinichi Nakagawa"
-          ],
-          "authors_display": "Ayumi Mizuno, Pietro Pollo, Malgorzata Lagisz, Masayo Soma, Shinichi Nakagawa",
-          "journal_title": "Animal Behaviour",
-          "type": "journal-article",
-          "type_display": "Journal Article",
-          "publication_year": "2026",
-          "publication_month": "05",
-          "publication_day": "00",
-          "publication_date_display": "May 2026",
-          "publication_date_iso": "2026-05-00",
-          "doi": "10.1016/j.anbehav.2025.123448",
-          "doi_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
-          "best_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
-          "source_name": "Crossref",
-          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214723791"
         },
         {
           "put_code": 207760239,
