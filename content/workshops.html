@@ -4,19 +4,16 @@ type = "page"
 +++
 
 <style>
+  html { scroll-behavior: smooth; }
+
   .workshops-page {
     margin: 0 auto;
     max-width: 1120px;
     padding: 6px 0 42px;
+    color: #2e4a3a;
   }
 
-  .workshops-hero {
-    display: grid;
-    gap: 28px;
-    grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.9fr);
-    align-items: start;
-    margin-bottom: 32px;
-  }
+  .workshops-page a { font-style: normal !important; }
 
   .workshops-kicker {
     color: var(--ualberta-green);
@@ -28,25 +25,34 @@ type = "page"
     text-transform: uppercase;
   }
 
+  /* Hero */
+  .workshops-hero {
+    display: grid;
+    gap: 28px;
+    grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.9fr);
+    align-items: start;
+    margin-bottom: 28px;
+  }
+
   .workshops-hero h2 {
     color: var(--ualberta-green-deep);
-    font-size: 46px;
-    line-height: 1.05;
+    font-size: 44px;
+    line-height: 1.07;
     margin: 0 0 16px;
-    max-width: 12ch;
+    max-width: 16ch;
   }
 
   .workshops-lead {
     color: #334638;
     font-size: 18px;
-    line-height: 1.82;
-    margin: 0 0 14px;
+    line-height: 1.7;
+    margin: 0 0 12px;
   }
 
   .workshops-sublead {
     color: #5c6b61;
     font-size: 15px;
-    line-height: 1.75;
+    line-height: 1.7;
     margin: 0;
   }
 
@@ -55,183 +61,494 @@ type = "page"
     border: 1px solid rgba(39, 93, 56, 0.12);
     border-radius: 24px;
     box-shadow: 0 18px 44px rgba(29, 71, 42, 0.08);
-    padding: 24px;
+    padding: 22px 24px;
   }
 
   .workshops-focus h3 {
     color: var(--ualberta-green-deep);
-    font-size: 24px;
-    line-height: 1.2;
-    margin: 0 0 12px;
-  }
-
-  .workshops-focus p {
-    color: #405346;
-    font-size: 15px;
-    line-height: 1.75;
-    margin: 0 0 16px;
-  }
-
-  .workshops-chip-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .workshops-chip {
-    background: rgba(255, 255, 255, 0.84);
-    border: 1px solid rgba(39, 93, 56, 0.1);
-    border-radius: 999px;
-    color: #2e4a3a;
-    display: inline-flex;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1.4;
-    padding: 8px 12px;
-  }
-
-  .workshops-grid {
-    display: grid;
-    gap: 18px;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
-
-  .workshops-card {
-    background: #ffffff;
-    border: 1px solid rgba(39, 93, 56, 0.1);
-    border-radius: 22px;
-    box-shadow: 0 12px 30px rgba(20, 34, 25, 0.05);
-    padding: 22px;
-  }
-
-  .workshops-card--span-4 { grid-column: span 4; }
-  .workshops-card--span-6 { grid-column: span 6; }
-  .workshops-card--span-12 { grid-column: span 12; }
-
-  .workshops-card h3 {
-    color: var(--ualberta-green-deep);
-    font-size: 24px;
-    line-height: 1.2;
-    margin: 0 0 12px;
-  }
-
-  .workshops-card p {
-    color: #45584c;
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: 18px;
+    letter-spacing: 0.01em;
     margin: 0 0 14px;
   }
 
-  .workshops-list {
+  .facts {
     display: grid;
     gap: 10px;
-    margin: 0;
+    margin: 0 0 18px;
     padding: 0;
-  }
-
-  .workshops-list li {
-    background: rgba(232, 240, 232, 0.58);
-    border-radius: 14px;
-    color: #345042;
     list-style: none;
-    padding: 12px 14px;
   }
 
-  .workshops-list strong {
-    color: #1f3d2b;
+  .facts li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px dashed rgba(39, 93, 56, 0.18);
+    padding-bottom: 9px;
   }
 
-  .workshops-placeholder {
-    background: #f7f3e7;
-    border: 1px solid rgba(120, 99, 40, 0.14);
-    border-radius: 18px;
-    color: #645536;
-    font-size: 14px;
+  .facts li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .facts span { color: #6a7a6f; font-size: 13px; }
+  .facts strong { color: #1f3d2b; font-size: 14px; text-align: right; }
+
+  .workshops-btn {
+    display: inline-block;
+    background: var(--ualberta-green-deep);
+    color: #fff;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 16px;
+    text-decoration: none !important;
+    color: #fff !important;
+  }
+  .workshops-btn:hover { background: var(--ualberta-green); color: #fff !important; }
+  .workshops-page a.workshops-btn,
+  .workshops-page a.workshops-btn:link,
+  .workshops-page a.workshops-btn:visited,
+  .workshops-page a.workshops-btn:hover { color: #fff !important; }
+
+  /* In-page navigation */
+  .workshops-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 38px;
+    padding: 12px;
+    background: rgba(232, 240, 232, 0.5);
+    border: 1px solid rgba(39, 93, 56, 0.1);
+    border-radius: 16px;
+  }
+
+  .workshops-nav a {
+    color: #2e4a3a;
+    background: #fff;
+    border: 1px solid rgba(39, 93, 56, 0.12);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 7px 14px;
+    text-decoration: none !important;
+    color: #2e4a3a !important;
+  }
+  .workshops-nav a:hover { background: var(--ualberta-green-deep); color: #fff !important; border-color: transparent; }
+
+  /* Sections */
+  .workshops-section { margin: 0 0 40px; scroll-margin-top: 90px; }
+
+  .section-title {
+    color: var(--ualberta-green-deep);
+    font-size: 28px;
+    line-height: 1.15;
+    margin: 0 0 6px;
+  }
+
+  .section-intro {
+    color: #51635a;
+    font-size: 15px;
     line-height: 1.7;
+    margin: 0 0 20px;
+    max-width: 70ch;
+  }
+
+  /* Stat cards */
+  .workshops-stats {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-bottom: 22px;
+  }
+
+  .stat-card {
+    background: #fff;
+    border: 1px solid rgba(39, 93, 56, 0.1);
+    border-radius: 16px;
     padding: 16px 18px;
   }
+  .stat-card .num { color: var(--ualberta-green-deep); font-size: 30px; font-weight: 800; line-height: 1; }
+  .stat-card .lbl { color: #5c6b61; font-size: 13px; margin-top: 6px; }
+
+  /* Narrative arc */
+  .arc {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .arc-step {
+    background: rgba(232, 240, 232, 0.55);
+    border: 1px solid rgba(39, 93, 56, 0.1);
+    border-radius: 14px;
+    padding: 14px 16px;
+    position: relative;
+  }
+  .arc-step .step-n { color: var(--ualberta-green); font-size: 12px; font-weight: 800; letter-spacing: 0.08em; }
+  .arc-step h4 { color: #1f3d2b; font-size: 15px; margin: 6px 0 4px; }
+  .arc-step p { color: #51635a; font-size: 13px; line-height: 1.55; margin: 0; }
+
+  /* Schedule */
+  .schedule {
+    border: 1px solid rgba(39, 93, 56, 0.12);
+    border-radius: 18px;
+    overflow: hidden;
+  }
+  .sched-row {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 18px;
+    padding: 16px 20px;
+    border-top: 1px solid rgba(39, 93, 56, 0.08);
+  }
+  .sched-row:first-child { border-top: 0; }
+  .sched-row--accent { background: rgba(232, 240, 232, 0.45); }
+  .sched-time { color: var(--ualberta-green-deep); font-weight: 700; font-size: 14px; white-space: nowrap; }
+  .sched-body h4 { color: #1f3d2b; font-size: 16px; margin: 0 0 3px; }
+  .sched-body p { color: #51635a; font-size: 14px; line-height: 1.55; margin: 0; }
+  .sched-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ualberta-green);
+    margin-left: 8px;
+  }
+
+  /* Talks */
+  .talks-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .talk-card {
+    background: #fff;
+    border: 1px solid rgba(39, 93, 56, 0.1);
+    border-radius: 16px;
+    padding: 18px 20px;
+    display: flex;
+    gap: 14px;
+  }
+  .talk-num {
+    flex: 0 0 auto;
+    width: 34px; height: 34px;
+    background: rgba(232, 240, 232, 0.8);
+    color: var(--ualberta-green-deep);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 15px;
+  }
+  .talk-card .theme { color: var(--ualberta-green); font-size: 11px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; }
+  .talk-card h4 { color: #1f3d2b; font-size: 16px; margin: 4px 0 5px; line-height: 1.25; }
+  .talk-card p { color: #51635a; font-size: 14px; line-height: 1.55; margin: 0; }
+  .talk-card .time { color: #8a978d; font-size: 12px; margin-top: 8px; }
+
+  /* Track / generic cards */
+  .workshops-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .workshops-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .workshops-card {
+    background: #fff;
+    border: 1px solid rgba(39, 93, 56, 0.1);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(20, 34, 25, 0.04);
+    padding: 22px;
+  }
+  .workshops-card .track-eyebrow { color: var(--ualberta-green); font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+  .workshops-card h3 { color: var(--ualberta-green-deep); font-size: 19px; line-height: 1.25; margin: 6px 0 6px; }
+  .workshops-card .leads { color: #6a7a6f; font-size: 13px; margin: 0 0 14px; }
+  .workshops-card .leads strong { color: #345042; }
+
+  .workshops-list { display: grid; gap: 10px; margin: 0; padding: 0; }
+  .workshops-list li {
+    background: rgba(232, 240, 232, 0.5);
+    border-radius: 12px;
+    color: #345042;
+    font-size: 14px;
+    line-height: 1.55;
+    list-style: none;
+    padding: 11px 13px;
+  }
+  .workshops-list strong { color: #1f3d2b; }
+
+  .synth-note {
+    margin-top: 18px;
+    background: #f7f3e7;
+    border: 1px solid rgba(120, 99, 40, 0.16);
+    border-radius: 16px;
+    color: #5d5026;
+    font-size: 14px;
+    line-height: 1.65;
+    padding: 16px 18px;
+  }
+  .synth-note strong { color: #463a16; }
 
   @media (max-width: 991px) {
-    .workshops-hero,
-    .workshops-card--span-4,
-    .workshops-card--span-6 {
-      grid-template-columns: 1fr;
-      grid-column: span 12;
-    }
+    .workshops-hero { grid-template-columns: 1fr; }
+    .workshops-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .arc { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .workshops-grid { grid-template-columns: 1fr; }
+    .talks-grid { grid-template-columns: 1fr; }
   }
 
   @media (max-width: 767px) {
-    .workshops-page {
-      padding-bottom: 20px;
-    }
-
-    .workshops-hero h2 {
-      font-size: 34px;
-      max-width: none;
-    }
-
-    .workshops-lead {
-      font-size: 16px;
-    }
+    .workshops-hero h2 { font-size: 32px; max-width: none; }
+    .workshops-lead { font-size: 16px; }
+    .section-title { font-size: 24px; }
+    .workshops-stats { grid-template-columns: 1fr; }
+    .arc { grid-template-columns: 1fr; }
+    .sched-row { grid-template-columns: 1fr; gap: 6px; }
   }
 </style>
 
 <div class="workshops-page">
   <section class="workshops-hero">
     <div>
-      <span class="workshops-kicker">Workshop Series</span>
-      <h2>Open scholarship and meta-science in practice.</h2>
+      <span class="workshops-kicker">COSSEE Workshop Series</span>
+      <h2>Open scholarship &amp; meta-science, in practice.</h2>
       <p class="workshops-lead">
-        This page will preserve COSSEE workshop materials, templates, and public-facing resources for open scholarship and meta-science training.
+        A recurring University of Alberta working group building toward research that is transparent, reproducible, and equitable &mdash; through short talks, themed discussion, and concrete next steps.
       </p>
       <p class="workshops-sublead">
-        The structure is ready for future workshop entries, including session summaries, reusable materials, recordings, protocols, readings, and related outputs.
+        This page documents each workshop in the series: who spoke, what the group discussed, and what we decided to do next.
       </p>
     </div>
 
     <aside class="workshops-focus">
-      <h3>What will live here</h3>
-      <p>
-        A public archive for workshops that support transparent, reproducible, collaborative, and well-documented research.
-      </p>
-      <div class="workshops-chip-list">
-        <span class="workshops-chip">Open scholarship</span>
-        <span class="workshops-chip">Meta-science</span>
-        <span class="workshops-chip">Workshop materials</span>
-        <span class="workshops-chip">Reusable templates</span>
-      </div>
+      <h3>Workshop 01 &mdash; at a glance</h3>
+      <ul class="facts">
+        <li><span>Date</span><strong>May 28, 2026</strong></li>
+        <li><span>Venue</span><strong>UAlberta Digital Scholarship Centre</strong></li>
+        <li><span>Format</span><strong>7 short talks + themed discussion</strong></li>
+        <li><span>Attendance</span><strong>23 participants</strong></li>
+      </ul>
+      <a class="workshops-btn" href="https://library.ualberta.ca/dsc" target="_blank" rel="noopener">About the venue (DSC) &rarr;</a>
     </aside>
   </section>
 
-  <section class="workshops-grid">
-    <div class="workshops-card workshops-card--span-6">
-      <h3>Workshop Archive</h3>
-      <p>
-        Future entries can be organized by year, topic, and audience so visitors can find materials from past and upcoming COSSEE workshops.
-      </p>
-      <ul class="workshops-list">
-        <li><strong>Session pages:</strong> titles, dates, facilitators, summaries, and links to materials.</li>
-        <li><strong>Reusable resources:</strong> slides, handouts, templates, checklists, and example workflows.</li>
-        <li><strong>Public outputs:</strong> related protocols, reports, blog posts, papers, and collaborative products.</li>
-      </ul>
+  <nav class="workshops-nav" aria-label="On this page">
+    <a href="#overview">Overview</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#talks">Short talks</a>
+    <a href="#discussion">Discussion tracks</a>
+    <a href="#next-steps">Next steps</a>
+  </nav>
+
+  <section class="workshops-section" id="overview">
+    <h2 class="section-title">Workshop 01 &mdash; overview</h2>
+    <p class="section-intro">
+      The inaugural workshop brought academics together to address the evolving landscape of open science, surface systemic barriers at the University of Alberta, and map out future infrastructure needs. The day opened with a welcome and a framing talk from Shinichi Nakagawa, ran seven short talks, and closed with themed discussion to set the working group&rsquo;s agenda.
+    </p>
+
+    <div class="workshops-stats">
+      <div class="stat-card"><div class="num">23</div><div class="lbl">Participants</div></div>
+      <div class="stat-card"><div class="num">7</div><div class="lbl">Short talks</div></div>
+      <div class="stat-card"><div class="num">3</div><div class="lbl">Discussion tracks</div></div>
+      <div class="stat-card"><div class="num">4</div><div class="lbl">Thematic arc</div></div>
     </div>
 
-    <div class="workshops-card workshops-card--span-6">
-      <h3>Suggested Content Types</h3>
-      <p>
-        The page is designed as a landing place first. As the series grows, it can link to individual workshop pages or downloadable resources.
-      </p>
-      <ul class="workshops-list">
-        <li><strong>Training modules:</strong> short units for teaching reproducible research practices.</li>
-        <li><strong>Meta-science topics:</strong> evidence synthesis, reporting quality, publication bias, and research transparency.</li>
-        <li><strong>Open scholarship practices:</strong> preregistration, protocols, versioned workflows, and accessible outputs.</li>
-      </ul>
+    <div class="arc">
+      <div class="arc-step">
+        <div class="step-n">01 &middot; WHY</div>
+        <h4>Big picture</h4>
+        <p>Framing open scholarship, meta-research, and the goals of the series.</p>
+      </div>
+      <div class="arc-step">
+        <div class="step-n">02 &middot; WHERE</div>
+        <h4>Institutional infrastructure</h4>
+        <p>Community-led publishing, repositories, and knowledge synthesis.</p>
+      </div>
+      <div class="arc-step">
+        <div class="step-n">03 &middot; HOW</div>
+        <h4>Subject-specific application</h4>
+        <p>Open data in ecology and health, from continental datasets to clinical commons.</p>
+      </div>
+      <div class="arc-step">
+        <div class="step-n">04 &middot; SO WHAT</div>
+        <h4>Policy &amp; education</h4>
+        <p>How open scholarship is taught, regulated, and adopted at UofA.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="workshops-section" id="schedule">
+    <h2 class="section-title">Schedule</h2>
+    <p class="section-intro">May 28, 2026 &middot; University of Alberta, Digital Scholarship Centre.</p>
+
+    <div class="schedule">
+      <div class="sched-row">
+        <div class="sched-time">09:00 &ndash; 09:10</div>
+        <div class="sched-body"><h4>Dean&rsquo;s opening</h4><p>Official welcome.</p></div>
+      </div>
+      <div class="sched-row">
+        <div class="sched-time">09:10 &ndash; 09:25</div>
+        <div class="sched-body"><h4>Opening keynote &mdash; Shinichi Nakagawa</h4><p>Intro to open scholarship, meta-research, and the goals of the workshop series.</p></div>
+      </div>
+      <div class="sched-row sched-row--accent">
+        <div class="sched-time">09:25 &ndash; 11:10</div>
+        <div class="sched-body"><h4>Short talks <span class="sched-tag">7 talks</span></h4><p>Seven 12-minute talks with 3 minutes of Q&amp;A each &mdash; see <a href="#talks">Short talks</a> below.</p></div>
+      </div>
+      <div class="sched-row">
+        <div class="sched-time">11:10 &ndash; 11:30</div>
+        <div class="sched-body"><h4>Break</h4><p>Coffee &amp; networking.</p></div>
+      </div>
+      <div class="sched-row sched-row--accent">
+        <div class="sched-time">11:30 &ndash; 12:35</div>
+        <div class="sched-body"><h4>Discussion block <span class="sched-tag">3 stations</span></h4><p>Three themed discussion stations running in parallel &mdash; see <a href="#discussion">Discussion tracks</a> below.</p></div>
+      </div>
+      <div class="sched-row">
+        <div class="sched-time">12:35 &ndash; 12:45</div>
+        <div class="sched-body"><h4>Synthesis</h4><p>Setting the agenda for the next meeting.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="workshops-section" id="talks">
+    <h2 class="section-title">Short talks</h2>
+    <p class="section-intro">
+      Seven short talks, sequenced as an arc &mdash; from the big picture, through institutional infrastructure and subject-specific applications, to policy and education.
+    </p>
+
+    <div class="talks-grid">
+      <div class="talk-card">
+        <div class="talk-num">1</div>
+        <div>
+          <div class="theme">Big picture</div>
+          <h4>Mariyam Suleman</h4>
+          <p>Power, geography, and open scholarship.</p>
+          <div class="time">09:25 &ndash; 09:40</div>
+        </div>
+      </div>
+      <div class="talk-card">
+        <div class="talk-num">2</div>
+        <div>
+          <div class="theme">Institutional infrastructure</div>
+          <h4>Sonya Betz</h4>
+          <p>Community-led publishing &amp; institutional repositories.</p>
+          <div class="time">09:40 &ndash; 09:55</div>
+        </div>
+      </div>
+      <div class="talk-card">
+        <div class="talk-num">3</div>
+        <div>
+          <div class="theme">Institutional infrastructure</div>
+          <h4>Lisa Hartling</h4>
+          <p>Knowledge synthesis in health: efforts to increase transparency and efficiency.</p>
+          <div class="time">09:55 &ndash; 10:10</div>
+        </div>
+      </div>
+      <div class="talk-card">
+        <div class="talk-num">4</div>
+        <div>
+          <div class="theme">Subject-specific application</div>
+          <h4>Erin Bayne</h4>
+          <p>What can we learn when we share all the raw data? Avian ecology at continental scales through data integration and AI.</p>
+          <div class="time">10:10 &ndash; 10:25</div>
+        </div>
+      </div>
+      <div class="talk-card">
+        <div class="talk-num">5</div>
+        <div>
+          <div class="theme">Subject-specific application</div>
+          <h4>Karim Fouad</h4>
+          <p>Open Data Commons for Spinal Cord Injury: a case study.</p>
+          <div class="time">10:25 &ndash; 10:40</div>
+        </div>
+      </div>
+      <div class="talk-card">
+        <div class="talk-num">6</div>
+        <div>
+          <div class="theme">Policy &amp; education</div>
+          <h4>Michael McNally</h4>
+          <p>Open scholarship and policy.</p>
+          <div class="time">10:40 &ndash; 10:55</div>
+        </div>
+      </div>
+      <div class="talk-card">
+        <div class="talk-num">7</div>
+        <div>
+          <div class="theme">Policy &amp; education</div>
+          <h4>Michelle Brailey</h4>
+          <p>Open education and how it applies at UofA.</p>
+          <div class="time">10:55 &ndash; 11:10</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="workshops-section" id="discussion">
+    <h2 class="section-title">Discussion tracks</h2>
+    <p class="section-intro">
+      Three themed stations ran in parallel during the discussion block. Each produced a summary of barriers and opportunities, which the group used to set priorities for the next workshop.
+    </p>
+
+    <div class="workshops-grid">
+      <div class="workshops-card">
+        <div class="track-eyebrow">Track A &middot; Technical &amp; databases</div>
+        <h3>Interdisciplinary standards, data workflows &amp; pre-registration</h3>
+        <p class="leads">Leads: <strong>Erin</strong> &amp; <strong>Rumaiza</strong></p>
+        <ul class="workshops-list">
+          <li><strong>Overcoming data silos:</strong> &ldquo;cross-walk&rdquo; interdisciplinary data standards, and judge which silos exist for valid technical reasons versus those that can be standardized.</li>
+          <li><strong>Pre-registration expansion:</strong> weigh the Open Science Framework (OSF) against domain repositories, with adaptive pre-registration in Australian government and industry as possible models.</li>
+          <li><strong>Data-flow bottlenecks:</strong> an Omics case study showed data often sits on local drives until publication, for lack of sharing tools and joined-up communication.</li>
+          <li><strong>Key challenge:</strong> too little centralized, non-technical documentation for navigating HPC, storage, and equitable data access.</li>
+        </ul>
+      </div>
+
+      <div class="workshops-card">
+        <div class="track-eyebrow">Track B &middot; Policy &amp; infrastructure</div>
+        <h3>Institutional policy, incentives &amp; peer review</h3>
+        <p class="leads">Leads: <strong>Michael</strong> &amp; <strong>Sonya</strong></p>
+        <ul class="workshops-list">
+          <li><strong>Incentive alignment:</strong> evaluation and chair metrics still favour impact factors and grant volume, at odds with collaborative, open work.</li>
+          <li><strong>DORA adoption:</strong> strong support for signing the Declaration on Research Assessment; UAlberta is not yet a signatory, citing implementation and policy-stagnation concerns.</li>
+          <li><strong>Administrative burden:</strong> redundant systems that don&rsquo;t readily transfer data to repositories such as ERA or Borealis.</li>
+          <li><strong>Peer-review reform:</strong> reward review work, and add reviewer training and collaborative peer-review to graduate curricula.</li>
+        </ul>
+      </div>
+
+      <div class="workshops-card">
+        <div class="track-eyebrow">Track C &middot; Equity &amp; education</div>
+        <h3>Equity + education</h3>
+        <p class="leads">Leads: <strong>Mariyam</strong> &amp; <strong>Michelle</strong></p>
+        <ul class="workshops-list">
+          <li><strong>Policy vs. practice:</strong> close the gap between the university&rsquo;s stated values and its structural policies.</li>
+          <li><strong>Tri-Agency advocacy:</strong> push for relationship-building grants, embed open-science practice into mandatory graduate professional development, and reward researchers who publish in Diamond OA journals.</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="workshops-card workshops-card--span-12">
-      <h3>Current Status</h3>
-      <div class="workshops-placeholder">
-        Workshop content will be added here later. For now, this page provides the public structure and navigation destination for the Open Scholarship + Meta-science Workshop Series.
+    <div class="synth-note">
+      <strong>Synthesis (12:35):</strong> the group used notes from all three tables to identify the top three hurdles to tackle in the next workshop.
+    </div>
+  </section>
+
+  <section class="workshops-section" id="next-steps">
+    <h2 class="section-title">Next steps</h2>
+    <p class="section-intro">
+      To keep momentum and address the gaps the tracks surfaced, the next workshop will adjust its format and advance a set of priority planning items.
+    </p>
+
+    <div class="workshops-grid workshops-grid--2">
+      <div class="workshops-card">
+        <h3>Logistics &amp; format</h3>
+        <ul class="workshops-list">
+          <li><strong>Student incentives:</strong> issue certificates or proof of attendance for graduate-student guests to use in progress reports.</li>
+          <li><strong>Preparatory packets:</strong> share an introductory &ldquo;who&rsquo;s who&rdquo; before each session.</li>
+          <li><strong>Structural pacing:</strong> build breaks between talks rather than running them in one uninterrupted block.</li>
+        </ul>
+      </div>
+
+      <div class="workshops-card">
+        <h3>Priority planning items</h3>
+        <ul class="workshops-list">
+          <li><strong>Centralized documentation:</strong> draft accessible, non-technical guides to UofA&rsquo;s data services and infrastructure.</li>
+          <li><strong>Graduate curriculum:</strong> partner with GPS on an interdisciplinary open-scholarship module, and map computational courses across faculties for tool consistency.</li>
+          <li><strong>DORA &amp; assessment reform:</strong> outline a realistic alternative-metrics framework to present to faculty leadership and the union/association.</li>
+          <li><strong>Repository integration:</strong> task a technical subgroup with streamlining data transfers across administrative portals, ERA, and Borealis.</li>
+        </ul>
       </div>
     </div>
   </section>
