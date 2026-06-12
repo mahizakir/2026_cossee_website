@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+  # Daily deploy ~20 min after the ORCID publications cron (update-publications.yml, 09:23 UTC).
+  # Cron commits use GITHUB_TOKEN, which cannot trigger this workflow via `push`, so we deploy
+  # on a schedule to publish the latest committed publications data.
+  schedule:
+    - cron: '45 9 * * *'
   workflow_dispatch:
 
 permissions:
