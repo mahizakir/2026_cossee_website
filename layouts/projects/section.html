@@ -53,12 +53,7 @@
                 <div class="featured-card__body">
                   <div class="featured-card__head">
                     {{ with .Params.project_code }}<span class="featured-card__code">{{ . }}</span>{{ end }}
-                    {{ if .Params.subtitle }}
-                      <h2 class="featured-card__title">{{ .Params.subtitle }}</h2>
-                      <p class="featured-card__shortname">Project {{ .Title }}</p>
-                    {{ else }}
-                      <h2 class="featured-card__title">{{ .Title }}</h2>
-                    {{ end }}
+                    <h2 class="featured-card__title">{{ .Params.subtitle | default .Title }}</h2>
                   </div>
                   {{ with .Params.summary }}<p class="featured-card__summary">{{ . }}</p>{{ end }}
                   <dl class="featured-card__facts">
