@@ -16,7 +16,7 @@ This page gathers organizations, tools, and networks that are relevant to resear
 
 ## Canadian Initiatives
 
-- [Canadian Institute for Ecology and Evolution (CIEE)](https://www.ciee-icee.ca/about)
+- [Canadian Institute for Ecology and Evolution (CIEE)](https://www.ciee-icee.ca/about.html)
 - [Canadian Centre for Evidence-Informed Conservation](https://canadiancebc.com/)
 - [Living Data Project](https://www.ciee-icee.ca/ldp.html)
 - [Canadian Reproducibility Network (CaRN)](https://carn-recar.ca/)
@@ -29,7 +29,7 @@ This page gathers organizations, tools, and networks that are relevant to resear
 
 ## Systematic Review and Meta-Analysis Resources
 
-- [Systematic Review Tools](https://www.systematicreviewtools.app/tools)
+- [Systematic Review Tools](https://systematicreviewtools.app/tools)
 - [Cochrane](https://www.cochrane.org/about-us/what-we-do)
 - [Campbell Collaboration](https://www.campbellcollaboration.org/)
 - [CAMARADES Collaboration](https://clinical-brain-sciences.ed.ac.uk/camarades)
@@ -37,7 +37,7 @@ This page gathers organizations, tools, and networks that are relevant to resear
 - [Conservation Evidence](https://www.conservationevidence.com/)
 - [PRISMA](https://www.prisma-statement.org/)
 - [Meta-analysis unit at the University of Murcia](https://portalinvestigacion.um.es/investigadores/331802/detalle)
-- Meta-analysis packages in `R`: [metafor](https://cran.r-project.org/package=metafor), [meta](https://cran.r-project.org/package=meta), [esc](https://cran.r-project.org/package=esc)
+- Meta-analysis packages in `R`: [metafor](https://cran.r-project.org/web/packages/metafor/index.html), [meta](https://cran.r-project.org/web/packages/meta/index.html), [esc](https://cran.r-project.org/web/packages/esc/index.html)
 - [Practical Meta-Analysis Effect Size Calculator](https://www.campbellcollaboration.org/calculator/d-means-ses)
 
 ## Equity, Inclusion, and Capacity-Building
