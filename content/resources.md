@@ -9,7 +9,7 @@ This page gathers organizations, tools, and networks that are relevant to resear
 
 - [National Center for Ecological Analysis and Synthesis (NCEAS)](https://www.nceas.ucsb.edu/)
 - [German Centre for Integrative Biodiversity Research (iDiv)](https://www.idiv.de/)
-- [BEACON Center for the Study of Evolution in Action](https://beacon-center.org/)
+- [BEACON Center for the Study of Evolution in Action](https://researchgroups.msu.edu/beacon-center-study-evolution-action)
 - [Center for Open Science (COS)](https://www.cos.io/)
 - [Socio-Environmental Synthesis Center (SESYNC)](https://www.sesync.org/)
 - [Environmental Data Initiative (EDI)](https://edirepository.org/)
@@ -36,7 +36,7 @@ This page gathers organizations, tools, and networks that are relevant to resear
 - [Collaboration for Environmental Evidence](https://environmentalevidence.org/)
 - [Conservation Evidence](https://www.conservationevidence.com/)
 - [PRISMA](https://www.prisma-statement.org/)
-- [Meta-analysis unit at the University of Murcia](https://www.um.es/metaanalysis/)
+- [Meta-analysis unit at the University of Murcia](https://portalinvestigacion.um.es/investigadores/331802/detalle)
 - Meta-analysis packages in `R`: [metafor](https://cran.r-project.org/package=metafor), [meta](https://cran.r-project.org/package=meta), [esc](https://cran.r-project.org/package=esc)
 - [Practical Meta-Analysis Effect Size Calculator](https://www.campbellcollaboration.org/calculator/d-means-ses)
 
