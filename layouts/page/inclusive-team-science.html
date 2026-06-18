@@ -24,7 +24,7 @@
         {{ end }}
       {{ end }}
     {{ end }}
-    {{ range (slice "Australia" "Japan" "New Zealand") }}
+    {{ range (slice "Australia" "Japan" "New Zealand" "Mexico" "Poland") }}
       {{ if not (in ($countryScratch.Get "items") .) }}
         {{ $countryScratch.Set "items" (($countryScratch.Get "items") | append .) }}
       {{ end }}
