@@ -13,12 +13,14 @@
     {{ $countryScratch.Set "items" (slice) }}
     {{ range $members }}
       {{ with .country }}
-        {{ $country := . }}
-        {{ if eq $country "USA" }}
-          {{ $country = "United States" }}
-        {{ end }}
-        {{ if not (in ($countryScratch.Get "items") $country) }}
-          {{ $countryScratch.Set "items" (($countryScratch.Get "items") | append $country) }}
+        {{ range (split . "/") }}
+          {{ $country := trim . " " }}
+          {{ if eq $country "USA" }}
+            {{ $country = "United States" }}
+          {{ end }}
+          {{ if not (in ($countryScratch.Get "items") $country) }}
+            {{ $countryScratch.Set "items" (($countryScratch.Get "items") | append $country) }}
+          {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}
