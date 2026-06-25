@@ -2,10 +2,41 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-06-24T12:03:44Z",
-  "generated_at_display": "June 24, 2026 at 12:03 UTC",
-  "works_count": 442,
+  "generated_at": "2026-06-25T11:59:23Z",
+  "generated_at_display": "June 25, 2026 at 11:59 UTC",
+  "works_count": 443,
   "latest": [
+    {
+      "put_code": 218671868,
+      "title": "Choosing the Response Matrix: Generalised Linear Latent Variable Models for Multivariate Ecology and Evolution",
+      "authors": [
+        "Shinichi Nakagawa",
+        "Ayumi Mizuno",
+        "Russell Dinnage",
+        "Marija Purgar",
+        "Christine Sosiak",
+        "Sergio Poo Hernandez",
+        "Iwo Gross",
+        "Erick Lundgren",
+        "Malgorzata Lagisz",
+        "Eduardo Santos",
+        "Santiao Ortega"
+      ],
+      "authors_display": "Shinichi Nakagawa, Ayumi Mizuno, Russell Dinnage, Marija Purgar, Christine Sosiak, Sergio Poo Hernandez, Iwo Gross, Erick Lundgren, Malgorzata Lagisz, Eduardo Santos, Santiao Ortega",
+      "journal_title": null,
+      "type": "preprint",
+      "type_display": "Preprint",
+      "publication_year": "2026",
+      "publication_month": "06",
+      "publication_day": "24",
+      "publication_date_display": "June 24, 2026",
+      "publication_date_iso": "2026-06-24",
+      "doi": "10.32942/x2wm31",
+      "doi_url": "https://doi.org/10.32942/x2wm31",
+      "best_url": "https://doi.org/10.32942/X2WM31",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/218671868"
+    },
     {
       "put_code": 217901576,
       "title": "The first systematic map of evidence syntheses on the use of artificial intelligence in ecology",
@@ -132,40 +163,44 @@
       "best_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214723791"
-    },
-    {
-      "put_code": 214608695,
-      "title": "Reciprocity: A transparent universal credit system to incentivize peer review",
-      "authors": [
-        "Angela T Moles",
-        "Russell Bonduriansky",
-        "Stephen Bonser",
-        "Daniel Stein Falster",
-        "Shinichi Nakagawa",
-        "Nigel Andrew",
-        "Malgorzata Lagisz"
-      ],
-      "authors_display": "Angela T Moles, Russell Bonduriansky, Stephen Bonser, Daniel Stein Falster, Shinichi Nakagawa, Nigel Andrew, Malgorzata Lagisz",
-      "journal_title": null,
-      "type": "preprint",
-      "type_display": "Preprint",
-      "publication_year": "2026",
-      "publication_month": "05",
-      "publication_day": "11",
-      "publication_date_display": "May 11, 2026",
-      "publication_date_iso": "2026-05-11",
-      "doi": "10.31222/osf.io/5qrmh_v1",
-      "doi_url": "https://doi.org/10.31222/osf.io/5qrmh_v1",
-      "best_url": "https://doi.org/10.31222/osf.io/5qrmh_v1",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214608695"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 20,
+      "count": 21,
       "items": [
+        {
+          "put_code": 218671868,
+          "title": "Choosing the Response Matrix: Generalised Linear Latent Variable Models for Multivariate Ecology and Evolution",
+          "authors": [
+            "Shinichi Nakagawa",
+            "Ayumi Mizuno",
+            "Russell Dinnage",
+            "Marija Purgar",
+            "Christine Sosiak",
+            "Sergio Poo Hernandez",
+            "Iwo Gross",
+            "Erick Lundgren",
+            "Malgorzata Lagisz",
+            "Eduardo Santos",
+            "Santiao Ortega"
+          ],
+          "authors_display": "Shinichi Nakagawa, Ayumi Mizuno, Russell Dinnage, Marija Purgar, Christine Sosiak, Sergio Poo Hernandez, Iwo Gross, Erick Lundgren, Malgorzata Lagisz, Eduardo Santos, Santiao Ortega",
+          "journal_title": null,
+          "type": "preprint",
+          "type_display": "Preprint",
+          "publication_year": "2026",
+          "publication_month": "06",
+          "publication_day": "24",
+          "publication_date_display": "June 24, 2026",
+          "publication_date_iso": "2026-06-24",
+          "doi": "10.32942/x2wm31",
+          "doi_url": "https://doi.org/10.32942/x2wm31",
+          "best_url": "https://doi.org/10.32942/X2WM31",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/218671868"
+        },
         {
           "put_code": 217901576,
           "title": "The first systematic map of evidence syntheses on the use of artificial intelligence in ecology",
@@ -12300,6 +12335,6 @@
     "book-chapter": 1,
     "journal-article": 366,
     "other": 6,
-    "preprint": 68
+    "preprint": 69
   }
 }
