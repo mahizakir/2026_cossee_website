@@ -2,10 +2,36 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-06-30T11:56:22Z",
-  "generated_at_display": "June 30, 2026 at 11:56 UTC",
-  "works_count": 443,
+  "generated_at": "2026-07-01T12:18:48Z",
+  "generated_at_display": "July 01, 2026 at 12:18 UTC",
+  "works_count": 444,
   "latest": [
+    {
+      "put_code": 219203014,
+      "title": "Assessing the diversity, transparency and accessibility of PRISMA guideline extensions",
+      "authors": [
+        "Kyle Morrison",
+        "Malgorzata Lagisz",
+        "Manman Liu",
+        "Manuela S. Santana",
+        "Shinichi Nakagawa",
+        "Yefeng Yang"
+      ],
+      "authors_display": "Kyle Morrison, Malgorzata Lagisz, Manman Liu, Manuela S. Santana, Shinichi Nakagawa, Yefeng Yang",
+      "journal_title": "Nature Mental Health",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "06",
+      "publication_day": "30",
+      "publication_date_display": "June 30, 2026",
+      "publication_date_iso": "2026-06-30",
+      "doi": "10.1038/s44220-026-00664-y",
+      "doi_url": "https://doi.org/10.1038/s44220-026-00664-y",
+      "best_url": "https://doi.org/10.1038/s44220-026-00664-y",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/219203014"
+    },
     {
       "put_code": 218671868,
       "title": "Choosing the Response Matrix: Generalised Linear Latent Variable Models for Multivariate Ecology and Evolution",
@@ -138,38 +164,39 @@
       "best_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212476743"
-    },
-    {
-      "put_code": 214723791,
-      "title": "Biological and methodological pitfalls of meta-analyses in ecology and evolution: lessons from eyespot function studies",
-      "authors": [
-        "Ayumi Mizuno",
-        "Pietro Pollo",
-        "Malgorzata Lagisz",
-        "Masayo Soma",
-        "Shinichi Nakagawa"
-      ],
-      "authors_display": "Ayumi Mizuno, Pietro Pollo, Malgorzata Lagisz, Masayo Soma, Shinichi Nakagawa",
-      "journal_title": "Animal Behaviour",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "06",
-      "publication_day": "00",
-      "publication_date_display": "June 2026",
-      "publication_date_iso": "2026-06-00",
-      "doi": "10.1016/j.anbehav.2025.123448",
-      "doi_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
-      "best_url": "https://doi.org/10.1016/j.anbehav.2025.123448",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/214723791"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 21,
+      "count": 22,
       "items": [
+        {
+          "put_code": 219203014,
+          "title": "Assessing the diversity, transparency and accessibility of PRISMA guideline extensions",
+          "authors": [
+            "Kyle Morrison",
+            "Malgorzata Lagisz",
+            "Manman Liu",
+            "Manuela S. Santana",
+            "Shinichi Nakagawa",
+            "Yefeng Yang"
+          ],
+          "authors_display": "Kyle Morrison, Malgorzata Lagisz, Manman Liu, Manuela S. Santana, Shinichi Nakagawa, Yefeng Yang",
+          "journal_title": "Nature Mental Health",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "06",
+          "publication_day": "30",
+          "publication_date_display": "June 30, 2026",
+          "publication_date_iso": "2026-06-30",
+          "doi": "10.1038/s44220-026-00664-y",
+          "doi_url": "https://doi.org/10.1038/s44220-026-00664-y",
+          "best_url": "https://doi.org/10.1038/s44220-026-00664-y",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/219203014"
+        },
         {
           "put_code": 218671868,
           "title": "Choosing the Response Matrix: Generalised Linear Latent Variable Models for Multivariate Ecology and Evolution",
@@ -12333,7 +12360,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 366,
+    "journal-article": 367,
     "other": 6,
     "preprint": 69
   }
