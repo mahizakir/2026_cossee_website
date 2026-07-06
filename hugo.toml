@@ -32,10 +32,25 @@ pluralizelisttitles = false
     weight = 2
 
   [[menu.main]]
+    name = "People"
+    url = "/people/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Publications"
+    url = "/publications/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 5
+
+  [[menu.main]]
     name = "Research"
     identifier = "menu.research"
     url = "/research/"
-    weight = 3
+    weight = 6
 
   [[menu.main]]
     name = "Research Overview"
@@ -44,43 +59,22 @@ pluralizelisttitles = false
     parent = "menu.research"
 
   [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+    parent = "menu.research"
+
+  [[menu.main]]
     name = "Opportunities"
     url = "/opportunities/"
-    weight = 2
+    weight = 3
     parent = "menu.research"
 
   [[menu.main]]
     name = "Ethos"
     url = "https://cossee.org/inclusive-team-science/"
-    weight = 3
-    parent = "menu.research"
-
-  [[menu.main]]
-    name = "Projects"
-    url = "/projects/"
     weight = 4
     parent = "menu.research"
-
-  [[menu.main]]
-    name = "Workshops"
-    url = "/workshops/"
-    weight = 5
-    parent = "menu.research"
-
-  [[menu.main]]
-    name = "People"
-    url = "/people/"
-    weight = 4
-
-  [[menu.main]]
-    name = "Publications"
-    url = "/publications/"
-    weight = 5
-
-  [[menu.main]]
-    name = "Blog"
-    url = "/blog/"
-    weight = 6
 
   [[menu.main]]
     name = "Open Science"
@@ -95,20 +89,20 @@ pluralizelisttitles = false
     parent = "menu.open-science"
 
   [[menu.main]]
-    name = "Resources"
-    url = "/resources/"
+    name = "Protocols"
+    url = "/protocols/"
     weight = 2
     parent = "menu.open-science"
 
   [[menu.main]]
-    name = "Protocols"
-    url = "/protocols/"
+    name = "Resources"
+    url = "/resources/"
     weight = 3
     parent = "menu.open-science"
 
   [[menu.main]]
-    name = "Projects"
-    url = "/projects/"
+    name = "Workshops"
+    url = "/workshops/"
     weight = 4
     parent = "menu.open-science"
 
