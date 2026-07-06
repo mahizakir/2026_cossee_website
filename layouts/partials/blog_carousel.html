@@ -1,0 +1,257 @@
+{{ $posts := first 9 (sort (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) "Date" "desc") }}
+{{ with $posts }}
+<section class="blog-home">
+  <div class="container">
+    <div class="blog-home__head">
+      <div class="blog-home__headtext">
+        <span class="blog-home__eyebrow">From the blog</span>
+        <h2>Latest from the COSSEE journal</h2>
+        <p>Methods explainers, lab reflections, and research notes from across the group.</p>
+      </div>
+      <a class="blog-home__all" href="{{ "/blog/" | relURL }}">View all posts <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="blog-home__carousel-wrap" tabindex="0" aria-label="Blog posts carousel. Use left and right arrow keys to change posts.">
+      <button class="blog-home__nav blog-home__nav--prev" type="button" aria-label="Previous posts"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+      <button class="blog-home__nav blog-home__nav--next" type="button" aria-label="Next posts"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+      <div class="blog-home-carousel owl-carousel">
+        {{ range . }}
+        {{ $cover := partial "blog/cover-image.html" . }}
+        {{ $authors := partial "blog/authors.html" . }}
+        <div class="blog-home__slide">
+          <article class="blog-home__card">
+            <a class="blog-home__media" href="{{ .Permalink }}" tabindex="-1" aria-hidden="true">
+              <img src="{{ if $cover }}{{ $cover }}{{ else }}{{ "img/placeholder.png" | relURL }}{{ end }}" alt="{{ .Title }}" loading="lazy">
+            </a>
+            <div class="blog-home__body">
+              <div class="blog-home__meta">
+                <span><i class="far fa-calendar" aria-hidden="true"></i> {{ .Date.Format .Site.Params.date_format }}</span>
+                {{ if gt (len $authors) 0 }}<span><i class="far fa-user" aria-hidden="true"></i> {{ delimit $authors ", " }}</span>{{ end }}
+              </div>
+              <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+              <p class="blog-home__summary">{{ .Summary }}</p>
+              <a class="blog-home__link" href="{{ .Permalink }}">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .blog-home {
+      background: linear-gradient(180deg, #ffffff 0%, #f2f7f1 100%);
+      margin: 0;
+      padding: 40px 0 44px;
+    }
+    .blog-home__head {
+      align-items: flex-end;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+    .blog-home__eyebrow {
+      color: var(--ualberta-green);
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .blog-home__headtext h2 {
+      color: var(--ualberta-green-deep);
+      font-size: 32px;
+      line-height: 1.1;
+      margin: 0 0 8px;
+    }
+    .blog-home__headtext p {
+      color: #51635a;
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 52ch;
+    }
+    .blog-home__all {
+      color: var(--ualberta-green-deep) !important;
+      border: 1px solid rgba(39, 93, 56, 0.25);
+      border-radius: 999px;
+      flex-shrink: 0;
+      font-size: 13px;
+      font-style: normal !important;
+      font-weight: 700;
+      padding: 9px 16px;
+      text-decoration: none !important;
+      white-space: nowrap;
+    }
+    .blog-home__all:hover { background: var(--ualberta-green-deep); color: #fff !important; }
+
+    .blog-home__carousel-wrap {
+      min-width: 0;
+      outline: none;
+      position: relative;
+    }
+    .blog-home__carousel-wrap:focus-visible {
+      border-radius: 22px;
+      box-shadow: 0 0 0 3px rgba(39, 93, 56, 0.18);
+    }
+    .blog-home__slide { padding: 8px; height: 100%; }
+
+    .blog-home__card {
+      background: #ffffff;
+      border: 1px solid rgba(39, 93, 56, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(20, 34, 25, 0.06);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .blog-home__card:hover {
+      box-shadow: 0 20px 44px rgba(20, 34, 25, 0.12);
+      transform: translateY(-4px);
+    }
+    .blog-home__media { display: block; overflow: hidden; }
+    .blog-home__media img {
+      aspect-ratio: 16 / 9;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+      width: 100%;
+    }
+    .blog-home__card:hover .blog-home__media img { transform: scale(1.04); }
+
+    .blog-home__body {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 18px 20px 20px;
+    }
+    .blog-home__meta {
+      color: #7c9381;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 12px;
+      gap: 6px 14px;
+      margin-bottom: 8px;
+    }
+    .blog-home__body h3 {
+      font-size: 18px;
+      line-height: 1.3;
+      margin: 0 0 8px;
+    }
+    .blog-home__body h3 a {
+      color: var(--ualberta-green-deep) !important;
+      display: -webkit-box;
+      font-style: normal !important;
+      overflow: hidden;
+      text-decoration: none !important;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+    .blog-home__body h3 a:hover { color: var(--ualberta-green) !important; }
+    .blog-home__summary {
+      color: #51635a;
+      display: -webkit-box;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0 0 14px;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+    .blog-home__link {
+      color: var(--ualberta-green-deep) !important;
+      font-size: 13px;
+      font-style: normal !important;
+      font-weight: 700;
+      margin-top: auto;
+      text-decoration: none !important;
+    }
+    .blog-home__link i { transition: transform 0.2s ease; }
+    .blog-home__link:hover i { transform: translateX(4px); }
+
+    .blog-home__nav {
+      align-items: center;
+      background: var(--ualberta-green-deep);
+      border: 0;
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      height: 44px;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+      width: 44px;
+      z-index: 4;
+      box-shadow: 0 8px 20px rgba(20, 34, 27, 0.22);
+    }
+    .blog-home__nav:hover { background: var(--ualberta-green); opacity: 1; transform: translateY(-50%) scale(1.08); }
+    .blog-home__nav--prev { left: -10px; }
+    .blog-home__nav--next { right: -10px; }
+
+    .blog-home .owl-theme .owl-controls { margin-top: 18px; text-align: center; }
+    .blog-home .owl-theme .owl-controls .owl-buttons { display: none; }
+    .blog-home .owl-theme .owl-controls .owl-page span {
+      background: rgba(39, 93, 56, 0.22);
+      height: 10px;
+      width: 10px;
+    }
+    .blog-home .owl-theme .owl-controls .owl-page.active span,
+    .blog-home .owl-theme .owl-controls.clickable .owl-page:hover span { background: var(--ualberta-green); }
+
+    @media (max-width: 991px) {
+      .blog-home__nav--prev { left: 2px; }
+      .blog-home__nav--next { right: 2px; }
+    }
+    @media (max-width: 767px) {
+      .blog-home { padding: 30px 0 34px; }
+      .blog-home__head { align-items: flex-start; }
+      .blog-home__headtext h2 { font-size: 26px; }
+      .blog-home__nav { height: 38px; width: 38px; }
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', function () {
+      if (!window.jQuery || !window.jQuery.fn || !window.jQuery.fn.owlCarousel) return;
+      var $carousel = window.jQuery('.blog-home-carousel');
+      if (!$carousel.length || $carousel.data('owlCarousel')) return;
+
+      $carousel.owlCarousel({
+        navigation: false,
+        pagination: true,
+        slideSpeed: 500,
+        paginationSpeed: 600,
+        autoPlay: 7000,
+        stopOnHover: true,
+        items: 3,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [979, 2],
+        itemsTablet: [768, 1],
+        itemsMobile: [479, 1],
+        lazyLoad: false,
+        addClassActive: true
+      });
+
+      var $wrap = $carousel.closest('.blog-home__carousel-wrap');
+      $wrap.find('.blog-home__nav--prev').on('click', function () { $carousel.trigger('owl.prev'); });
+      $wrap.find('.blog-home__nav--next').on('click', function () { $carousel.trigger('owl.next'); });
+      $wrap.on('keydown', function (event) {
+        if (event.key === 'ArrowLeft') { event.preventDefault(); $carousel.trigger('owl.prev'); }
+        if (event.key === 'ArrowRight') { event.preventDefault(); $carousel.trigger('owl.next'); }
+      });
+    });
+  </script>
+</section>
+{{ end }}
