@@ -26,6 +26,10 @@
       "label": "Undergrad"
     },
     {
+      "value": "intern",
+      "label": "Interns"
+    },
+    {
       "value": "assistants",
       "label": "Research Assistants"
     },
