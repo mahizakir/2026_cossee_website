@@ -23,6 +23,11 @@
             {{ end }}
           {{ end }}
 
+          <section class="projects-intro">
+            <p class="projects-intro__lead">These are COSSEE's open, reusable research tools and collaborative projects, spanning databases, annotation and reporting tools, and shared infrastructure for evidence synthesis in ecology and evolution. Each is built on open-science principles: transparent workflows, open data, and code others can reuse, so findings are easier to reproduce and extend. For the bigger picture, see our <a href="/open-science/">Open Science</a> hub.</p>
+            <p class="projects-intro__note">More projects will be added here over time as new collaborations come online.</p>
+          </section>
+
           <section class="projects-hub">
             {{ if gt (len $featured) 0 }}
             <div class="projects-featured">
@@ -298,6 +303,24 @@
       .featured-card:hover .featured-card__cta,
       .featured-card:focus-within .featured-card__cta {
         gap: 14px;
+      }
+
+      /* ===== Intro ===== */
+      .projects-intro {
+        margin: 0 0 30px;
+        max-width: 820px;
+      }
+      .projects-intro__lead {
+        color: #3a4f42;
+        font-size: 17px;
+        line-height: 1.7;
+        margin: 0 0 10px;
+      }
+      .projects-intro__note {
+        color: #6a7a6f;
+        font-size: 14px;
+        font-style: italic;
+        margin: 0;
       }
 
       /* ===== In-development grid ===== */
