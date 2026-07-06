@@ -170,16 +170,17 @@ pluralizelisttitles = false
   apple_touch_icon = "img/favicon.svg"
   contact_url = "/contact/"
   address = """<p class="text-uppercase"><strong>COSSEE Lab</strong>
+      <br>CW312, Biological Sciences Building
       <br>Department of Biological Sciences
       <br>University of Alberta
-      <br>Edmonton, Alberta
+      <br>Edmonton, Alberta T6G 2E9
       <br>Canada
     </p>
     """
 
 [params.topbar]
   enable = true
-  text = """<p class="hidden-sm hidden-xs">Collaboration for Open Science and Synthesis in Ecology and Evolution (COSSEE)</p>
+  text = """<p class="hidden-sm hidden-xs">Collaboration for Open Science and Synthesis in Ecology and Evolution (COSSEE)<br>CW312, Biological Sciences Building, Edmonton, AB T6G 2E9, Canada</p>
     <p class="hidden-md hidden-lg"><a href="mailto:snakagaw@ualberta.ca" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a></p>
     """
 
