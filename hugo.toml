@@ -175,7 +175,7 @@ pluralizelisttitles = false
 
 [params.topbar]
   enable = true
-  text = """<p class="hidden-sm hidden-xs">Collaboration for Open Science and Synthesis in Ecology and Evolution (COSSEE)<br>CW312, Biological Sciences Building, Edmonton, AB T6G 2E9, Canada</p>
+  text = """<p class="hidden-sm hidden-xs">Collaboration for Open Science and Synthesis in Ecology and Evolution (COSSEE)<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Biological+Sciences+Building,+University+of+Alberta,+Edmonton,+AB+T6G+2E9" target="_blank" rel="noopener">CW312, Biological Sciences Building, Edmonton, AB T6G 2E9, Canada</a></p>
     <p class="hidden-md hidden-lg"><a href="mailto:snakagaw@ualberta.ca" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a></p>
     """
 
