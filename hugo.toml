@@ -170,6 +170,7 @@ pluralizelisttitles = false
       <br>Edmonton, Alberta T6G 2E9
       <br>Canada
     </p>
+    <p class="cossee-map-link"><a href="https://www.google.com/maps/search/?api=1&amp;query=Biological+Sciences+Building,+University+of+Alberta,+Edmonton,+AB+T6G+2E9" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i> View on Google Maps</a></p>
     """
 
 [params.topbar]
