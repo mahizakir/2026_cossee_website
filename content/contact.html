@@ -78,6 +78,78 @@ type = "page"
       min-height: 1550px;
     }
   }
+
+  .contact-directions {
+    border-top: 1px solid rgba(39, 93, 56, 0.14);
+    margin-top: 42px;
+    padding-top: 34px;
+  }
+  .contact-directions h2 {
+    color: var(--ualberta-green-deep);
+    font-size: 30px;
+    line-height: 1.12;
+    margin: 0 0 12px;
+  }
+  .contact-directions__lead { max-width: 72ch; }
+  .contact-directions__body {
+    align-items: start;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    margin-top: 6px;
+  }
+  .contact-directions__steps {
+    counter-reset: dir;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .contact-directions__steps li {
+    color: #3d4a5d;
+    counter-increment: dir;
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 0 0 12px;
+    padding-left: 44px;
+    position: relative;
+  }
+  .contact-directions__steps li:last-child { margin-bottom: 0; }
+  .contact-directions__steps li::before {
+    align-items: center;
+    background: rgba(39, 93, 56, 0.1);
+    border-radius: 50%;
+    color: var(--ualberta-green-deep);
+    content: counter(dir);
+    display: flex;
+    font-size: 13px;
+    font-weight: 800;
+    height: 30px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: -1px;
+    width: 30px;
+  }
+  .contact-directions__steps strong { color: #1f3d2b; }
+  .contact-directions__map { margin: 0; }
+  .contact-directions__map img {
+    border: 1px solid rgba(39, 93, 56, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 14px 34px rgba(20, 34, 25, 0.1);
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  .contact-directions__map figcaption {
+    color: #607086;
+    font-size: 13px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  @media (max-width: 767px) {
+    .contact-directions__body { grid-template-columns: 1fr; gap: 22px; }
+    .contact-directions h2 { font-size: 26px; }
+  }
 </style>
 
 <div class="contact-form-page">
@@ -99,4 +171,31 @@ type = "page"
     If the form does not load here, open it directly:
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfCiGZmrB5UO8807gjcpW8cFTLrNlgfC9kWjs264Y9ZkF19_g/viewform" target="_blank" rel="noopener">COSSEE contact form</a>.
   </p>
+
+  <section class="contact-directions">
+    <h2>How to get to COSSEE</h2>
+    <p class="contact-directions__lead">There are several ways to reach COSSEE (CW312) once you are on campus. Here is one recommended route.</p>
+    <div class="contact-directions__body">
+      <ol class="contact-directions__steps">
+        <li>Go to the <strong>CCIS (Centennial Centre for Interdisciplinary Science) building</strong>.</li>
+        <li>Enter the building and <strong>walk straight ahead</strong>.</li>
+        <li>Continue straight and <strong>go down a small set of stairs</strong>.</li>
+        <li>After the stairs, <strong>keep walking straight</strong>.</li>
+        <li>You will see a café on your left and enter an <strong>open area</strong>.</li>
+        <li>The <strong>Biological Sciences (BioSci) building entrance</strong> will be in front of you.</li>
+        <li>Enter the building. You will see <strong>elevators on your right and stairs further ahead</strong>.</li>
+        <li><strong>Take the stairs up one floor</strong>.</li>
+        <li>At the top of the stairs, you will see <strong>two doors ahead, one on the left and one on the right</strong>.</li>
+        <li><strong>Enter through the door on the right</strong>.</li>
+        <li><strong>Walk straight to the end of the hallway</strong>.</li>
+        <li><strong>Turn left</strong>. The <strong>COSSEE</strong> will be on your right :)</li>
+      </ol>
+      <figure class="contact-directions__map">
+        <a href="/web_files/cossee-route-map.webp" target="_blank" rel="noopener">
+          <img src="/web_files/cossee-route-map.webp" alt="Photo guide showing the recommended walking route from CCIS to COSSEE (CW312), numbered step by step." loading="lazy">
+        </a>
+        <figcaption>Photo guide to the recommended route (steps 1 to 12). Click to enlarge.</figcaption>
+      </figure>
+    </div>
+  </section>
 </div>
