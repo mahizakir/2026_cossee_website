@@ -14,7 +14,7 @@ location = "Web app"
 timing = "Active development"
 commitment = "Browse, annotate, and contribute fossil records"
 external_url = "https://fossils.cossee.org/"
-hero_image = "fossil-db-logo.png"
+hero_image = "fossildb-logo.svg"
 hero_image_fit = "contain"
 highlights = [
   { label = "What it does", value = "Manages metadata and images for plant–insect fossil specimens" },
