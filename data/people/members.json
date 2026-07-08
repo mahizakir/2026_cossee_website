@@ -363,6 +363,21 @@
     "form_role": "Intern"
   },
   {
+    "name": "Joanna Huang",
+    "pronouns": "she/her/hers",
+    "status": "current",
+    "status_label": "Current",
+    "role": "intern",
+    "role_label": "Intern",
+    "email": "",
+    "bio": "Joanna Huang is a high school student from Edmonton interning with the lab for six weeks through the University of Alberta's WISEST Summer Research Program, working on a meta-research project on high school science fair incentives and transparency.",
+    "photo": "/web_files/joanna-huang.webp",
+    "detail_id": "joanna-huang",
+    "detail_group": "current",
+    "country": "Canada",
+    "form_role": "Intern"
+  },
+  {
     "name": "Haley Lacza",
     "pronouns": "-",
     "status": "past",
