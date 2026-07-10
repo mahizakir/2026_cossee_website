@@ -131,6 +131,24 @@ type = "page"
     width: 30px;
   }
   .contact-directions__steps strong { color: #1f3d2b; }
+  .contact-directions__access {
+    align-items: flex-start;
+    background: #f7f3e7;
+    border: 1px solid rgba(120, 99, 40, 0.18);
+    border-radius: 12px;
+    color: #6b5a2f;
+    display: flex;
+    font-size: 13.5px;
+    gap: 9px;
+    line-height: 1.55;
+    margin-top: 9px;
+    padding: 10px 13px;
+  }
+  .contact-directions__access i {
+    color: #9a7d2e;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
   .contact-directions__map { margin: 0; }
   .contact-directions__map img {
     border: 1px solid rgba(39, 93, 56, 0.12);
@@ -167,7 +185,9 @@ type = "page"
         <li>Enter the building. You will see <strong>elevators on your right and stairs further ahead</strong>.</li>
         <li><strong>Take the stairs up one floor</strong>.</li>
         <li>At the top of the stairs, you will see <strong>two doors ahead, one on the left and one on the right</strong>.</li>
-        <li><strong>Enter through the door on the right</strong>.</li>
+        <li><strong>Enter through the door on the right.</strong>
+          <span class="contact-directions__access"><i class="fas fa-id-card" aria-hidden="true"></i><span>This door now requires <strong>card access</strong>. Please contact the lab beforehand to arrange access or to be escorted to the lab.</span></span>
+        </li>
         <li><strong>Walk straight to the end of the hallway</strong>.</li>
         <li><strong>Turn left</strong>. The <strong>COSSEE</strong> will be on your right :)</li>
       </ol>
