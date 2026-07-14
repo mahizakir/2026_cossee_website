@@ -2,10 +2,40 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-07-13T12:18:39Z",
-  "generated_at_display": "July 13, 2026 at 12:18 UTC",
-  "works_count": 444,
+  "generated_at": "2026-07-14T10:58:46Z",
+  "generated_at_display": "July 14, 2026 at 10:58 UTC",
+  "works_count": 445,
   "latest": [
+    {
+      "put_code": 220532643,
+      "title": "Elevating the importance of Risk of Bias assessment for ecology and evolutionary biology",
+      "authors": [
+        "Antica Culina",
+        "Dugald Foster",
+        "Matthew Grainger",
+        "Rose E. O'Dea",
+        "Oliver L. Pescott",
+        "Alfredo Sánchez‐Tójar",
+        "Robin J. Boyd",
+        "Julia Koricheva",
+        "Shinichi Nakagawa",
+        "Gavin Stewart"
+      ],
+      "authors_display": "Antica Culina, Dugald Foster, Matthew Grainger, Rose E. O'Dea, Oliver L. Pescott, Alfredo Sánchez‐Tójar, Robin J. Boyd, Julia Koricheva, Shinichi Nakagawa, Gavin Stewart",
+      "journal_title": "Methods in Ecology and Evolution",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "07",
+      "publication_day": "13",
+      "publication_date_display": "July 13, 2026",
+      "publication_date_iso": "2026-07-13",
+      "doi": "10.1111/2041-210x.70356",
+      "doi_url": "https://doi.org/10.1111/2041-210x.70356",
+      "best_url": "https://doi.org/10.1111/2041-210x.70356",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/220532643"
+    },
     {
       "put_code": 219203014,
       "title": "Assessing the diversity, transparency and accessibility of PRISMA guideline extensions",
@@ -140,37 +170,43 @@
       "best_url": "https://doi.org/10.1016/j.anbehav.2026.123542",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212973195"
-    },
-    {
-      "put_code": 212476743,
-      "title": "Interactive effects of heat and drought on wheat yield change from synergistic to antagonistic as their severity increases",
-      "authors": [
-        "Arisede Chisaka",
-        "John P. Hammond",
-        "Shinichi Nakagawa",
-        "Jacob Bishop"
-      ],
-      "authors_display": "Arisede Chisaka, John P. Hammond, Shinichi Nakagawa, Jacob Bishop",
-      "journal_title": "Agricultural and Forest Meteorology",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "06",
-      "publication_day": "00",
-      "publication_date_display": "June 2026",
-      "publication_date_iso": "2026-06-00",
-      "doi": "10.1016/j.agrformet.2026.111189",
-      "doi_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
-      "best_url": "https://doi.org/10.1016/j.agrformet.2026.111189",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212476743"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 22,
+      "count": 23,
       "items": [
+        {
+          "put_code": 220532643,
+          "title": "Elevating the importance of Risk of Bias assessment for ecology and evolutionary biology",
+          "authors": [
+            "Antica Culina",
+            "Dugald Foster",
+            "Matthew Grainger",
+            "Rose E. O'Dea",
+            "Oliver L. Pescott",
+            "Alfredo Sánchez‐Tójar",
+            "Robin J. Boyd",
+            "Julia Koricheva",
+            "Shinichi Nakagawa",
+            "Gavin Stewart"
+          ],
+          "authors_display": "Antica Culina, Dugald Foster, Matthew Grainger, Rose E. O'Dea, Oliver L. Pescott, Alfredo Sánchez‐Tójar, Robin J. Boyd, Julia Koricheva, Shinichi Nakagawa, Gavin Stewart",
+          "journal_title": "Methods in Ecology and Evolution",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "07",
+          "publication_day": "13",
+          "publication_date_display": "July 13, 2026",
+          "publication_date_iso": "2026-07-13",
+          "doi": "10.1111/2041-210x.70356",
+          "doi_url": "https://doi.org/10.1111/2041-210x.70356",
+          "best_url": "https://doi.org/10.1111/2041-210x.70356",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/220532643"
+        },
         {
           "put_code": 219203014,
           "title": "Assessing the diversity, transparency and accessibility of PRISMA guideline extensions",
@@ -12360,7 +12396,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 367,
+    "journal-article": 368,
     "other": 6,
     "preprint": 69
   }
