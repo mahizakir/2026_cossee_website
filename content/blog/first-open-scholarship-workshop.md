@@ -74,11 +74,6 @@ The hard part is incentives, infrastructure, and time. So on 28 May we set out t
 
 Dean of Science **Matina Kalcounis-Rueppell** opened the day. **Shinichi Nakagawa** set up the series: what open scholarship and meta-research are for, and what this working group hopes to achieve. Then came seven short talks, twelve minutes each, moving from the big picture to infrastructure, practice, and policy.
 
-<figure class="blog-inline-figure">
-  <img src="/web_files/open-scholarship-workshop-opening.webp" alt="Shinichi Nakagawa speaking beside the workshop's opening title slide at the front of the room." />
-  <figcaption>Shinichi Nakagawa setting up the series and what the working group hopes to achieve.</figcaption>
-</figure>
-
 ## Seven talks, seven angles
 
 The seven talks came at open scholarship from very different directions. **Mariyam Suleman** opened with the question of who actually gets to take part in open science, drawing on a Global South perspective and the local knowledge the system tends to leave out. **Sonya Betz** turned to community-led publishing at UofA, including the Diamond open-access model, where neither authors nor readers pay. **Lisa Hartling** raised the problem of research waste, and the hard task of knowing when a line of inquiry is saturated. **Erin Bayne** showed what becomes possible when raw data is shared, using WildTrax as a working example in avian ecology.
