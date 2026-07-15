@@ -1,6 +1,6 @@
 +++
 title = "Open scholarship, in practice: our first Open Scholarship Workshop"
-date = 2026-05-28
+date = 2026-07-15
 authors = ["Mahi Zakir"]
 banner = "/web_files/open-scholarship-workshop-banner.webp"
 summary = "Twenty-three people, seven talks, three discussion tracks, one morning, and a concrete to-do list for open science at the U of A."
