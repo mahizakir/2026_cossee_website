@@ -16,6 +16,7 @@ commitment = "Approximately 2 to 3 hours"
 contact_email = "csosiak@ualberta.ca"
 interest_form_url = "https://docs.google.com/forms/d/e/1FAIpQLSd2VkB_VbK_y5YVYHbzWMz3ZTn_5c5vz1dZXAAnQgThgm0OnQ/viewform"
 results_url = "/projects/gateway/results/"
+results_as_of = "July 15, 2026"
 hero_image = "ant/DSC_1662.JPG"
 hero_video = "ant/20260419_110233 (1).mp4"
 gallery_images = [

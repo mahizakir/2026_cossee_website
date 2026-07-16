@@ -117,6 +117,7 @@
               <span class="gw-resultsbanner__kicker"><span class="gw-resultsbanner__dot"></span> Results are in</span>
               <h2 class="gw-resultsbanner__title">See what students have discovered so far</h2>
               <p class="gw-resultsbanner__sub">{{ len $gwres }} student trials across {{ len $gwsch }} schools, mapping {{ len $gwsum }} ant colonies and counting.</p>
+              {{ with $.Params.results_as_of }}<span class="gw-resultsbanner__asof">Results as of {{ . }}</span>{{ end }}
             </div>
             <span class="gw-resultsbanner__cta">
               <span>View the results</span>
@@ -590,6 +591,7 @@
       }
       .gw-resultsbanner__title { color: #fff; font-size: 26px; font-weight: 800; line-height: 1.15; margin: 10px 0 6px; }
       .gw-resultsbanner__sub { color: rgba(255, 255, 255, 0.9); font-size: 16px; line-height: 1.5; margin: 0; }
+      .gw-resultsbanner__asof { color: rgba(255, 255, 255, 0.72); display: inline-block; font-size: 12.5px; font-weight: 600; letter-spacing: 0.02em; margin-top: 12px; }
       .gw-resultsbanner__cta {
         align-items: center;
         background: var(--gw-gold);
@@ -615,6 +617,7 @@
       #content .gw-resultsbanner__kicker,
       #content .gw-resultsbanner__title,
       #content .gw-resultsbanner__sub,
+      #content .gw-resultsbanner__asof,
       #content .gw-resultsbanner__cta { font-style: normal !important; }
       #content a.gw-resultsbanner .gw-resultsbanner__cta { color: var(--gw-green-dark); }
 
