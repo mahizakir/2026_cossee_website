@@ -125,10 +125,6 @@ Close the gap between stated values and actual policy: lobby the Tri-Agencies fo
 
 From the three tracks, a handful of priorities rose to the top for the next session. Two are practical: **plain-language guides** to UofA's data services, written for researchers rather than engineers, and a **graduate module** on open scholarship built together with Graduate & Postdoctoral Studies. Two are structural: a realistic framework for **alternative impact metrics** as a route toward DORA, and a small technical subgroup tasked with **repository integration**, streamlining data transfers between administrative portals, ERA, and Borealis.
 
-## What we'll do differently next time
-
-Running a first workshop is also how you learn to run a better second one. Next time we will issue certificates of attendance that graduate students can use in their progress reports, send round a short who's-who beforehand so people arrive already knowing the room, and pace the day with breaks between talks rather than one uninterrupted block.
-
 ---
 
 Open science moves when a specific barrier gets specific people assigned to it. We now have a shortlist worth showing up for. Thanks to our speakers, our discussion leads, and the Digital Scholarship Centre for hosting. If you work on any of these problems at UofA, we'd like you in the room next time.
