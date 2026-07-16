@@ -1,0 +1,72 @@
+[
+  {
+    "code": "EXP001",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP002",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP003",
+    "replicates": "3",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP004",
+    "replicates": "5",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP005",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP006",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP007",
+    "replicates": "",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP008",
+    "replicates": "",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP009",
+    "replicates": "",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP010",
+    "replicates": "",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP011",
+    "replicates": "2",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP012",
+    "replicates": "1",
+    "conclusion": "Inconclusive"
+  },
+  {
+    "code": "EXP013",
+    "replicates": "3",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP014",
+    "replicates": "3",
+    "conclusion": "Supercolony"
+  }
+]

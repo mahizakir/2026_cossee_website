@@ -77,6 +77,12 @@
                 <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
               {{ end }}{{ end }}
+              {{ with .Params.results_url }}
+              <a class="gw-btn gw-btn--ghost" href="{{ . }}">
+                <span>See student results</span>
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              {{ end }}
               <a class="gw-btn gw-btn--ghost" href="#how-it-works">How it works</a>
             </div>
           </div>
@@ -100,6 +106,24 @@
             <div class="gw-fact"><span>Time commitment</span><strong>{{ . }}</strong></div>
             {{ end }}
           </section>
+
+          {{ with .Params.results_url }}
+          {{ $gwsum := $.Site.Data.gateway.colony_summary }}
+          {{ $gwres := $.Site.Data.gateway.student_results }}
+          {{ $gwsch := slice }}
+          {{ range $gwres }}{{ if not (in $gwsch .school) }}{{ $gwsch = $gwsch | append .school }}{{ end }}{{ end }}
+          <a class="gw-resultsbanner" href="{{ . }}">
+            <div class="gw-resultsbanner__main">
+              <span class="gw-resultsbanner__kicker"><span class="gw-resultsbanner__dot"></span> Results are in</span>
+              <h2 class="gw-resultsbanner__title">See what students have discovered so far</h2>
+              <p class="gw-resultsbanner__sub">{{ len $gwres }} student trials across {{ len $gwsch }} schools, mapping {{ len $gwsum }} ant colonies and counting.</p>
+            </div>
+            <span class="gw-resultsbanner__cta">
+              <span>View the results</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          {{ end }}
 
           <nav class="gw-anchornav" aria-label="On this page">
             <a href="#story">The science</a>
@@ -216,8 +240,8 @@
           <section class="gw-section" id="media">
             <div class="gw-section__head">
               <span class="gw-eyebrow">Field media</span>
-              <h2>From the ant archive</h2>
-              <p class="gw-section__sub">Photos and video captured across multiple seasons in Fish Creek Provincial Park.</p>
+              <h2>From the field and the classroom</h2>
+              <p class="gw-section__sub">Ant fieldwork across multiple seasons, and students running trials in schools across Alberta.</p>
             </div>
 
             {{ if $heroVideo }}
@@ -229,11 +253,19 @@
             </figure>
             {{ end }}
 
-            {{ if gt (len $gallery) 0 }}
+            {{ if or (gt (len $gallery) 0) .Params.gallery_extra }}
             <div class="gw-gallery">
               {{ range $gallery }}
               <a class="gw-gallery__item" href="{{ .RelPermalink }}" target="_blank" rel="noopener" aria-label="Open field photo">
                 <img src="{{ .RelPermalink }}" alt="Gateway field observation" loading="lazy">
+                <span class="gw-gallery__expand" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 10V4h6M14 4h6v6M20 14v6h-6M10 20H4v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </a>
+              {{ end }}
+              {{ range .Params.gallery_extra }}
+              <a class="gw-gallery__item" href="{{ . }}" target="_blank" rel="noopener" aria-label="Open Gateway photo">
+                <img src="{{ . }}" alt="Gateway students collecting ants and running trials" loading="lazy">
                 <span class="gw-gallery__expand" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none"><path d="M4 10V4h6M14 4h6v6M20 14v6h-6M10 20H4v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
@@ -500,6 +532,91 @@
         font-weight: 700;
         line-height: 1.4;
       }
+
+      /* Results banner */
+      .gw-resultsbanner {
+        align-items: center;
+        background: linear-gradient(120deg, var(--gw-green-dark) 0%, var(--gw-green) 55%, #3a7f52 100%);
+        border-radius: 22px;
+        box-shadow: 0 22px 46px rgba(19, 34, 26, 0.16);
+        color: #fff;
+        display: flex;
+        gap: 24px;
+        justify-content: space-between;
+        margin-bottom: 44px;
+        overflow: hidden;
+        padding: 26px 32px;
+        position: relative;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .gw-resultsbanner::before {
+        background: radial-gradient(circle, rgba(202, 160, 58, 0.35) 0%, transparent 68%);
+        content: "";
+        height: 320px;
+        pointer-events: none;
+        position: absolute;
+        right: -60px;
+        top: -120px;
+        width: 320px;
+      }
+      .gw-resultsbanner:hover, .gw-resultsbanner:focus {
+        box-shadow: 0 30px 60px rgba(19, 34, 26, 0.24);
+        color: #fff;
+        text-decoration: none;
+        transform: translateY(-3px);
+      }
+      .gw-resultsbanner__main { position: relative; z-index: 1; }
+      .gw-resultsbanner__kicker {
+        align-items: center;
+        color: var(--gw-gold);
+        display: inline-flex;
+        font-size: 12px;
+        font-weight: 800;
+        gap: 9px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .gw-resultsbanner__dot {
+        animation: gw-pulse 2s infinite;
+        background: var(--gw-gold);
+        border-radius: 50%;
+        height: 9px;
+        width: 9px;
+      }
+      @keyframes gw-pulse {
+        0% { box-shadow: 0 0 0 0 rgba(202, 160, 58, 0.6); }
+        70% { box-shadow: 0 0 0 10px rgba(202, 160, 58, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(202, 160, 58, 0); }
+      }
+      .gw-resultsbanner__title { color: #fff; font-size: 26px; font-weight: 800; line-height: 1.15; margin: 10px 0 6px; }
+      .gw-resultsbanner__sub { color: rgba(255, 255, 255, 0.9); font-size: 16px; line-height: 1.5; margin: 0; }
+      .gw-resultsbanner__cta {
+        align-items: center;
+        background: var(--gw-gold);
+        border-radius: 999px;
+        color: var(--gw-green-dark);
+        display: inline-flex;
+        flex-shrink: 0;
+        font-size: 15px;
+        font-weight: 800;
+        gap: 10px;
+        padding: 14px 24px;
+        position: relative;
+        white-space: nowrap;
+        z-index: 1;
+      }
+      .gw-resultsbanner__cta svg { height: 18px; transition: transform 0.25s ease; width: 18px; }
+      .gw-resultsbanner:hover .gw-resultsbanner__cta svg { transform: translateX(4px); }
+      /* override site-wide #content a italic/underline for this card */
+      #content a.gw-resultsbanner,
+      #content a.gw-resultsbanner:hover,
+      #content a.gw-resultsbanner:focus { color: #fff; text-decoration: none !important; }
+      #content a.gw-resultsbanner,
+      #content .gw-resultsbanner__kicker,
+      #content .gw-resultsbanner__title,
+      #content .gw-resultsbanner__sub,
+      #content .gw-resultsbanner__cta { font-style: normal !important; }
+      #content a.gw-resultsbanner .gw-resultsbanner__cta { color: var(--gw-green-dark); }
 
       /* Anchor nav */
       .gw-anchornav {
@@ -1031,6 +1148,8 @@
         .gw-gallery__item img { height: 220px; }
         .gw-join { padding: 28px; margin-bottom: 40px; }
         .gw-join__copy h2 { font-size: 26px; }
+        .gw-resultsbanner { align-items: flex-start; flex-direction: column; gap: 18px; padding: 24px; }
+        .gw-resultsbanner__title { font-size: 22px; }
         .gw-anchornav { top: 72px; }
         .gw-prose { font-size: 17px; }
         .gw-prose p:first-of-type::first-letter { font-size: 48px; }

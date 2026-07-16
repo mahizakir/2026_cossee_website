@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ partial "headers.html" . }}
+    {{ partial "custom_headers.html" . }}
+  </head>
+  <body>
+    {{ $summary := .Site.Data.gateway.colony_summary }}
+    {{ $results := .Site.Data.gateway.student_results }}
+    {{ $colonies := .Site.Data.gateway.colonies }}
+
+    {{/* distinct schools, in first-seen order */}}
+    {{ $schools := slice }}
+    {{ range $results }}
+      {{ if not (in $schools .school) }}{{ $schools = $schools | append .school }}{{ end }}
+    {{ end }}
+
+    <div id="all">
+      {{ partial "top.html" . }}
+      {{ partial "nav.html" . }}
+
+      <div id="content" class="gwr-page">
+        <section class="gwr-hero">
+          <div class="container gwr-hero__inner">
+            <a class="gwr-back" href="/projects/gateway/"><span aria-hidden="true">&#8592;</span> Project Gateway</a>
+            <span class="gwr-eyebrow gwr-eyebrow--light">Results</span>
+            <h1 class="gwr-hero__title">{{ .Title }}</h1>
+            {{ with .Params.summary }}<p class="gwr-hero__lede">{{ . }}</p>{{ end }}
+          </div>
+        </section>
+
+        <div class="container">
+          <section class="gwr-stats">
+            <div class="gwr-stat"><b>{{ len $summary }}</b><span>Colonies tested</span></div>
+            <div class="gwr-stat"><b>{{ len (where $summary "conclusion" "Supercolony") }}</b><span>Supercolony</span></div>
+            <div class="gwr-stat"><b>{{ len (where $summary "conclusion" "Not supercolony") }}</b><span>Not supercolony</span></div>
+            <div class="gwr-stat"><b>{{ len $schools }}</b><span>Schools</span></div>
+            <div class="gwr-stat"><b>{{ len $results }}</b><span>Student trials</span></div>
+          </section>
+
+          {{ with .Content }}<section class="gwr-intro">{{ . }}</section>{{ end }}
+
+          <!-- How the data was gathered -->
+          <section class="gwr-section" id="how">
+            <div class="gwr-section__head">
+              <span class="gwr-eyebrow">Behind the data</span>
+              <h2>How your class gathered this data</h2>
+              <p class="gwr-section__sub">Every row in the tables below started with students in the field and at their desks.</p>
+            </div>
+            <div class="gwr-process">
+              <figure class="gwr-pcard">
+                <img src="/web_files/gateway/gw-collect.webp" alt="A student holds a collection tube with an ant sample outdoors." loading="lazy">
+                <figcaption><b>1. Collect</b>Students gather ants from colonies around their school.</figcaption>
+              </figure>
+              <figure class="gwr-pcard">
+                <img src="/web_files/gateway/gw-test.webp" alt="Students run an aggression trial at a desk with a container and clipboard." loading="lazy">
+                <figcaption><b>2. Test</b>Ants from two nests meet in a container to see whether they fight.</figcaption>
+              </figure>
+              <figure class="gwr-pcard">
+                <img src="/web_files/gateway/gw-record.webp" alt="A student records observations on a clipboard alongside a researcher." loading="lazy">
+                <figcaption><b>3. Record</b>Each group notes the behaviour, and the result joins the dataset.</figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <!-- Colony summary -->
+          <section class="gwr-section" id="colonies">
+            <div class="gwr-section__head">
+              <span class="gwr-eyebrow">Colony summary</span>
+              <h2>What each colony told us</h2>
+              <p class="gwr-section__sub">Each colony was tested one or more times. "Supercolony" means the introduced ants did not fight the local ants, a sign they may belong to the same vast colony. "Not supercolony" means they were aggressive.</p>
+            </div>
+            <div class="gwr-tablewrap">
+              <table class="gwr-table">
+                <thead>
+                  <tr><th>Colony</th><th>Replicates</th><th>Conclusion</th></tr>
+                </thead>
+                <tbody>
+                  {{ range $summary }}
+                  <tr>
+                    <td class="gwr-mono">{{ .code }}</td>
+                    <td>{{ if .replicates }}{{ .replicates }}{{ else }}&mdash;{{ end }}</td>
+                    <td><span class="gwr-badge gwr-badge--{{ .conclusion | urlize }}">{{ .conclusion }}</span></td>
+                  </tr>
+                  {{ end }}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Interactive map (placeholder until coordinates are compiled) -->
+          <section class="gwr-section" id="map">
+            <div class="gwr-section__head">
+              <span class="gwr-eyebrow">Where the colonies are</span>
+              <h2>Colony map</h2>
+              <p class="gwr-section__sub">An interactive map of every tested colony across Alberta, with the ones your students collected marked separately.</p>
+            </div>
+            {{ if $colonies }}
+              <div id="gwr-map" class="gwr-map"></div>
+            {{ else }}
+              <div class="gwr-soon">
+                <div class="gwr-soon__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg>
+                </div>
+                <div>
+                  <strong>Map coming soon.</strong>
+                  <p>We are compiling the field coordinates for every colony. When they are in, this map will show each site, with student-collected colonies and supercolony findings colour-coded so your class can spot exactly which ones you tested.</p>
+                </div>
+              </div>
+            {{ end }}
+          </section>
+
+          <!-- Detailed student results -->
+          <section class="gwr-section" id="student-results">
+            <div class="gwr-section__head">
+              <span class="gwr-eyebrow">Trial by trial</span>
+              <h2>Student results</h2>
+              <p class="gwr-section__sub">Every trial your classes ran, grouped by school. Filter to find your school below.</p>
+            </div>
+
+            <div class="gwr-filters" role="tablist" aria-label="Filter by school">
+              <button class="gwr-chip is-active" type="button" data-school="all">All schools</button>
+              {{ range $schools }}
+              <button class="gwr-chip" type="button" data-school="{{ . }}">{{ . }}</button>
+              {{ end }}
+            </div>
+
+            <div class="gwr-tablewrap">
+              <table class="gwr-table gwr-table--results">
+                <thead>
+                  <tr><th>School</th><th>Group</th><th>Date</th><th>Colony</th><th>Result</th><th>Conclusion</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                  {{ range $results }}
+                  <tr data-school="{{ .school }}">
+                    <td>{{ .school }}</td>
+                    <td class="gwr-muted">{{ .group }}</td>
+                    <td>{{ .date }}</td>
+                    <td class="gwr-mono">{{ .colony }}</td>
+                    <td><span class="gwr-badge gwr-badge--{{ .result | urlize }}">{{ .result }}</span></td>
+                    <td><span class="gwr-badge gwr-badge--{{ .conclusion | urlize }}">{{ .conclusion }}</span></td>
+                    <td class="gwr-notes">{{ with .notes }}{{ . }}{{ end }}</td>
+                  </tr>
+                  {{ end }}
+                </tbody>
+              </table>
+            </div>
+
+            <aside class="gwr-privacy">
+              <div class="gwr-privacy__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9.5 12l1.8 1.8L15 10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <strong>Student names are kept private.</strong>
+                <p>To protect student privacy, individual names are not shown on this page. Groups are numbered instead. If you would like to know which group ran a particular trial, or any other details, please <a href="mailto:{{ .Params.contact_email | default "csosiak@ualberta.ca" }}?subject=Project%20Gateway%20results">contact the research team</a>.</p>
+              </div>
+            </aside>
+          </section>
+
+          <!-- Students in action -->
+          <section class="gwr-section" id="gallery">
+            <div class="gwr-section__head">
+              <span class="gwr-eyebrow">In the field and the classroom</span>
+              <h2>The students in action</h2>
+              <p class="gwr-section__sub">The classes across Alberta whose trials make up the data above. Tap any photo to enlarge.</p>
+            </div>
+            <div class="gwr-gallery">
+              {{ range $i, $e := (seq 1 11) }}
+              <a class="gwr-gallery__item" href="/web_files/gateway/gw-g{{ $e }}.webp" target="_blank" rel="noopener" aria-label="Open Project Gateway photo {{ $e }}">
+                <img src="/web_files/gateway/gw-g{{ $e }}.webp" alt="Project Gateway students taking part in ant collection and aggression trials" loading="lazy">
+                <span class="gwr-gallery__expand" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 10V4h6M14 4h6v6M20 14v6h-6M10 20H4v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </a>
+              {{ end }}
+            </div>
+          </section>
+
+          <!-- Example data sheets (future) -->
+          <section class="gwr-section" id="sample-sheets">
+            <div class="gwr-section__head">
+              <span class="gwr-eyebrow">For teachers</span>
+              <h2>Sample data sheets</h2>
+              <p class="gwr-section__sub">A look at what data collection in the classroom actually looks like.</p>
+            </div>
+            <div class="gwr-soon">
+              <div class="gwr-soon__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 3v5h5M9 13h6M9 17h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <strong>Examples coming soon.</strong>
+                <p>We will post a few anonymized data sheets here so teachers can see how students record their observations during a trial.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="gwr-cta">
+            <div>
+              <h2>Curious about your class's data?</h2>
+              <p>We are always happy to talk through the results, and there is more data to come as new schools take part.</p>
+            </div>
+            <div class="gwr-cta__actions">
+              <a class="gwr-btn gwr-btn--primary" href="mailto:{{ .Params.contact_email | default "csosiak@ualberta.ca" }}?subject=Project%20Gateway%20results">Contact the team</a>
+              <a class="gwr-btn gwr-btn--ghost" href="/projects/gateway/">Back to Project Gateway</a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      {{ partial "footer.html" . }}
+    </div>
+
+    {{ partial "scripts.html" . }}
+
+    <style>
+      :root {
+        --gw-green: #245436;
+        --gw-green-dark: #163223;
+        --gw-green-soft: rgba(36, 84, 54, 0.08);
+        --gw-gold: #caa03a;
+        --gw-ink: #1a2b22;
+        --gw-muted: #556b5d;
+        --gw-line: rgba(36, 84, 54, 0.12);
+        --gw-bg: #fbfaf5;
+      }
+      .gwr-page { background: var(--gw-bg); }
+      .gwr-page .container { max-width: 1180px; }
+
+      /* Hero */
+      .gwr-hero {
+        background: linear-gradient(150deg, rgba(15,33,24,0.88) 0%, rgba(22,50,35,0.76) 52%, rgba(36,84,54,0.66) 100%), url('/web_files/gateway/gw-hero.webp');
+        background-position: center 32%;
+        background-size: cover;
+        color: #fff;
+        padding: 72px 0 84px;
+        position: relative;
+      }
+      .gwr-hero::after {
+        background: linear-gradient(180deg, transparent 55%, var(--gw-bg) 100%);
+        bottom: 0; content: ""; height: 90px; left: 0; position: absolute; right: 0;
+      }
+      .gwr-hero__inner { position: relative; z-index: 2; }
+      .gwr-back {
+        color: rgba(255,255,255,0.82); display: inline-flex; font-size: 13px; font-weight: 700;
+        gap: 8px; letter-spacing: 0.04em; margin-bottom: 22px; text-transform: uppercase;
+      }
+      .gwr-back:hover, .gwr-back:focus { color: #fff; text-decoration: none; }
+      .gwr-hero__title { color: #fff; font-size: 48px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.06; margin: 8px 0 12px; max-width: 800px; }
+      .gwr-hero__lede { color: rgba(255,255,255,0.92); font-size: 19px; line-height: 1.6; margin: 0; max-width: 720px; }
+
+      .gwr-eyebrow { color: var(--gw-gold); display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; }
+      .gwr-eyebrow--light { color: var(--gw-gold); margin-bottom: 4px; }
+
+      /* Stat row */
+      .gwr-stats {
+        background: #fff; border: 1px solid var(--gw-line); border-radius: 20px;
+        box-shadow: 0 24px 50px rgba(19,34,26,0.09); display: grid; gap: 0;
+        grid-template-columns: repeat(5, minmax(0,1fr)); margin: -54px auto 36px;
+        overflow: hidden; position: relative; z-index: 3;
+      }
+      .gwr-stat { padding: 20px 18px; text-align: center; position: relative; }
+      .gwr-stat + .gwr-stat::before { background: var(--gw-line); bottom: 16px; content: ""; left: 0; position: absolute; top: 16px; width: 1px; }
+      .gwr-stat b { color: var(--gw-green-dark); display: block; font-size: 30px; font-weight: 800; line-height: 1; }
+      .gwr-stat span { color: var(--gw-muted); display: block; font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em; margin-top: 8px; text-transform: uppercase; }
+
+      /* Intro + sections */
+      .gwr-intro { color: #37493e; font-size: 18px; line-height: 1.8; margin: 0 auto 46px; max-width: 820px; }
+      .gwr-intro p { margin: 0 0 16px; }
+      .gwr-section { margin-bottom: 60px; scroll-margin-top: 100px; }
+      .gwr-section__head { margin-bottom: 22px; max-width: 820px; }
+      .gwr-section__head h2 { color: var(--gw-ink); font-size: 32px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.12; margin: 8px 0 0; }
+      .gwr-section__sub { color: var(--gw-muted); font-size: 16px; line-height: 1.65; margin: 12px 0 0; }
+
+      /* Tables */
+      .gwr-tablewrap { border: 1px solid var(--gw-line); border-radius: 18px; overflow: auto hidden; background: #fff; box-shadow: 0 14px 30px rgba(19,34,26,0.05); }
+      .gwr-table { border-collapse: collapse; margin: 0; width: 100%; }
+      .gwr-table th, .gwr-table td { padding: 13px 18px; text-align: left; }
+      .gwr-table thead th {
+        background: var(--gw-green-soft); color: var(--gw-green-dark); font-size: 12px; font-weight: 800;
+        letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; position: sticky; top: 0;
+      }
+      .gwr-table tbody tr + tr { border-top: 1px solid var(--gw-line); }
+      .gwr-table tbody tr:hover { background: rgba(36,84,54,0.03); }
+      .gwr-table td { color: #37493e; font-size: 15px; line-height: 1.5; vertical-align: top; }
+      .gwr-mono { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--gw-ink); white-space: nowrap; }
+      .gwr-muted { color: var(--gw-muted); white-space: nowrap; }
+      .gwr-notes { color: var(--gw-muted); font-size: 14px; min-width: 200px; }
+
+      /* Badges */
+      .gwr-badge { border-radius: 999px; display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: 0.02em; padding: 4px 11px; white-space: nowrap; }
+      .gwr-badge--supercolony { background: var(--gw-gold); color: var(--gw-green-dark); }
+      .gwr-badge--non-aggressive { background: rgba(202,160,58,0.16); color: #916d0e; }
+      .gwr-badge--not-supercolony { background: rgba(36,84,54,0.12); color: var(--gw-green); }
+      .gwr-badge--aggression { background: rgba(190,92,48,0.14); color: #a2461f; }
+      .gwr-badge--inconclusive { background: rgba(85,107,93,0.14); color: var(--gw-muted); }
+
+      /* Filter chips */
+      .gwr-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+      .gwr-chip {
+        background: #fff; border: 1px solid var(--gw-line); border-radius: 999px; color: var(--gw-green);
+        cursor: pointer; font-size: 13.5px; font-weight: 700; padding: 8px 16px; transition: all 0.18s ease;
+      }
+      .gwr-chip:hover { border-color: var(--gw-green); }
+      .gwr-chip.is-active { background: var(--gw-green); border-color: var(--gw-green); color: #fff; }
+
+      /* Privacy + coming-soon callouts */
+      .gwr-privacy, .gwr-soon {
+        align-items: flex-start; border: 1px solid var(--gw-line); border-radius: 18px;
+        display: flex; gap: 16px; margin-top: 18px; padding: 20px 22px;
+      }
+      .gwr-privacy { background: var(--gw-green-soft); border-left: 4px solid var(--gw-green); }
+      .gwr-soon { background: #f7f3e7; border-left: 4px solid var(--gw-gold); }
+      .gwr-privacy__icon, .gwr-soon__icon { flex-shrink: 0; height: 40px; width: 40px; }
+      .gwr-privacy__icon { color: var(--gw-green); }
+      .gwr-soon__icon { color: #a5822a; }
+      .gwr-privacy__icon svg, .gwr-soon__icon svg { height: 40px; width: 40px; }
+      .gwr-privacy strong, .gwr-soon strong { color: var(--gw-ink); display: block; font-size: 16px; margin-bottom: 4px; }
+      .gwr-privacy p, .gwr-soon p { color: #4a5c50; font-size: 14.5px; line-height: 1.65; margin: 0; }
+      .gwr-map { border: 1px solid var(--gw-line); border-radius: 18px; height: 460px; width: 100%; }
+
+      /* CTA */
+      .gwr-cta {
+        align-items: center; background: linear-gradient(135deg, var(--gw-green-dark), var(--gw-green) 70%, #2d7048);
+        border-radius: 26px; color: #fff; display: flex; flex-wrap: wrap; gap: 22px;
+        justify-content: space-between; margin: 10px 0 60px; padding: 36px 40px;
+      }
+      .gwr-cta h2 { color: #fff; font-size: 26px; font-weight: 800; margin: 0 0 6px; }
+      .gwr-cta p { color: rgba(255,255,255,0.9); font-size: 16px; line-height: 1.6; margin: 0; max-width: 560px; }
+      .gwr-cta__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+      .gwr-btn { align-items: center; border-radius: 999px; display: inline-flex; font-size: 15px; font-weight: 800; gap: 8px; justify-content: center; padding: 13px 22px; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+      .gwr-btn--primary { background: var(--gw-gold); color: var(--gw-green-dark); }
+      .gwr-btn--primary:hover { box-shadow: 0 16px 30px rgba(202,160,58,0.35); color: var(--gw-green-dark); text-decoration: none; transform: translateY(-2px); }
+      .gwr-btn--ghost { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3); color: #fff; }
+      .gwr-btn--ghost:hover { background: rgba(255,255,255,0.18); color: #fff; text-decoration: none; transform: translateY(-2px); }
+
+      /* Process trio */
+      .gwr-process { display: grid; gap: 18px; grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .gwr-pcard { background: #fff; border: 1px solid var(--gw-line); border-radius: 18px; box-shadow: 0 14px 30px rgba(19,34,26,0.05); margin: 0; overflow: hidden; }
+      .gwr-pcard img { display: block; height: 210px; object-fit: cover; width: 100%; }
+      .gwr-pcard figcaption { color: #4a5c50; font-size: 14.5px; line-height: 1.55; padding: 16px 18px; }
+      .gwr-pcard figcaption b { color: var(--gw-green-dark); display: block; font-size: 15px; margin-bottom: 4px; }
+
+      /* Gallery */
+      .gwr-gallery { display: grid; gap: 12px; grid-template-columns: repeat(4, minmax(0,1fr)); }
+      .gwr-gallery__item { border-radius: 14px; display: block; overflow: hidden; position: relative; }
+      .gwr-gallery__item img { display: block; height: 200px; object-fit: cover; transition: transform 0.35s ease; width: 100%; }
+      .gwr-gallery__item:hover img, .gwr-gallery__item:focus img { transform: scale(1.06); }
+      .gwr-gallery__expand { align-items: center; background: rgba(15,33,24,0.86); border-radius: 50%; color: #fff; display: inline-flex; height: 34px; justify-content: center; opacity: 0; position: absolute; right: 10px; top: 10px; transition: opacity 0.2s ease; width: 34px; }
+      .gwr-gallery__expand svg { height: 16px; width: 16px; }
+      .gwr-gallery__item:hover .gwr-gallery__expand, .gwr-gallery__item:focus .gwr-gallery__expand { opacity: 1; }
+
+      @media (max-width: 991px) {
+        .gwr-stats { grid-template-columns: repeat(3, minmax(0,1fr)); }
+        .gwr-stat:nth-child(n+4) { border-top: 1px solid var(--gw-line); }
+        .gwr-process { grid-template-columns: 1fr; }
+        .gwr-pcard img { height: 240px; }
+        .gwr-gallery { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      }
+      @media (max-width: 767px) {
+        .gwr-hero { padding: 56px 0 70px; }
+        .gwr-hero__title { font-size: 34px; }
+        .gwr-hero__lede { font-size: 17px; }
+        .gwr-stats { grid-template-columns: repeat(2, minmax(0,1fr)); margin-top: -40px; }
+        .gwr-stat + .gwr-stat::before { display: none; }
+        .gwr-section__head h2 { font-size: 26px; }
+        .gwr-cta { padding: 28px; }
+        .gwr-gallery { grid-template-columns: repeat(2, minmax(0,1fr)); }
+        .gwr-gallery__item img { height: 150px; }
+      }
+    </style>
+
+    <script>
+      (function () {
+        var chips = document.querySelectorAll('.gwr-chip');
+        var rows = document.querySelectorAll('.gwr-table--results tbody tr');
+        chips.forEach(function (chip) {
+          chip.addEventListener('click', function () {
+            chips.forEach(function (c) { c.classList.remove('is-active'); });
+            chip.classList.add('is-active');
+            var school = chip.getAttribute('data-school');
+            rows.forEach(function (row) {
+              row.style.display = (school === 'all' || row.getAttribute('data-school') === school) ? '' : 'none';
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

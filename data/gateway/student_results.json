@@ -1,0 +1,335 @@
+[
+  {
+    "school": "Father Lacombe",
+    "group": "Group 1",
+    "date": "June 1 2026",
+    "colony": "EXP002",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 2",
+    "date": "June 1 2026",
+    "colony": "EXP002",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 3",
+    "date": "June 1 2026",
+    "colony": "EXP002",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 4",
+    "date": "June 1 2026",
+    "colony": "EXP004",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 5",
+    "date": "June 1 2026",
+    "colony": "EXP004",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 6",
+    "date": "June 1 2026",
+    "colony": "EXP004",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 7",
+    "date": "June 1 2026",
+    "colony": "EXP004",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 8",
+    "date": "June 1 2026",
+    "colony": "EXP005",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 9",
+    "date": "June 1 2026",
+    "colony": "EXP005",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 10",
+    "date": "June 1 2026",
+    "colony": "EXP005",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 11",
+    "date": "June 1 2026",
+    "colony": "EXP005",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 12",
+    "date": "June 1 2026",
+    "colony": "EXP003",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 13",
+    "date": "June 1 2026",
+    "colony": "EXP003",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 14",
+    "date": "June 1 2026",
+    "colony": "EXP003",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record that experimental ant may have been dead initially"
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 15",
+    "date": "June 1 2026",
+    "colony": "EXP001",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 16",
+    "date": "June 1 2026",
+    "colony": "EXP001",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record that they accidentally had 6 supercolony ants"
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 17",
+    "date": "June 1 2026",
+    "colony": "EXP001",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 18",
+    "date": "June 1 2026",
+    "colony": "EXP001",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 19",
+    "date": "June 1 2026",
+    "colony": "EXP001",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that occasional fighting but mostly non-aggressive behaviour"
+  },
+  {
+    "school": "Blessed Marie Rose",
+    "group": "Group 1",
+    "date": "June 2 2026",
+    "colony": "EXP006",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Blessed Marie Rose",
+    "group": "Group 2",
+    "date": "June 2 2026",
+    "colony": "EXP006",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Blessed Marie Rose",
+    "group": "Group 3",
+    "date": "June 2 2026",
+    "colony": "EXP002",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Blessed Marie Rose",
+    "group": "Group 4",
+    "date": "June 2 2026",
+    "colony": "EXP005",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Blessed Marie Rose",
+    "group": "Group 5",
+    "date": "June 2 2026",
+    "colony": "EXP002",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Blessed Marie Rose",
+    "group": "Group 6",
+    "date": "June 2 2026",
+    "colony": "EXP006",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Blessed Marie Rose",
+    "group": "Group 7",
+    "date": "June 2 2026",
+    "colony": "EXP006",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Blessed Marie Rose",
+    "group": "Group 8",
+    "date": "June 2 2026",
+    "colony": "EXP006",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Blessed Marie Rose",
+    "group": "Group 9",
+    "date": "June 2 2026",
+    "colony": "EXP004",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 1",
+    "date": "June 15 2026",
+    "colony": "EXP011",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 2",
+    "date": "June 15 2026",
+    "colony": "EXP011",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 3",
+    "date": "June 15 2026",
+    "colony": "EXP012",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that they lost track of experimental ant"
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 4",
+    "date": "June 15 2026",
+    "colony": "EXP013",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that some fighting initially but lost track of experimental ant later"
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 5",
+    "date": "June 15 2026",
+    "colony": "EXP013",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 6",
+    "date": "June 15 2026",
+    "colony": "EXP013",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 7",
+    "date": "June 15 2026",
+    "colony": "EXP014",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 8",
+    "date": "June 15 2026",
+    "colony": "EXP014",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that antenna was gripped but no other signs of aggression"
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 9",
+    "date": "June 15 2026",
+    "colony": "EXP014",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  }
+]

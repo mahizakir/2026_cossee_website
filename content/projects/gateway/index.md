@@ -15,6 +15,7 @@ timing = "June to October 2026"
 commitment = "Approximately 2 to 3 hours"
 contact_email = "csosiak@ualberta.ca"
 interest_form_url = "https://docs.google.com/forms/d/e/1FAIpQLSd2VkB_VbK_y5YVYHbzWMz3ZTn_5c5vz1dZXAAnQgThgm0OnQ/viewform"
+results_url = "/projects/gateway/results/"
 hero_image = "ant/DSC_1662.JPG"
 hero_video = "ant/20260419_110233 (1).mp4"
 gallery_images = [
@@ -24,6 +25,14 @@ gallery_images = [
   "ant/DSC_1155.JPG",
   "ant/IMG_20180528_181041733.jpg",
   "ant/Copy of IMG_20180522_122915958.jpg",
+]
+gallery_extra = [
+  "/web_files/gateway/gw-collect.webp",
+  "/web_files/gateway/gw-g2.webp",
+  "/web_files/gateway/gw-g3.webp",
+  "/web_files/gateway/gw-test.webp",
+  "/web_files/gateway/gw-g6.webp",
+  "/web_files/gateway/gw-g8.webp",
 ]
 highlights = [
   { label = "Who can join", value = "Alberta science teachers for Grades 4 through 12" },
