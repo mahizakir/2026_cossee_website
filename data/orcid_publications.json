@@ -2,10 +2,34 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-07-17T10:59:52Z",
-  "generated_at_display": "July 17, 2026 at 10:59 UTC",
-  "works_count": 445,
+  "generated_at": "2026-07-18T10:44:00Z",
+  "generated_at_display": "July 18, 2026 at 10:44 UTC",
+  "works_count": 446,
   "latest": [
+    {
+      "put_code": 221042365,
+      "title": "A flexible modelling framework for estimating thermal tolerance and sensitivity",
+      "authors": [
+        "Daniel W.A. Noble",
+        "Pieter Andrew Arnold",
+        "Shinichi Nakagawa",
+        "Patrice Pottier"
+      ],
+      "authors_display": "Daniel W.A. Noble, Pieter Andrew Arnold, Shinichi Nakagawa, Patrice Pottier",
+      "journal_title": null,
+      "type": "preprint",
+      "type_display": "Preprint",
+      "publication_year": "2026",
+      "publication_month": "07",
+      "publication_day": "17",
+      "publication_date_display": "July 17, 2026",
+      "publication_date_iso": "2026-07-17",
+      "doi": "10.64898/2026.07.16.738378",
+      "doi_url": "https://doi.org/10.64898/2026.07.16.738378",
+      "best_url": "https://doi.org/10.64898/2026.07.16.738378",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/221042365"
+    },
     {
       "put_code": 220532643,
       "title": "Elevating the importance of Risk of Bias assessment for ecology and evolutionary biology",
@@ -147,36 +171,37 @@
       "best_url": "https://doi.org/10.32942/X2468Z",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/217901577"
-    },
-    {
-      "put_code": 212973195,
-      "title": "Ungeneralizable generalizations? A meta-meta-analysis of the influence of taxonomic bias on the study of behaviour",
-      "authors": [
-        "Ned A. Dochtermann",
-        "M.A. Sekhar",
-        "S. Nakagawa"
-      ],
-      "authors_display": "Ned A. Dochtermann, M.A. Sekhar, S. Nakagawa",
-      "journal_title": "Animal Behaviour",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "06",
-      "publication_day": "00",
-      "publication_date_display": "June 2026",
-      "publication_date_iso": "2026-06-00",
-      "doi": "10.1016/j.anbehav.2026.123542",
-      "doi_url": "https://doi.org/10.1016/j.anbehav.2026.123542",
-      "best_url": "https://doi.org/10.1016/j.anbehav.2026.123542",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/212973195"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 23,
+      "count": 24,
       "items": [
+        {
+          "put_code": 221042365,
+          "title": "A flexible modelling framework for estimating thermal tolerance and sensitivity",
+          "authors": [
+            "Daniel W.A. Noble",
+            "Pieter Andrew Arnold",
+            "Shinichi Nakagawa",
+            "Patrice Pottier"
+          ],
+          "authors_display": "Daniel W.A. Noble, Pieter Andrew Arnold, Shinichi Nakagawa, Patrice Pottier",
+          "journal_title": null,
+          "type": "preprint",
+          "type_display": "Preprint",
+          "publication_year": "2026",
+          "publication_month": "07",
+          "publication_day": "17",
+          "publication_date_display": "July 17, 2026",
+          "publication_date_iso": "2026-07-17",
+          "doi": "10.64898/2026.07.16.738378",
+          "doi_url": "https://doi.org/10.64898/2026.07.16.738378",
+          "best_url": "https://doi.org/10.64898/2026.07.16.738378",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/221042365"
+        },
         {
           "put_code": 220532643,
           "title": "Elevating the importance of Risk of Bias assessment for ecology and evolutionary biology",
@@ -12398,6 +12423,6 @@
     "book-chapter": 1,
     "journal-article": 368,
     "other": 6,
-    "preprint": 69
+    "preprint": 70
   }
 }
