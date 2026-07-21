@@ -3,7 +3,7 @@
   <head>
     {{ partial "headers.html" . }}
     {{ partial "custom_headers.html" . }}
-    {{ if .Site.Data.gateway.colonies }}<link rel="stylesheet" href="/web_files/leaflet/leaflet.css">{{ end }}
+    {{ if .Site.Data.gateway.colonies }}<link rel="stylesheet" href="/web_files/leaflet/leaflet.css"><link rel="stylesheet" href="/web_files/leaflet/MarkerCluster.css"><link rel="stylesheet" href="/web_files/leaflet/MarkerCluster.Default.css">{{ end }}
   </head>
   <body>
     {{ $summary := .Site.Data.gateway.colony_summary }}
@@ -215,6 +215,7 @@
 
     {{ if $colonies }}
     <script src="/web_files/leaflet/leaflet.js"></script>
+    <script src="/web_files/leaflet/leaflet.markercluster.js"></script>
     <script>
       (function () {
         if (typeof L === 'undefined') return;
@@ -231,6 +232,13 @@
         }).addTo(map);
 
         var pts = [];
+        var useCluster = typeof L.markerClusterGroup === 'function';
+        var layer = useCluster ? L.markerClusterGroup({
+          maxClusterRadius: 48,
+          showCoverageOnHover: false,
+          spiderfyOnMaxZoom: true,
+          disableClusteringAtZoom: 12
+        }) : map;
         COLONIES.forEach(function (c) {
           var color = COLORS[c.outcome] || COLORS.surveyed;
           var rows = [];
@@ -241,13 +249,15 @@
           rows.push('<b>Aggression trial:</b> ' + esc(c.trial || 'No'));
           if (c.collected) rows.push('<b>Specimens collected:</b> ' + esc(c.collected));
           if (c.notes) rows.push('<i>' + esc(c.notes) + '</i>');
-          L.circleMarker([c.lat, c.lng], {
-            radius: 7, weight: 1.5, color: '#fff', opacity: 1, fillColor: color, fillOpacity: 0.9
-          }).addTo(map).bindPopup(
+          var mk = L.circleMarker([c.lat, c.lng], {
+            radius: 9, weight: 2.5, color: '#fff', opacity: 1, fillColor: color, fillOpacity: 0.95
+          }).bindPopup(
             '<div class="gwr-pop"><div class="gwr-pop__head"><i style="background:' + color + '"></i>' + LABELS[c.outcome] + '</div>' + rows.join('<br>') + '</div>'
           );
+          layer.addLayer(mk);
           pts.push([c.lat, c.lng]);
         });
+        if (useCluster) map.addLayer(layer);
         if (pts.length) map.fitBounds(pts, { padding: [30, 30] });
 
         var legend = L.control({ position: 'bottomright' });
@@ -392,6 +402,11 @@
       .gwr-pop { font-size: 13px; line-height: 1.55; }
       .gwr-pop__head { align-items: center; color: #1f3d2b; display: flex; font-weight: 800; gap: 7px; margin-bottom: 6px; }
       .gwr-pop__head i { border-radius: 50%; flex-shrink: 0; height: 11px; width: 11px; }
+      /* cluster bubbles themed green */
+      .marker-cluster-small, .marker-cluster-medium, .marker-cluster-large { background: rgba(36, 84, 54, 0.25); }
+      .marker-cluster-small div, .marker-cluster-medium div, .marker-cluster-large div { background: var(--gw-green); color: #fff; }
+      .marker-cluster div { font-weight: 800; }
+      .marker-cluster span { line-height: 30px; }
 
       /* CTA */
       .gwr-cta {
