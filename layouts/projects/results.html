@@ -73,7 +73,7 @@
             <div class="gwr-tablewrap">
               <table class="gwr-table">
                 <thead>
-                  <tr><th>Colony</th><th>Replicates</th><th>Conclusion</th></tr>
+                  <tr><th>Colony</th><th>Replicates</th><th>Conclusion</th><th>Location</th></tr>
                 </thead>
                 <tbody>
                   {{ range $summary }}
@@ -81,6 +81,7 @@
                     <td class="gwr-mono">{{ .code }}</td>
                     <td>{{ if .replicates }}{{ .replicates }}{{ else }}&mdash;{{ end }}</td>
                     <td><span class="gwr-badge gwr-badge--{{ .conclusion | urlize }}">{{ .conclusion }}</span></td>
+                    <td>{{ if .lat }}<a class="gwr-maplink" href="https://www.google.com/maps/search/?api=1&amp;query={{ .lat }},{{ .lng }}" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> View</a>{{ else }}<span class="gwr-muted">&mdash;</span>{{ end }}</td>
                   </tr>
                   {{ end }}
                 </tbody>
@@ -396,6 +397,9 @@
       .gwr-privacy p, .gwr-soon p { color: #4a5c50; font-size: 14.5px; line-height: 1.65; margin: 0; }
       .gwr-map { border: 1px solid var(--gw-line); border-radius: 18px; height: 460px; overflow: hidden; position: relative; width: 100%; z-index: 0; }
       .gwr-map-note { color: var(--gw-muted); font-size: 13px; margin: 12px 2px 0; }
+      #content a.gwr-maplink { color: var(--gw-green); font-style: normal !important; font-weight: 700; text-decoration: none !important; white-space: nowrap; }
+      #content a.gwr-maplink:hover { color: var(--gw-green-dark); }
+      .gwr-maplink i { font-size: 12px; }
       .gwr-legend { background: rgba(255,255,255,0.94); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15); font-size: 12px; line-height: 1.5; padding: 8px 11px; }
       .gwr-legend span { align-items: center; color: #37493e; display: flex; gap: 7px; margin: 3px 0; }
       .gwr-legend i { border-radius: 50%; flex-shrink: 0; height: 11px; width: 11px; }

@@ -2,22 +2,30 @@
   {
     "code": "EXP001",
     "replicates": "5",
-    "conclusion": "Not supercolony"
+    "conclusion": "Not supercolony",
+    "lat": 50.987528,
+    "lng": -114.098965
   },
   {
     "code": "EXP002",
     "replicates": "5",
-    "conclusion": "Not supercolony"
+    "conclusion": "Not supercolony",
+    "lat": 50.988194,
+    "lng": -114.098971
   },
   {
     "code": "EXP003",
     "replicates": "3",
-    "conclusion": "Supercolony"
+    "conclusion": "Supercolony",
+    "lat": 50.924678,
+    "lng": -114.134153
   },
   {
     "code": "EXP004",
     "replicates": "5",
-    "conclusion": "Supercolony"
+    "conclusion": "Supercolony",
+    "lat": 50.925341,
+    "lng": -114.134485
   },
   {
     "code": "EXP005",
@@ -27,46 +35,64 @@
   {
     "code": "EXP006",
     "replicates": "5",
-    "conclusion": "Not supercolony"
+    "conclusion": "Not supercolony",
+    "lat": 50.989289,
+    "lng": -114.119387
   },
   {
     "code": "EXP007",
     "replicates": "",
-    "conclusion": "Supercolony"
+    "conclusion": "Supercolony",
+    "lat": 53.532598,
+    "lng": -113.483734
   },
   {
     "code": "EXP008",
     "replicates": "",
-    "conclusion": "Supercolony"
+    "conclusion": "Supercolony",
+    "lat": 53.532198,
+    "lng": -113.484976
   },
   {
     "code": "EXP009",
     "replicates": "",
-    "conclusion": "Supercolony"
+    "conclusion": "Supercolony",
+    "lat": 53.533861,
+    "lng": -113.486427
   },
   {
     "code": "EXP010",
     "replicates": "",
-    "conclusion": "Supercolony"
+    "conclusion": "Supercolony",
+    "lat": 53.54126,
+    "lng": -113.459114
   },
   {
     "code": "EXP011",
     "replicates": "2",
-    "conclusion": "Not supercolony"
+    "conclusion": "Not supercolony",
+    "lat": 52.550918,
+    "lng": -113.640621
   },
   {
     "code": "EXP012",
     "replicates": "1",
-    "conclusion": "Inconclusive"
+    "conclusion": "Inconclusive",
+    "lat": 52.551468,
+    "lng": -113.639994
   },
   {
     "code": "EXP013",
     "replicates": "3",
-    "conclusion": "Not supercolony"
+    "conclusion": "Not supercolony",
+    "lat": 52.55173,
+    "lng": -113.637524
   },
   {
     "code": "EXP014",
     "replicates": "3",
-    "conclusion": "Supercolony"
+    "conclusion": "Supercolony",
+    "lat": 52.552315,
+    "lng": -113.636268
   }
 ]
