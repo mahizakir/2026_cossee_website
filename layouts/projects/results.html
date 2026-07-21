@@ -293,7 +293,7 @@
             if (mapSection) mapSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
             setTimeout(function () {
               map.invalidateSize();
-              map.flyTo([lat, lng], 16, { duration: 0.9 });
+              map.setView([lat, lng], 16, { animate: false });
               L.popup({ offset: [0, -2], autoPan: false }).setLatLng([lat, lng])
                 .setContent('<div class="gwr-pop"><div class="gwr-pop__head"><i style="background:' + color + '"></i>' + code + '</div>' + concl + '</div>')
                 .openOn(map);
