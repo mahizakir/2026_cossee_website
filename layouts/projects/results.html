@@ -3,6 +3,7 @@
   <head>
     {{ partial "headers.html" . }}
     {{ partial "custom_headers.html" . }}
+    {{ if .Site.Data.gateway.colonies }}<link rel="stylesheet" href="/web_files/leaflet/leaflet.css">{{ end }}
   </head>
   <body>
     {{ $summary := .Site.Data.gateway.colony_summary }}
@@ -88,14 +89,15 @@
           </section>
 
           <!-- Interactive map (placeholder until coordinates are compiled) -->
-          <section class="gwr-section" id="map">
+          <section class="gwr-section" id="colony-map">
             <div class="gwr-section__head">
               <span class="gwr-eyebrow">Where the colonies are</span>
               <h2>Colony map</h2>
-              <p class="gwr-section__sub">An interactive map of every tested colony across Alberta, with the ones your students collected marked separately.</p>
+              <p class="gwr-section__sub">Every nest surveyed across Alberta so far, coloured by how the ants behaved. Click a point for details, and scroll to zoom once the map is in focus.</p>
             </div>
             {{ if $colonies }}
               <div id="gwr-map" class="gwr-map"></div>
+              <p class="gwr-map-note">Showing {{ len $colonies }} surveyed nests. This field survey is separate from the classroom trials in the tables above.</p>
             {{ else }}
               <div class="gwr-soon">
                 <div class="gwr-soon__icon" aria-hidden="true">
@@ -211,6 +213,71 @@
 
     {{ partial "scripts.html" . }}
 
+    {{ if $colonies }}
+    <script src="/web_files/leaflet/leaflet.js"></script>
+    <script>
+      (function () {
+        if (typeof L === 'undefined') return;
+        function init() {
+        var COLONIES = {{ $colonies | jsonify | safeJS }};
+        var COLORS = { 'supercolony': '#caa03a', 'not-supercolony': '#245436', 'surveyed': '#8a9a90' };
+        var LABELS = { 'supercolony': 'Supercolony (ants did not fight)', 'not-supercolony': 'Not supercolony (ants fought)', 'surveyed': 'Surveyed, not yet trialled' };
+        function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+        var map = L.map('gwr-map', { scrollWheelZoom: false });
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var pts = [];
+        COLONIES.forEach(function (c) {
+          var color = COLORS[c.outcome] || COLORS.surveyed;
+          var rows = [];
+          if (c.date) rows.push('<b>Surveyed:</b> ' + esc(c.date));
+          if (c.species) rows.push('<b>Species:</b> ' + esc(c.species));
+          if (c.shape) rows.push('<b>Nest:</b> ' + esc(c.shape));
+          if (c.environment) rows.push('<b>Habitat:</b> ' + esc(c.environment));
+          rows.push('<b>Aggression trial:</b> ' + esc(c.trial || 'No'));
+          if (c.collected) rows.push('<b>Specimens collected:</b> ' + esc(c.collected));
+          if (c.notes) rows.push('<i>' + esc(c.notes) + '</i>');
+          L.circleMarker([c.lat, c.lng], {
+            radius: 7, weight: 1.5, color: '#fff', opacity: 1, fillColor: color, fillOpacity: 0.9
+          }).addTo(map).bindPopup(
+            '<div class="gwr-pop"><div class="gwr-pop__head"><i style="background:' + color + '"></i>' + LABELS[c.outcome] + '</div>' + rows.join('<br>') + '</div>'
+          );
+          pts.push([c.lat, c.lng]);
+        });
+        if (pts.length) map.fitBounds(pts, { padding: [30, 30] });
+
+        var legend = L.control({ position: 'bottomright' });
+        legend.onAdd = function () {
+          var d = L.DomUtil.create('div', 'gwr-legend');
+          ['supercolony', 'not-supercolony', 'surveyed'].forEach(function (k) {
+            d.innerHTML += '<span><i style="background:' + COLORS[k] + '"></i>' + LABELS[k] + '</span>';
+          });
+          return d;
+        };
+        legend.addTo(map);
+
+        map.on('focus', function () { map.scrollWheelZoom.enable(); });
+        map.on('blur', function () { map.scrollWheelZoom.disable(); });
+        function refit() { map.invalidateSize(); if (pts.length) map.fitBounds(pts, { padding: [30, 30] }); }
+        setTimeout(refit, 60);
+        window.addEventListener('load', refit);
+        if (window.ResizeObserver) {
+          var ro = new ResizeObserver(function () {
+            if (map.getContainer().clientWidth > 50) { refit(); ro.disconnect(); }
+          });
+          ro.observe(map.getContainer());
+        }
+        }
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+        else init();
+      })();
+    </script>
+    {{ end }}
+
     <style>
       :root {
         --gw-green: #245436;
@@ -317,7 +384,14 @@
       .gwr-privacy__icon svg, .gwr-soon__icon svg { height: 40px; width: 40px; }
       .gwr-privacy strong, .gwr-soon strong { color: var(--gw-ink); display: block; font-size: 16px; margin-bottom: 4px; }
       .gwr-privacy p, .gwr-soon p { color: #4a5c50; font-size: 14.5px; line-height: 1.65; margin: 0; }
-      .gwr-map { border: 1px solid var(--gw-line); border-radius: 18px; height: 460px; width: 100%; }
+      .gwr-map { border: 1px solid var(--gw-line); border-radius: 18px; height: 460px; overflow: hidden; position: relative; width: 100%; z-index: 0; }
+      .gwr-map-note { color: var(--gw-muted); font-size: 13px; margin: 12px 2px 0; }
+      .gwr-legend { background: rgba(255,255,255,0.94); border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.15); font-size: 12px; line-height: 1.5; padding: 8px 11px; }
+      .gwr-legend span { align-items: center; color: #37493e; display: flex; gap: 7px; margin: 3px 0; }
+      .gwr-legend i { border-radius: 50%; flex-shrink: 0; height: 11px; width: 11px; }
+      .gwr-pop { font-size: 13px; line-height: 1.55; }
+      .gwr-pop__head { align-items: center; color: #1f3d2b; display: flex; font-weight: 800; gap: 7px; margin-bottom: 6px; }
+      .gwr-pop__head i { border-radius: 50%; flex-shrink: 0; height: 11px; width: 11px; }
 
       /* CTA */
       .gwr-cta {
