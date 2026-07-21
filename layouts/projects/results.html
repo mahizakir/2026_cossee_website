@@ -81,7 +81,7 @@
                     <td class="gwr-mono">{{ .code }}</td>
                     <td>{{ if .replicates }}{{ .replicates }}{{ else }}&mdash;{{ end }}</td>
                     <td><span class="gwr-badge gwr-badge--{{ .conclusion | urlize }}">{{ .conclusion }}</span></td>
-                    <td>{{ if .lat }}<a class="gwr-maplink" href="https://www.google.com/maps/search/?api=1&amp;query={{ .lat }},{{ .lng }}" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> View</a>{{ else }}<span class="gwr-muted">&mdash;</span>{{ end }}</td>
+                    <td>{{ if .lat }}<a class="gwr-maplink" href="#colony-map" data-lat="{{ .lat }}" data-lng="{{ .lng }}" data-code="{{ .code }}" data-conclusion="{{ .conclusion }}"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> View</a>{{ else }}<span class="gwr-muted">&mdash;</span>{{ end }}</td>
                   </tr>
                   {{ end }}
                 </tbody>
@@ -282,6 +282,24 @@
           });
           ro.observe(map.getContainer());
         }
+
+        var mapSection = document.getElementById('colony-map');
+        document.querySelectorAll('.gwr-maplink[data-lat]').forEach(function (a) {
+          a.addEventListener('click', function (e) {
+            e.preventDefault();
+            var lat = parseFloat(a.getAttribute('data-lat')), lng = parseFloat(a.getAttribute('data-lng'));
+            var code = a.getAttribute('data-code'), concl = a.getAttribute('data-conclusion') || '';
+            var color = COLORS[concl.toLowerCase().replace(/\s+/g, '-')] || '#8a9a90';
+            if (mapSection) mapSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(function () {
+              map.invalidateSize();
+              map.flyTo([lat, lng], 16, { duration: 0.9 });
+              L.popup({ offset: [0, -2], autoPan: false }).setLatLng([lat, lng])
+                .setContent('<div class="gwr-pop"><div class="gwr-pop__head"><i style="background:' + color + '"></i>' + code + '</div>' + concl + '</div>')
+                .openOn(map);
+            }, 320);
+          });
+        });
         }
         if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
         else init();
