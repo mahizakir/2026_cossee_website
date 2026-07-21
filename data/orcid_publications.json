@@ -2,8 +2,8 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-07-20T12:00:07Z",
-  "generated_at_display": "July 20, 2026 at 12:00 UTC",
+  "generated_at": "2026-07-21T11:21:29Z",
+  "generated_at_display": "July 21, 2026 at 11:21 UTC",
   "works_count": 446,
   "latest": [
     {
@@ -11,11 +11,11 @@
       "title": "A flexible modelling framework for estimating thermal tolerance and sensitivity",
       "authors": [
         "Daniel W.A. Noble",
-        "Pieter Andrew Arnold",
+        "Pieter A. Arnold",
         "Shinichi Nakagawa",
         "Patrice Pottier"
       ],
-      "authors_display": "Daniel W.A. Noble, Pieter Andrew Arnold, Shinichi Nakagawa, Patrice Pottier",
+      "authors_display": "Daniel W.A. Noble, Pieter A. Arnold, Shinichi Nakagawa, Patrice Pottier",
       "journal_title": null,
       "type": "preprint",
       "type_display": "Preprint",
@@ -183,11 +183,11 @@
           "title": "A flexible modelling framework for estimating thermal tolerance and sensitivity",
           "authors": [
             "Daniel W.A. Noble",
-            "Pieter Andrew Arnold",
+            "Pieter A. Arnold",
             "Shinichi Nakagawa",
             "Patrice Pottier"
           ],
-          "authors_display": "Daniel W.A. Noble, Pieter Andrew Arnold, Shinichi Nakagawa, Patrice Pottier",
+          "authors_display": "Daniel W.A. Noble, Pieter A. Arnold, Shinichi Nakagawa, Patrice Pottier",
           "journal_title": null,
           "type": "preprint",
           "type_display": "Preprint",
