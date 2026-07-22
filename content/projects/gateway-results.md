@@ -8,6 +8,6 @@ contact_email = "csosiak@ualberta.ca"
   list = "never"
 +++
 
-Project Gateway asks a simple question with a huge scope: are the ants across Alberta one enormous supercolony, or many separate ones? Every classroom that runs a trial adds a real data point toward the answer.
+Project Gateway asks a simple question with a huge scope: what are the dimensions of the newly discovered supercolony? Every classroom that runs a trial adds a real data point toward the answer.
 
 Below are the colonies tested so far and what each trial found. When two ants from different nests meet and stay calm, it hints they belong to the same colony; when they fight, they do not. This page will keep growing as more schools take part.
