@@ -131,24 +131,59 @@ type = "page"
     width: 30px;
   }
   .contact-directions__steps strong { color: #1f3d2b; }
-  .contact-directions__access {
+  .contact-directions__route-title {
+    color: var(--ualberta-green-deep);
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 36px 0 8px;
+  }
+  .contact-directions__notice {
     align-items: flex-start;
     background: #f7f3e7;
-    border: 1px solid rgba(120, 99, 40, 0.18);
-    border-radius: 12px;
-    color: #6b5a2f;
+    border: 1px solid rgba(120, 99, 40, 0.22);
+    border-left: 4px solid #caa03a;
+    border-radius: 14px;
     display: flex;
-    font-size: 13.5px;
-    gap: 9px;
-    line-height: 1.55;
-    margin-top: 9px;
-    padding: 10px 13px;
+    gap: 14px;
+    margin: 10px 0 8px;
+    padding: 16px 20px;
   }
-  .contact-directions__access i {
-    color: #9a7d2e;
+  .contact-directions__notice > i {
+    color: #b5892a;
     flex-shrink: 0;
-    margin-top: 2px;
+    font-size: 22px;
+    margin-top: 3px;
   }
+  .contact-directions__notice strong {
+    color: #7a5f18;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .contact-form-page .contact-directions__notice p {
+    color: #6b5a2f;
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin: 0 0 8px;
+  }
+  .contact-form-page .contact-directions__notice p:last-child { margin-bottom: 0; }
+  .contact-form-page .contact-directions__note {
+    color: #556070;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 12px 0 0;
+  }
+  .contact-directions__enter {
+    color: #3d4a5d;
+    margin: 8px 0 0;
+    padding-left: 20px;
+  }
+  .contact-directions__enter li {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .contact-directions__enter li:last-child { margin-bottom: 0; }
   .contact-directions__map { margin: 0; }
   .contact-directions__map img {
     border: 1px solid rgba(39, 93, 56, 0.12);
@@ -172,32 +207,76 @@ type = "page"
 
 <div class="contact-form-page">
   <section class="contact-directions">
-    <h2>How to get to COSSEE</h2>
-    <p class="contact-directions__lead">There are several ways to reach COSSEE (CW312) once you are on campus. Here is one recommended route.</p>
+    <h2>Getting to COSSEE</h2>
+
+    <div class="contact-directions__notice">
+      <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+      <div>
+        <strong>Important access information</strong>
+        <p>Since June 2026, access to several floors of the Biological Sciences Building has been restricted for security reasons. This includes Level 3, where COSSEE is located.</p>
+        <p>Please follow the appropriate instructions below depending on whether your ONEcard has been activated for access to the Biological Sciences Building.</p>
+      </div>
+    </div>
+
+    <h3 class="contact-directions__route-title">If you have an activated ONEcard</h3>
+    <p class="contact-directions__lead">There are several ways to reach COSSEE (CW312) once you are on campus. Here, we introduce one recommended route.</p>
     <div class="contact-directions__body">
       <ol class="contact-directions__steps">
-        <li>Go to the <strong>CCIS (Centennial Centre for Interdisciplinary Science) building</strong>.</li>
+        <li>Go to the <strong>CCIS (Centennial Centre for Interdisciplinary Science) Building</strong>.</li>
         <li>Enter the building and <strong>walk straight ahead</strong>.</li>
-        <li>Continue straight and <strong>go down a small set of stairs</strong>.</li>
+        <li>Continue straight and <strong>go down the short set of stairs</strong>.</li>
         <li>After the stairs, <strong>keep walking straight</strong>.</li>
-        <li>You will see a café on your left and enter an <strong>open area</strong>.</li>
-        <li>The <strong>Biological Sciences (BioSci) building entrance</strong> will be in front of you.</li>
-        <li>Enter the building. You will see <strong>elevators on your right and stairs further ahead</strong>.</li>
+        <li>You will see a café on your left as you enter an <strong>open seating area</strong>.</li>
+        <li>The entrance to the <strong>Biological Sciences Building (BioSci)</strong> will be directly ahead.</li>
+        <li>Enter the building. You will see <strong>elevators on your right and stairs farther ahead</strong>.</li>
         <li><strong>Take the stairs up one floor</strong>.</li>
-        <li>At the top of the stairs, you will see <strong>two doors ahead, one on the left and one on the right</strong>.</li>
-        <li><strong>Enter through the door on the right.</strong>
-          <span class="contact-directions__access"><i class="fas fa-id-card" aria-hidden="true"></i><span>This door now requires <strong>card access</strong>. Please contact the lab beforehand to arrange access or to be escorted to the lab.</span></span>
-        </li>
-        <li><strong>Walk straight to the end of the hallway</strong>.</li>
-        <li><strong>Turn left</strong>. The <strong>COSSEE</strong> will be on your right :)</li>
+        <li>At the top of the stairs, you will see <strong>two doors ahead</strong>, one on the left and one on the right.</li>
+        <li>Use the <strong>door on the right</strong> and tap your activated ONEcard on the card reader. <strong>ONEcard access is required at this door at all times.</strong></li>
+        <li><strong>Walk straight</strong> to the end of the hallway.</li>
+        <li><strong>Turn left</strong> - COSSEE, room <strong>CW312</strong>, will be on your right.</li>
       </ol>
       <figure class="contact-directions__map">
         <a href="/web_files/cossee-route-map.webp" target="_blank" rel="noopener">
-          <img src="/web_files/cossee-route-map.webp" alt="Photo guide showing the recommended walking route from CCIS to COSSEE (CW312), numbered step by step." loading="lazy">
+          <img src="/web_files/cossee-route-map.webp" alt="Photo guide showing the ONEcard route from CCIS to COSSEE (CW312), numbered step by step." loading="lazy">
         </a>
-        <figcaption>Photo guide to the recommended route (steps 1 to 12). Click to enlarge.</figcaption>
+        <figcaption>Photo guide to the ONEcard route (steps 1 to 12). Click to enlarge.</figcaption>
       </figure>
     </div>
+
+    <h3 class="contact-directions__route-title">If you do not have an activated ONEcard</h3>
+    <p class="contact-directions__lead">Visitors without Biological Sciences Building (BioSci) access on their ONEcard can reach COSSEE using the route shown in the map. Please note that this route is available without a ONEcard only <strong>between 7:00 and 18:00 on weekdays</strong>.</p>
+    <div class="contact-directions__body">
+      <ol class="contact-directions__steps">
+        <li>Go to the <strong>CCIS (Centennial Centre for Interdisciplinary Science) Building</strong>.</li>
+        <li>Enter the building and <strong>walk straight ahead</strong>.</li>
+        <li>Continue straight and <strong>go down the short set of stairs</strong>.</li>
+        <li>After the stairs, <strong>keep walking straight</strong>.</li>
+        <li>You will see a café on your left. <strong>Continue through the opening directly ahead</strong>.</li>
+        <li>Go up the short set of steps and <strong>enter through the doors marked BioSci</strong>.</li>
+        <li>After entering the BioSci building, <strong>turn left and go through the black double doors</strong>.</li>
+        <li>Continue straight along the corridor, passing the seating areas and display cases.</li>
+        <li>At the open area at the end of the corridor, continue toward the <strong>stairwell on the right</strong>.</li>
+        <li><strong>Take the stairs up one floor</strong>.</li>
+        <li>At the top of the stairs, go through the <strong>black double doors to the left ahead</strong>. These doors are unlocked without a ONEcard between 7:00 and 18:00 on weekdays.</li>
+        <li>After passing through the doors, walk straight - at the halfway point of the hallway, COSSEE, room <strong>CW312</strong>, will be on your left.</li>
+      </ol>
+      <figure class="contact-directions__map">
+        <a href="/web_files/cossee-route-visitor.webp" target="_blank" rel="noopener">
+          <img src="/web_files/cossee-route-visitor.webp" alt="Photo guide showing the visitor route without a ONEcard from CCIS to COSSEE (CW312), numbered step by step." loading="lazy">
+        </a>
+        <figcaption>Photo guide to the visitor route (steps 1 to 12). Click to enlarge.</figcaption>
+      </figure>
+    </div>
+    <p class="contact-directions__note">When you arrive at CW312, please use the doorbell to let COSSEE members know that you have arrived.</p>
+    <p class="contact-directions__note">Outside the weekday access hours, the doors at Point 11 require an authorised ONEcard. Please arrange in advance for a COSSEE member to meet you and let you in.</p>
+
+    <h3 class="contact-directions__route-title">Entering COSSEE</h3>
+    <p class="contact-directions__lead">Please note that the following times refer to entry into CW312 itself, rather than entry to Level 3 of the Biological Sciences Building.</p>
+    <ul class="contact-directions__enter">
+      <li>The kitchen-side door to CW312 is normally <strong>unlocked between 9:00 and 17:00</strong>.</li>
+      <li>COSSEE members with the appropriate access can enter at any time using the card reader.</li>
+      <li>If you are a COSSEE member, have forgotten your card, and no one is in CW312 (!), please follow the instructions pinned in the Discord <strong>#announcements</strong> channel.</li>
+    </ul>
   </section>
 
   <div class="contact-form-intro">
