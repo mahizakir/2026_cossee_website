@@ -526,6 +526,23 @@
     "orcid": "https://orcid.org/0000-0001-6324-6938"
   },
   {
+    "name": "Martin Friedrichs-Manthey",
+    "pronouns": "he/him/his",
+    "status": "current",
+    "status_label": "Current",
+    "role": "visitors",
+    "role_label": "Visitor",
+    "email": "martin(-dot-)friedrichs-manthey(-at-)idiv(-dot-)de",
+    "bio": "Quantitative ecologist studying biodiversity change across space and time, with a focus on freshwater ecosystems and citizen-science data.",
+    "photo": "/web_files/martin-friedrichs-manthey.webp",
+    "detail_id": "martin-friedrichs-manthey",
+    "detail_group": "current",
+    "country": "Germany",
+    "form_role": "Visitor",
+    "google_scholar": "https://scholar.google.com/citations?user=uF0vaP8AAAAJ&hl=de",
+    "orcid": "https://orcid.org/0000-0002-0132-7799"
+  },
+  {
     "name": "Pietro Pollo",
     "pronouns": "Past member",
     "status": "past",
