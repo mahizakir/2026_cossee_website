@@ -66,6 +66,22 @@
     "orcid": "https://orcid.org/0000-0003-0822-5637"
   },
   {
+    "name": "Christin Manthey",
+    "pronouns": "she/her/hers",
+    "status": "current",
+    "status_label": "Current",
+    "role": "postdocs",
+    "role_label": "Postdoc",
+    "email": "manthey(-at-)ualberta(-dot-)ca",
+    "bio": "Evolutionary biologist studying how insects became so diverse, from the evolution of metamorphosis to microbial symbionts, using comparative, phylogenetic, and genomic methods.",
+    "photo": "/web_files/christin-manthey.webp",
+    "detail_id": "christin-manthey",
+    "detail_group": "current",
+    "country": "Germany",
+    "form_role": "Postdoc",
+    "orcid": "https://orcid.org/0000-0002-4118-8367"
+  },
+  {
     "name": "Marija Purgar Filjak",
     "pronouns": "she/her/hers",
     "status": "current",
