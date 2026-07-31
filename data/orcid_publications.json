@@ -2,10 +2,39 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-07-30T11:25:37Z",
-  "generated_at_display": "July 30, 2026 at 11:25 UTC",
-  "works_count": 447,
+  "generated_at": "2026-07-31T11:36:51Z",
+  "generated_at_display": "July 31, 2026 at 11:36 UTC",
+  "works_count": 448,
   "latest": [
+    {
+      "put_code": 222282522,
+      "title": "Interspecific Bergmann’s rule pattern in birds persists despite seasonal migration",
+      "authors": [
+        "Ayumi Mizuno",
+        "Erick Lundgren",
+        "Szymon Drobniak",
+        "Corey Callaghan",
+        "Eduardo Santos",
+        "Malgorzata Lagisz",
+        "Santiago Ortega",
+        "Xi Lin",
+        "Shinichi Nakagawa"
+      ],
+      "authors_display": "Ayumi Mizuno, Erick Lundgren, Szymon Drobniak, Corey Callaghan, Eduardo Santos, Malgorzata Lagisz, Santiago Ortega, Xi Lin, Shinichi Nakagawa",
+      "journal_title": null,
+      "type": "preprint",
+      "type_display": "Preprint",
+      "publication_year": "2026",
+      "publication_month": "07",
+      "publication_day": "30",
+      "publication_date_display": "July 30, 2026",
+      "publication_date_iso": "2026-07-30",
+      "doi": "10.32942/x2fx0z",
+      "doi_url": "https://doi.org/10.32942/x2fx0z",
+      "best_url": "https://doi.org/10.32942/X2FX0Z",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/222282522"
+    },
     {
       "put_code": 221607998,
       "title": "Plant diversity modifies multi-trophic interactions in croplands, grasslands and forests",
@@ -314,40 +343,42 @@
       "best_url": "https://doi.org/10.32942/X2WM31",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/218671868"
-    },
-    {
-      "put_code": 217901576,
-      "title": "The first systematic map of evidence syntheses on the use of artificial intelligence in ecology",
-      "authors": [
-        "Sergio Poo Hernandez",
-        "Eduardo Santos",
-        "Santiao Ortega",
-        "Ayumi Mizuno",
-        "Sarah Young",
-        "Malgorzata Lagisz",
-        "Shinichi Nakagawa"
-      ],
-      "authors_display": "Sergio Poo Hernandez, Eduardo Santos, Santiao Ortega, Ayumi Mizuno, Sarah Young, Malgorzata Lagisz, Shinichi Nakagawa",
-      "journal_title": null,
-      "type": "preprint",
-      "type_display": "Preprint",
-      "publication_year": "2026",
-      "publication_month": "06",
-      "publication_day": "17",
-      "publication_date_display": "June 17, 2026",
-      "publication_date_iso": "2026-06-17",
-      "doi": "10.32942/x2vt11",
-      "doi_url": "https://doi.org/10.32942/x2vt11",
-      "best_url": "https://doi.org/10.32942/X2VT11",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/217901576"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 25,
+      "count": 26,
       "items": [
+        {
+          "put_code": 222282522,
+          "title": "Interspecific Bergmann’s rule pattern in birds persists despite seasonal migration",
+          "authors": [
+            "Ayumi Mizuno",
+            "Erick Lundgren",
+            "Szymon Drobniak",
+            "Corey Callaghan",
+            "Eduardo Santos",
+            "Malgorzata Lagisz",
+            "Santiago Ortega",
+            "Xi Lin",
+            "Shinichi Nakagawa"
+          ],
+          "authors_display": "Ayumi Mizuno, Erick Lundgren, Szymon Drobniak, Corey Callaghan, Eduardo Santos, Malgorzata Lagisz, Santiago Ortega, Xi Lin, Shinichi Nakagawa",
+          "journal_title": null,
+          "type": "preprint",
+          "type_display": "Preprint",
+          "publication_year": "2026",
+          "publication_month": "07",
+          "publication_day": "30",
+          "publication_date_display": "July 30, 2026",
+          "publication_date_iso": "2026-07-30",
+          "doi": "10.32942/x2fx0z",
+          "doi_url": "https://doi.org/10.32942/x2fx0z",
+          "best_url": "https://doi.org/10.32942/X2FX0Z",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/222282522"
+        },
         {
           "put_code": 221607998,
           "title": "Plant diversity modifies multi-trophic interactions in croplands, grasslands and forests",
@@ -12791,6 +12822,6 @@
     "book-chapter": 1,
     "journal-article": 369,
     "other": 6,
-    "preprint": 70
+    "preprint": 71
   }
 }
