@@ -63,7 +63,7 @@ EcoEvoRxiv reminds me of this too. I was fortunate to help lead its creation wit
 
 Looking back, that has been the story of much of my career. The biggest changes did not come from careful planning. They came from conversations, chance meetings, and the generosity of other people.
 
-So when I think about five years of SORTEE, I do not first think about the papers, the meetings, or the milestones. I think about one conversation in the Botanic Garden in Dunedin. At the time, it felt completely ordinary. Looking back, it changed the course of my career.
+So when I think about five years of SORTEE, I do not first think about the papers, the annual conferences, or the milestones. I think about one conversation in the Botanic Garden in Dunedin. At the time, it felt completely ordinary. Looking back, it changed the course of my career.
 
 <div class="sb-gallery">
   <a href="/web_files/sortee-5th-group.webp" target="_blank" rel="noopener"><img src="/web_files/sortee-5th-group.webp" alt="COSSEE members posed together behind the SORTEE birthday cake with lit candles." loading="lazy"></a>
