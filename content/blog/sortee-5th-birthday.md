@@ -3,9 +3,10 @@ title = "Ichigo ichie (一期一会): SORTEE's 5th birthday"
 date = 2026-07-31
 authors = ["Shinichi Nakagawa"]
 banner = "/web_files/sortee-5th-cake.webp"
-summary = "Reflecting on SORTEE's fifth birthday, and the chance 2014 conversation in a Dunedin botanic garden that set everything in motion."
 tags = ["open science", "reflection", "SORTEE"]
 +++
+
+<!--more-->
 
 <style>
 .sb-duo {
@@ -15,12 +16,23 @@ tags = ["open science", "reflection", "SORTEE"]
   margin: 26px 0;
 }
 .sb-duo .blog-inline-figure { margin: 0; }
+.sb-gallery {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 28px 0 6px;
+}
+.sb-gallery a { border-radius: 14px; display: block; overflow: hidden; }
+.sb-gallery img { display: block; height: 230px; object-fit: cover; width: 100%; transition: transform 0.35s ease; }
+.sb-gallery a:hover img { transform: scale(1.05); }
+.sb-gallery__cap { color: #607086; font-size: 13px; margin: 10px 2px 0; text-align: center; }
 @media (max-width: 600px) {
   .sb-duo { grid-template-columns: 1fr; }
+  .sb-gallery { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 
-Last week SORTEE turned five. Along with COSSEE members, I attended Tim Parker's SORTEE birthday interview here in Edmonton, Canada, with some SORTEE members joining online from around the world. Afterwards, we had a potluck.
+Last week [SORTEE](https://www.sortee.org/) turned five. Along with [COSSEE](/) members, I attended Tim Parker's SORTEE birthday interview here in Edmonton, Canada, with some SORTEE members joining online from around the world. Afterwards, we had a potluck.
 
 <div class="sb-duo">
   <figure class="blog-inline-figure">
@@ -52,6 +64,13 @@ EcoEvoRxiv reminds me of this too. I was fortunate to help lead its creation wit
 Looking back, that has been the story of much of my career. The biggest changes did not come from careful planning. They came from conversations, chance meetings, and the generosity of other people.
 
 So when I think about five years of SORTEE, I do not first think about the papers, the meetings, or the milestones. I think about one conversation in the Botanic Garden in Dunedin. At the time, it felt completely ordinary. Looking back, it changed the course of my career.
+
+<div class="sb-gallery">
+  <a href="/web_files/sortee-5th-group.webp" target="_blank" rel="noopener"><img src="/web_files/sortee-5th-group.webp" alt="COSSEE members posed together behind the SORTEE birthday cake with lit candles." loading="lazy"></a>
+  <a href="/web_files/sortee-5th-cheers.webp" target="_blank" rel="noopener"><img src="/web_files/sortee-5th-cheers.webp" alt="COSSEE members gathered around the potluck table." loading="lazy"></a>
+  <a href="/web_files/sortee-5th-spread.webp" target="_blank" rel="noopener"><img src="/web_files/sortee-5th-spread.webp" alt="The shared potluck spread on the table." loading="lazy"></a>
+</div>
+<p class="sb-gallery__cap">Celebrating five years of SORTEE. Tap any photo to enlarge.</p>
 
 Thank you, Tim.
 
