@@ -335,6 +335,16 @@
     "orcid": "https://orcid.org/0009-0000-8261-6148"
   },
   {
+    "name": "Adam Bouma",
+    "status": "current",
+    "status_label": "Current",
+    "role": "msc",
+    "role_label": "MSc Student",
+    "email": "abouma(-at-)ualberta(-dot-)ca",
+    "country": "Canada",
+    "form_role": "Master student"
+  },
+  {
     "name": "Cassidy Schneider",
     "pronouns": "",
     "status": "current",
