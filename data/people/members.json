@@ -376,8 +376,8 @@
   {
     "name": "Yakira Christian",
     "pronouns": "she/her/hers",
-    "status": "current",
-    "status_label": "Current",
+    "status": "past",
+    "status_label": "Past",
     "role": "intern",
     "role_label": "Intern",
     "email": "",
@@ -391,8 +391,8 @@
   {
     "name": "Joanna Huang",
     "pronouns": "she/her/hers",
-    "status": "current",
-    "status_label": "Current",
+    "status": "past",
+    "status_label": "Past",
     "role": "intern",
     "role_label": "Intern",
     "email": "",
