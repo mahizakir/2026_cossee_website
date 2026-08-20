@@ -24,7 +24,7 @@ tags = ["peer review", "open science", "meta-research"]
 }
 </style>
 
-As researchers at different career stages, we have both been invited to review for reputable journals. It is work we value. But like many others, we cannot afford to overcommit to an activity that carries little weight in how academic success is evaluated. Publications, grants and awards determine careers; peer review, despite underpinning them, does not.
+As researchers at different career stages, I have both been invited to review for reputable journals. It is work I value. But like many others, I cannot afford to overcommit to an activity that carries little weight in how academic success is evaluated. Publications, grants and awards determine careers; peer review, despite underpinning them, does not.
 
 For the relatively small group of scientists who do accept review requests, the system is often all cost and little reward. Reviewing a paper properly can take hours, sometimes days, and is met with little more than a generic thank you. Yet if something is missed and a review is not sufficiently thorough in their evaluations, the consequences can be serious: unreliable, flawed, or even fraudulent science may be endorsed and pushed into the literature (or a valuable one does not get published).
 
