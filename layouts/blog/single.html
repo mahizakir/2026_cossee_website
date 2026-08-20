@@ -31,7 +31,21 @@
                         <div class="blog-post-modern__meta">
                             <span><i class="far fa-calendar"></i> {{ $createdAt }}</span>
                             {{ if gt (len $authors) 0 }}
-                            <span><i class="far fa-user"></i> {{ delimit $authors ", " }}</span>
+                            {{- $parts := slice -}}
+                            {{- range $name := $authors -}}
+                              {{- $scholar := "" -}}
+                              {{- range $.Site.Data.people.members -}}
+                                {{- if and (eq .name $name) .google_scholar -}}
+                                  {{- $scholar = .google_scholar -}}
+                                {{- end -}}
+                              {{- end -}}
+                              {{- if $scholar -}}
+                                {{- $parts = $parts | append (printf `<a class="blog-author-link" href="%s" target="_blank" rel="noopener" title="Google Scholar profile">%s</a>` ($scholar | htmlEscape) ($name | htmlEscape)) -}}
+                              {{- else -}}
+                                {{- $parts = $parts | append $name -}}
+                              {{- end -}}
+                            {{- end -}}
+                            <span><i class="far fa-user"></i> {{ delimit $parts ", " | safeHTML }}</span>
                             {{ end }}
                         </div>
                         <h1>{{ .Title }}</h1>
