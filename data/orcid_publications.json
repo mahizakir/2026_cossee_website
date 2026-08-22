@@ -2,10 +2,37 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-08-21T09:55:54Z",
-  "generated_at_display": "August 21, 2026 at 09:55 UTC",
-  "works_count": 448,
+  "generated_at": "2026-08-22T09:47:03Z",
+  "generated_at_display": "August 22, 2026 at 09:47 UTC",
+  "works_count": 449,
   "latest": [
+    {
+      "put_code": 224526894,
+      "title": "Native and introduced megafauna have convergent effects on animals and ecosystems: a meta-analysis",
+      "authors": [
+        "Erick J. Lundgren",
+        "Shinichi Nakagawa",
+        "Jonas Trepel",
+        "Sage Raymond",
+        "Elizabeth le Roux",
+        "Eamonn I. F. Wooster",
+        "Jens-Christian Svenning"
+      ],
+      "authors_display": "Erick J. Lundgren, Shinichi Nakagawa, Jonas Trepel, Sage Raymond, Elizabeth le Roux, Eamonn I. F. Wooster, Jens-Christian Svenning",
+      "journal_title": "Nature Communications",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "08",
+      "publication_day": "21",
+      "publication_date_display": "August 21, 2026",
+      "publication_date_iso": "2026-08-21",
+      "doi": "10.1038/s41467-026-76981-8",
+      "doi_url": "https://doi.org/10.1038/s41467-026-76981-8",
+      "best_url": "https://doi.org/10.1038/s41467-026-76981-8",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/224526894"
+    },
     {
       "put_code": 222282522,
       "title": "Interspecific Bergmann’s rule pattern in birds persists despite seasonal migration",
@@ -312,44 +339,40 @@
       "best_url": "https://doi.org/10.1038/s44220-026-00664-y",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/219203014"
-    },
-    {
-      "put_code": 218671868,
-      "title": "Choosing the Response Matrix: Generalised Linear Latent Variable Models for Multivariate Ecology and Evolution",
-      "authors": [
-        "Shinichi Nakagawa",
-        "Ayumi Mizuno",
-        "Russell Dinnage",
-        "Marija Purgar",
-        "Christine Sosiak",
-        "Sergio Poo Hernandez",
-        "Iwo Gross",
-        "Erick Lundgren",
-        "Malgorzata Lagisz",
-        "Eduardo Santos",
-        "Santiao Ortega"
-      ],
-      "authors_display": "Shinichi Nakagawa, Ayumi Mizuno, Russell Dinnage, Marija Purgar, Christine Sosiak, Sergio Poo Hernandez, Iwo Gross, Erick Lundgren, Malgorzata Lagisz, Eduardo Santos, Santiao Ortega",
-      "journal_title": null,
-      "type": "preprint",
-      "type_display": "Preprint",
-      "publication_year": "2026",
-      "publication_month": "06",
-      "publication_day": "24",
-      "publication_date_display": "June 24, 2026",
-      "publication_date_iso": "2026-06-24",
-      "doi": "10.32942/x2wm31",
-      "doi_url": "https://doi.org/10.32942/x2wm31",
-      "best_url": "https://doi.org/10.32942/X2WM31",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/218671868"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 26,
+      "count": 27,
       "items": [
+        {
+          "put_code": 224526894,
+          "title": "Native and introduced megafauna have convergent effects on animals and ecosystems: a meta-analysis",
+          "authors": [
+            "Erick J. Lundgren",
+            "Shinichi Nakagawa",
+            "Jonas Trepel",
+            "Sage Raymond",
+            "Elizabeth le Roux",
+            "Eamonn I. F. Wooster",
+            "Jens-Christian Svenning"
+          ],
+          "authors_display": "Erick J. Lundgren, Shinichi Nakagawa, Jonas Trepel, Sage Raymond, Elizabeth le Roux, Eamonn I. F. Wooster, Jens-Christian Svenning",
+          "journal_title": "Nature Communications",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "08",
+          "publication_day": "21",
+          "publication_date_display": "August 21, 2026",
+          "publication_date_iso": "2026-08-21",
+          "doi": "10.1038/s41467-026-76981-8",
+          "doi_url": "https://doi.org/10.1038/s41467-026-76981-8",
+          "best_url": "https://doi.org/10.1038/s41467-026-76981-8",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/224526894"
+        },
         {
           "put_code": 222282522,
           "title": "Interspecific Bergmann’s rule pattern in birds persists despite seasonal migration",
@@ -12820,7 +12843,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 369,
+    "journal-article": 370,
     "other": 6,
     "preprint": 71
   }
