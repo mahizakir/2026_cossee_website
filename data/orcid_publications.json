@@ -2,10 +2,36 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-08-25T09:55:38Z",
-  "generated_at_display": "August 25, 2026 at 09:55 UTC",
-  "works_count": 449,
+  "generated_at": "2026-08-26T10:02:11Z",
+  "generated_at_display": "August 26, 2026 at 10:02 UTC",
+  "works_count": 450,
   "latest": [
+    {
+      "put_code": 224823833,
+      "title": "The intensity of sexual selection and the absence of assortative mating patterns in Prunella modularis (Aves: Passeriformes)",
+      "authors": [
+        "Grazieli Cerqueira",
+        "Eduardo Santos",
+        "Benedikt Holtmann",
+        "Carlos Lara",
+        "Shinichi Nakagawa",
+        "Renato Macedo-Rego"
+      ],
+      "authors_display": "Grazieli Cerqueira, Eduardo Santos, Benedikt Holtmann, Carlos Lara, Shinichi Nakagawa, Renato Macedo-Rego",
+      "journal_title": null,
+      "type": "preprint",
+      "type_display": "Preprint",
+      "publication_year": "2026",
+      "publication_month": "08",
+      "publication_day": "25",
+      "publication_date_display": "August 25, 2026",
+      "publication_date_iso": "2026-08-25",
+      "doi": "10.32942/x2bq2q",
+      "doi_url": "https://doi.org/10.32942/x2bq2q",
+      "best_url": "https://doi.org/10.32942/X2BQ2Q",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/224823833"
+    },
     {
       "put_code": 224526894,
       "title": "Native and introduced megafauna have convergent effects on animals and ecosystems: a meta-analysis",
@@ -313,39 +339,39 @@
       "best_url": "https://doi.org/10.1111/2041-210x.70356",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/220532643"
-    },
-    {
-      "put_code": 219203014,
-      "title": "Assessing the diversity, transparency and accessibility of PRISMA guideline extensions",
-      "authors": [
-        "Kyle Morrison",
-        "Malgorzata Lagisz",
-        "Manman Liu",
-        "Manuela S. Santana",
-        "Shinichi Nakagawa",
-        "Yefeng Yang"
-      ],
-      "authors_display": "Kyle Morrison, Malgorzata Lagisz, Manman Liu, Manuela S. Santana, Shinichi Nakagawa, Yefeng Yang",
-      "journal_title": "Nature Mental Health",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "06",
-      "publication_day": "30",
-      "publication_date_display": "June 30, 2026",
-      "publication_date_iso": "2026-06-30",
-      "doi": "10.1038/s44220-026-00664-y",
-      "doi_url": "https://doi.org/10.1038/s44220-026-00664-y",
-      "best_url": "https://doi.org/10.1038/s44220-026-00664-y",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/219203014"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 27,
+      "count": 28,
       "items": [
+        {
+          "put_code": 224823833,
+          "title": "The intensity of sexual selection and the absence of assortative mating patterns in Prunella modularis (Aves: Passeriformes)",
+          "authors": [
+            "Grazieli Cerqueira",
+            "Eduardo Santos",
+            "Benedikt Holtmann",
+            "Carlos Lara",
+            "Shinichi Nakagawa",
+            "Renato Macedo-Rego"
+          ],
+          "authors_display": "Grazieli Cerqueira, Eduardo Santos, Benedikt Holtmann, Carlos Lara, Shinichi Nakagawa, Renato Macedo-Rego",
+          "journal_title": null,
+          "type": "preprint",
+          "type_display": "Preprint",
+          "publication_year": "2026",
+          "publication_month": "08",
+          "publication_day": "25",
+          "publication_date_display": "August 25, 2026",
+          "publication_date_iso": "2026-08-25",
+          "doi": "10.32942/x2bq2q",
+          "doi_url": "https://doi.org/10.32942/x2bq2q",
+          "best_url": "https://doi.org/10.32942/X2BQ2Q",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/224823833"
+        },
         {
           "put_code": 224526894,
           "title": "Native and introduced megafauna have convergent effects on animals and ecosystems: a meta-analysis",
@@ -12845,6 +12871,6 @@
     "book-chapter": 1,
     "journal-article": 370,
     "other": 6,
-    "preprint": 71
+    "preprint": 72
   }
 }
