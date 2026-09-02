@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Synthesis, Vol. 1, No. 1 (August 2026)</title>
+<meta name="description" content="The Synthesis, Vol. 1 No. 1 (August 2026). A monthly note to the COSSEE lab at the University of Alberta, covering 1 June to 30 August 2026.">
+<meta name="author" content="COSSEE, University of Alberta">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#181b1a" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="COSSEE">
+<meta property="og:title" content="The Synthesis, Vol. 1, No. 1">
+<meta property="og:description" content="What the field did, what we did, and what is coming. Covering 1 June to 30 August 2026.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2317635a'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='21' fill='%23ffffff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<style>
+/* ============ tokens: light ============ */
+:root{
+  color-scheme:light;
+  --bg:#efeeea; --surface:#ffffff;
+  --ink:#1c1f1e; --ink-soft:#3b4340; --muted:#6b7472;
+  --rule:#dfe3e1; --rule-hard:#1c1f1e;
+  --accent:#17635a; --accent-soft:#e9f1ee;
+  --warm:#fbeee6; --warm-ink:#8a3b2a;
+  --fill:#fff3c4; --fill-ink:#7a5a00; --fill-line:#d8b400;
+  --panel:#f2f4f3; --panel-ink:#4a5250;
+  --todo-bg:#fffbe8; --todo-ink:#6b5600;
+  --gloss-bg:#f7f8f7;
+  --chip-bg:#eef1f0; --chip-ink:#4a5250; --chip-line:#d6dcda;
+  --hot-bg:#fbe4dc; --hot-ink:#8a3b2a; --hot-line:#e3b7a6;
+  --soon-bg:#fdf3d8; --soon-ink:#7a5a00; --soon-line:#e2c877;
+  --shade:rgba(28,31,30,.09);
+}
+/* ============ tokens: dark ============ */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#101211; --surface:#181b1a;
+    --ink:#e7eae8; --ink-soft:#c3ccc8; --muted:#94a09c;
+    --rule:#2b3230; --rule-hard:#7d8b87;
+    --accent:#6ec6b5; --accent-soft:#14302b;
+    --warm:#33211b; --warm-ink:#f0a98f;
+    --fill:#3a3218; --fill-ink:#efd694; --fill-line:#8a7128;
+    --panel:#1f2422; --panel-ink:#b6c0bc;
+    --todo-bg:#26210f; --todo-ink:#e5cd8c;
+    --gloss-bg:#1c201f;
+    --chip-bg:#232928; --chip-ink:#b6c0bc; --chip-line:#333b39;
+    --hot-bg:#3a211a; --hot-ink:#f3ab90; --hot-line:#5e332a;
+    --soon-bg:#332c14; --soon-ink:#efd694; --soon-line:#54471c;
+    --shade:rgba(0,0,0,.55);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#101211; --surface:#181b1a;
+  --ink:#e7eae8; --ink-soft:#c3ccc8; --muted:#94a09c;
+  --rule:#2b3230; --rule-hard:#7d8b87;
+  --accent:#6ec6b5; --accent-soft:#14302b;
+  --warm:#33211b; --warm-ink:#f0a98f;
+  --fill:#3a3218; --fill-ink:#efd694; --fill-line:#8a7128;
+  --panel:#1f2422; --panel-ink:#b6c0bc;
+  --todo-bg:#26210f; --todo-ink:#e5cd8c;
+  --gloss-bg:#1c201f;
+  --chip-bg:#232928; --chip-ink:#b6c0bc; --chip-line:#333b39;
+  --hot-bg:#3a211a; --hot-ink:#f3ab90; --hot-line:#5e332a;
+  --soon-bg:#332c14; --soon-ink:#efd694; --soon-line:#54471c;
+  --shade:rgba(0,0,0,.55);
+}
+
+/* ============ base ============ */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-text-size-adjust:100%;}
+.page{max-width:722px;margin:0 auto;background:var(--surface);padding:52px 48px 64px;
+  box-shadow:0 1px 2px var(--shade),0 18px 46px var(--shade);}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:60px;
+   line-height:1;margin:6px 0 14px;letter-spacing:-.01em;text-wrap:balance}
+.kicker{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.16em;
+   text-transform:uppercase}
+.standfirst{font-style:italic;color:var(--ink-soft);font-size:18.5px;line-height:1.5;margin:0 0 24px}
+.meta{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+   color:var(--muted);border-bottom:2px solid var(--rule-hard);padding-bottom:14px;margin-bottom:26px;
+   display:flex;flex-wrap:wrap;align-items:center;gap:6px 20px}
+.meta span{white-space:nowrap}
+h2{font-family:Georgia,serif;font-weight:400;font-size:32px;margin:54px 0 6px;scroll-margin-top:72px}
+h2 .num{color:var(--accent);font-size:13px;letter-spacing:.1em;font-family:inherit;
+   vertical-align:6px;margin-right:10px}
+.dek{color:var(--muted);font-size:15px;margin:0 0 10px}
+.dek:last-of-type{margin-bottom:20px}
+section{border-top:1px solid var(--rule);padding-top:6px;scroll-margin-top:64px}
+section:first-of-type{border-top:none}
+.note{background:var(--accent-soft);border-left:4px solid var(--accent);
+   padding:24px 28px;margin:10px 0 4px}
+.note p{margin:0 0 16px}.note p:last-child{margin:0}
+.sig{font-style:italic;color:var(--muted)}
+.item{border-bottom:1px solid var(--rule);padding:22px 0;position:relative}
+.item:last-child{border-bottom:none}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.14em;
+   border:1px solid var(--chip-line);color:var(--muted);padding:3px 8px;border-radius:3px;
+   margin-right:10px;vertical-align:2px}
+.tag.co{border-color:var(--accent);color:var(--accent)}
+.src{display:block;color:var(--muted);font-size:13.5px;line-height:1.5;margin-top:8px}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.field h3{font-size:20px;margin:24px 0 2px;line-height:1.35;text-wrap:balance}
+.subhead{font-size:12px;font-weight:700;letter-spacing:.22em;color:var(--accent);
+   text-transform:uppercase;margin:30px 0 4px}
+.body p{margin:0 0 15px;text-wrap:pretty}
+.body p:last-child{margin-bottom:0}
+ul{padding-left:22px}li{margin:12px 0;text-wrap:pretty}
+table{width:100%;border-collapse:collapse;margin-top:10px;font-variant-numeric:tabular-nums}
+th{text-align:left;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+   color:var(--muted);border-bottom:2px solid var(--rule-hard);padding:8px 0}
+td{border-bottom:1px solid var(--rule);padding:15px 16px 15px 0;vertical-align:top}
+td.d{width:132px;font-weight:700;font-size:14px}
+td.d .dl{white-space:nowrap}
+tr.urgent{background:var(--warm)}tr.urgent td.d{color:var(--warm-ink)}
+tr.urgent td{padding-left:12px}
+.flag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.12em;color:var(--warm-ink);
+   border:1px solid var(--warm-ink);padding:2px 6px;border-radius:3px;margin-left:8px;
+   white-space:nowrap}
+.sub{display:block;color:var(--muted);font-size:14px;line-height:1.55;margin-top:7px}
+.fill{background:var(--fill);color:var(--fill-ink);font-weight:700;padding:1px 6px;
+   border-radius:3px;border:1px dashed var(--fill-line)}
+.todo{background:var(--todo-bg);border:1px dashed var(--fill-line);padding:14px 18px;margin:16px 0;
+   font-size:14px;color:var(--todo-ink)}
+.todo b{color:var(--todo-ink)}
+.house{background:var(--panel);border-radius:6px;padding:18px 22px;font-size:14.5px;
+   line-height:1.6;color:var(--panel-ink);margin-top:22px}
+.house p{margin:0 0 11px}.house p:last-child{margin:0}
+.glossary{background:var(--gloss-bg);border:1px solid var(--rule);padding:20px 24px;
+   font-size:14.5px;line-height:1.55;column-count:2;column-gap:34px;margin-top:20px}
+.glossary div{break-inside:avoid;page-break-inside:avoid;padding:2px 4px;margin:0 -4px;
+   border-radius:3px;scroll-margin-top:86px}
+.glossary dt{font-weight:700;margin-top:8px}
+.glossary div:first-child dt{margin-top:0}
+.glossary dd{margin:0 0 2px}
+.glossary div:target{background:var(--fill);color:var(--fill-ink)}
+.glossary div:target dt{color:var(--fill-ink)}
+.toc{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+   padding:14px 0;margin:22px 0 4px;font-size:14px}
+.toc a{display:inline-block;margin:4px 26px 4px 0;text-decoration:none;color:var(--ink)}
+.toc a:hover{color:var(--accent)}
+.toc a.active{color:var(--accent);font-weight:700}
+.toc a .n{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.1em;
+   margin-right:7px;vertical-align:1px}
+.toc a.plain{color:var(--muted);font-size:13px}
+.foot{border-top:2px solid var(--rule-hard);margin-top:52px;padding-top:18px;
+   font-size:13.5px;line-height:1.6;color:var(--muted)}
+
+/* ============ added: chrome ============ */
+.skip{position:absolute;left:-9999px;top:0;z-index:60;background:var(--accent);color:#fff;
+  padding:10px 16px;font-weight:700;text-decoration:none}
+.skip:focus{left:8px;top:8px}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:50;
+  transition:width .08s linear}
+.railbar{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;gap:14px;align-items:center;
+  background:var(--surface);border-bottom:1px solid var(--rule);padding:9px 18px;
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted);
+  transform:translateY(-101%);transition:transform .18s ease}
+.railbar.on{transform:none}
+.railbar .rb-sec{color:var(--accent)}
+.railbar .rb-top{margin-left:auto;color:var(--muted);text-decoration:none}
+.railbar .rb-top:hover{color:var(--accent)}
+@media(max-width:520px){.railbar .rb-name{display:none}}
+.tools{display:flex;gap:8px;margin-left:auto}
+.tbtn{font:inherit;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  background:var(--chip-bg);color:var(--chip-ink);border:1px solid var(--chip-line);
+  border-radius:999px;padding:5px 12px;cursor:pointer;line-height:1.4}
+.tbtn:hover{border-color:var(--accent);color:var(--accent)}
+.anchor{text-decoration:none;color:var(--rule);font-size:.6em;margin-left:.5em;opacity:0;
+  transition:opacity .15s;vertical-align:middle}
+h2:hover .anchor,.anchor:focus-visible{opacity:1;color:var(--accent)}
+.xref{font-weight:700;text-decoration:none;border-bottom:1px solid var(--accent);white-space:nowrap}
+.xref:hover{background:var(--accent-soft)}
+@keyframes land{from{background:var(--fill)}to{background:transparent}}
+.landed{animation:land 1.6s ease-out}
+.gloss{color:inherit;text-decoration:none;border-bottom:1px dotted var(--accent);cursor:help}
+.gloss:hover{color:var(--accent)}
+.copy{font:inherit;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  background:none;border:1px solid var(--chip-line);color:var(--muted);border-radius:3px;
+  padding:2px 7px;cursor:pointer;margin-left:8px;opacity:0;transition:opacity .15s}
+.item:hover .copy,.copy:focus-visible{opacity:1}
+.copy:hover{border-color:var(--accent);color:var(--accent)}
+@media(hover:none){.copy{opacity:1}}
+
+/* ============ added: glance + numbers ============ */
+.glance{border:1px solid var(--rule);border-top:3px solid var(--accent);padding:18px 22px 16px;margin:0 0 8px}
+.glance-h{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 14px}
+.figs{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));
+  gap:20px 24px;padding:0;margin:0}
+.figs li{margin:0;font-size:13px;color:var(--muted);line-height:1.35}
+.figs li b{display:block;font-family:Georgia,serif;font-size:31px;font-weight:400;
+  color:var(--ink);line-height:1;margin-bottom:3px}
+.glance-lead{margin:16px 0 0;padding-top:14px;border-top:1px solid var(--rule);font-size:14.5px}
+.glance-lead div{display:grid;grid-template-columns:88px 1fr;gap:3px 14px;margin-top:9px}
+.glance-lead div:first-child{margin-top:0}
+.glance-lead dt{color:var(--accent);text-transform:uppercase;font-size:10.5px;letter-spacing:.14em;
+  font-weight:700;padding-top:4px}
+.glance-lead dd{margin:0}
+@media(max-width:520px){.glance-lead div{grid-template-columns:1fr;gap:1px}.glance-lead dt{padding-top:0}}
+
+/* ============ added: timeline ============ */
+.timeline{list-style:none;padding:0;margin:6px 0 0;position:relative}
+.timeline::before{content:"";position:absolute;left:101px;top:14px;bottom:14px;width:1px;background:var(--rule)}
+.timeline li{margin:0;padding:18px 0 18px 124px;position:relative;border-bottom:1px solid var(--rule);
+  text-wrap:pretty}
+.timeline li:last-child{border-bottom:none}
+.timeline .when{position:absolute;left:0;top:20px;width:92px;font-size:11.5px;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--accent);line-height:1.3}
+.timeline li::after{content:"";position:absolute;left:98px;top:24px;width:7px;height:7px;
+  border-radius:50%;background:var(--accent);border:2px solid var(--surface)}
+
+
+/* ============ added: deadline countdowns ============ */
+.cd{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:2px 7px;border-radius:999px;border:1px solid var(--chip-line);background:var(--chip-bg);
+  color:var(--chip-ink);margin-top:6px;white-space:nowrap}
+.cd.hot{background:var(--hot-bg);color:var(--hot-ink);border-color:var(--hot-line)}
+.cd.soon{background:var(--soon-bg);color:var(--soon-ink);border-color:var(--soon-line)}
+.cd.past{opacity:.7}
+.cd.next{background:var(--accent);color:var(--surface);border-color:var(--accent);margin:6px 6px 0 8px}
+tr.is-past{opacity:.45}
+tr.is-past .flag{display:none}
+tr.is-next{box-shadow:inset 3px 0 0 var(--accent)}
+tr.is-next td:first-child{padding-left:12px}
+.tcontrols{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin-top:14px;
+  font-size:12.5px;color:var(--muted)}
+.tcontrols label{display:inline-flex;gap:7px;align-items:center;cursor:pointer}
+.tcontrols input{accent-color:var(--accent)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ============ responsive ============ */
+@media(max-width:640px){
+  .page{padding:28px 20px}
+  h1{font-size:40px}
+  .glossary{column-count:1}
+  .timeline::before{display:none}
+  .timeline li{padding-left:0}
+  .timeline li::after{display:none}
+  .timeline .when{position:static;width:auto;display:block;margin-bottom:5px}
+  table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  table,table tbody,table tr,table td{display:block;width:100%}
+  table tr{border-bottom:1px solid var(--rule);padding:14px 0}
+  tr.urgent,tr.is-next{padding-left:12px}
+  table td{border:none;padding:0}
+  td.d{width:auto;color:var(--accent);margin-bottom:6px}
+  .item:hover .copy{opacity:1}
+}
+
+/* ============ print ============ */
+@media print{
+  :root{--bg:#fff;--surface:#fff;--ink:#111;--muted:#555;--rule:#ccc;--rule-hard:#111;
+        --accent:#0b4a43;--accent-soft:#f2f6f4;--panel:#f4f4f4;--shade:transparent}
+  body{background:#fff;font-size:10.5pt;line-height:1.42}
+  .page{max-width:none;padding:0;box-shadow:none}
+  h1{font-size:34pt}
+  .skip,#progress,.railbar,.tools,.copy,.anchor,.tcontrols,.toc{display:none!important}
+  a{color:inherit;text-decoration:none}
+  .xref,.gloss{border:none}
+  .src a[href^="http"]::after{content:" \005B" attr(href) "\005D";font-size:7.5pt;color:#555;
+    word-break:break-all}
+  section,.item,tr,.timeline li,.actions li,.glance,.note,.house,.todo{break-inside:avoid;
+    page-break-inside:avoid}
+  h2,h3,.subhead{break-after:avoid;page-break-after:avoid}
+  tr.is-past{opacity:1}
+  .cd{border:1px solid #bbb;background:#fff;color:#555}
+}
+</style>
+</head>
+<body>
+<script>try{var t=localStorage.getItem("synth-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+<a class="skip" href="#main">Skip to the contents</a>
+<div id="progress" aria-hidden="true"></div>
+<div class="railbar" id="railbar">
+  <span class="rb-name">The Synthesis · Vol.&nbsp;1 No.&nbsp;1</span>
+  <span class="rb-sec" id="rbSec"></span>
+  <a class="rb-top" href="#top">Top &uarr;</a>
+</div>
+
+<div class="page" id="top">
+
+  <header>
+  <div class="kicker">Collaboration for Open Science &amp; Synthesis in Ecology &amp; Evolution (COSSEE)</div>
+  <h1>The Synthesis</h1>
+  <p class="standfirst">A monthly note to the COSSEE lab: what the field did, what we did, and what is coming.</p>
+  <div class="meta">
+    <span>Vol. 1 · No. 1</span><span><time datetime="2026-08">August 2026</time></span>
+    <span>Covering 1 June – 30 August 2026</span><span>University of Alberta</span>
+    <span id="readtime"></span>
+    <span class="tools">
+      <button class="tbtn" id="themeBtn" type="button" aria-live="polite">Theme</button>
+      <button class="tbtn" id="printBtn" type="button">Print / PDF</button>
+    </span>
+  </div>
+
+  <div class="glance">
+    <p class="glance-h">This issue at a glance</p>
+    <ul class="figs">
+      <li><b>2</b>arrivals: one postdoc, one visitor</li>
+      <li><b>3</b>summer students, three programmes</li>
+      <li><b>9</b>outputs with a COSSEE author</li>
+      <li><b>10</b>papers from the wider field, plus two shorter notes</li>
+      <li><b>13</b>dates that apply to this lab before January</li>
+    </ul>
+    <dl class="glance-lead">
+      <div><dt>Read first</dt><dd>Culina and colleagues on risk-of-bias assessment, in
+        <a class="xref" href="#s04">§04</a>.</dd></div>
+      <div><dt>Act first</dt><dd>two deadlines land on Wednesday 2 September and two more inside
+        the following week, in <a class="xref" href="#s06">§06</a>.</dd></div>
+      <div><dt>Then</dt><dd>what to send in for issue 2, and what we got wrong in this one, in
+        <a class="xref" href="#s07">§07</a>.</dd></div>
+    </dl>
+  </div>
+  </header>
+
+  <nav class="toc" aria-label="Contents">
+    <a href="#s01"><span class="n">01</span>From the Centre</a><a href="#s02"><span class="n">02</span>People and goings-on</a><a href="#s03"><span class="n">03</span>The period in review</a><a href="#s04"><span class="n">04</span>In the field</a><a href="#s05"><span class="n">05</span>Lab achievements</a><a href="#s06"><span class="n">06</span>Looking ahead</a><a href="#s07"><span class="n">07</span>Over to you</a><a class="plain" href="#abbr">Abbreviations &rarr;</a>
+  </nav>
+
+  <main id="main">
+
+  <!-- 01 -->
+  <section id="s01">
+    <h2><span class="num">01</span>From the Centre</h2>
+    <div class="note">
+      <p>This is the first issue of a monthly note to the lab. The idea is simple. One place,
+      once a month, for the things that are easy to miss when you are deep in a screening
+      spreadsheet or manuscript writing: what moved in the field, who has joined us, what we
+      published, what happened here, and which deadlines are about to arrive.</p>
+      <p>One item is worth reading even if you read nothing else: Culina and colleagues have made
+      the case that risk-of-bias assessment belongs at the centre of ecological synthesis, and
+      their survey numbers are sobering. <a class="xref" href="#s04">§04</a> has the detail.</p>
+      <p>This is meant to be useful to you rather than to me, so tell me what belongs in it. If
+      there is a topic you think the lab should be reading about (a method, a debate, a resource, a recurring question in your own work), send it over or add it to the intake doc and it will
+      go in the next issue. Suggestions about what to drop are just as welcome.</p>
+      <p>One housekeeping note: the abbreviations used throughout are
+      <a href="#abbr">spelled out in a list at the end</a>, and every abbreviation is linked to
+      its entry the first time it appears in a section.</p>
+      <p class="sig">Eduardo</p>
+    </div>
+  </section>
+
+  <!-- 02 PEOPLE -->
+  <section id="s02">
+    <h2><span class="num">02</span>People and goings-on</h2>
+    <p class="dek">Who arrived, who visited, and who spent the summer with us.</p>
+
+    <div class="item">
+      <b>Christin Manthey has joined as a postdoc.</b> An evolutionary biologist working on how
+      insects became so diverse (from the evolution of metamorphosis to microbial symbionts) using comparative, phylogenetic and genomic methods.
+    </div>
+
+    <div class="item">
+      <b>Martin Friedrichs-Manthey is with us as a visitor.</b> A quantitative ecologist working on
+      biodiversity change across space and time, with a focus on freshwater ecosystems and
+      citizen-science data.
+    </div>
+
+    <div class="item">
+      <b>Summer students worked in the lab through WISEST, HYRS and I-STEAM.</b>
+      <ul>
+        <li><b>Joanna Huang</b> (WISEST): high school student from Edmonton, in the lab for six
+        weeks, working on meta-research on <b>incentives and transparency in high school science
+        fairs</b>.</li>
+        <li><b>Yakira Christian</b> (HYRS): high school student, working on meta-research on
+        <b>bias, transparency and the quality of evidence in Cochrane Reviews</b>.</li>
+        <li><b>Montana Lawrence</b> (I-STEAM): undergraduate researcher at the University of
+        Alberta, completing a BA (Honours) in Native Studies and Political Science, working on a
+        <b>systematic map of Indigenous Data Sovereignty in Manoomin (wild rice) research conducted
+        in Canada and the United States</b>.</li>
+      </ul>
+      <span class="src">cossee.org/people</span>
+    </div>
+
+  </section>
+
+  <!-- 03 PERIOD IN REVIEW -->
+  <section id="s03">
+    <h2><span class="num">03</span>The period in review</h2>
+    <p class="dek">1 June – 30 August 2026, in order.</p>
+
+    <ol class="timeline">
+      <li><span class="when"><time datetime="2026-05-26">26 May</time></span>
+        <b>Earlier, still worth flagging:</b> 24 Canada-Wide Science Fair finalists visited
+        COSSEE/I-DEEL for a hands-on LEGO® workshop on transparency and reproducibility. The format clearly worked and could be reused.</li>
+      <li><span class="when"><time datetime="2026-06">June</time></span>
+        <b>Three preprints went out in a single fortnight:</b> the GLLVM response-matrix
+        paper, the systematic map of AI-in-ecology evidence syntheses, and prepR4pcm.</li>
+      <li><span class="when"><time datetime="2026-07-13">13 July</time></span>
+        <b>The risk-of-bias paper landed</b> in <i>Methods in Ecology and Evolution</i>,
+        with Shinichi among the authors. Detail in <a class="xref" href="#s04">§04</a>.</li>
+      <li><span class="when"><time datetime="2026-07-15">15 July</time></span>
+        <b>Our first Open Scholarship Workshop.</b> 23 participants, seven talks, three
+        discussion tracks, and a to-do list for open science at the U of A. Mahi Zakir's write-up is
+        on the blog.</li>
+      <li><span class="when"><time datetime="2026-07-31">31 July</time></span>
+        <b>SORTEE turned five</b>, marked by Shinichi's <i>ichigo ichie</i> post on the
+        blog. The 2026 conference is in October and free to members. See <a class="xref" href="#s06">§06</a>.</li>
+      <li><span class="when">Late July</span>
+        <b>Housekeeping that affects everyone:</b> a hackathon on the EDI page, and
+        visitors are now included in the research-output records.</li>
+      <li><span class="when"><time datetime="2026-08-04">4–5 Aug</time></span>
+        <b>Screening milestones in the first week of August:</b> the EGF systematic map (led by
+        Iwo) finished its screening pass on 4 August, and a second screening round closed on
+        5 August.</li>
+      <li><span class="when"><time datetime="2026-08-14">14 Aug</time></span>
+        <b>The mate-choice-copying meta-analysis update went to <i>Biology Open</i>.</b>
+        That project has been running since February; the manuscript is now submitted.</li>
+      <li><span class="when">Across the period</span>
+        <b>We won the Canadian Metaresearch Data Challenge.</b>
+        Our proposal was the winner and Ed will present the findings during the 2nd Canadian Open
+        Science Conference.</li>
+      <li><span class="when">Across the period</span>
+        <b>Summer students were in the lab through WISEST, HYRS and I-STEAM:</b> Joanna Huang,
+        Yakira Christian and Montana Lawrence. See <a class="xref" href="#s02">§02</a>.</li>
+    </ol>
+
+    <p class="subhead">The period in numbers</p>
+    <ul class="figs">
+      <li><b>9</b>outputs carrying a COSSEE author</li>
+      <li><b>3</b>preprints in one fortnight in June</li>
+      <li><b>23</b>people at the first Open Scholarship Workshop</li>
+      <li><b>7</b>talks and three discussion tracks at it</li>
+      <li><b>24</b>science fair finalists hosted on 26 May</li>
+      <li><b>5</b>years of SORTEE, as of 31 July</li>
+    </ul>
+  </section>
+
+  <!-- 04 IN THE FIELD -->
+  <section id="s04" class="field">
+    <h2><span class="num">04</span>In the field</h2>
+    <p class="dek">Verified developments from outside the lab over the period, with a note on
+    why each one matters here.</p>
+
+    <div class="subhead">Synthesis &amp; open science</div>
+
+    <div class="item">
+      <span class="tag co">COSSEE co-authored</span>
+      <h3>Risk-of-bias assessment is barely practised in ecology, and the paper has the numbers</h3>
+      <span class="src">“Elevating the importance of Risk of Bias assessment for ecology and
+      evolutionary biology” · Methods in Ecology and Evolution, 13 July 2026 · Culina, Foster,
+      Grainger, O'Dea, Sánchez-Tójar, Pescott, Boyd, Koricheva, Nakagawa &amp; Stewart ·
+      <a href="https://doi.org/10.1111/2041-210x.70356">10.1111/2041-210X.70356</a></span>
+      <div class="body"><p>Of 232 researchers with evidence-synthesis experience surveyed, only 28
+      were familiar with risk-of-bias assessment, 46 confused it with publication bias, and just 10
+      had ever performed one. Of 275 EEB journals reviewed, 209 look likely to solicit evidence syntheses; only five of those referenced any guidelines for conducting one, let alone for assessing risk of bias.</p>
+      <p>The paper proposes making risk-of-bias assessment a condition of
+      credible synthesis via journal policy, improving how primary studies report their methods, and
+      building field-specific risk-of-bias tools with training to go with them, plus four questions
+      every synthesist should answer. Expect this to be cited alongside PRISMA-EcoEvo, and expect reviewers to start
+      asking.</p></div>
+    </div>
+
+    <div class="item">
+      <h3>Data sharing in ecology is largely solved. Code sharing is not.</h3>
+      <span class="src">“Data- and code-archiving in the British Ecological Society journals” ·
+      Methods in Ecology and Evolution, 2026 · Natalie Cooper &amp; the BES Data and Code Hackathon
+      Group (137 authors) ·
+      <a href="https://doi.org/10.1111/2041-210x.70338">10.1111/2041-210X.70338</a></span>
+      <div class="body"><p>An audit of 1,861 papers, roughly a fifth of everything published in
+      seven British Ecological Society journals from 2017 to 2024. Of papers using data, 97%
+      archived it. Of the 90% of papers using code, only 35% archived it. About a third had no
+      README at all, median README quality was 7 out of 10 for data and 6 for code, and only 69% of archived data was judged complete.</p>
+      <p>The authors' framing is the useful part: accessibility has been fixed,
+      usability is the live problem. Good benchmark if we want to write down a lab code-sharing
+      standard.</p></div>
+    </div>
+
+    <div class="item">
+      <h3>The counter-argument, published in February: “Demonstrations of reproducibility are not
+      reproducibility”</h3>
+      <span class="src">Nature Ecology &amp; Evolution Correspondence 10(4):615–616, 13 Feb 2026 ·
+      Gómez-Llano &amp; De Lisle ·
+      <a href="https://doi.org/10.1038/s41559-026-03000-w">10.1038/s41559-026-03000-w</a></span>
+      <div class="body"><p>Concedes that mandatory data archiving delivered real benefits, then
+      argues that newer requirements (code that must run on any machine, extensive metadata) impose heavy costs on thin justification, and confuse demonstrating reproducibility with
+      achieving it. Worth reading directly against the BES audit above; the two together would
+      make a good lab meeting.</p></div>
+    </div>
+
+    <div class="item">
+      <h3>A 2019 insect-decline paper with 120 citations has been retracted</h3>
+      <span class="src">“Parallel declines in abundance of insects and insectivorous birds in
+      Denmark over 22 years”, Ecology and Evolution 2019 · retraction reported 23 June 2026 ·
+      <a href="https://retractionwatch.com/2026/06/23/a-prolific-evolutionary-biologist-caught-faking-data-decades-ago-notches-a-new-retraction/">Retraction Watch</a></span>
+      <div class="body"><p>Anders Møller reported that, over 1,375 drives through the Danish
+      countryside across 22 years, insect splatter on his windscreen fell by 80% on one route and
+      97% on another. The paper has now been retracted over data duplications and inconsistencies
+      that the editors say invalidate its conclusions; it had 120 Web of Science citations.</p>
+      <p>The Danish Committees on Scientific Dishonesty found in 2004 that Møller had fabricated data in a
+      1998 <i>Oikos</i> paper on oak-leaf asymmetry, and he is among the most prolific contributors to the eco-evo meta-analytic literature, which makes this a
+      provenance question for any synthesis carrying his effect sizes, not just a news item.</p>
+      <p>A reasonable habit: check the retraction status of included studies at the revision stage,
+      not just at screening.</p></div>
+    </div>
+
+    <div class="item">
+      <h3>Reporting standards for AI in evidence synthesis are now in place, including in environmental evidence</h3>
+      <span class="src">“Position statement on artificial intelligence use in evidence synthesis
+      across Cochrane, the Campbell Collaboration, JBI and the Collaboration for Environmental
+      Evidence” · <i>Environmental Evidence</i> 14:20, 31 Oct 2025 ·
+      <a href="https://doi.org/10.1186/s13750-025-00374-5">10.1186/s13750-025-00374-5</a> ·
+      <a href="https://environmentalevidence.org/artificial-intelligence-reporting-guidance/">CEE
+      reporting guidance</a> (a living document, Nakagawa a co-author)</span>
+      <div class="body"><p>The four organisations published their joint position simultaneously in
+      their four journals, including <i>Environmental Evidence</i>, so it applies to us directly; it
+      endorses the RAISE guidance (Responsible AI use in evidence SynthEsis).</p>
+      <p>CEE's own reporting guidance operationalises it: for every AI system used you report name, version, developer, validation references,
+      position in the workflow, custom parameters, protocol deviations, human–AI agreement,
+      limitations and ethics, plus supplementary files containing the exact prompts and the
+      rationale for them.</p>
+      <p>Relevant context: Xie et al., a
+      <a href="https://doi.org/10.64898/2026.03.17.26348656">medRxiv preprint</a> posted 19 March
+      2026, meta-analyse 18 studies and report a pooled sensitivity of 0.92 for LLM title/abstract
+      screening. Two caveats are the preprint's own: the corpus is medical, and it has not been peer reviewed.</p>
+      <p>The third is ours: a sensitivity of 0.92 implies that roughly 8% of relevant records are missed, which
+      by our reading is not acceptable for single-pass screening in a PRISMA-EcoEvo review.
+      That inference is arithmetic from the reported figure, not a finding of the paper.</p></div>
+    </div>
+
+    <div class="item">
+      <h3>“Adaptive preregistration” answers the standard objection from modellers</h3>
+      <span class="src">“‘But I can't preregister my research’: improving the reproducibility and
+      transparency of ecology and conservation with adaptive preregistration for model-based
+      research” · Methods in Ecology and Evolution, online 30 April 2026 · Gould, Jones, Yen,
+      Fraser et al. ·
+      <a href="https://doi.org/10.1111/2041-210x.70311">10.1111/2041-210X.70311</a></span>
+      <div class="body"><p>Two mechanisms for people who say their modelling workflow is too
+      iterative to preregister: registered flexibility (preregistering flexible heuristics, with
+      alternative analysis paths made contingent on earlier decision points) and interim preregistrations (versioned
+      preregistrations at successive phases). Developed with user-centred design and tested on an
+      environmental-flows case study. Useful if we want a preregistration norm that survives
+      contact with real model development.</p></div>
+    </div>
+
+    <div class="item">
+      <div class="body"><p><b>Also worth knowing:</b> <i>Peer Community Journal</i> is now indexed
+      in Web of Science, and PCI reported 521 submissions in 2025 across 21 thematic PCIs, with
+      123 journals now PCI-friendly, so the long-standing objection that publishing through PCI does not
+      count for anything on your CV has weakened considerably.</p>
+      <p>And Mizuno, Williams, Lagisz,
+      Senior &amp; Nakagawa's April preprint showing that phylogenetic and spatial meta-analysis
+      are the same model with a different distance metric has worked implementations in metafor,
+      glmmTMB and brms. Handy the next time a reviewer asks about spatial autocorrelation.
+      (<a href="https://ecoevorxiv.org/repository/view/12555/">preprint, 9 April 2026</a>;
+      <a href="https://peercommunityin.org/2026/01/14/pci-and-peer-community-journal-highlights-of-2025">PCI
+      2025 highlights</a>)</p></div>
+    </div>
+
+    <div class="subhead">Ecology &amp; evolution</div>
+
+    <div class="item">
+      <h3>Ninety years of Swiss insect records: the steepest declines were in the 1930s–1960s</h3>
+      <span class="src">Nature Ecology &amp; Evolution, 2 June 2026 · Neff et al. ·
+      <a href="https://doi.org/10.1038/s41559-026-03074-6">10.1038/s41559-026-03074-6</a></span>
+      <div class="body"><p>1.2 million records, 1930–2021, 595 saproxylic beetle and 216 butterfly
+      species. Losses peaked during agricultural mechanisation, with beetles later partially
+      recovering and butterflies not. The authors argue that analyses restricted to recent decades
+      produce shifted-baseline artefacts, a temporal-coverage caveat that applies to essentially
+      every insect-decline meta-analysis, including any we might run.</p></div>
+    </div>
+
+    <div class="item">
+      <h3>Global butterfly range shifts across 1,758 species, deliberately including non-English
+      literature</h3>
+      <span class="src">Nature Ecology &amp; Evolution, 5 August 2026 · Chowdhury et al. ·
+      <a href="https://doi.org/10.1038/s41559-026-03117-y">10.1038/s41559-026-03117-y</a></span>
+      <div class="body"><p>About 10% of known butterfly diversity across 105 countries; 80% of
+      species showed range expansion and 79% of those shifts were linked to climate change.
+      The methodological interest for us is the search design: literature in 15 languages, grey
+      literature and assessments from 68 experts, explicitly to reduce geographic and language bias. A citable
+      precedent when we argue for multilingual searches.</p></div>
+    </div>
+
+    <div class="item">
+      <h3>An experimental intervention in the fragmentation debate</h3>
+      <span class="src">Nature Ecology &amp; Evolution, 17 June 2026 · Fletcher et al. ·
+      <a href="https://doi.org/10.1038/s41559-026-03095-1">10.1038/s41559-026-03095-1</a></span>
+      <div class="body"><p>27 experimental landscapes and more than 3,000 cactus patches with
+      specialist insect herbivores. Habitat loss, fragmentation and matrix quality all had negative effects. Against the prevailing assumption, a high-quality matrix helped more in
+      less-fragmented landscapes. Direct experimental evidence in one of the longest-running
+      controversies that synthesis has failed to settle.</p></div>
+    </div>
+
+    <div class="item">
+      <h3>A claimed general rule of biodiversity organisation may be a mid-domain artefact</h3>
+      <span class="src">Nature Ecology &amp; Evolution Matters Arising, 6 July 2026 · Zhang &amp; Wang ·
+      <a href="https://doi.org/10.1038/s41559-026-03118-x">10.1038/s41559-026-03118-x</a></span>
+      <div class="body"><p>Shows that the reported core-to-transition gradient also emerges from
+      randomly generated, non-biogeographical regions and from a simple mid-domain geometric
+      effect. An unusually clean teaching case in how an analytical pipeline (here, identifying “characteristic species” by spatial dominance) can manufacture the pattern it then explains.
+      The original authors' Reply runs alongside it.</p></div>
+    </div>
+  </section>
+
+  <!-- 05 LAB ACHIEVEMENTS -->
+  <section id="s05">
+    <h2><span class="num">05</span>Lab achievements</h2>
+
+    <div class="body">
+      <p>Nine outputs carry a COSSEE author since 1 June (five preprints and four journal articles), covering latent-variable models for multivariate data, a systematic map of
+      AI in ecology, an R package for phylogenetic comparative methods, thermal tolerance,
+      Bergmann's rule in migratory birds, taxonomic bias, PRISMA extensions, plant diversity
+      and multi-trophic interactions, and the risk-of-bias paper discussed in <a class="xref" href="#s04">§04</a>.</p>
+      <p>Rather than list them here, the full set (with authors, dates and a resolving DOI for each) is on <a href="https://cossee.org/publications/">cossee.org/publications</a>, which
+      is kept in sync automatically. If something of yours is missing from that page, it needs
+      adding at the source rather than to this newsletter.</p>
+    </div>
+  </section>
+
+  <!-- 06 LOOKING AHEAD -->
+  <section id="s06">
+    <h2><span class="num">06</span>Looking ahead</h2>
+    <p class="dek">Dates verified against the official page for each item on 18 August 2026, except where a
+    row says otherwise.
+    This section covers the current semester only: everything falling between now and the end of December 2026.</p>
+    <p class="dek">The first table is what most people here will actually act on; the wider
+    society calendar follows it. Winter and spring 2027 deadlines will run in a later issue.</p>
+
+    <div class="subhead">For us: deadlines and events that apply to this lab</div>
+    <div class="tcontrols">
+      <label><input type="checkbox" id="hidePast"> Hide dates that have already passed</label>
+      <span id="cdNote"></span>
+    </div>
+    <table id="tblUs">
+      <caption class="sr">Deadlines and events for this lab, with live countdowns</caption>
+      <thead><tr><th scope="col">Date</th><th scope="col">What</th></tr></thead>
+      <tbody>
+      <tr class="urgent" data-deadline="2026-09-02"><td class="d"><span class="dl">Wed 2 Sep</span></td><td>
+        <b>BES Annual Meeting: abstract submission closes</b> <span class="flag">time-critical</span>
+        <span class="sub">The call is open and closes 2 September.
+        britishecologicalsociety.org</span></td></tr>
+      <tr class="urgent" data-deadline="2026-09-02"><td class="d"><span class="dl">Wed 2 Sep</span></td><td>
+        <b>CGRS-M (Canada Graduate Research Scholarship – Master's) 2026 competition opens</b>
+        <span class="flag">time-critical</span>
+        <span class="sub">Worth $27,000 for one year. Application deadline 1 December, but your departmental deadline will be earlier. sshrc-crsh.canada.ca</span></td></tr>
+      <tr class="urgent" data-deadline="2026-09-08"><td class="d"><span class="dl">Tue 8 Sep</span></td><td>
+        <b>BES Annual Meeting attendance grants close</b> <span class="flag">time-critical</span>
+        <span class="sub">For applicants based in the Global South; opened 17 July.
+        britishecologicalsociety.org</span></td></tr>
+      <tr class="urgent" data-deadline="2026-09-10"><td class="d"><span class="dl">Thu 10 Sep</span></td><td>
+        <b>CPRA (Canada Postdoctoral Research Awards): SSHRC stream</b>, 8:00 pm ET
+        <span class="flag">time-critical</span>
+        <span class="sub">$70,000 a year for two years. <b>Confirm with SSHRC before you plan
+        around this date:</b> SSHRC's own CPRA page still displays the September 2025 competition,
+        and 10 September 2026 is taken from U of T and USask award pages, which both state it as
+        the SSHRC agency deadline. sshrc-crsh.canada.ca</span></td></tr>
+      <tr class="urgent"><td class="d"><span class="dl">Mid-Sep (TBC)</span></td><td>
+        <b>U of A internal deadlines for CGRS-D and CPRA</b> <span class="flag">confirm with FGPS</span>
+        <span class="sub">The institutional deadline is the one that binds you, and it is weeks ahead
+        of NSERC's. We could not verify the U of A date. Comparators: U of T 11 September, Guelph
+        18 September. Ask your supervisor or the Faculty of Graduate Studies (FGPS) this month.
+        No countdown is shown because we are not asserting a date.</span></td></tr>
+      <tr><td class="d"><span class="dl">1 Oct</span></td><td>
+        <b>Sigma Xi Grants in Aid of Research (GIAR), autumn cycle</b>
+        <span class="sub">Sigma Xi lists its cycles as 15 March and 1 October with <b>no year
+        printed anywhere</b>, so we are not asserting a 2026 date. The application form is said to go
+        online 1 July. Confirm before you plan around it. No countdown is shown, for the same
+        reason. sigmaxi.org</span></td></tr>
+      <tr data-deadline="2026-10-13"><td class="d"><span class="dl">13–14 Oct</span></td><td>
+        <b>SORTEE 2026 Conference.</b> Virtual, free to members, runs continuously 13 Oct 07:00 UTC
+        → 14 Oct 10:00 UTC
+        <span class="sub">Registration open now; content submissions are closed, so this is
+        attend-only. Unconferences, hackathons and workshops; sessions other than plenaries are not
+        recorded. Membership has a free tier, so cost and travel are both zero. Microgrants are
+        being offered; details were still to be posted. sortee.org/upcoming</span></td></tr>
+      <tr data-deadline="2026-10-17"><td class="d"><span class="dl">Sat 17 Oct</span></td><td>
+        <b>NSERC CGRS-D / CPRA: for applicants submitting directly to NSERC</b>, 8:00 pm ET
+        <span class="sub">NSERC prints “October 17”, which is a Saturday. The next-working-day
+        footnote we could verify sits on the professors' deadlines table, and CPRA is not on that table, so we are printing 17 October as NSERC prints it rather than assuming a shift to
+        Monday 19 October. Confirm on NSERC's CPRA page before relying on either.
+        nserc-crsng.canada.ca</span></td></tr>
+      <tr data-deadline="2026-10-19"><td class="d"><span class="dl">Mon 19 Oct</span></td><td>
+        <b>NSERC Discovery Horizons: application</b>
+        <span class="sub">The programme page gives the 2026 competition explicitly: deadline
+        19 October 2026, 8:00 pm ET. (NSERC's summary table prints no competition year; the programme page is the one to trust.)</span></td></tr>
+      <tr data-deadline="2026-10-26"><td class="d"><span class="dl">Mon 26 Oct</span></td><td>
+        <b>NSERC Research Tools and Instruments (RTI)</b>
+        <span class="sub">The summary table prints “October 25*”, a Sunday; the RTI programme page
+        gives the actual 2026 date as <b>26 October 2026, 8:00 pm ET</b>.</span></td></tr>
+      <tr data-deadline="2026-11-02"><td class="d"><span class="dl">Mon 2 Nov</span></td><td>
+        <b>NSERC Discovery Grants: full application</b>
+        <span class="sub">The summary table prints “November 1*”, a Sunday; the programme page gives
+        <b>2 November 2026, 8:00 pm ET</b>. The mandatory notification of intent (NOI) for this cycle
+        has already closed. If you did not file one, you are out of this competition. Results
+        expected mid-April. (NSERC's table prints no competition year against Discovery Grants,
+        so we are not printing one.)</span></td></tr>
+      <tr data-deadline="2026-11-05"><td class="d"><span class="dl">Thu 5 Nov</span></td><td>
+        <b>NSERC Geoffrey Hinton Prizes: application</b>
+        <span class="sub">Now printed in the Prizes section of the NSERC deadlines table. Awarded
+        off the back of Discovery Grant applications, so it pairs with the row above. Relevant here because of the lab's AI-screening work. nserc-crsng.canada.ca</span></td></tr>
+      <tr data-deadline="2026-12-01"><td class="d"><span class="dl">Tue 1 Dec</span></td><td>
+        <b>CGRS-M application deadline</b>, 8:00 pm ET
+        <span class="sub">$27,000 for one year. Departmental deadline will be earlier, so find it in September, not November.</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="subhead">Wider calendar: relevant only if it is your system or society</div>
+    <table id="tblWider">
+      <caption class="sr">Wider society calendar, with live countdowns</caption>
+      <thead><tr><th scope="col">Date</th><th scope="col">What</th></tr></thead>
+      <tbody>
+      <tr data-deadline="2026-10-01"><td class="d"><span class="dl">Thu 1 Oct</span></td><td>
+        <b>ASAB Research Grants (autumn round)</b> and ASAB conference attendance grants up to £750
+        <span class="sub">Research Grants run in rounds on 1 Feb / 1 June / 1 Oct.
+        asab.org/research-grants</span></td></tr>
+      <tr><td class="d"><span class="dl">Mid-Nov</span></td><td>
+        <b>BES Annual Meeting registration closes</b>, subject to availability
+        <span class="sub">The 2026 pages say only that registration closes mid-November. The
+        specific 3 November early-bird and 13 November standard times we carried earlier appear on
+        the 2025 page and could not be confirmed for 2026, so check before relying on them.
+        britishecologicalsociety.org</span></td></tr>
+      <tr data-deadline="2026-11-30"><td class="d"><span class="dl">Mon 30 Nov</span></td><td>
+        <b><i>NZ Journal of Zoology</i> special issue “Australasian Animal Behaviour”: full manuscripts</b>
+        <span class="sub">The expression-of-intent stage has closed. Final acceptance 31 May 2027.
+        Australasian focus, so relevance depends on system. royalsociety.org.nz</span></td></tr>
+      <tr data-deadline="2026-12-08"><td class="d"><span class="dl">8–10 Dec</span></td><td>
+        <b>ASAB/PSGB Winter Conference</b>, Edinburgh. Theme: Social Learning and Culture
+        <span class="sub">ASAB sessions 8–9 Dec, PSGB 10 Dec. The venue reached capacity for the
+        ASAB days, so those two are waiting-list or virtual only; the PSGB day is still openly
+        registrable. asabpsgbwinter.github.io</span></td></tr>
+      <tr data-deadline="2026-12-14"><td class="d"><span class="dl">14–17 Dec</span></td><td>
+        <b>BES Annual Meeting</b>, ICC Birmingham
+        <span class="sub">BES bills it as 14–17 December: main sessions 15–17 Dec, with
+        pre-conference workshops on the afternoon of 14 Dec.</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="subhead">What the abbreviations mean</div>
+    <dl class="glossary" id="abbr">
+      <div id="abbr-asab"><dt>ASAB</dt><dd>Association for the Study of Animal Behaviour (UK)</dd></div>
+      <div id="abbr-bes"><dt>BES</dt><dd>British Ecological Society</dd></div>
+      <div id="abbr-cee"><dt>CEE</dt><dd>Collaboration for Environmental Evidence</dd></div>
+      <div id="abbr-cgrs"><dt>CGRS-M / CGRS-D</dt><dd>Canada Graduate Research Scholarship – Master's / – Doctoral.
+        Part of the harmonised Canada Research Training Awards Suite; CGRS-D replaces CGS-D, Vanier
+        and the agency-specific doctoral awards, not simply a rename</dd></div>
+      <div id="abbr-cpra"><dt>CPRA</dt><dd>Canada Postdoctoral Research Award. The harmonised replacement for agency
+        postdoctoral fellowships and Banting</dd></div>
+      <div id="abbr-doi"><dt>DOI</dt><dd>Digital object identifier. The permanent link for a paper or dataset</dd></div>
+      <div id="abbr-edi"><dt>EDI</dt><dd>Equity, diversity and inclusion</dd></div>
+      <div id="abbr-eeb"><dt>EEB</dt><dd>Ecology, evolution and behaviour</dd></div>
+      <div id="abbr-fgps"><dt>FGPS</dt><dd>U of A Faculty of Graduate &amp; Postdoctoral Studies</dd></div>
+      <div id="abbr-giar"><dt>GIAR</dt><dd>Grants in Aid of Research (Sigma Xi)</dd></div>
+      <div id="abbr-gllvm"><dt>GLLVM</dt><dd>Generalised linear latent variable model</dd></div>
+      <div id="abbr-hyrs"><dt>HYRS</dt><dd>Alberta Innovates' High School Youth Researcher Summer programme (also
+        written Heritage Youth Researcher Summer)</dd></div>
+      <div id="abbr-ideel"><dt>I-DEEL</dt><dd>Inter-Disciplinary Ecology and Evolution Lab. Shinichi Nakagawa's group, with which COSSEE runs joint activities</dd></div>
+      <div id="abbr-isteam"><dt>I-STEAM</dt><dd>I-STEAM Pathways. U of A environmental research internships for First
+        Nations, Métis and Inuit undergraduate students</dd></div>
+      <div id="abbr-jbi"><dt>JBI</dt><dd>JBI, formerly the Joanna Briggs Institute. An evidence-synthesis organisation and a RAISE endorser</dd></div>
+      <div id="abbr-llm"><dt>LLM</dt><dd>Large language model</dd></div>
+      <div id="abbr-noi"><dt>NOI</dt><dd>Notification of intent (mandatory first stage of NSERC Discovery Grants)</dd></div>
+      <div id="abbr-nserc"><dt>NSERC</dt><dd>Natural Sciences and Engineering Research Council of Canada</dd></div>
+      <div id="abbr-pci"><dt>PCI</dt><dd>Peer Community In. A free preprint peer-review and recommendation service</dd></div>
+      <div id="abbr-prisma"><dt>PRISMA-EcoEvo</dt><dd>Reporting standard for systematic reviews in ecology and evolution</dd></div>
+      <div id="abbr-psgb"><dt>PSGB</dt><dd>Primate Society of Great Britain</dd></div>
+      <div id="abbr-raise"><dt>RAISE</dt><dd>Responsible AI use in evidence SynthEsis. Reporting guidance endorsed by
+        Cochrane, Campbell, JBI and CEE</dd></div>
+      <div id="abbr-rob"><dt>RoB</dt><dd>Risk of bias</dd></div>
+      <div id="abbr-rti"><dt>RTI</dt><dd>NSERC Research Tools and Instruments grants</dd></div>
+      <div id="abbr-sortee"><dt>SORTEE</dt><dd>Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology</dd></div>
+      <div id="abbr-sshrc"><dt>SSHRC</dt><dd>Social Sciences and Humanities Research Council of Canada</dd></div>
+      <div id="abbr-wisest"><dt>WISEST</dt><dd>Women in Scholarship, Engineering, Science &amp; Technology (U of A summer
+        research programme)</dd></div>
+    </dl>
+
+    <div class="house">
+    <p><b>⚠️ Before you act on any date above: click through and confirm it.</b>
+    Deadlines move.</p>
+      <p>Several NSERC dates in the summary table fall on weekends, and NSERC's own
+    footnote reads: “If the deadline date falls on a weekend or a federal holiday, the application
+    must reach NSERC by the next working day.” Where NSERC's programme page gives an explicit
+    working-day date we have printed that; where it does not, we print the date as NSERC prints it
+    and say so in the row.</p>
+      <p>Two items are genuinely unresolved and need a human: the U of A internal
+    deadlines for CGRS-D and CPRA (ualberta.ca cannot be checked automatically), and whether the Sigma Xi autumn round is open for 2026.</p>
+      <p>The countdowns beside each date are calculated live from
+    your own computer's clock; they are a convenience, not a second source.</p></div>
+
+    <div class="body"><p><b>Policy and funding worth knowing about.</b> Banting and Vanier are gone. The tri-agencies replaced agency-specific postdoctoral fellowships and Banting with the
+    harmonised CPRA, part of the new Canada Research Training Awards Suite. The 2024–25 round
+    (results February 2025) was the last Banting competition.</p>
+      <p><b>NSERC launched the Geoffrey Hinton Prizes on 28 July 2026:</b> up to three per year at $100,000 each for early-stage researchers
+    applying AI in novel ways, awarded off the back of Discovery Grant applications. AI-assisted screening and extraction pipelines plausibly qualify, which makes this a funding line for methods work already underway here.</p>
+      <p><b>NSERC and SSHRC expanded the Indigenous Scholars Awards</b> to doctoral
+    ($40,000/yr) and postdoctoral ($70,000/yr) levels on 18 June 2026, with supplements of $5,000
+    (doctoral) and $10,000 (postdoctoral) for things like travel to northern and remote communities,
+    childcare and eldercare.</p>
+      <p>And <b>the revised Tri-Agency Open Access Policy is still not out.</b> The 2015 policy remains in force, release is now anticipated “in 2026” with a transition period, so zero-embargo
+    deposit is not yet binding. Keep accepted manuscripts deposit-ready anyway.</p></div>
+  </section>
+
+  <!-- 07 OVER TO YOU -->
+  <section id="s07">
+    <h2><span class="num">07</span>Over to you</h2>
+    <p class="dek">What to send, what we got wrong, and how this issue was put together.</p>
+
+    <div class="item">
+      <b>Send something for the next issue.</b> A paper accepted, a talk given, a grant landed,
+      someone new in the lab, a deadline the rest of us should know about, a method you wish
+      everyone here used, a resource you keep re-finding. Add it to the newsletter intake doc as it
+      happens, rather than trying to remember on the 1st. Suggestions about what to
+      <i>drop</i> are just as welcome as suggestions about what to add.
+    </div>
+
+    <div class="item">
+      <b>Corrections.</b> None yet: this is the first issue. Corrections are welcome and will run in
+      the next issue. If a date, a number or an author list here is wrong, say so: it gets
+      corrected in print rather than quietly dropped.
+    </div>
+
+    <div class="item">
+      <b>How this issue was built.</b> Compiled 13 August 2026; revised 14 and 18 August 2026.
+      Every date and citation was checked against its source on those dates. Two items in
+      <a class="xref" href="#s06">§06</a> remain unverified and are labelled as such in the row
+      rather than silently dropped, which is the standing policy: an unverified date is printed with
+      the reason it could not be confirmed, and never printed as if it were confirmed.
+      <span class="src">Presentation and navigation revised 1 September 2026. No fact, date,
+      number, citation or author list was changed in that revision.</span>
+    </div>
+
+    <div class="todo"><b>Editor's note, delete before sending.</b> Standing slots that are open for
+    issue 2 and were not filled this month: <span class="fill">method of the month</span>
+    <span class="fill">figure worth stealing</span>
+    <span class="fill">reviewer question we keep getting</span>
+    <span class="fill">who is working on what</span>. If none of them earn their place by the next
+    issue, drop the idea rather than filling them with padding.</div>
+  </section>
+
+  </main>
+
+  <footer class="foot">
+    <p><b>The Synthesis.</b> Monthly, first Monday. COSSEE, Department of Biological Sciences,
+    University of Alberta. <a href="https://cossee.org">cossee.org</a></p>
+    <p>Compiled 13 August 2026; revised 14, 18 August and 1 September 2026.
+    Have something for issue 2, or a correction to this one? See
+    <a class="xref" href="#s07">§07</a>.</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var $  = function(s,c){ return (c||document).querySelector(s); };
+  var $$ = function(s,c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+  var LS = {
+    get:function(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
+    set:function(k,v){ try{ localStorage.setItem(k,v); }catch(e){} },
+    del:function(k){ try{ localStorage.removeItem(k); }catch(e){} }
+  };
+
+  /* ---------- 1. theme: auto -> light -> dark ---------- */
+  (function(){
+    var root=document.documentElement, btn=$('#themeBtn');
+    if(!btn) return;
+    function label(){
+      var t=root.getAttribute('data-theme');
+      btn.textContent='Theme: '+(t==='dark'?'dark':t==='light'?'light':'auto');
+      btn.setAttribute('aria-label','Colour theme, currently '+(t||'automatic')+'. Click to change.');
+    }
+    label();
+    btn.addEventListener('click',function(){
+      var order=['','light','dark'];
+      var nx=order[(order.indexOf(root.getAttribute('data-theme')||'')+1)%3];
+      if(nx){ root.setAttribute('data-theme',nx); LS.set('synth-theme',nx); }
+      else  { root.removeAttribute('data-theme'); LS.del('synth-theme'); }
+      label();
+    });
+  })();
+
+  /* ---------- 2. print ---------- */
+  (function(){ var b=$('#printBtn'); if(b) b.addEventListener('click',function(){ window.print(); }); })();
+
+  /* ---------- 3. reading time ---------- */
+  (function(){
+    var main=$('#main'), out=$('#readtime');
+    if(!main||!out) return;
+    var words=(main.innerText||main.textContent||'').trim().split(/\s+/).length;
+    out.textContent=Math.max(1,Math.round(words/230))+' min read';
+  })();
+
+  /* ---------- 4. anchor links on section headings ---------- */
+  $$('#main section[id] > h2').forEach(function(h){
+    var a=document.createElement('a');
+    a.className='anchor'; a.href='#'+h.parentNode.id; a.textContent='#';
+    a.setAttribute('aria-label','Link to this section');
+    h.appendChild(document.createTextNode(' ')); h.appendChild(a);
+  });
+
+  /* ---------- 5. text-node rewriting helper ---------- */
+  var SKIP='a,abbr,button,h1,h2,h3,.src,.glossary,.toc,.railbar,.cd,.flag,.fill,script,style,code';
+  function eachTextNode(scope,test,fn){
+    var w=document.createTreeWalker(scope,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
+      if(!n.nodeValue||!test(n.nodeValue)) return NodeFilter.FILTER_REJECT;
+      if(n.parentElement&&n.parentElement.closest(SKIP)) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }});
+    var out=[],n; while((n=w.nextNode())) out.push(n);
+    out.forEach(fn);
+  }
+  function replaceIn(node,rx,make){
+    var text=node.nodeValue, frag=document.createDocumentFragment(), last=0, m, hit=false;
+    rx.lastIndex=0;
+    while((m=rx.exec(text))){
+      var el=make(m); if(!el){ continue; }
+      frag.appendChild(document.createTextNode(text.slice(last,m.index)));
+      frag.appendChild(el);
+      last=m.index+m[0].length; hit=true;
+    }
+    if(hit){ frag.appendChild(document.createTextNode(text.slice(last))); node.parentNode.replaceChild(frag,node); }
+  }
+
+  /* ---------- 6. section cross-references: turn any "§04" into a link ---------- */
+  (function(){
+    var RX=/§\s?(\d{2})/g, T=/§\s?\d{2}/;
+    eachTextNode(document.body,function(s){ return T.test(s); },function(node){
+      replaceIn(node,RX,function(m){
+        var sec=document.getElementById('s'+m[1]);
+        if(!sec) return null;
+        var h=sec.querySelector('h2');
+        var name=h?h.textContent.replace(/\s*#\s*$/,'').replace(/^\d{2}/,'').trim():'';
+        var a=document.createElement('a');
+        a.className='xref'; a.href='#s'+m[1]; a.textContent=m[0];
+        a.title='Go to §'+m[1]+(name?': '+name:'');
+        return a;
+      });
+    });
+  })();
+
+  /* ---------- 7. abbreviations: link first use per section to the glossary ---------- */
+  (function(){
+    var MAP={}, terms=[];
+    $$('.glossary div[id]').forEach(function(div){
+      var dt=$('dt',div), dd=$('dd',div);
+      if(!dt||!dd) return;
+      var def=dd.textContent.replace(/\s+/g,' ').trim();
+      dt.textContent.split('/').forEach(function(t){
+        t=t.trim(); if(!t) return;
+        MAP[t]={id:div.id,def:def}; terms.push(t);
+      });
+    });
+    if(!terms.length) return;
+    terms.sort(function(a,b){ return b.length-a.length; });
+    var src='\\b(?:'+terms.map(function(t){ return t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }).join('|')+')\\b';
+    var T=new RegExp(src);
+    $$('#main section').forEach(function(sec){
+      var used={};
+      eachTextNode(sec,function(s){ return T.test(s); },function(node){
+        replaceIn(node,new RegExp(src,'g'),function(m){
+          var e=MAP[m[0]];
+          if(!e||used[e.id]) return null;
+          used[e.id]=1;
+          var a=document.createElement('a');
+          a.className='gloss'; a.href='#'+e.id; a.title=m[0]+': '+e.def; a.textContent=m[0];
+          return a;
+        });
+      });
+    });
+  })();
+
+  /* ---------- 8. live deadline countdowns ---------- */
+  (function(){
+    var today=new Date(); today.setHours(0,0,0,0);
+    var note=$('#cdNote'), toggle=$('#hidePast'), past=[], next=null;
+    if(note){
+      var fmt;
+      try{ fmt=new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'long',year:'numeric'}).format(today); }
+      catch(e){ fmt=today.toDateString(); }
+      note.textContent='Countdowns are calculated live from your own clock ('+fmt+').';
+    }
+    $$('#tblUs tr[data-deadline], #tblWider tr[data-deadline]').forEach(function(tr){
+      var p=tr.getAttribute('data-deadline').split('-');
+      var when=new Date(+p[0],+p[1]-1,+p[2]);
+      var days=Math.round((when-today)/864e5);
+      var chip=document.createElement('span'); chip.className='cd';
+      if(days<0){ chip.textContent='passed'; chip.className+=' past'; tr.classList.add('is-past'); past.push(tr); }
+      else if(days===0){ chip.textContent='today'; chip.className+=' hot'; }
+      else if(days===1){ chip.textContent='tomorrow'; chip.className+=' hot'; }
+      else if(days<=7){ chip.textContent='in '+days+' days'; chip.className+=' hot'; }
+      else if(days<=30){ chip.textContent='in '+days+' days'; chip.className+=' soon'; }
+      else { chip.textContent='in '+days+' days'; }
+      var cell=$('td.d',tr);
+      if(cell){ cell.appendChild(document.createElement('br')); cell.appendChild(chip); }
+      if(days>=0&&!next&&tr.closest('#tblUs')) next=tr;
+    });
+    if(next){
+      next.classList.add('is-next');
+      var lab=document.createElement('span'); lab.className='cd next'; lab.textContent='next up';
+      var c=$('td.d',next);
+      if(c) c.insertBefore(lab,c.querySelector('br'));
+    }
+    if(toggle){
+      var wrap=toggle.closest('label');
+      if(!past.length){ if(wrap) wrap.style.display='none'; }
+      else{
+        var apply=function(){
+          past.forEach(function(tr){ tr.style.display=toggle.checked?'none':''; });
+          toggle.checked?LS.set('synth-hidepast','1'):LS.del('synth-hidepast');
+        };
+        if(LS.get('synth-hidepast')==='1') toggle.checked=true;
+        apply();
+        toggle.addEventListener('change',apply);
+      }
+    }
+  })();
+
+  /* ---------- 9. copy citation ---------- */
+  (function(){
+    function copy(t){
+      if(navigator.clipboard&&window.isSecureContext) return navigator.clipboard.writeText(t);
+      return new Promise(function(res,rej){
+        try{
+          var ta=document.createElement('textarea');
+          ta.value=t; ta.setAttribute('readonly','');
+          ta.style.position='fixed'; ta.style.top='-1000px';
+          document.body.appendChild(ta); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta); res();
+        }catch(e){ rej(e); }
+      });
+    }
+    $$('.item > .src').forEach(function(src){
+      if(!src.querySelector('a')) return;
+      var btn=document.createElement('button');
+      btn.type='button'; btn.className='copy'; btn.textContent='Copy citation';
+      btn.addEventListener('click',function(){
+        var text=src.textContent.replace(/Copy citation|Copied|Copy failed/g,'').replace(/\s+/g,' ').trim();
+        copy(text).then(function(){ btn.textContent='Copied'; },function(){ btn.textContent='Copy failed'; })
+          .then(function(){ setTimeout(function(){ btn.textContent='Copy citation'; },1600); });
+      });
+      src.appendChild(document.createTextNode(' '));
+      src.appendChild(btn);
+    });
+  })();
+
+  /* ---------- 11. progress bar, sticky rail, active contents ---------- */
+  (function(){
+    var prog=$('#progress'), rail=$('#railbar'), rbSec=$('#rbSec');
+    function onScroll(){
+      var h=document.documentElement;
+      var max=h.scrollHeight-h.clientHeight;
+      if(prog) prog.style.width=(max>0?(h.scrollTop/max*100):0)+'%';
+      if(rail) rail.classList.toggle('on',h.scrollTop>340);
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('resize',onScroll,{passive:true});
+    onScroll();
+
+    var links=$$('.toc a[href^="#s"]');
+    var secs=$$('#main section[id]');
+    if(!links.length||!secs.length) return;
+    var map={};
+    links.forEach(function(a){ map[a.getAttribute('href').slice(1)]=a; });
+    var current=null;
+    function mark(){
+      var line=90, found=null;
+      for(var i=0;i<secs.length;i++){
+        var r=secs[i].getBoundingClientRect();
+        if(r.top<=line) found=secs[i]; else break;
+      }
+      if(found===current) return;
+      current=found;
+      links.forEach(function(l){ l.classList.remove('active'); });
+      if(!found){ if(rbSec) rbSec.textContent=''; return; }
+      var a=map[found.id]; if(!a) return;
+      a.classList.add('active');
+      if(rbSec) rbSec.textContent=a.textContent.replace(/^(\d{2})/,'$1 · ');
+    }
+    var ticking=false;
+    function schedule(){
+      if(ticking) return; ticking=true;
+      requestAnimationFrame(function(){ ticking=false; mark(); });
+    }
+    window.addEventListener('scroll',schedule,{passive:true});
+    window.addEventListener('resize',schedule,{passive:true});
+    mark();
+  })();
+
+  /* ---------- 12. flash whatever you just jumped to ---------- */
+  (function(){
+    function flash(){
+      if(!location.hash) return;
+      var el; try{ el=document.querySelector(location.hash); }catch(e){ return; }
+      if(!el) return;
+      var t=(el.tagName==='SECTION'&&el.querySelector('h2'))||el;
+      t.classList.remove('landed'); void t.offsetWidth; t.classList.add('landed');
+    }
+    window.addEventListener('hashchange',flash);
+    if(location.hash) setTimeout(flash,60);
+  })();
+})();
+</script>
+</body>
+</html>
