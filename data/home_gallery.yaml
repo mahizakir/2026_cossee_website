@@ -4,8 +4,6 @@ autoplay: true
 slide_speed: 2400
 pagination_speed: 900
 items:
-  - image: "/web_files/cossee-zoo-2026-selfie.webp"
-    alt: "A group selfie of COSSEE members on the zoo outing"
   - image: "/web_files/IMG_7534.webp"
     alt: "COSSEE lab photo 1"
   - image: "/web_files/IMG_0611.webp"
@@ -20,6 +18,8 @@ items:
     alt: "COSSEE lab photo 5"
   - image: "/web_files/IMG_0612.webp"
     alt: "COSSEE lab photo 6"
+  - image: "/web_files/cossee-zoo-2026-selfie.webp"
+    alt: "A group selfie of COSSEE members on the zoo outing"
   - image: "/web_files/IMG_7529.webp"
     alt: "COSSEE lab photo 7"
   - image: "/web_files/IMG_6640.webp"
