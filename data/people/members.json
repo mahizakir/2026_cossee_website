@@ -337,13 +337,19 @@
   },
   {
     "name": "Adam Bouma",
+    "pronouns": "he/him/his",
     "status": "current",
     "status_label": "Current",
     "role": "msc",
     "role_label": "MSc Student",
     "email": "abouma(-at-)ualberta(-dot-)ca",
+    "bio": "Adam joined COSSEE / I-DEEL in September 2026 as a Master's student. His thesis project is creating a systematic map and a subsequent meta-analysis of trophic cascades.",
+    "photo": "/web_files/adam-bouma.webp",
+    "detail_id": "adam-bouma",
+    "detail_group": "current",
     "country": "Canada",
-    "form_role": "Master student"
+    "form_role": "Master student",
+    "orcid": "https://orcid.org/0009-0007-7769-5751"
   },
   {
     "name": "Cassidy Schneider",
