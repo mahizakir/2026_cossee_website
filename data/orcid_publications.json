@@ -2,9 +2,9 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-09-03T13:39:43Z",
-  "generated_at_display": "September 03, 2026 at 13:39 UTC",
-  "works_count": 450,
+  "generated_at": "2026-09-04T13:36:19Z",
+  "generated_at_display": "September 04, 2026 at 13:36 UTC",
+  "works_count": 451,
   "latest": [
     {
       "put_code": 220532643,
@@ -35,6 +35,35 @@
       "best_url": "https://doi.org/10.1111/2041-210x.70356",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/220532643"
+    },
+    {
+      "put_code": 225743582,
+      "title": "A New Effect Size for Meta‐Analysis of Magnitude: lnM",
+      "authors": [
+        "Shinichi Nakagawa",
+        "Ayumi Mizuno",
+        "Coralie Williams",
+        "Malgorzata Lagisz",
+        "Rose E. O'Dea",
+        "Daniel W. A. Noble",
+        "Alistair M. Senior",
+        "Erick Lundgren",
+        "Santiago Ortega"
+      ],
+      "authors_display": "Shinichi Nakagawa, Ayumi Mizuno, Coralie Williams, Malgorzata Lagisz, Rose E. O'Dea, Daniel W. A. Noble, Alistair M. Senior, Erick Lundgren, Santiago Ortega",
+      "journal_title": "Ecology Letters",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "09",
+      "publication_day": "00",
+      "publication_date_display": "September 2026",
+      "publication_date_iso": "2026-09-00",
+      "doi": "10.1111/ele.70428",
+      "doi_url": "https://doi.org/10.1111/ele.70428",
+      "best_url": "https://doi.org/10.1111/ele.70428",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/225743582"
     },
     {
       "put_code": 224823833,
@@ -315,36 +344,12 @@
       "best_url": "https://doi.org/10.1126/sciadv.aeb8680",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/221607998"
-    },
-    {
-      "put_code": 221042365,
-      "title": "A flexible modelling framework for estimating thermal tolerance and sensitivity",
-      "authors": [
-        "Daniel W.A. Noble",
-        "Pieter A. Arnold",
-        "Shinichi Nakagawa",
-        "Patrice Pottier"
-      ],
-      "authors_display": "Daniel W.A. Noble, Pieter A. Arnold, Shinichi Nakagawa, Patrice Pottier",
-      "journal_title": null,
-      "type": "preprint",
-      "type_display": "Preprint",
-      "publication_year": "2026",
-      "publication_month": "07",
-      "publication_day": "17",
-      "publication_date_display": "July 17, 2026",
-      "publication_date_iso": "2026-07-17",
-      "doi": "10.64898/2026.07.16.738378",
-      "doi_url": "https://doi.org/10.64898/2026.07.16.738378",
-      "best_url": "https://doi.org/10.64898/2026.07.16.738378",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/221042365"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 28,
+      "count": 29,
       "items": [
         {
           "put_code": 220532643,
@@ -375,6 +380,35 @@
           "best_url": "https://doi.org/10.1111/2041-210x.70356",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/220532643"
+        },
+        {
+          "put_code": 225743582,
+          "title": "A New Effect Size for Meta‐Analysis of Magnitude: lnM",
+          "authors": [
+            "Shinichi Nakagawa",
+            "Ayumi Mizuno",
+            "Coralie Williams",
+            "Malgorzata Lagisz",
+            "Rose E. O'Dea",
+            "Daniel W. A. Noble",
+            "Alistair M. Senior",
+            "Erick Lundgren",
+            "Santiago Ortega"
+          ],
+          "authors_display": "Shinichi Nakagawa, Ayumi Mizuno, Coralie Williams, Malgorzata Lagisz, Rose E. O'Dea, Daniel W. A. Noble, Alistair M. Senior, Erick Lundgren, Santiago Ortega",
+          "journal_title": "Ecology Letters",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "09",
+          "publication_day": "00",
+          "publication_date_display": "September 2026",
+          "publication_date_iso": "2026-09-00",
+          "doi": "10.1111/ele.70428",
+          "doi_url": "https://doi.org/10.1111/ele.70428",
+          "best_url": "https://doi.org/10.1111/ele.70428",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/225743582"
         },
         {
           "put_code": 224823833,
@@ -12869,7 +12903,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 370,
+    "journal-article": 371,
     "other": 6,
     "preprint": 72
   }
