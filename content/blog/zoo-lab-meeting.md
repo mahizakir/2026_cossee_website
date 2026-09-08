@@ -9,7 +9,7 @@ summary = "Science, sunshine, and animals: we swapped the usual meeting room for
 <style>
 .zoo-collage {
   margin: 32px auto 10px;
-  max-width: 520px;
+  max-width: 660px;
 }
 .zoo-collage img {
   border-radius: 14px;
