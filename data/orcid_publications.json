@@ -2,9 +2,9 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-09-21T15:57:22Z",
-  "generated_at_display": "September 21, 2026 at 15:57 UTC",
-  "works_count": 452,
+  "generated_at": "2026-09-22T14:06:10Z",
+  "generated_at_display": "September 22, 2026 at 14:06 UTC",
+  "works_count": 453,
   "latest": [
     {
       "put_code": 226977622,
@@ -35,6 +35,28 @@
       "best_url": "https://doi.org/10.1007/s10531-026-03411-y",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/226977622"
+    },
+    {
+      "put_code": 227445550,
+      "title": "Statistical Methods for Assessing Non-Replicable, Outlying, and Influential Studies",
+      "authors": [
+        "Yefeng Yang",
+        "Shinichi Nakagawa"
+      ],
+      "authors_display": "Yefeng Yang, Shinichi Nakagawa",
+      "journal_title": "Mathematics",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "09",
+      "publication_day": "22",
+      "publication_date_display": "September 22, 2026",
+      "publication_date_iso": "2026-09-22",
+      "doi": "10.3390/math14193436",
+      "doi_url": "https://doi.org/10.3390/math14193436",
+      "best_url": "https://doi.org/10.3390/math14193436",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/227445550"
     },
     {
       "put_code": 220532643,
@@ -147,41 +169,12 @@
       "best_url": "https://doi.org/10.1038/s41467-026-76981-8",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/224526894"
-    },
-    {
-      "put_code": 222282522,
-      "title": "Interspecific Bergmann’s rule pattern in birds persists despite seasonal migration",
-      "authors": [
-        "Ayumi Mizuno",
-        "Erick Lundgren",
-        "Szymon Drobniak",
-        "Corey Callaghan",
-        "Eduardo Santos",
-        "Malgorzata Lagisz",
-        "Santiago Ortega",
-        "Xi Lin",
-        "Shinichi Nakagawa"
-      ],
-      "authors_display": "Ayumi Mizuno, Erick Lundgren, Szymon Drobniak, Corey Callaghan, Eduardo Santos, Malgorzata Lagisz, Santiago Ortega, Xi Lin, Shinichi Nakagawa",
-      "journal_title": null,
-      "type": "preprint",
-      "type_display": "Preprint",
-      "publication_year": "2026",
-      "publication_month": "07",
-      "publication_day": "30",
-      "publication_date_display": "July 30, 2026",
-      "publication_date_iso": "2026-07-30",
-      "doi": "10.32942/x2fx0z",
-      "doi_url": "https://doi.org/10.32942/x2fx0z",
-      "best_url": "https://doi.org/10.32942/X2FX0Z",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/222282522"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 30,
+      "count": 31,
       "items": [
         {
           "put_code": 226977622,
@@ -212,6 +205,28 @@
           "best_url": "https://doi.org/10.1007/s10531-026-03411-y",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/226977622"
+        },
+        {
+          "put_code": 227445550,
+          "title": "Statistical Methods for Assessing Non-Replicable, Outlying, and Influential Studies",
+          "authors": [
+            "Yefeng Yang",
+            "Shinichi Nakagawa"
+          ],
+          "authors_display": "Yefeng Yang, Shinichi Nakagawa",
+          "journal_title": "Mathematics",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "09",
+          "publication_day": "22",
+          "publication_date_display": "September 22, 2026",
+          "publication_date_iso": "2026-09-22",
+          "doi": "10.3390/math14193436",
+          "doi_url": "https://doi.org/10.3390/math14193436",
+          "best_url": "https://doi.org/10.3390/math14193436",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/227445550"
         },
         {
           "put_code": 220532643,
@@ -12765,7 +12780,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 372,
+    "journal-article": 373,
     "other": 6,
     "preprint": 72
   }
