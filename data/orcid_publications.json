@@ -2,9 +2,9 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-09-27T14:46:22Z",
-  "generated_at_display": "September 27, 2026 at 14:46 UTC",
-  "works_count": 453,
+  "generated_at": "2026-09-28T17:44:03Z",
+  "generated_at_display": "September 28, 2026 at 17:44 UTC",
+  "works_count": 454,
   "latest": [
     {
       "put_code": 226977622,
@@ -35,6 +35,36 @@
       "best_url": "https://doi.org/10.1007/s10531-026-03411-y",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/226977622"
+    },
+    {
+      "put_code": 228031408,
+      "title": "Mastering a simulation-based parametric method to obtain bias-corrected point estimates and sampling variance for effect sizes",
+      "authors": [
+        "Shinichi Nakagawa",
+        "Ayumi Mizuno",
+        "Coralie Williams",
+        "Santiago Ortega",
+        "Szymon M. Drobniak",
+        "Malgorzata Lagisz",
+        "Yefeng Yang",
+        "Alistair M. Senior",
+        "Daniel W. A. Noble",
+        "Erick Lundgren"
+      ],
+      "authors_display": "Shinichi Nakagawa, Ayumi Mizuno, Coralie Williams, Santiago Ortega, Szymon M. Drobniak, Malgorzata Lagisz, Yefeng Yang, Alistair M. Senior, Daniel W. A. Noble, Erick Lundgren",
+      "journal_title": "Research Synthesis Methods",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "09",
+      "publication_day": "28",
+      "publication_date_display": "September 28, 2026",
+      "publication_date_iso": "2026-09-28",
+      "doi": "10.1017/rsm.2026.10108",
+      "doi_url": "https://doi.org/10.1017/rsm.2026.10108",
+      "best_url": "https://doi.org/10.1017/rsm.2026.10108",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/228031408"
     },
     {
       "put_code": 227445550,
@@ -142,39 +172,12 @@
       "best_url": "https://doi.org/10.32942/X2BQ2Q",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/224823833"
-    },
-    {
-      "put_code": 224526894,
-      "title": "Native and introduced megafauna have convergent effects on animals and ecosystems: a meta-analysis",
-      "authors": [
-        "Erick J. Lundgren",
-        "Shinichi Nakagawa",
-        "Jonas Trepel",
-        "Sage Raymond",
-        "Elizabeth le Roux",
-        "Eamonn I. F. Wooster",
-        "Jens-Christian Svenning"
-      ],
-      "authors_display": "Erick J. Lundgren, Shinichi Nakagawa, Jonas Trepel, Sage Raymond, Elizabeth le Roux, Eamonn I. F. Wooster, Jens-Christian Svenning",
-      "journal_title": "Nature Communications",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "08",
-      "publication_day": "21",
-      "publication_date_display": "August 21, 2026",
-      "publication_date_iso": "2026-08-21",
-      "doi": "10.1038/s41467-026-76981-8",
-      "doi_url": "https://doi.org/10.1038/s41467-026-76981-8",
-      "best_url": "https://doi.org/10.1038/s41467-026-76981-8",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/224526894"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 31,
+      "count": 32,
       "items": [
         {
           "put_code": 226977622,
@@ -205,6 +208,36 @@
           "best_url": "https://doi.org/10.1007/s10531-026-03411-y",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/226977622"
+        },
+        {
+          "put_code": 228031408,
+          "title": "Mastering a simulation-based parametric method to obtain bias-corrected point estimates and sampling variance for effect sizes",
+          "authors": [
+            "Shinichi Nakagawa",
+            "Ayumi Mizuno",
+            "Coralie Williams",
+            "Santiago Ortega",
+            "Szymon M. Drobniak",
+            "Malgorzata Lagisz",
+            "Yefeng Yang",
+            "Alistair M. Senior",
+            "Daniel W. A. Noble",
+            "Erick Lundgren"
+          ],
+          "authors_display": "Shinichi Nakagawa, Ayumi Mizuno, Coralie Williams, Santiago Ortega, Szymon M. Drobniak, Malgorzata Lagisz, Yefeng Yang, Alistair M. Senior, Daniel W. A. Noble, Erick Lundgren",
+          "journal_title": "Research Synthesis Methods",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "09",
+          "publication_day": "28",
+          "publication_date_display": "September 28, 2026",
+          "publication_date_iso": "2026-09-28",
+          "doi": "10.1017/rsm.2026.10108",
+          "doi_url": "https://doi.org/10.1017/rsm.2026.10108",
+          "best_url": "https://doi.org/10.1017/rsm.2026.10108",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/228031408"
         },
         {
           "put_code": 227445550,
@@ -12780,7 +12813,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 373,
+    "journal-article": 374,
     "other": 6,
     "preprint": 72
   }
