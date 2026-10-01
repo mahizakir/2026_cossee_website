@@ -94,5 +94,195 @@
     "conclusion": "Supercolony",
     "lat": 52.552315,
     "lng": -113.636268
+  },
+  {
+    "code": "EXP020",
+    "replicates": "3",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP021",
+    "replicates": "3",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP022",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP023",
+    "replicates": "2",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP024",
+    "replicates": "4",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP025",
+    "replicates": "4",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP026",
+    "replicates": "4",
+    "conclusion": "Inconclusive"
+  },
+  {
+    "code": "EXP027",
+    "replicates": "6",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP028",
+    "replicates": "3",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP029",
+    "replicates": "3",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP030",
+    "replicates": "3",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP031",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP032",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP033",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP034",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP035",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP036",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP037",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP038",
+    "replicates": "4",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP039",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP040",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP041",
+    "replicates": "6",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP042",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP043",
+    "replicates": "5",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP044",
+    "replicates": "4",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP045",
+    "replicates": "4",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP046",
+    "replicates": "3",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP047",
+    "replicates": "5",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP048",
+    "replicates": "5",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP049",
+    "replicates": "4",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP050",
+    "replicates": "3",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP051",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP052",
+    "replicates": "4",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP053",
+    "replicates": "5",
+    "conclusion": "Not supercolony"
+  },
+  {
+    "code": "EXP054",
+    "replicates": "3",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP055",
+    "replicates": "1",
+    "conclusion": "Inconclusive"
+  },
+  {
+    "code": "EXP056",
+    "replicates": "2",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP057",
+    "replicates": "1",
+    "conclusion": "Supercolony"
   }
 ]

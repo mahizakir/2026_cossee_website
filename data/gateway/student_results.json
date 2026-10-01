@@ -171,6 +171,96 @@
     "notes": "students record that occasional fighting but mostly non-aggressive behaviour"
   },
   {
+    "school": "Father Lacombe",
+    "group": "Group 20",
+    "date": "September 24 2026",
+    "colony": "EXP031",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 21",
+    "date": "September 24 2026",
+    "colony": "EXP032",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 22",
+    "date": "September 24 2026",
+    "colony": "EXP035",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 23",
+    "date": "September 24 2026",
+    "colony": "EXP036",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record experiment ant died"
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 24",
+    "date": "September 24 2026",
+    "colony": "EXP048",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 25",
+    "date": "September 24 2026",
+    "colony": "EXP048",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 26",
+    "date": "September 24 2026",
+    "colony": "EXP048",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record experiment ant stayed away from other supercolony ants for most part"
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 27",
+    "date": "September 24 2026",
+    "colony": "EXP050",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 28",
+    "date": "September 24 2026",
+    "colony": "EXP050",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Father Lacombe",
+    "group": "Group 29",
+    "date": "September 24 2026",
+    "colony": "EXP051",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
     "school": "Blessed Marie Rose",
     "group": "Group 1",
     "date": "June 2 2026",
@@ -331,5 +421,1301 @@
     "result": "Non-aggressive",
     "conclusion": "Supercolony",
     "notes": ""
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 10",
+    "date": "September 16 2026",
+    "colony": "EXP021",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record that one supercolony ant died, unrelated to experiment ant"
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 11",
+    "date": "September 16 2026",
+    "colony": "EXP022",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record lots of formic acid spraying"
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 12",
+    "date": "September 16 2026",
+    "colony": "EXP027",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 13",
+    "date": "September 16 2026",
+    "colony": "EXP027",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that several brief bouts of fighting occurred"
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 14",
+    "date": "September 16 2026",
+    "colony": "EXP029",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 15",
+    "date": "September 16 2026",
+    "colony": "EXP030",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 16",
+    "date": "September 16 2026",
+    "colony": "EXP030",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Alix-MAC",
+    "group": "Group 17",
+    "date": "September 16 2026",
+    "colony": "EXP030",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that several brief bouts of fighting occurred"
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 1",
+    "date": "September 14 2026",
+    "colony": "EXP020",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that they lost track of experimental ant"
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 2",
+    "date": "September 14 2026",
+    "colony": "EXP020",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 3",
+    "date": "September 14 2026",
+    "colony": "EXP020",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 4",
+    "date": "September 14 2026",
+    "colony": "EXP021",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 5",
+    "date": "September 14 2026",
+    "colony": "EXP021",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 6",
+    "date": "September 14 2026",
+    "colony": "EXP022",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 7",
+    "date": "September 14 2026",
+    "colony": "EXP022",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 8",
+    "date": "September 14 2026",
+    "colony": "EXP025",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record that lost track of experiment ant initially but rediscovered ant"
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 9",
+    "date": "September 14 2026",
+    "colony": "EXP025",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 10",
+    "date": "September 14 2026",
+    "colony": "EXP025",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 11",
+    "date": "September 14 2026",
+    "colony": "EXP025",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 12",
+    "date": "September 14 2026",
+    "colony": "EXP026",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that several brief bouts of fighting occurred"
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 13",
+    "date": "September 14 2026",
+    "colony": "EXP026",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that they lost track of experiment ant"
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 14",
+    "date": "September 14 2026",
+    "colony": "EXP026",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record only one brief fight at start of experiment but otherwise calm antennation"
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 15",
+    "date": "September 14 2026",
+    "colony": "EXP026",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 16",
+    "date": "September 14 2026",
+    "colony": "EXP027",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that several brief bouts of fighting occurred"
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 17",
+    "date": "September 14 2026",
+    "colony": "EXP027",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 18",
+    "date": "September 14 2026",
+    "colony": "EXP028",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 19",
+    "date": "September 14 2026",
+    "colony": "EXP028",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Don Campbell",
+    "group": "Group 20",
+    "date": "September 14 2026",
+    "colony": "EXP028",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 1",
+    "date": "September 15 2026",
+    "colony": "EXP022",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record that accidentally sneezed on ants and 3 escaped; one supercolony ant died related to fighting"
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 2",
+    "date": "September 15 2026",
+    "colony": "EXP022",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 3",
+    "date": "September 15 2026",
+    "colony": "EXP023",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 4",
+    "date": "September 15 2026",
+    "colony": "EXP023",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 5",
+    "date": "September 15 2026",
+    "colony": "EXP024",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 6",
+    "date": "September 15 2026",
+    "colony": "EXP024",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record observed trophallaxis"
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 7",
+    "date": "September 15 2026",
+    "colony": "EXP024",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 8",
+    "date": "September 15 2026",
+    "colony": "EXP024",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record observed trophallaxis"
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 9",
+    "date": "September 15 2026",
+    "colony": "EXP027",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 10",
+    "date": "September 15 2026",
+    "colony": "EXP027",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 11",
+    "date": "September 15 2026",
+    "colony": "EXP029",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Crestomere",
+    "group": "Group 12",
+    "date": "September 15 2026",
+    "colony": "EXP029",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "St Mary's High School",
+    "group": "Group 1",
+    "date": "September 21 2026",
+    "colony": "EXP031",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "St Mary's High School",
+    "group": "Group 2",
+    "date": "September 21 2026",
+    "colony": "EXP032",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "St Mary's High School",
+    "group": "Group 3",
+    "date": "September 21 2026",
+    "colony": "EXP033",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record that they lost track of experiment ant at end"
+  },
+  {
+    "school": "St Mary's High School",
+    "group": "Group 4",
+    "date": "September 21 2026",
+    "colony": "EXP033",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 1 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP034",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record one supercolony ant died at start of experiment unrelated to fighting"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 2 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP034",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record experiment ant died"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 3 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP034",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 4 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP034",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 5 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP034",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 6 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP035",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 7 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP035",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 8 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP035",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record that they lost track of experiment ant at end"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 9 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP036",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 10 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP037",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 11 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP037",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that several brief bouts of fighting occurred"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 12 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP037",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 13 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP037",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 14 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP037",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 15 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP039",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record one supercolony ant died during fight"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 16 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP039",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 17 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP039",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record possibly three supercolony ants died during fight"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 18 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP039",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 19 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP039",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 20 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP040",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 21 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP040",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record experiment ant died"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 22 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP040",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 23 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP040",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record experiment ant possibly died"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 24 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP041",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 25 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP041",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record that they lost track of experiment ant but found it again"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 26 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP041",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that several brief bouts of fighting occurred"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 27 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP041",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record one supercolony ant died during fight"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 28 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP041",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that several brief bouts of fighting occurred"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 29 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP041",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record one ant dead, whether supercolony or experiment not recorded"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 30 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP042",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 31 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP042",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record experiment ant died"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 32 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP042",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record one ant dead, whether supercolony or experiment not recorded"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 33 (Grade 5)",
+    "date": "September 22 2026",
+    "colony": "EXP042",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 34 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP031",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record two supercolony ants died during fight"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 35 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP031",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 36 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP031",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 37 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP032",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 38 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP032",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 39 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP032",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record one supercolony ant may have been injured by a student"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 40 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP033",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 41 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP035",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record experiment ant died"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 42 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP036",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that several brief bouts of fighting occurred"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 43 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP036",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 44 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP036",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 45 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP038",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 46 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP038",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record one supercolony ant died during fight"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 47 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP038",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 48 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP040",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record experiment ant died"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 49 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP042",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 50 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP043",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record that additional supercolony ant was found at the end of the experiment"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 51 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP043",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record observed trophallaxis"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 52 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP043",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 53 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP043",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record some mound-building behaviour"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 54 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP043",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record some mound-building behaviour"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 55 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP051",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record that three ants died, including experiment ant"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 56 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP051",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that several brief bouts of fighting occurred"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 57 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP051",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 58 (Grade 6)",
+    "date": "September 23 2026",
+    "colony": "EXP051",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 59 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP033",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 60 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP044",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that several brief bouts of fighting occurred"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 61 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP044",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record observed trophallaxis; one supercolony ant dead for reasons unrelated to experiment ant"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 62 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP044",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 63 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP044",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 64 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP045",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 65 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP045",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record they may have lost track of experiment ant"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 66 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP045",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 67 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP045",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 68 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP047",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 69 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP047",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record that one supercolony ant demonstrated initial aggressive behaviour, but no others did; concluded that this particular ant was hyperaggressive"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 70 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP047",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 71 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP047",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 72 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP047",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 73 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP048",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record they had six supercolony ants"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 74 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP048",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 75 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP049",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 76 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP049",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 77 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP050",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 78 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP053",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record experiment ant was injured when taken out from tube"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 79 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP053",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record one ant dead, whether supercolony or experiment not recorded"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 80 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP053",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record experiment ant died"
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 81 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP053",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 82 (Grade 9)",
+    "date": "September 24 2026",
+    "colony": "EXP053",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 83",
+    "date": "Not recorded",
+    "colony": "EXP033",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "Connect Charter",
+    "group": "Group 84",
+    "date": "Not recorded",
+    "colony": "EXP038",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 1",
+    "date": "September 25 2026",
+    "colony": "EXP046",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 2",
+    "date": "September 25 2026",
+    "colony": "EXP046",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that supercolony ants were ?chasing experiment ant but no recorded interactions"
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 3",
+    "date": "September 25 2026",
+    "colony": "EXP046",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "one name recorded for this group may have been the ant's name, unclear"
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 4",
+    "date": "September 25 2026",
+    "colony": "EXP049",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 5",
+    "date": "September 25 2026",
+    "colony": "EXP049",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 6",
+    "date": "September 25 2026",
+    "colony": "EXP052",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": "students record experiment ant possibly died"
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 7",
+    "date": "September 25 2026",
+    "colony": "EXP052",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record that several brief bouts of fighting occurred"
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 8",
+    "date": "September 25 2026",
+    "colony": "EXP052",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 9",
+    "date": "September 25 2026",
+    "colony": "EXP052",
+    "result": "Aggression",
+    "conclusion": "Not supercolony",
+    "notes": ""
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 10",
+    "date": "September 25 2026",
+    "colony": "EXP054",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record observed trophallaxis"
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 11",
+    "date": "September 25 2026",
+    "colony": "EXP054",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 12",
+    "date": "September 25 2026",
+    "colony": "EXP054",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 13",
+    "date": "September 25 2026",
+    "colony": "EXP055",
+    "result": "Inconclusive",
+    "conclusion": "Inconclusive",
+    "notes": "students record initial antennation and subsequently lost track of ant at 4 minutes"
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 14",
+    "date": "September 25 2026",
+    "colony": "EXP056",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 15",
+    "date": "September 25 2026",
+    "colony": "EXP056",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": ""
+  },
+  {
+    "school": "USchool - St Augustine",
+    "group": "Group 16",
+    "date": "September 25 2026",
+    "colony": "EXP057",
+    "result": "Non-aggressive",
+    "conclusion": "Supercolony",
+    "notes": "students record some mound-building behaviour"
   }
 ]
