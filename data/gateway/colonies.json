@@ -8,8 +8,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": ""
+  "trial": "No"
  },
  {
   "lat": 53.531371,
@@ -20,8 +19,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": ""
+  "trial": "No"
  },
  {
   "lat": 53.529284,
@@ -32,8 +30,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": ""
+  "trial": "No"
  },
  {
   "lat": 53.531193,
@@ -44,8 +41,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": ""
+  "trial": "No"
  },
  {
   "lat": 53.531666,
@@ -56,8 +52,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": ""
+  "trial": "No"
  },
  {
   "lat": 53.540776,
@@ -68,8 +63,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": ""
+  "trial": "No"
  },
  {
   "lat": 53.5392,
@@ -80,8 +74,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "Migratory trail parallel to pathway between nest groups"
+  "trial": "No"
  },
  {
   "lat": 53.538974,
@@ -92,8 +85,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "Local aggression trials between nest from top of hill. Ants fought"
+  "trial": "No"
  },
  {
   "lat": 53.538913,
@@ -104,8 +96,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "Nest approx 2m along lonh axis. Very active."
+  "trial": "No"
  },
  {
   "lat": 50.923965,
@@ -116,8 +107,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.924123,
@@ -128,8 +118,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": "SCFCP1"
+  "trial": "Yes"
  },
  {
   "lat": 50.924154,
@@ -140,8 +129,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Close to wolf willows"
+  "trial": "Yes"
  },
  {
   "lat": 50.924125,
@@ -152,8 +140,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.924216,
@@ -164,8 +151,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Under choke cherry"
+  "trial": "Yes"
  },
  {
   "lat": 50.924647,
@@ -176,8 +162,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.924809,
@@ -188,8 +173,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.924821,
@@ -200,8 +184,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Hills are at least 1m in height in diametre"
+  "trial": "Yes"
  },
  {
   "lat": 50.924767,
@@ -212,20 +195,18 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Nest more than 1m high and 2m long"
+  "trial": "Yes"
  },
  {
   "lat": 50.92486,
-  "lng": -114.132452,
+  "lng": -114.132451,
   "outcome": "supercolony",
   "date": "5/29/2026",
   "shape": "Dome-shaped (round)",
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Beside the cliff/ ridge"
+  "trial": "Yes"
  },
  {
   "lat": 50.924862,
@@ -236,8 +217,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Nest up agaonst stumpp on edve of cliff\n2m long x less than 1 m high"
+  "trial": "Yes"
  },
  {
   "lat": 50.924762,
@@ -248,8 +228,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Small nest on edge of trail\n0.3m highx 0.5 wide"
+  "trial": "Yes"
  },
  {
   "lat": 50.933842,
@@ -260,8 +239,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.932749,
@@ -272,20 +250,18 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.92484,
-  "lng": -114.131984,
+  "lng": -114.131983,
   "outcome": "supercolony",
   "date": "5/29/2026",
   "shape": "Dome-shaped (round)",
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Owl juvenile hanging out beside nest"
+  "trial": "Yes"
  },
  {
   "lat": 50.92452,
@@ -296,8 +272,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Maybe an old colony, assumption because of assymetrical shape"
+  "trial": "Yes"
  },
  {
   "lat": 50.927682,
@@ -308,8 +283,7 @@
   "environment": "Conifer forest",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": "SCFCP2 there are parasitized (slave) ants, also leptothorax found in the stump."
+  "trial": "Yes"
  },
  {
   "lat": 50.928117,
@@ -320,8 +294,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Other",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.934112,
@@ -332,8 +305,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": "Assuming Formica obscuriventris"
+  "trial": "Yes"
  },
  {
   "lat": 50.933711,
@@ -344,8 +316,7 @@
   "environment": "Open grassland",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": "Assumed as Formica obscuriventris beside the no parking sign by parking lot"
+  "trial": "Yes"
  },
  {
   "lat": 50.933236,
@@ -356,20 +327,18 @@
   "environment": "Open grassland",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": "Single hill at the foot of a hill"
+  "trial": "Yes"
  },
  {
   "lat": 50.932926,
-  "lng": -114.078814,
+  "lng": -114.078815,
   "outcome": "supercolony",
   "date": "5/29/2026",
   "shape": "Other",
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Ant nest is in log. The ants were not aggressive to the test ant."
+  "trial": "Yes"
  },
  {
   "lat": 50.931738,
@@ -380,8 +349,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.931802,
@@ -392,8 +360,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": "Probably Formica aserva nest in old tree"
+  "trial": "Yes"
  },
  {
   "lat": 50.931946,
@@ -404,8 +371,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Formica aserva"
+  "trial": "Yes"
  },
  {
   "lat": 50.932185,
@@ -416,8 +382,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Floodplain"
+  "trial": "Yes"
  },
  {
   "lat": 50.9319,
@@ -428,8 +393,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.932128,
@@ -440,8 +404,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Formica aserva"
+  "trial": "Yes"
  },
  {
   "lat": 50.932761,
@@ -452,8 +415,7 @@
   "environment": "Open grassland",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.932178,
@@ -464,8 +426,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.932033,
@@ -476,8 +437,7 @@
   "environment": "Open grassland",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": "Looks like similar species, needs ID"
+  "trial": "Yes"
  },
  {
   "lat": 50.931939,
@@ -488,8 +448,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Probably F. aserva has hosts"
+  "trial": "Yes"
  },
  {
   "lat": 50.932735,
@@ -500,8 +459,7 @@
   "environment": "Open grassland",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "F.obscuriventris with winged queens"
+  "trial": "Yes"
  },
  {
   "lat": 50.928684,
@@ -512,8 +470,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Within 50m of the creek"
+  "trial": "Yes"
  },
  {
   "lat": 50.92827,
@@ -524,8 +481,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": "Assuming it is F. neoclara"
+  "trial": "Yes"
  },
  {
   "lat": 50.928025,
@@ -536,8 +492,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Assumed F.neoclara"
+  "trial": "Yes"
  },
  {
   "lat": 50.929118,
@@ -548,8 +503,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Maybe F.obscuriventris"
+  "trial": "Yes"
  },
  {
   "lat": 50.929157,
@@ -560,8 +514,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "By the edge of a cliff"
+  "trial": "Yes"
  },
  {
   "lat": 50.927738,
@@ -572,8 +525,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.926222,
@@ -584,8 +536,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.925588,
@@ -596,8 +547,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.925834,
@@ -608,8 +558,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.92419,
@@ -620,8 +569,7 @@
   "environment": "Open grassland",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Beside choke cherry tree"
+  "trial": "Yes"
  },
  {
   "lat": 50.92624,
@@ -632,8 +580,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.923865,
@@ -644,8 +591,7 @@
   "environment": "Open grassland",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "F.obscuriventris"
+  "trial": "Yes"
  },
  {
   "lat": 50.927143,
@@ -656,8 +602,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.927166,
@@ -668,8 +613,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "Yes",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.927697,
@@ -680,8 +624,7 @@
   "environment": "Open grassland",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "On a floodplain"
+  "trial": "Yes"
  },
  {
   "lat": 50.926459,
@@ -692,8 +635,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.905114,
@@ -704,8 +646,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.905013,
@@ -716,20 +657,18 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.9053,
-  "lng": -114.02069,
+  "lng": -114.020689,
   "outcome": "not-supercolony",
   "date": "5/30/2026",
   "shape": "Other",
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.987528,
@@ -741,8 +680,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This is colony EXP001"
+  "trial": "No"
  },
  {
   "lat": 50.988194,
@@ -754,8 +692,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This is colony EXP002"
+  "trial": "No"
  },
  {
   "lat": 50.924678,
@@ -767,8 +704,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This is colony EXP003"
+  "trial": "No"
  },
  {
   "lat": 50.925341,
@@ -780,8 +716,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This  is colony EXP004"
+  "trial": "No"
  },
  {
   "lat": 50.989301,
@@ -793,8 +728,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This replaces EXP006 but is within 10 metres so likely same colony"
+  "trial": "No"
  },
  {
   "lat": 53.532598,
@@ -806,8 +740,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This replaces prior measurement at this site; this is colony EXP007."
+  "trial": "No"
  },
  {
   "lat": 53.532198,
@@ -819,8 +752,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This replaces original measurement at this site; this is colony EXP008. On east facing slope."
+  "trial": "No"
  },
  {
   "lat": 53.533861,
@@ -832,8 +764,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This replaces original observation at this site; this is colony EXP009."
+  "trial": "No"
  },
  {
   "lat": 53.54126,
@@ -845,8 +776,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This replaces original observation at this site; this is colony EXP010. The nest is actually three domes in a row, connected by a log."
+  "trial": "No"
  },
  {
   "lat": 50.922204,
@@ -857,8 +787,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.922343,
@@ -869,8 +798,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Pupae are chilling on top of mound"
+  "trial": "Yes"
  },
  {
   "lat": 50.922353,
@@ -881,8 +809,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Beside desired pathway, less than 30m from building"
+  "trial": "Yes"
  },
  {
   "lat": 50.922543,
@@ -893,8 +820,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Ant hill is by desired trail beside the building and a drop of the ridge"
+  "trial": "Yes"
  },
  {
   "lat": 50.923463,
@@ -905,8 +831,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Ant nest is in a pile of wood and small gravel dirt mound. Theres a western stoneseed plant right beside it."
+  "trial": "Yes"
  },
  {
   "lat": 50.922162,
@@ -917,8 +842,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "Flat dirt mound"
+  "trial": "Yes"
  },
  {
   "lat": 50.922358,
@@ -929,8 +853,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.923335,
@@ -941,8 +864,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.925851,
@@ -953,8 +875,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": ""
+  "trial": "Yes"
  },
  {
   "lat": 50.92433,
@@ -965,8 +886,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "13 more ant mounds up the hill that are a few metres gap of each other"
+  "trial": "Yes"
  },
  {
   "lat": 50.924159,
@@ -977,8 +897,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "There multiple nests stretching out from the last ovserved point."
+  "trial": "Yes"
  },
  {
   "lat": 50.924159,
@@ -989,8 +908,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "Yes",
-  "notes": "There are ant nests for every 5 metres west of the observed nest"
+  "trial": "Yes"
  },
  {
   "lat": 52.550918,
@@ -1002,8 +920,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This is colony EXP011"
+  "trial": "No"
  },
  {
   "lat": 52.551468,
@@ -1015,8 +932,7 @@
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This is colony EXP012"
+  "trial": "No"
  },
  {
   "lat": 52.55173,
@@ -1028,8 +944,7 @@
   "environment": "Deciduous forest",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This is colony EXP013"
+  "trial": "No"
  },
  {
   "lat": 52.552315,
@@ -1041,7 +956,473 @@
   "environment": "Open grassland",
   "species": "Red ant",
   "collected": "No",
-  "trial": "No",
-  "notes": "This is colony EXP014. Nest was disturbed prior to photo so more active than usual. Brood present\n ."
+  "trial": "No"
+ },
+ {
+  "lat": 53.474101,
+  "lng": -117.477868,
+  "outcome": "surveyed",
+  "date": "9/12/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 52.291052,
+  "lng": -113.778125,
+  "outcome": "surveyed",
+  "code": "EXP021",
+  "date": "9/13/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 52.291879,
+  "lng": -113.781145,
+  "outcome": "surveyed",
+  "code": "EXP022",
+  "date": "9/13/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 52.290513,
+  "lng": -113.784917,
+  "outcome": "surveyed",
+  "code": "EXP023",
+  "date": "9/13/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 52.290236,
+  "lng": -113.784978,
+  "outcome": "surveyed",
+  "code": "EXP024",
+  "date": "9/13/2026",
+  "shape": "Dome-shaped (round)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 52.291116,
+  "lng": -113.777764,
+  "outcome": "surveyed",
+  "code": "EXP020",
+  "date": "9/13/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 52.291151,
+  "lng": -113.775852,
+  "outcome": "surveyed",
+  "code": "EXP025",
+  "date": "9/13/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 52.291255,
+  "lng": -113.77609,
+  "outcome": "surveyed",
+  "code": "EXP026",
+  "date": "9/13/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 52.292651,
+  "lng": -113.778269,
+  "outcome": "surveyed",
+  "code": "EXP027",
+  "date": "9/13/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 52.293571,
+  "lng": -113.778252,
+  "outcome": "surveyed",
+  "code": "EXP028",
+  "date": "9/13/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 52.293766,
+  "lng": -113.77821,
+  "outcome": "surveyed",
+  "code": "EXP029",
+  "date": "9/13/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 52.295267,
+  "lng": -113.779112,
+  "outcome": "surveyed",
+  "code": "EXP030",
+  "date": "9/13/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 51.03626,
+  "lng": -113.937501,
+  "outcome": "surveyed",
+  "code": "EXP031",
+  "date": "9/20/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 51.135653,
+  "lng": -114.070509,
+  "outcome": "surveyed",
+  "code": "EXP032",
+  "date": "9/20/2026",
+  "shape": "Low bump",
+  "environment": "Open grassland",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 51.135544,
+  "lng": -114.070231,
+  "outcome": "surveyed",
+  "code": "EXP033",
+  "date": "9/20/2026",
+  "shape": "Low bump",
+  "environment": "Open grassland",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 51.135318,
+  "lng": -114.069508,
+  "outcome": "surveyed",
+  "code": "EXP034",
+  "date": "9/20/2026",
+  "shape": "Low bump",
+  "environment": "Open grassland",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 51.134672,
+  "lng": -114.068707,
+  "outcome": "surveyed",
+  "code": "EXP035",
+  "date": "9/20/2026",
+  "shape": "Other",
+  "environment": "Open grassland",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 51.134531,
+  "lng": -114.068633,
+  "outcome": "surveyed",
+  "code": "EXP036",
+  "date": "9/20/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Open grassland",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 51.134126,
+  "lng": -114.066828,
+  "outcome": "surveyed",
+  "code": "EXP037",
+  "date": "9/20/2026",
+  "shape": "Dome-shaped (round)",
+  "environment": "Open grassland",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 51.098271,
+  "lng": -114.268769,
+  "outcome": "surveyed",
+  "code": "EXP038",
+  "date": "9/20/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 51.098528,
+  "lng": -114.268803,
+  "outcome": "surveyed",
+  "code": "EXP039",
+  "date": "9/20/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 51.098648,
+  "lng": -114.268903,
+  "outcome": "surveyed",
+  "code": "EXP040",
+  "date": "9/20/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "No",
+  "trial": "No"
+ },
+ {
+  "lat": 50.994741,
+  "lng": -114.148475,
+  "outcome": "surveyed",
+  "code": "EXP041",
+  "date": "9/20/2026",
+  "shape": "Low bump",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.994801,
+  "lng": -114.148476,
+  "outcome": "surveyed",
+  "code": "EXP042",
+  "date": "9/20/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.979715,
+  "lng": -114.134043,
+  "outcome": "surveyed",
+  "code": "EXP043",
+  "date": "9/22/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.98012,
+  "lng": -114.134937,
+  "outcome": "surveyed",
+  "code": "EXP044",
+  "date": "9/22/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.980083,
+  "lng": -114.134987,
+  "outcome": "surveyed",
+  "code": "EXP045",
+  "date": "9/22/2026",
+  "shape": "Dome-shaped (round)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.980263,
+  "lng": -114.135115,
+  "outcome": "surveyed",
+  "code": "EXP046",
+  "date": "9/22/2026",
+  "shape": "Low bump",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.980321,
+  "lng": -114.135034,
+  "outcome": "surveyed",
+  "code": "EXP047",
+  "date": "9/22/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.980478,
+  "lng": -114.135123,
+  "outcome": "surveyed",
+  "code": "EXP048",
+  "date": "9/22/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.976277,
+  "lng": -114.099637,
+  "outcome": "surveyed",
+  "code": "EXP049",
+  "date": "9/22/2026",
+  "shape": "Dome-shaped (round)",
+  "environment": "Deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.976193,
+  "lng": -114.099714,
+  "outcome": "surveyed",
+  "code": "EXP050",
+  "date": "9/22/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.974614,
+  "lng": -114.100248,
+  "outcome": "surveyed",
+  "code": "EXP051",
+  "date": "9/22/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.992851,
+  "lng": -114.099577,
+  "outcome": "surveyed",
+  "code": "EXP052",
+  "date": "9/22/2026",
+  "shape": "Dome-shaped (round)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.980406,
+  "lng": -114.137045,
+  "outcome": "surveyed",
+  "code": "EXP053",
+  "date": "9/23/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.980289,
+  "lng": -114.137159,
+  "outcome": "surveyed",
+  "code": "EXP054",
+  "date": "9/23/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 50.980069,
+  "lng": -114.136328,
+  "outcome": "surveyed",
+  "code": "EXP055",
+  "date": "9/23/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 53.539045,
+  "lng": -113.462918,
+  "outcome": "surveyed",
+  "code": "EXP056",
+  "date": "9/25/2026",
+  "shape": "Other",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 53.538983,
+  "lng": -113.463251,
+  "outcome": "surveyed",
+  "code": "EXP057",
+  "date": "9/25/2026",
+  "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
  }
 ]

@@ -236,6 +236,8 @@
         }
 
         var map = L.map('gwr-map', { scrollWheelZoom: false });
+        // nests with a result draw above untrialled ones, so an overlap never hides a result behind grey
+        map.createPane('gwrResults').style.zIndex = 450;
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 18,
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -264,7 +266,8 @@
           if (!c.code) rows.push('<b>Aggression trial:</b> ' + esc(c.trial || 'No'));
           if (c.collected && !c.code) rows.push('<b>Specimens collected:</b> ' + esc(c.collected));
           var mk = L.circleMarker([c.lat, c.lng], {
-            radius: 9, weight: 2.5, color: '#fff', opacity: 1, fillColor: color, fillOpacity: 0.95
+            radius: 9, weight: 2.5, color: '#fff', opacity: 1, fillColor: color, fillOpacity: 0.95,
+            pane: (key === 'surveyed' || key === 'pending') ? 'overlayPane' : 'gwrResults'
           }).bindPopup(
             '<div class="gwr-pop"><div class="gwr-pop__head"><i style="background:' + color + '"></i>' + LABELS[key] + '</div>' + rows.join('<br>') + '</div>'
           );
@@ -314,8 +317,9 @@
             setTimeout(function () {
               map.invalidateSize();
               map.setView(mk.getLatLng(), 16, { animate: false });
-              if (map.hasLayer(mk)) mk.openPopup();
-              else if (layer.zoomToShowLayer) layer.zoomToShowLayer(mk, function () { mk.openPopup(); });
+              // some colonies were collected metres apart; lift this one above its neighbours
+              if (map.hasLayer(mk)) { mk.bringToFront(); mk.openPopup(); }
+              else if (layer.zoomToShowLayer) layer.zoomToShowLayer(mk, function () { mk.bringToFront(); mk.openPopup(); });
             }, 320);
           });
         });

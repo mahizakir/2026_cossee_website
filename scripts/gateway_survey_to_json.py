@@ -6,6 +6,9 @@ Usage: python3 scripts/gateway_survey_to_json.py path/to/survey_export.csv
 Each nest keeps the outcome of the survey's own field aggression trial. Nests collected for the
 classroom trials also get their colony collection code ("code"). The results page joins that code
 with data/gateway/colony_summary.json, because the classroom result is not known at collection time.
+
+The output is embedded in a public page, so free-text notes and vial labels (which name landowners
+and describe properties) are never written.
 """
 from __future__ import annotations
 
@@ -21,9 +24,15 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "data" / "gateway" / "colonies.json"
 
-# Alberta's bounding box; a point outside it is a GPS or data-entry error.
+# The map covers Alberta; points outside its bounding box (e.g. a Northwest Territories survey) stay off it.
 LAT_RANGE = (49.0, 60.0)
 LNG_RANGE = (-120.0, -110.0)
+
+# Survey records kept off the public map. 96-129 are the Jul 29 to Aug 26, 2026 surveys on private land
+# (backyards, pastures, driveways); they stay off until the team confirms the landowners are happy to be shown.
+HELD_BACK = set(range(96, 130))
+
+TIME_FORMATS = ("%m/%d/%Y %H:%M", "%m/%d/%Y %I:%M:%S %p", "%m/%d/%Y %H:%M:%S")  # July export, then Sep 2026 onward
 
 # A record whose notes say it "replaces" another supersedes the nearest earlier record within this radius.
 REPLACE_RADIUS_M = 30.0
@@ -55,6 +64,15 @@ def code_of(text: str) -> str | None:
     return f"EXP{int(match.group(1)):03d}" if match else None
 
 
+def parse_time(text: str) -> datetime:
+    for fmt in TIME_FORMATS:
+        try:
+            return datetime.strptime(text, fmt)
+        except ValueError:
+            pass
+    raise ValueError(f"unrecognised survey time {text!r}")
+
+
 def distance_m(a: tuple[float, float], b: tuple[float, float]) -> float:
     lat1, lng1, lat2, lng2 = map(math.radians, (*a, *b))
     h = math.sin((lat2 - lat1) / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin((lng2 - lng1) / 2) ** 2
@@ -80,6 +98,8 @@ def convert(rows: list[dict[str, str]], *, link_codes: bool = True, drop_replace
 
     nests = []
     for row in rows:
+        if row.get("objectid", "").isdigit() and int(row["objectid"]) in HELD_BACK:
+            continue
         try:
             point = (float(row["y"]), float(row["x"]))
         except (KeyError, ValueError):
@@ -88,7 +108,7 @@ def convert(rows: list[dict[str, str]], *, link_codes: bool = True, drop_replace
         if not (LAT_RANGE[0] <= point[0] <= LAT_RANGE[1] and LNG_RANGE[0] <= point[1] <= LNG_RANGE[1]):
             print(f"skipped object {row.get('objectid')}: {point} is outside Alberta", file=sys.stderr)
             continue
-        nests.append((row, point, datetime.strptime(row["date and time"], "%m/%d/%Y %H:%M")))
+        nests.append((row, point, parse_time(row["date and time"])))
 
     superseded: set[int] = set()
     if drop_replaced:
@@ -124,7 +144,6 @@ def convert(rows: list[dict[str, str]], *, link_codes: bool = True, drop_replace
             "species": label(row["ant species"]),
             "collected": row["were specimens collected at this site?"],
             "trial": row["were aggression trials completed at this nest?"],
-            "notes": row["notes"],
         })
         out.append(nest)
 
