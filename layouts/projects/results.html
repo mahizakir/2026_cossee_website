@@ -81,7 +81,7 @@
                     <td class="gwr-mono">{{ .code }}</td>
                     <td>{{ if .replicates }}{{ .replicates }}{{ else }}&mdash;{{ end }}</td>
                     <td><span class="gwr-badge gwr-badge--{{ .conclusion | urlize }}">{{ .conclusion }}</span></td>
-                    <td>{{ if .lat }}<a class="gwr-maplink" href="#colony-map" data-lat="{{ .lat }}" data-lng="{{ .lng }}" data-code="{{ .code }}" data-conclusion="{{ .conclusion }}"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> View</a>{{ else }}<span class="gwr-muted">&mdash;</span>{{ end }}</td>
+                    <td>{{ if where $colonies "code" .code }}<a class="gwr-maplink" href="#colony-map" data-code="{{ .code }}"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> View</a>{{ else }}<span class="gwr-muted">&mdash;</span>{{ end }}</td>
                   </tr>
                   {{ end }}
                 </tbody>
@@ -98,7 +98,7 @@
             </div>
             {{ if $colonies }}
               <div id="gwr-map" class="gwr-map"></div>
-              <p class="gwr-map-note">Showing {{ len $colonies }} surveyed nests. This field survey is separate from the classroom trials in the tables above.</p>
+              <p class="gwr-map-note">Showing {{ len $colonies }} surveyed nests. Nests collected for the classroom trials take their colour from the colony summary above. Other nests are coloured by a field aggression trial, if one was run.</p>
             {{ else }}
               <div class="gwr-soon">
                 <div class="gwr-soon__icon" aria-hidden="true">
@@ -221,9 +221,19 @@
         if (typeof L === 'undefined') return;
         function init() {
         var COLONIES = {{ $colonies | jsonify | safeJS }};
-        var COLORS = { 'supercolony': '#caa03a', 'not-supercolony': '#245436', 'surveyed': '#8a9a90' };
-        var LABELS = { 'supercolony': 'Supercolony (ants did not fight)', 'not-supercolony': 'Not supercolony (ants fought)', 'surveyed': 'Surveyed, not yet trialled' };
+        // The survey records a nest's colony code at collection; its classroom result only exists in the summary.
+        var SUMMARY = {{ $summary | jsonify | safeJS }};
+        var RESULTS = {};
+        SUMMARY.forEach(function (s) { RESULTS[s.code] = s; });
+        var CONCLUSIONS = { 'Supercolony': 'supercolony', 'Not supercolony': 'not-supercolony', 'Inconclusive': 'inconclusive' };
+        var COLORS = { 'supercolony': '#caa03a', 'not-supercolony': '#245436', 'inconclusive': '#6b8fb3', 'pending': '#c3ccc6', 'surveyed': '#8a9a90' };
+        var LABELS = { 'supercolony': 'Supercolony (ants did not fight)', 'not-supercolony': 'Not supercolony (ants fought)', 'inconclusive': 'Inconclusive (mixed behaviour)', 'pending': 'Collected for classroom trials, result pending', 'surveyed': 'Surveyed, not yet trialled' };
         function esc(s){ return String(s == null ? '' : s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+        function outcomeOf(c) {
+          if (!c.code) return COLORS[c.outcome] ? c.outcome : 'surveyed';
+          var s = RESULTS[c.code];
+          return (s && CONCLUSIONS[s.conclusion]) || 'pending';
+        }
 
         var map = L.map('gwr-map', { scrollWheelZoom: false });
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -239,21 +249,27 @@
           spiderfyOnMaxZoom: true,
           disableClusteringAtZoom: 12
         }) : map;
+        var markers = {}, used = {};
         COLONIES.forEach(function (c) {
-          var color = COLORS[c.outcome] || COLORS.surveyed;
+          var key = outcomeOf(c), color = COLORS[key], s = c.code && RESULTS[c.code];
+          used[key] = true;
           var rows = [];
+          if (c.code) rows.push('<b>Colony:</b> ' + esc(c.code));
+          if (s && s.replicates) rows.push('<b>Classroom trials:</b> ' + esc(s.replicates));
           if (c.date) rows.push('<b>Surveyed:</b> ' + esc(c.date));
           if (c.species) rows.push('<b>Species:</b> ' + esc(c.species));
           if (c.shape) rows.push('<b>Nest:</b> ' + esc(c.shape));
           if (c.environment) rows.push('<b>Habitat:</b> ' + esc(c.environment));
-          rows.push('<b>Aggression trial:</b> ' + esc(c.trial || 'No'));
-          if (c.collected) rows.push('<b>Specimens collected:</b> ' + esc(c.collected));
+          // the survey's trial and specimen questions describe field work, which classroom colonies skip
+          if (!c.code) rows.push('<b>Aggression trial:</b> ' + esc(c.trial || 'No'));
+          if (c.collected && !c.code) rows.push('<b>Specimens collected:</b> ' + esc(c.collected));
           var mk = L.circleMarker([c.lat, c.lng], {
             radius: 9, weight: 2.5, color: '#fff', opacity: 1, fillColor: color, fillOpacity: 0.95
           }).bindPopup(
-            '<div class="gwr-pop"><div class="gwr-pop__head"><i style="background:' + color + '"></i>' + LABELS[c.outcome] + '</div>' + rows.join('<br>') + '</div>'
+            '<div class="gwr-pop"><div class="gwr-pop__head"><i style="background:' + color + '"></i>' + LABELS[key] + '</div>' + rows.join('<br>') + '</div>'
           );
           layer.addLayer(mk);
+          if (c.code) markers[c.code] = mk;
           pts.push([c.lat, c.lng]);
         });
         if (useCluster) map.addLayer(layer);
@@ -262,8 +278,8 @@
         var legend = L.control({ position: 'bottomright' });
         legend.onAdd = function () {
           var d = L.DomUtil.create('div', 'gwr-legend');
-          ['supercolony', 'not-supercolony', 'surveyed'].forEach(function (k) {
-            d.innerHTML += '<span><i style="background:' + COLORS[k] + '"></i>' + LABELS[k] + '</span>';
+          ['supercolony', 'not-supercolony', 'inconclusive', 'pending', 'surveyed'].forEach(function (k) {
+            if (used[k]) d.innerHTML += '<span><i style="background:' + COLORS[k] + '"></i>' + LABELS[k] + '</span>';
           });
           return d;
         };
@@ -271,7 +287,12 @@
 
         map.on('focus', function () { map.scrollWheelZoom.enable(); });
         map.on('blur', function () { map.scrollWheelZoom.disable(); });
-        function refit() { map.invalidateSize(); if (pts.length) map.fitBounds(pts, { padding: [30, 30] }); }
+        // a late refit (e.g. window load on a slow connection) must not undo a jump the visitor already made
+        var userMoved = false;
+        ['mousedown', 'touchstart', 'wheel'].forEach(function (ev) {
+          map.getContainer().addEventListener(ev, function () { userMoved = true; }, { passive: true });
+        });
+        function refit() { map.invalidateSize(); if (pts.length && !userMoved) map.fitBounds(pts, { padding: [30, 30] }); }
         setTimeout(refit, 60);
         window.addEventListener('load', refit);
         if (window.ResizeObserver) {
@@ -282,19 +303,19 @@
         }
 
         var mapSection = document.getElementById('colony-map');
-        document.querySelectorAll('.gwr-maplink[data-lat]').forEach(function (a) {
+        // "View" opens the colony's own marker popup, so the table and the map always agree.
+        document.querySelectorAll('.gwr-maplink[data-code]').forEach(function (a) {
+          var mk = markers[a.getAttribute('data-code')];
+          if (!mk) return;
           a.addEventListener('click', function (e) {
             e.preventDefault();
-            var lat = parseFloat(a.getAttribute('data-lat')), lng = parseFloat(a.getAttribute('data-lng'));
-            var code = a.getAttribute('data-code'), concl = a.getAttribute('data-conclusion') || '';
-            var color = COLORS[concl.toLowerCase().replace(/\s+/g, '-')] || '#8a9a90';
+            userMoved = true;
             if (mapSection) mapSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
             setTimeout(function () {
               map.invalidateSize();
-              map.setView([lat, lng], 16, { animate: false });
-              L.popup({ offset: [0, -2], autoPan: false }).setLatLng([lat, lng])
-                .setContent('<div class="gwr-pop"><div class="gwr-pop__head"><i style="background:' + color + '"></i>' + code + '</div>' + concl + '</div>')
-                .openOn(map);
+              map.setView(mk.getLatLng(), 16, { animate: false });
+              if (map.hasLayer(mk)) mk.openPopup();
+              else if (layer.zoomToShowLayer) layer.zoomToShowLayer(mk, function () { mk.openPopup(); });
             }, 320);
           });
         });
