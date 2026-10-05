@@ -2,10 +2,38 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-10-04T14:53:23Z",
-  "generated_at_display": "October 04, 2026 at 14:53 UTC",
-  "works_count": 456,
+  "generated_at": "2026-10-05T18:35:33Z",
+  "generated_at_display": "October 05, 2026 at 18:35 UTC",
+  "works_count": 457,
   "latest": [
+    {
+      "put_code": 228799541,
+      "title": "prepR4pcm: An R package for preparing data and trees for phylogenetic comparative methods",
+      "authors": [
+        "Shinichi Nakagawa",
+        "Santiago Ortega",
+        "Ayumi Mizuno",
+        "Eduardo S. A. Santos",
+        "Malgorzata Lagisz",
+        "Bhavya Jain",
+        "Jimuel Jr Celeste",
+        "Sergio Poo Hernandez"
+      ],
+      "authors_display": "Shinichi Nakagawa, Santiago Ortega, Ayumi Mizuno, Eduardo S. A. Santos, Malgorzata Lagisz, Bhavya Jain, Jimuel Jr Celeste, Sergio Poo Hernandez",
+      "journal_title": "Peer Community Journal",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "10",
+      "publication_day": "05",
+      "publication_date_display": "October 5, 2026",
+      "publication_date_iso": "2026-10-05",
+      "doi": "10.24072/pcjournal.809",
+      "doi_url": "https://doi.org/10.24072/pcjournal.809",
+      "best_url": "https://doi.org/10.24072/pcjournal.809",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/228799541"
+    },
     {
       "put_code": 226977622,
       "title": "Photovoltaic panels affect arthropod and plant communities: a systematic review",
@@ -143,42 +171,41 @@
       "best_url": "https://doi.org/10.1111/2041-210x.70356",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/220532643"
-    },
-    {
-      "put_code": 225743582,
-      "title": "A New Effect Size for Meta‐Analysis of Magnitude: lnM",
-      "authors": [
-        "Shinichi Nakagawa",
-        "Ayumi Mizuno",
-        "Coralie Williams",
-        "Malgorzata Lagisz",
-        "Rose E. O'Dea",
-        "Daniel W. A. Noble",
-        "Alistair M. Senior",
-        "Erick Lundgren",
-        "Santiago Ortega"
-      ],
-      "authors_display": "Shinichi Nakagawa, Ayumi Mizuno, Coralie Williams, Malgorzata Lagisz, Rose E. O'Dea, Daniel W. A. Noble, Alistair M. Senior, Erick Lundgren, Santiago Ortega",
-      "journal_title": "Ecology Letters",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "09",
-      "publication_day": "00",
-      "publication_date_display": "September 2026",
-      "publication_date_iso": "2026-09-00",
-      "doi": "10.1111/ele.70428",
-      "doi_url": "https://doi.org/10.1111/ele.70428",
-      "best_url": "https://doi.org/10.1111/ele.70428",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/225743582"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 34,
+      "count": 35,
       "items": [
+        {
+          "put_code": 228799541,
+          "title": "prepR4pcm: An R package for preparing data and trees for phylogenetic comparative methods",
+          "authors": [
+            "Shinichi Nakagawa",
+            "Santiago Ortega",
+            "Ayumi Mizuno",
+            "Eduardo S. A. Santos",
+            "Malgorzata Lagisz",
+            "Bhavya Jain",
+            "Jimuel Jr Celeste",
+            "Sergio Poo Hernandez"
+          ],
+          "authors_display": "Shinichi Nakagawa, Santiago Ortega, Ayumi Mizuno, Eduardo S. A. Santos, Malgorzata Lagisz, Bhavya Jain, Jimuel Jr Celeste, Sergio Poo Hernandez",
+          "journal_title": "Peer Community Journal",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "10",
+          "publication_day": "05",
+          "publication_date_display": "October 5, 2026",
+          "publication_date_iso": "2026-10-05",
+          "doi": "10.24072/pcjournal.809",
+          "doi_url": "https://doi.org/10.24072/pcjournal.809",
+          "best_url": "https://doi.org/10.24072/pcjournal.809",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/228799541"
+        },
         {
           "put_code": 226977622,
           "title": "Photovoltaic panels affect arthropod and plant communities: a systematic review",
@@ -12940,7 +12967,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 376,
+    "journal-article": 377,
     "other": 6,
     "preprint": 72
   }
