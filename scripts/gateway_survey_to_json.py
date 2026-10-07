@@ -28,10 +28,6 @@ DATA_PATH = ROOT / "data" / "gateway" / "colonies.json"
 LAT_RANGE = (49.0, 60.0)
 LNG_RANGE = (-120.0, -110.0)
 
-# Survey records kept off the public map. 96-129 are the Jul 29 to Aug 26, 2026 surveys on private land
-# (backyards, pastures, driveways); they stay off until the team confirms the landowners are happy to be shown.
-HELD_BACK = set(range(96, 130))
-
 TIME_FORMATS = ("%m/%d/%Y %H:%M", "%m/%d/%Y %I:%M:%S %p", "%m/%d/%Y %H:%M:%S")  # July export, then Sep 2026 onward
 
 # A record whose notes say it "replaces" another supersedes the nearest earlier record within this radius.
@@ -98,8 +94,6 @@ def convert(rows: list[dict[str, str]], *, link_codes: bool = True, drop_replace
 
     nests = []
     for row in rows:
-        if row.get("objectid", "").isdigit() and int(row["objectid"]) in HELD_BACK:
-            continue
         try:
             point = (float(row["y"]), float(row["x"]))
         except (KeyError, ValueError):
