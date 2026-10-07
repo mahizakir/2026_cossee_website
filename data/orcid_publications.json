@@ -2,10 +2,37 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-10-06T16:02:45Z",
-  "generated_at_display": "October 06, 2026 at 16:02 UTC",
-  "works_count": 457,
+  "generated_at": "2026-10-07T16:41:01Z",
+  "generated_at_display": "October 07, 2026 at 16:41 UTC",
+  "works_count": 458,
   "latest": [
+    {
+      "put_code": 229018197,
+      "title": "Human disturbance and the magnitude and predictability of phenotypic divergence",
+      "authors": [
+        "Santiago Ortega",
+        "Eduardo Santos",
+        "Kiyoko Gotanda",
+        "Sarah Sanderson",
+        "Lucas Gorne",
+        "Andrew Hendry",
+        "Shinichi Nakagawa"
+      ],
+      "authors_display": "Santiago Ortega, Eduardo Santos, Kiyoko Gotanda, Sarah Sanderson, Lucas Gorne, Andrew Hendry, Shinichi Nakagawa",
+      "journal_title": null,
+      "type": "preprint",
+      "type_display": "Preprint",
+      "publication_year": "2026",
+      "publication_month": "10",
+      "publication_day": "07",
+      "publication_date_display": "October 7, 2026",
+      "publication_date_iso": "2026-10-07",
+      "doi": "10.32942/x2tt3g",
+      "doi_url": "https://doi.org/10.32942/x2tt3g",
+      "best_url": "https://doi.org/10.32942/X2TT3G",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/229018197"
+    },
     {
       "put_code": 228799541,
       "title": "prepR4pcm: An R package for preparing data and trees for phylogenetic comparative methods",
@@ -141,43 +168,40 @@
       "best_url": "https://doi.org/10.3390/math14193436",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/227445550"
-    },
-    {
-      "put_code": 220532643,
-      "title": "Elevating the importance of Risk of Bias assessment for ecology and evolutionary biology",
-      "authors": [
-        "Antica Culina",
-        "Dugald Foster",
-        "Matthew Grainger",
-        "Rose E. O'Dea",
-        "Oliver L. Pescott",
-        "Alfredo Sánchez‐Tójar",
-        "Robin J. Boyd",
-        "Julia Koricheva",
-        "Shinichi Nakagawa",
-        "Gavin Stewart"
-      ],
-      "authors_display": "Antica Culina, Dugald Foster, Matthew Grainger, Rose E. O'Dea, Oliver L. Pescott, Alfredo Sánchez‐Tójar, Robin J. Boyd, Julia Koricheva, Shinichi Nakagawa, Gavin Stewart",
-      "journal_title": "Methods in Ecology and Evolution",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "09",
-      "publication_day": "00",
-      "publication_date_display": "September 2026",
-      "publication_date_iso": "2026-09-00",
-      "doi": "10.1111/2041-210x.70356",
-      "doi_url": "https://doi.org/10.1111/2041-210x.70356",
-      "best_url": "https://doi.org/10.1111/2041-210x.70356",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/220532643"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 35,
+      "count": 36,
       "items": [
+        {
+          "put_code": 229018197,
+          "title": "Human disturbance and the magnitude and predictability of phenotypic divergence",
+          "authors": [
+            "Santiago Ortega",
+            "Eduardo Santos",
+            "Kiyoko Gotanda",
+            "Sarah Sanderson",
+            "Lucas Gorne",
+            "Andrew Hendry",
+            "Shinichi Nakagawa"
+          ],
+          "authors_display": "Santiago Ortega, Eduardo Santos, Kiyoko Gotanda, Sarah Sanderson, Lucas Gorne, Andrew Hendry, Shinichi Nakagawa",
+          "journal_title": null,
+          "type": "preprint",
+          "type_display": "Preprint",
+          "publication_year": "2026",
+          "publication_month": "10",
+          "publication_day": "07",
+          "publication_date_display": "October 7, 2026",
+          "publication_date_iso": "2026-10-07",
+          "doi": "10.32942/x2tt3g",
+          "doi_url": "https://doi.org/10.32942/x2tt3g",
+          "best_url": "https://doi.org/10.32942/X2TT3G",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/229018197"
+        },
         {
           "put_code": 228799541,
           "title": "prepR4pcm: An R package for preparing data and trees for phylogenetic comparative methods",
@@ -12969,6 +12993,6 @@
     "book-chapter": 1,
     "journal-article": 377,
     "other": 6,
-    "preprint": 72
+    "preprint": 73
   }
 }
