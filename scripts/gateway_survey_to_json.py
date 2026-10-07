@@ -28,6 +28,9 @@ DATA_PATH = ROOT / "data" / "gateway" / "colonies.json"
 LAT_RANGE = (49.0, 60.0)
 LNG_RANGE = (-120.0, -110.0)
 
+# Survey records kept off the public map at the team's request (130: Sep 12, 2026 nest in the Jasper area).
+EXCLUDED = {130}
+
 TIME_FORMATS = ("%m/%d/%Y %H:%M", "%m/%d/%Y %I:%M:%S %p", "%m/%d/%Y %H:%M:%S")  # July export, then Sep 2026 onward
 
 # A record whose notes say it "replaces" another supersedes the nearest earlier record within this radius.
@@ -94,6 +97,8 @@ def convert(rows: list[dict[str, str]], *, link_codes: bool = True, drop_replace
 
     nests = []
     for row in rows:
+        if row.get("objectid", "").isdigit() and int(row["objectid"]) in EXCLUDED:
+            continue
         try:
             point = (float(row["y"]), float(row["x"]))
         except (KeyError, ValueError):

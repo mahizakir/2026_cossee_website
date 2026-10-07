@@ -1333,17 +1333,6 @@
   "trial": "Yes"
  },
  {
-  "lat": 53.474101,
-  "lng": -117.477868,
-  "outcome": "surveyed",
-  "date": "9/12/2026",
-  "shape": "Dome-shaped (asymmetrical)",
-  "environment": "Mixed conifer and deciduous forest",
-  "species": "Red ant",
-  "collected": "Yes",
-  "trial": "No"
- },
- {
   "lat": 52.291052,
   "lng": -113.778125,
   "outcome": "surveyed",
