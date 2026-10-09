@@ -2,10 +2,36 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-10-08T16:37:52Z",
-  "generated_at_display": "October 08, 2026 at 16:37 UTC",
-  "works_count": 458,
+  "generated_at": "2026-10-09T16:22:23Z",
+  "generated_at_display": "October 09, 2026 at 16:22 UTC",
+  "works_count": 459,
   "latest": [
+    {
+      "put_code": 229201385,
+      "title": "No effect of short‐term exposure to ocean acidification on individual‐level variation in behaviour and susceptibility to predation in a Great Barrier Reef damselfish",
+      "authors": [
+        "Dominique G. Roche",
+        "Josefin Sundin",
+        "Ben Speers‐Roesch",
+        "Shinichi Nakagawa",
+        "Timothy D. Clark",
+        "Sandra A. Binning"
+      ],
+      "authors_display": "Dominique G. Roche, Josefin Sundin, Ben Speers‐Roesch, Shinichi Nakagawa, Timothy D. Clark, Sandra A. Binning",
+      "journal_title": "Journal of Animal Ecology",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "10",
+      "publication_day": "08",
+      "publication_date_display": "October 8, 2026",
+      "publication_date_iso": "2026-10-08",
+      "doi": "10.1111/1365-2656.70346",
+      "doi_url": "https://doi.org/10.1111/1365-2656.70346",
+      "best_url": "https://doi.org/10.1111/1365-2656.70346",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/229201385"
+    },
     {
       "put_code": 229018197,
       "title": "Human disturbance and the magnitude and predictability of phenotypic divergence",
@@ -146,35 +172,39 @@
       "best_url": "https://doi.org/10.1017/rsm.2026.10108",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/228031408"
-    },
-    {
-      "put_code": 227445550,
-      "title": "Statistical Methods for Assessing Non-Replicable, Outlying, and Influential Studies",
-      "authors": [
-        "Yefeng Yang",
-        "Shinichi Nakagawa"
-      ],
-      "authors_display": "Yefeng Yang, Shinichi Nakagawa",
-      "journal_title": "Mathematics",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "09",
-      "publication_day": "22",
-      "publication_date_display": "September 22, 2026",
-      "publication_date_iso": "2026-09-22",
-      "doi": "10.3390/math14193436",
-      "doi_url": "https://doi.org/10.3390/math14193436",
-      "best_url": "https://doi.org/10.3390/math14193436",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/227445550"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 36,
+      "count": 37,
       "items": [
+        {
+          "put_code": 229201385,
+          "title": "No effect of short‐term exposure to ocean acidification on individual‐level variation in behaviour and susceptibility to predation in a Great Barrier Reef damselfish",
+          "authors": [
+            "Dominique G. Roche",
+            "Josefin Sundin",
+            "Ben Speers‐Roesch",
+            "Shinichi Nakagawa",
+            "Timothy D. Clark",
+            "Sandra A. Binning"
+          ],
+          "authors_display": "Dominique G. Roche, Josefin Sundin, Ben Speers‐Roesch, Shinichi Nakagawa, Timothy D. Clark, Sandra A. Binning",
+          "journal_title": "Journal of Animal Ecology",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "10",
+          "publication_day": "08",
+          "publication_date_display": "October 8, 2026",
+          "publication_date_iso": "2026-10-08",
+          "doi": "10.1111/1365-2656.70346",
+          "doi_url": "https://doi.org/10.1111/1365-2656.70346",
+          "best_url": "https://doi.org/10.1111/1365-2656.70346",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/229201385"
+        },
         {
           "put_code": 229018197,
           "title": "Human disturbance and the magnitude and predictability of phenotypic divergence",
@@ -12991,7 +13021,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 377,
+    "journal-article": 378,
     "other": 6,
     "preprint": 73
   }
