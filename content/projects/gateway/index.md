@@ -34,6 +34,11 @@ gallery_extra = [
   "/web_files/gateway/gw-test.webp",
   "/web_files/gateway/gw-g6.webp",
   "/web_files/gateway/gw-g8.webp",
+  "/web_files/gateway/gw-g12.webp",
+  "/web_files/gateway/gw-g13.webp",
+  "/web_files/gateway/gw-g14.webp",
+  "/web_files/gateway/gw-g15.webp",
+  "/web_files/gateway/gw-g16.webp",
 ]
 highlights = [
   { label = "Who can join", value = "Alberta science teachers for Grades 4 through 12" },
