@@ -33,14 +33,21 @@
                             {{ if gt (len $authors) 0 }}
                             {{- $parts := slice -}}
                             {{- range $name := $authors -}}
-                              {{- $scholar := "" -}}
+                              {{- $profile := "" -}}
+                              {{- $profileLabel := "" -}}
                               {{- range $.Site.Data.people.members -}}
-                                {{- if and (eq .name $name) .google_scholar -}}
-                                  {{- $scholar = .google_scholar -}}
+                                {{- if eq .name $name -}}
+                                  {{- if .google_scholar -}}
+                                    {{- $profile = .google_scholar -}}
+                                    {{- $profileLabel = "Google Scholar profile" -}}
+                                  {{- else if .orcid -}}
+                                    {{- $profile = .orcid -}}
+                                    {{- $profileLabel = "ORCID profile" -}}
+                                  {{- end -}}
                                 {{- end -}}
                               {{- end -}}
-                              {{- if $scholar -}}
-                                {{- $parts = $parts | append (printf `<a class="blog-author-link" href="%s" target="_blank" rel="noopener" title="Google Scholar profile">%s</a>` ($scholar | htmlEscape) ($name | htmlEscape)) -}}
+                              {{- if $profile -}}
+                                {{- $parts = $parts | append (printf `<a class="blog-author-link" href="%s" target="_blank" rel="noopener" title="%s">%s</a>` ($profile | htmlEscape) $profileLabel ($name | htmlEscape)) -}}
                               {{- else -}}
                                 {{- $parts = $parts | append $name -}}
                               {{- end -}}
