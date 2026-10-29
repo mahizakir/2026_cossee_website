@@ -2,7 +2,7 @@
 title = "Research Output"
 date = 2026-05-11
 draft = false
-weight = 3
+weight = 4
 summary = "Record COSSEE research outputs including publications, presentations, funding, and other scholarly activity in one shared reporting system."
 project_code = "COSSEE RESEARCH OUTPUT"
 subtitle = "Centralized reporting for COSSEE outputs"

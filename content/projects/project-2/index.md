@@ -2,7 +2,7 @@
 title = "Checklist Automator"
 date = 2026-05-06
 draft = false
-weight = 2
+weight = 3
 summary = "Pick a reporting standard, upload a manuscript and supplements, and get back a fully cited compliance checklist with verbatim quotes and downloadable reports."
 project_code = "CHECKLIST AUTOMATOR"
 subtitle = "Evidence-grounded reporting audits"

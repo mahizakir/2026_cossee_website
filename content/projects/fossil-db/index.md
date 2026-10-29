@@ -2,7 +2,7 @@
 title = "Fossil DB"
 date = 2026-05-06
 draft = false
-weight = 3
+weight = 5
 aliases = ["/projects/project-3/"]
 summary = "A database and image-annotation tool for Alberta's plant–insect fossil record, tracing insect damage across the Cretaceous–Paleogene extinction 66 million years ago."
 project_code = "FOSSIL DB"
