@@ -34,7 +34,7 @@
               {{ range $featured }}
               {{ $p := . }}
               {{ $heroImg := "" }}
-              {{ with .Params.hero_image }}
+              {{ with .Params.card_image | default .Params.hero_image }}
                 {{ with $p.Resources.GetMatch . }}
                   {{ $heroImg = .RelPermalink }}
                 {{ end }}

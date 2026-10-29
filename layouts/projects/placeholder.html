@@ -5,13 +5,21 @@
     {{ partial "custom_headers.html" . }}
   </head>
   <body>
+    {{/* hero_image may be a page resource name or a site-absolute path such as /web_files/... */}}
     {{ $heroImage := "" }}
     {{ with .Params.hero_image }}
-      {{ with $.Resources.GetMatch . }}
+      {{ $src := . }}
+      {{ with $.Resources.GetMatch $src }}
         {{ $heroImage = .RelPermalink }}
+      {{ else }}
+        {{ if hasPrefix $src "/" }}{{ $heroImage = $src }}{{ end }}
       {{ end }}
     {{ end }}
     {{ $hasFacts := or .Params.audience .Params.location .Params.timing .Params.commitment }}
+    {{ $backURL := .Params.back_url | default "/projects/" }}
+    {{ $backLabel := .Params.back_label | default "All projects" }}
+    {{ $ghosts := .Params.team_placeholder_tiles | default 0 }}
+    {{ $placeholderIcon := `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7V5a1 1 0 011-1h2M17 4h2a1 1 0 011 1v2M20 17v2a1 1 0 01-1 1h-2M7 20H5a1 1 0 01-1-1v-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>` }}
 
     <div id="all">
       {{ partial "top.html" . }}
@@ -20,7 +28,7 @@
       <div id="content" class="gw-page">
         <section class="gw-hero" {{ if $heroImage }}style="background-image: linear-gradient(180deg, rgba(12, 28, 19, 0.55) 0%, rgba(12, 28, 19, 0.72) 100%), url('{{ $heroImage }}');"{{ end }}>
           <div class="container gw-hero__inner">
-            <a class="gw-back" href="/projects/"><span aria-hidden="true">&#8592;</span> All projects</a>
+            <a class="gw-back" href="{{ $backURL }}"><span aria-hidden="true">&#8592;</span> {{ $backLabel }}</a>
             <div class="gw-hero__tag-row">
               {{ with .Params.project_code }}<span class="gw-tag gw-tag--gold">{{ . }}</span>{{ end }}
               {{ with .Params.status }}<span class="gw-tag">{{ . }}</span>{{ end }}
@@ -32,14 +40,6 @@
               <h1 class="gw-hero__title">{{ .Title }}</h1>
             {{ end }}
             {{ with .Params.summary }}<p class="gw-hero__lede">{{ . }}</p>{{ end }}
-            {{ with .Params.contact_email }}
-            <div class="gw-hero__actions">
-              <a class="gw-btn gw-btn--primary" href="mailto:{{ . }}?subject={{ printf "%s interest" $.Title | urlquery }}">
-                <span>Email the team</span>
-                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-            {{ end }}
           </div>
         </section>
 
@@ -61,29 +61,139 @@
           </section>
           {{ end }}
 
-          <section class="gw-section{{ if not $hasFacts }} gw-section--first{{ end }}" id="about">
+          <section class="gw-section{{ if not $hasFacts }} gw-section--first{{ end }}" id="description">
             <div class="gw-section__head">
-              <span class="gw-eyebrow">About the project</span>
-              <h2>{{ .Title }}</h2>
+              <span class="gw-eyebrow">Description</span>
+              <h2>About {{ .Title }}</h2>
             </div>
             <div class="gw-prose">
               {{ .Content }}
             </div>
+            {{ with .Params.downloads }}
+            <div class="pc-downloads">
+              {{ range . }}
+              <article class="pc-download">
+                <div class="pc-download__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v12a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 3v5h5M12 11v6m0 0l-2.5-2.5M12 17l2.5-2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="pc-download__body">
+                  <h3>{{ .label }}</h3>
+                  <div class="pc-download__links">
+                    {{ with .pdf }}<a class="pc-chip" href="{{ . }}" download>Download PDF</a>{{ else }}<span class="pc-chip pc-chip--empty">Placeholder for PDF</span>{{ end }}
+                    {{ with .html }}<a class="pc-chip" href="{{ . }}">Read online</a>{{ else }}<span class="pc-chip pc-chip--empty">Placeholder for web version</span>{{ end }}
+                  </div>
+                </div>
+              </article>
+              {{ end }}
+            </div>
+            {{ end }}
           </section>
 
-          <section class="gw-join">
+          {{ if or .Params.team (gt $ghosts 0) }}
+          <section class="gw-section" id="team">
+            <div class="gw-section__head">
+              <span class="gw-eyebrow">People</span>
+              <h2>{{ .Params.team_title | default "Who we are" }}</h2>
+              {{ with .Params.team_note }}<p class="gw-section__sub">{{ . }}</p>{{ end }}
+            </div>
+            <div class="pc-team">
+              {{ range .Params.team }}
+              <article class="pc-person">
+                {{ with .photo }}
+                <img class="pc-person__photo" src="{{ . }}" alt="" loading="lazy">
+                {{ else }}
+                <div class="pc-person__photo pc-person__photo--empty" aria-hidden="true"><span>{{ substr .name 0 1 }}</span></div>
+                {{ end }}
+                <h3>{{ .name }}</h3>
+                {{ with .role }}<p>{{ . }}</p>{{ else }}<p class="pc-person__todo">Placeholder for photo, role, and short bio</p>{{ end }}
+              </article>
+              {{ end }}
+              {{ if gt $ghosts 0 }}
+              {{ range seq $ghosts }}
+              <article class="pc-person pc-person--ghost">
+                <div class="pc-person__photo pc-person__photo--empty" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 20c1.2-3.6 4.1-5.5 7.5-5.5s6.3 1.9 7.5 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </div>
+                <h3>Participant</h3>
+                <p class="pc-person__todo">Placeholder for photo and name</p>
+              </article>
+              {{ end }}
+              {{ end }}
+            </div>
+          </section>
+          {{ end }}
+
+          {{ if isset .Params "ethics" }}
+          <section class="gw-section" id="ethics">
+            <div class="gw-section__head">
+              <span class="gw-eyebrow">Ethics</span>
+              <h2>Our approach to ethics</h2>
+            </div>
+            {{ with .Params.ethics }}
+            <div class="gw-prose">{{ . | markdownify }}</div>
+            {{ else }}
+            <div class="pc-placeholder">{{ $placeholderIcon | safeHTML }}<span>Placeholder for the ethics statement and image</span></div>
+            {{ end }}
+          </section>
+          {{ end }}
+
+          {{ with .Params.cases }}
+          <section class="gw-section" id="projects">
+            <div class="gw-section__head">
+              <span class="gw-eyebrow">Projects</span>
+              <h2>Projects in this collaboration</h2>
+            </div>
+            <div class="pc-cases">
+              {{ range . }}
+              <a class="pc-case" href="{{ .url }}">
+                <span class="pc-case__tag">Project</span>
+                <h3>{{ .title }}</h3>
+                {{ with .summary }}<p>{{ . }}</p>{{ end }}
+                <span class="pc-case__cta">
+                  Open the project
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </a>
+              {{ end }}
+            </div>
+          </section>
+          {{ end }}
+
+          {{ if isset .Params "outputs" }}
+          <section class="gw-section" id="outputs">
+            <div class="gw-section__head">
+              <span class="gw-eyebrow">Outputs</span>
+              <h2>What we are producing</h2>
+            </div>
+            {{ with .Params.outputs }}
+            <ul class="pc-outputs">
+              {{ range . }}<li>{{ . | markdownify }}</li>{{ end }}
+            </ul>
+            {{ else }}
+            <div class="pc-placeholder">{{ $placeholderIcon | safeHTML }}<span>Placeholder for outputs such as publications, reports, and other products</span></div>
+            {{ end }}
+          </section>
+          {{ end }}
+
+          <section class="gw-join" id="contact">
             <div class="gw-join__copy">
-              <span class="gw-eyebrow gw-eyebrow--light">In development</span>
-              <h2>The full project page is on its way</h2>
-              <p>We are preparing the details for {{ .Title }}. In the meantime, explore COSSEE's other projects.</p>
+              <span class="gw-eyebrow gw-eyebrow--light">Contact</span>
+              <h2>Get in touch</h2>
+              {{ with .Params.contact_email }}
+              <p>Questions about {{ $.Title }}? Reach the team directly.</p>
+              {{ else }}
+              <div class="pc-placeholder pc-placeholder--dark">{{ $placeholderIcon | safeHTML }}<span>Placeholder for contact details</span></div>
+              {{ end }}
               <div class="gw-join__actions">
-                <a class="gw-btn gw-btn--primary gw-btn--lg" href="/projects/">
-                  <span>Browse all projects</span>
+                {{ with .Params.contact_email }}
+                <a class="gw-btn gw-btn--primary gw-btn--lg" href="mailto:{{ . }}?subject={{ printf "%s interest" $.Title | urlquery }}">
+                  <span>Email {{ . }}</span>
                   <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                {{ with .Params.contact_email }}
-                <a class="gw-btn gw-btn--ghost gw-btn--lg" href="mailto:{{ . }}?subject={{ printf "%s interest" $.Title | urlquery }}">Email {{ . }}</a>
                 {{ end }}
+                <a class="gw-btn gw-btn--ghost gw-btn--lg" href="{{ $backURL }}">
+                  <span>Back to {{ if .Params.back_url }}{{ $backLabel }}{{ else }}all projects{{ end }}</span>
+                </a>
               </div>
             </div>
           </section>
@@ -185,12 +295,6 @@
         margin: 0;
         max-width: 740px;
       }
-      .gw-hero__actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 28px;
-      }
       .gw-btn {
         align-items: center;
         border-radius: 999px;
@@ -227,13 +331,19 @@
         transform: translateY(-2px);
       }
       .gw-btn--lg { font-size: 16px; padding: 16px 26px; }
-      /* override site-wide #content a italic/underline for buttons and the back link */
+      /* override site-wide #content a italic/underline for buttons, links, and cards */
       #content a.gw-btn,
       #content a.gw-btn:hover,
       #content a.gw-btn:focus,
       #content a.gw-back,
       #content a.gw-back:hover,
-      #content a.gw-back:focus { font-style: normal !important; text-decoration: none !important; }
+      #content a.gw-back:focus,
+      #content a.pc-chip,
+      #content a.pc-chip:hover,
+      #content a.pc-chip:focus,
+      #content a.pc-case,
+      #content a.pc-case:hover,
+      #content a.pc-case:focus { font-style: normal !important; text-decoration: none !important; }
 
       /* Facts bar (overlaps hero) */
       .gw-facts {
@@ -280,7 +390,7 @@
       }
 
       /* Sections */
-      .gw-section { margin-bottom: 56px; }
+      .gw-section { margin-bottom: 56px; scroll-margin-top: 120px; }
       .gw-section--first { margin-top: 8px; }
       .gw-section__head { margin-bottom: 22px; max-width: 780px; }
       .gw-eyebrow {
@@ -300,6 +410,12 @@
         line-height: 1.1;
         margin: 0;
       }
+      .gw-section__sub {
+        color: var(--gw-muted);
+        font-size: 17px;
+        line-height: 1.6;
+        margin: 10px 0 0;
+      }
       .gw-prose {
         color: #37493e;
         font-size: 18px;
@@ -313,7 +429,177 @@
       .gw-prose h2 { font-size: 26px; }
       .gw-prose h3 { font-size: 20px; }
 
-      /* Coming-soon panel */
+      /* Placeholder boxes */
+      .pc-placeholder {
+        align-items: center;
+        background: repeating-linear-gradient(135deg, rgba(36, 84, 54, 0.03) 0 12px, transparent 12px 24px);
+        border: 2px dashed rgba(36, 84, 54, 0.22);
+        border-radius: 18px;
+        color: var(--gw-muted);
+        display: flex;
+        font-size: 15px;
+        font-style: italic;
+        gap: 12px;
+        padding: 26px 24px;
+      }
+      .pc-placeholder svg { color: var(--gw-gold); flex-shrink: 0; height: 22px; width: 22px; }
+      .pc-placeholder--dark {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 22px;
+        max-width: 560px;
+      }
+
+      /* Downloads */
+      .pc-downloads {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        margin-top: 30px;
+        max-width: 820px;
+      }
+      .pc-download {
+        align-items: flex-start;
+        background: #fff;
+        border: 1px solid var(--gw-line);
+        border-radius: 20px;
+        display: flex;
+        gap: 16px;
+        padding: 20px 22px;
+      }
+      .pc-download__icon {
+        align-items: center;
+        background: var(--gw-green-dark);
+        border-radius: 14px;
+        color: var(--gw-gold);
+        display: inline-flex;
+        flex-shrink: 0;
+        height: 46px;
+        justify-content: center;
+        width: 46px;
+      }
+      .pc-download__icon svg { height: 24px; width: 24px; }
+      .pc-download h3 {
+        color: var(--gw-ink);
+        font-size: 18px;
+        font-weight: 800;
+        margin: 2px 0 10px;
+      }
+      .pc-download__links { display: flex; flex-wrap: wrap; gap: 8px; }
+      .pc-chip {
+        background: var(--gw-gold);
+        border-radius: 999px;
+        color: var(--gw-green-dark);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        padding: 7px 13px;
+      }
+      .pc-chip--empty {
+        background: transparent;
+        border: 1px dashed rgba(36, 84, 54, 0.3);
+        color: var(--gw-muted);
+        font-style: italic;
+        font-weight: 600;
+      }
+
+      /* People grid */
+      .pc-team {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      }
+      .pc-person {
+        background: #fff;
+        border: 1px solid var(--gw-line);
+        border-radius: 20px;
+        padding: 18px;
+        text-align: center;
+      }
+      .pc-person__photo {
+        aspect-ratio: 1;
+        border-radius: 16px;
+        display: block;
+        margin-bottom: 14px;
+        object-fit: cover;
+        width: 100%;
+      }
+      .pc-person__photo--empty {
+        align-items: center;
+        background: linear-gradient(135deg, rgba(36, 84, 54, 0.08), rgba(202, 160, 58, 0.14));
+        border: 2px dashed rgba(36, 84, 54, 0.18);
+        color: var(--gw-green);
+        display: flex;
+        justify-content: center;
+      }
+      .pc-person__photo--empty span { font-size: 48px; font-weight: 800; opacity: 0.55; }
+      .pc-person__photo--empty svg { height: 56px; opacity: 0.45; width: 56px; }
+      .pc-person h3 {
+        color: var(--gw-ink);
+        font-size: 18px;
+        font-weight: 800;
+        margin: 0 0 6px;
+      }
+      .pc-person p { color: var(--gw-muted); font-size: 14px; line-height: 1.5; margin: 0; }
+      .pc-person .pc-person__todo { font-style: italic; }
+      .pc-person--ghost { border-style: dashed; }
+      .pc-person--ghost h3 { color: var(--gw-muted); }
+
+      /* Project cards */
+      .pc-cases {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+      .pc-case {
+        background: #fff;
+        border: 1px solid var(--gw-line);
+        border-left: 4px solid var(--gw-gold);
+        border-radius: 20px;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 22px 24px;
+        transition: transform 0.22s ease, box-shadow 0.22s ease;
+      }
+      .pc-case:hover, .pc-case:focus {
+        box-shadow: 0 18px 36px rgba(19, 34, 26, 0.1);
+        color: inherit;
+        transform: translateY(-2px);
+      }
+      .pc-case__tag {
+        align-self: flex-start;
+        background: rgba(202, 160, 58, 0.18);
+        border-radius: 999px;
+        color: #8a6706;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        padding: 5px 10px;
+        text-transform: uppercase;
+      }
+      .pc-case h3 { color: var(--gw-ink); font-size: 22px; font-weight: 800; margin: 0; }
+      .pc-case p { color: #4e6355; font-size: 15px; font-weight: 400; line-height: 1.65; margin: 0; }
+      .pc-case__cta {
+        align-items: center;
+        color: var(--gw-green);
+        display: inline-flex;
+        font-size: 12px;
+        font-weight: 800;
+        gap: 6px;
+        letter-spacing: 0.1em;
+        margin-top: 4px;
+        text-transform: uppercase;
+        transition: gap 0.2s ease;
+      }
+      .pc-case__cta svg { height: 14px; width: 14px; }
+      .pc-case:hover .pc-case__cta { gap: 10px; }
+
+      .pc-outputs { color: #37493e; font-size: 17px; line-height: 1.7; max-width: 820px; padding-left: 20px; }
+
+      /* Contact panel */
       .gw-join {
         background: linear-gradient(135deg, var(--gw-green-dark) 0%, var(--gw-green) 60%, #2d7048 100%);
         border-radius: 32px;
@@ -369,6 +655,9 @@
         .gw-section { margin-bottom: 40px; }
         .gw-section__head h2 { font-size: 28px; }
         .gw-prose { font-size: 17px; }
+        .pc-team { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+        .pc-person { padding: 12px; }
+        .pc-cases { grid-template-columns: 1fr; }
         .gw-join { padding: 28px; margin-bottom: 40px; }
         .gw-join__copy h2 { font-size: 26px; }
       }
