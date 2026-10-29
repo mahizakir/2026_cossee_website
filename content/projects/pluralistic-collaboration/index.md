@@ -26,6 +26,8 @@ cases = [
   { title = "Ecological Novelty", url = "/projects/pluralistic-collaboration/ecological-novelty/", summary = "Using pluralistic collaboration to explore controversial questions about introduced species and ecological novelty in conservation biology and ecology." },
 ]
 outputs = []
+[build]
+  list = "never"
 +++
 
 Scientific disagreements rarely concern evidence alone. They also involve terminology, ethics, risk, professional roles, institutional responsibilities and expertise.
