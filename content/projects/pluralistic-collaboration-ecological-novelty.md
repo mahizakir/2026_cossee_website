@@ -13,7 +13,7 @@ downloads = [
   { label = "Process manifesto", pdf = "", html = "" },
   { label = "Ethics", pdf = "", html = "" },
 ]
-team_title = "Who we are"
+team_title = "Meet the team"
 team_note = "Placeholder for photos and names of the current cohort of 18 researchers."
 team_placeholder_tiles = 10
 outputs = []
