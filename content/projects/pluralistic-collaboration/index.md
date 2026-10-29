@@ -18,7 +18,7 @@ hero_image_fit = "contain"
 hero_image_variant = "centered-large"
 team = [
   { name = "Laura" },
-  { name = "Dawid" },
+  { name = "David" },
   { name = "Aleksandra" },
 ]
 ethics = ""
