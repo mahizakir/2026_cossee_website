@@ -8,6 +8,10 @@ summary = "A new COSSEE collaborative research project. Full details, aims, and 
 project_code = "PLURALISTIC COLLABORATION"
 status = "Coming soon"
 lead = "COSSEE"
+audience = "Researchers"
+location = "Global"
+timing = "January 2027"
+commitment = "To be determined"
 hero_image = "pluralistic-collaboration.svg"
 +++
 
