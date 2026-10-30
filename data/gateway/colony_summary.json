@@ -258,5 +258,25 @@
     "code": "EXP057",
     "replicates": "1",
     "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP058",
+    "replicates": "3",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP059",
+    "replicates": "2",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP060",
+    "replicates": "2",
+    "conclusion": "Supercolony"
+  },
+  {
+    "code": "EXP062",
+    "replicates": "2",
+    "conclusion": "Supercolony"
   }
 ]

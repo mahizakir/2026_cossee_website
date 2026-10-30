@@ -199,7 +199,7 @@
  },
  {
   "lat": 50.92486,
-  "lng": -114.132451,
+  "lng": -114.132452,
   "outcome": "supercolony",
   "date": "5/29/2026",
   "shape": "Dome-shaped (round)",
@@ -254,7 +254,7 @@
  },
  {
   "lat": 50.92484,
-  "lng": -114.131983,
+  "lng": -114.131984,
   "outcome": "supercolony",
   "date": "5/29/2026",
   "shape": "Dome-shaped (round)",
@@ -331,7 +331,7 @@
  },
  {
   "lat": 50.932926,
-  "lng": -114.078815,
+  "lng": -114.078814,
   "outcome": "supercolony",
   "date": "5/29/2026",
   "shape": "Other",
@@ -661,7 +661,7 @@
  },
  {
   "lat": 50.9053,
-  "lng": -114.020689,
+  "lng": -114.02069,
   "outcome": "not-supercolony",
   "date": "5/30/2026",
   "shape": "Other",
@@ -1406,7 +1406,7 @@
  },
  {
   "lat": 52.291255,
-  "lng": -113.77609,
+  "lng": -113.776089,
   "outcome": "surveyed",
   "code": "EXP026",
   "date": "9/13/2026",
@@ -1754,7 +1754,7 @@
  },
  {
   "lat": 50.980069,
-  "lng": -114.136328,
+  "lng": -114.136329,
   "outcome": "surveyed",
   "code": "EXP055",
   "date": "9/23/2026",
@@ -1766,7 +1766,7 @@
  },
  {
   "lat": 53.539045,
-  "lng": -113.462918,
+  "lng": -113.462919,
   "outcome": "surveyed",
   "code": "EXP056",
   "date": "9/25/2026",
@@ -1783,6 +1783,54 @@
   "code": "EXP057",
   "date": "9/25/2026",
   "shape": "Dome-shaped (asymmetrical)",
+  "environment": "Mixed conifer and deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 53.508226,
+  "lng": -113.560946,
+  "outcome": "surveyed",
+  "code": "EXP058",
+  "date": "10/4/2026",
+  "shape": "Low bump",
+  "environment": "Deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 53.508248,
+  "lng": -113.560824,
+  "outcome": "surveyed",
+  "code": "EXP059",
+  "date": "10/4/2026",
+  "shape": "Other",
+  "environment": "Deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 53.508052,
+  "lng": -113.564899,
+  "outcome": "surveyed",
+  "code": "EXP060",
+  "date": "10/4/2026",
+  "shape": "Other",
+  "environment": "Deciduous forest",
+  "species": "Red ant",
+  "collected": "Yes",
+  "trial": "No"
+ },
+ {
+  "lat": 53.512033,
+  "lng": -113.548616,
+  "outcome": "surveyed",
+  "code": "EXP061",
+  "date": "10/4/2026",
+  "shape": "Dome-shaped (round)",
   "environment": "Mixed conifer and deciduous forest",
   "species": "Red ant",
   "collected": "Yes",
