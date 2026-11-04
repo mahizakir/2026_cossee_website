@@ -2,10 +2,36 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-11-03T17:10:45Z",
-  "generated_at_display": "November 03, 2026 at 17:10 UTC",
+  "generated_at": "2026-11-04T17:22:58Z",
+  "generated_at_display": "November 04, 2026 at 17:22 UTC",
   "works_count": 460,
   "latest": [
+    {
+      "put_code": 229201385,
+      "title": "No effect of short‐term exposure to ocean acidification on individual‐level variation in behaviour and susceptibility to predation in a Great Barrier Reef damselfish",
+      "authors": [
+        "Dominique G. Roche",
+        "Josefin Sundin",
+        "Ben Speers‐Roesch",
+        "Shinichi Nakagawa",
+        "Timothy D. Clark",
+        "Sandra A. Binning"
+      ],
+      "authors_display": "Dominique G. Roche, Josefin Sundin, Ben Speers‐Roesch, Shinichi Nakagawa, Timothy D. Clark, Sandra A. Binning",
+      "journal_title": "Journal of Animal Ecology",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "11",
+      "publication_day": "00",
+      "publication_date_display": "November 2026",
+      "publication_date_iso": "2026-11-00",
+      "doi": "10.1111/1365-2656.70346",
+      "doi_url": "https://doi.org/10.1111/1365-2656.70346",
+      "best_url": "https://doi.org/10.1111/1365-2656.70346",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/229201385"
+    },
     {
       "put_code": 229768746,
       "title": "One dataset, four meta-analyses: synthesising mean effects and heterogeneity within and among populations",
@@ -30,32 +56,6 @@
       "best_url": "https://doi.org/10.1242/bio.062872",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/229768746"
-    },
-    {
-      "put_code": 229201385,
-      "title": "No effect of short‐term exposure to ocean acidification on individual‐level variation in behaviour and susceptibility to predation in a Great Barrier Reef damselfish",
-      "authors": [
-        "Dominique G. Roche",
-        "Josefin Sundin",
-        "Ben Speers‐Roesch",
-        "Shinichi Nakagawa",
-        "Timothy D. Clark",
-        "Sandra A. Binning"
-      ],
-      "authors_display": "Dominique G. Roche, Josefin Sundin, Ben Speers‐Roesch, Shinichi Nakagawa, Timothy D. Clark, Sandra A. Binning",
-      "journal_title": "Journal of Animal Ecology",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "10",
-      "publication_day": "08",
-      "publication_date_display": "October 8, 2026",
-      "publication_date_iso": "2026-10-08",
-      "doi": "10.1111/1365-2656.70346",
-      "doi_url": "https://doi.org/10.1111/1365-2656.70346",
-      "best_url": "https://doi.org/10.1111/1365-2656.70346",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/229201385"
     },
     {
       "put_code": 229018197,
@@ -175,6 +175,32 @@
       "count": 38,
       "items": [
         {
+          "put_code": 229201385,
+          "title": "No effect of short‐term exposure to ocean acidification on individual‐level variation in behaviour and susceptibility to predation in a Great Barrier Reef damselfish",
+          "authors": [
+            "Dominique G. Roche",
+            "Josefin Sundin",
+            "Ben Speers‐Roesch",
+            "Shinichi Nakagawa",
+            "Timothy D. Clark",
+            "Sandra A. Binning"
+          ],
+          "authors_display": "Dominique G. Roche, Josefin Sundin, Ben Speers‐Roesch, Shinichi Nakagawa, Timothy D. Clark, Sandra A. Binning",
+          "journal_title": "Journal of Animal Ecology",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "11",
+          "publication_day": "00",
+          "publication_date_display": "November 2026",
+          "publication_date_iso": "2026-11-00",
+          "doi": "10.1111/1365-2656.70346",
+          "doi_url": "https://doi.org/10.1111/1365-2656.70346",
+          "best_url": "https://doi.org/10.1111/1365-2656.70346",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/229201385"
+        },
+        {
           "put_code": 229768746,
           "title": "One dataset, four meta-analyses: synthesising mean effects and heterogeneity within and among populations",
           "authors": [
@@ -198,32 +224,6 @@
           "best_url": "https://doi.org/10.1242/bio.062872",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/229768746"
-        },
-        {
-          "put_code": 229201385,
-          "title": "No effect of short‐term exposure to ocean acidification on individual‐level variation in behaviour and susceptibility to predation in a Great Barrier Reef damselfish",
-          "authors": [
-            "Dominique G. Roche",
-            "Josefin Sundin",
-            "Ben Speers‐Roesch",
-            "Shinichi Nakagawa",
-            "Timothy D. Clark",
-            "Sandra A. Binning"
-          ],
-          "authors_display": "Dominique G. Roche, Josefin Sundin, Ben Speers‐Roesch, Shinichi Nakagawa, Timothy D. Clark, Sandra A. Binning",
-          "journal_title": "Journal of Animal Ecology",
-          "type": "journal-article",
-          "type_display": "Journal Article",
-          "publication_year": "2026",
-          "publication_month": "10",
-          "publication_day": "08",
-          "publication_date_display": "October 8, 2026",
-          "publication_date_iso": "2026-10-08",
-          "doi": "10.1111/1365-2656.70346",
-          "doi_url": "https://doi.org/10.1111/1365-2656.70346",
-          "best_url": "https://doi.org/10.1111/1365-2656.70346",
-          "source_name": "Crossref",
-          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/229201385"
         },
         {
           "put_code": 229018197,
