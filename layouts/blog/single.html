@@ -36,7 +36,7 @@
                               {{- $profile := "" -}}
                               {{- $profileLabel := "" -}}
                               {{- range $.Site.Data.people.members -}}
-                                {{- if eq .name $name -}}
+                                {{- if or (eq .name $name) (in .aliases $name) -}}
                                   {{- if .google_scholar -}}
                                     {{- $profile = .google_scholar -}}
                                     {{- $profileLabel = "Google Scholar profile" -}}
