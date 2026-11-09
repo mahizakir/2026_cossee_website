@@ -1835,5 +1835,15 @@
   "species": "Red ant",
   "collected": "Yes",
   "trial": "No"
+ },
+ {
+  "lat": 53.516667,
+  "lng": -113.55,
+  "approx": true,
+  "outcome": "surveyed",
+  "code": "EXP062",
+  "date": "10/8/2026",
+  "collected": "Yes",
+  "trial": "No"
  }
 ]

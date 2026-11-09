@@ -259,6 +259,7 @@
           if (c.code) rows.push('<b>Colony:</b> ' + esc(c.code));
           if (s && s.replicates) rows.push('<b>Classroom trials:</b> ' + esc(s.replicates));
           if (c.date) rows.push('<b>Surveyed:</b> ' + esc(c.date));
+          if (c.approx) rows.push('<b>Location:</b> approximate, within about 1 km');
           if (c.species) rows.push('<b>Species:</b> ' + esc(c.species));
           if (c.shape) rows.push('<b>Nest:</b> ' + esc(c.shape));
           if (c.environment) rows.push('<b>Habitat:</b> ' + esc(c.environment));

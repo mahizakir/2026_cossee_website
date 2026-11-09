@@ -31,6 +31,13 @@ LNG_RANGE = (-120.0, -110.0)
 # Survey records kept off the public map at the team's request (130: Sep 12, 2026 nest in the Jasper area).
 EXCLUDED = {130}
 
+# Classroom colonies missing from the export, placed from a screenshot of the unsubmitted survey form. The form shows
+# whole arc-minutes, so "approx" puts the nest within about 1 km of the true spot.
+MANUAL_NESTS = [
+    {"lat": 53.516667, "lng": -113.55, "approx": True, "outcome": "surveyed", "code": "EXP062", "date": "10/8/2026",
+     "collected": "Yes", "trial": "No"},  # 53°31'N 113°33'W, Oct 8, 2026 2:52 PM
+]
+
 TIME_FORMATS = ("%m/%d/%Y %H:%M", "%m/%d/%Y %I:%M:%S %p", "%m/%d/%Y %H:%M:%S")  # July export, then Sep 2026 onward
 
 # A record whose notes say it "replaces" another supersedes the nearest earlier record within this radius.
@@ -145,6 +152,8 @@ def convert(rows: list[dict[str, str]], *, link_codes: bool = True, drop_replace
             "trial": row["were aggression trials completed at this nest?"],
         })
         out.append(nest)
+    surveyed_codes = {nest.get("code") for nest in out}
+    out.extend(dict(nest) for nest in MANUAL_NESTS if nest["code"] not in surveyed_codes)
 
     seen: dict[str, int] = {}
     for nest in out:
