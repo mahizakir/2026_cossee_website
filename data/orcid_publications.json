@@ -2,10 +2,34 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-11-08T16:05:55Z",
-  "generated_at_display": "November 08, 2026 at 16:05 UTC",
-  "works_count": 461,
+  "generated_at": "2026-11-09T19:55:36Z",
+  "generated_at_display": "November 09, 2026 at 19:55 UTC",
+  "works_count": 462,
   "latest": [
+    {
+      "put_code": 232613104,
+      "title": "Robust statistical modelling and inference for conservation biology",
+      "authors": [
+        "Yefeng Yang",
+        "Jinming Pan",
+        "David I. Warton",
+        "Shinichi Nakagawa"
+      ],
+      "authors_display": "Yefeng Yang, Jinming Pan, David I. Warton, Shinichi Nakagawa",
+      "journal_title": "Nature Reviews Biodiversity",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "11",
+      "publication_day": "09",
+      "publication_date_display": "November 9, 2026",
+      "publication_date_iso": "2026-11-09",
+      "doi": "10.1038/s44358-026-00215-4",
+      "doi_url": "https://doi.org/10.1038/s44358-026-00215-4",
+      "best_url": "https://doi.org/10.1038/s44358-026-00215-4",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/232613104"
+    },
     {
       "put_code": 232312044,
       "title": "Music exposure reduces anxiety- and depression-like behavior in rodents: a systematic review and multilevel meta-analysis",
@@ -138,43 +162,37 @@
       "best_url": "https://doi.org/10.24072/pcjournal.809",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/228799541"
-    },
-    {
-      "put_code": 226977622,
-      "title": "Photovoltaic panels affect arthropod and plant communities: a systematic review",
-      "authors": [
-        "Alix Lafitte",
-        "Dakis-Yaoba Ouédraogo",
-        "Shinichi Nakagawa",
-        "Bertrand Schatz",
-        "Geoffroy Marx",
-        "Christian Kerbiriou",
-        "Raphaël Gros",
-        "Jérémy S. P. Froidevaux",
-        "Romain Sordello",
-        "Yorick Reyjol"
-      ],
-      "authors_display": "Alix Lafitte, Dakis-Yaoba Ouédraogo, Shinichi Nakagawa, Bertrand Schatz, Geoffroy Marx, Christian Kerbiriou, Raphaël Gros, Jérémy S. P. Froidevaux, Romain Sordello, Yorick Reyjol",
-      "journal_title": "Biodiversity and Conservation",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "10",
-      "publication_day": "00",
-      "publication_date_display": "October 2026",
-      "publication_date_iso": "2026-10-00",
-      "doi": "10.1007/s10531-026-03411-y",
-      "doi_url": "https://doi.org/10.1007/s10531-026-03411-y",
-      "best_url": "https://doi.org/10.1007/s10531-026-03411-y",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/226977622"
     }
   ],
   "years": [
     {
       "year": "2026",
-      "count": 39,
+      "count": 40,
       "items": [
+        {
+          "put_code": 232613104,
+          "title": "Robust statistical modelling and inference for conservation biology",
+          "authors": [
+            "Yefeng Yang",
+            "Jinming Pan",
+            "David I. Warton",
+            "Shinichi Nakagawa"
+          ],
+          "authors_display": "Yefeng Yang, Jinming Pan, David I. Warton, Shinichi Nakagawa",
+          "journal_title": "Nature Reviews Biodiversity",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "11",
+          "publication_day": "09",
+          "publication_date_display": "November 9, 2026",
+          "publication_date_iso": "2026-11-09",
+          "doi": "10.1038/s44358-026-00215-4",
+          "doi_url": "https://doi.org/10.1038/s44358-026-00215-4",
+          "best_url": "https://doi.org/10.1038/s44358-026-00215-4",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/232613104"
+        },
         {
           "put_code": 232312044,
           "title": "Music exposure reduces anxiety- and depression-like behavior in rodents: a systematic review and multilevel meta-analysis",
@@ -13069,7 +13087,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 1,
-    "journal-article": 380,
+    "journal-article": 381,
     "other": 6,
     "preprint": 73
   }
