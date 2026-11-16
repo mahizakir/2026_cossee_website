@@ -1,0 +1,42 @@
+# cossee.org -> the lab's main website (static files built by Hugo)
+# Owner: mzakir   Files: /home/mzakir/cossee-site/current   (no backend, no port)
+#
+# The site is rebuilt from github.com/mahizakir/2026_cossee_website by the
+# cossee-site.timer systemd user unit. See ~/cossee-site/README.md.
+#
+# Install only after the DNS A records for cossee.org and www point at this
+# server. Before that the certificate request fails and retries in the
+# background.
+#
+#   sudo install -m 644 cossee.org.caddy /etc/caddy/sites/ && caddy-reload
+
+www.cossee.org {
+	redir https://cossee.org{uri} permanent
+}
+
+cossee.org {
+	root * /home/mzakir/cossee-site/current
+	encode zstd gzip
+
+	# /page also finds /page.html, as it did on GitHub Pages.
+	try_files {path} {path}.html
+
+	file_server
+
+	# The two headers GitHub Pages sent, kept so that nothing relying on them
+	# (short browser caching, other sites fetching our data files) changes.
+	header {
+		Cache-Control "max-age=600"
+		Access-Control-Allow-Origin "*"
+		-Server
+	}
+
+	# Missing pages get the site's own 404 page, still with status 404.
+	handle_errors 404 {
+		rewrite * /404.html
+		file_server
+	}
+
+	# Access logs go to the journal:  journalctl -u caddy -f
+	log
+}

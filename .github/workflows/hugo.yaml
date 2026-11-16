@@ -1,24 +1,25 @@
-name: Build and deploy
+name: Build check
+
+# This workflow no longer deploys anything. cossee.org is served by the lab web
+# server, which pulls this repo and builds the site itself within about five
+# minutes of a push (see deploy/README.md).
+#
+# All this does is confirm that each push still builds, so a commit that breaks
+# the site shows up here as a failed run and an email, instead of the live site
+# quietly staying on its previous version.
 
 on:
   push:
     branches:
       - main
-  # Daily deploy ~20 min after the ORCID publications cron (update-publications.yml, 09:23 UTC).
-  # Cron commits use GITHUB_TOKEN, which cannot trigger this workflow via `push`, so we deploy
-  # on a schedule to publish the latest committed publications data.
-  schedule:
-    - cron: '45 9 * * *'
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: build-check
+  cancel-in-progress: true
 
 defaults:
   run:
@@ -28,6 +29,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      # Keep in step with the Hugo on the server (~/.local/hugo/hugo).
       HUGO_VERSION: 0.157.0
     steps:
       - name: Checkout
@@ -35,10 +37,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
 
       - name: Install Hugo
         run: |
@@ -57,19 +55,3 @@ jobs:
             --gc \
             --minify \
             --cacheDir "${{ runner.temp }}/hugo_cache"
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./public
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4

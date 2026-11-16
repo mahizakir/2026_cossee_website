@@ -1,0 +1,10 @@
+[Unit]
+Description=Rebuild cossee.org from GitHub when it changes
+Documentation=file:%h/cossee-site/README.md
+
+[Service]
+Type=oneshot
+ExecStart=%h/cossee-site/bin/update-site.sh
+TimeoutStartSec=20min
+MemoryMax=3G
+Nice=10
