@@ -1,0 +1,21 @@
++++
+title = "Impressions from the 2nd Canadian Open Science Conference"
+date = 2026-11-20
+authors = ["Eduardo Santos"]
+banner = "/web_files/cosc-2026-uottawa-campus.webp"
+banner_alt = "Autumn maples and red lamp posts at the corner of Marie-Curie and Louis-Pasteur on the University of Ottawa campus."
+summary = "Notes from three days in Ottawa: a wide mix of researchers, funders and policy makers, and open science framed as a matter of scientific sovereignty."
+tags = ["open science", "meta-research", "reflection"]
++++
+
+In the last week of October, between the 27 and 29, the University of Ottawa Heart Institute hosted the [2nd Canadian Open Science Conference](https://carn-recar.ca/2nd-canadian-open-science-conference/) at the University of Ottawa. We had the chance to participate as a large group of COSSEE members. Losia, Shinichi, Marija and I went to Ottawa for the conference. Losia presented a poster, while Shinichi was invited for a panel. Marija presented the Early Career Researcher plenary session, and I presented the MetaResearch Challenge plenary session. All in all, there were 350 participants in the conference, and the small format, with at the most two parallel sessions, made it a very cozy and connected environment where most participants were in sync with what was being presented and discussed.
+
+[Marija’s talk](/blog/early-career-perspective-canadian-open-science-conference/) about making research more transparent, reliable and reusable was really well received by the participants, and led to several questions and good discussions. I presented the MetaResearch dashboard that we created for the data challenge the conference put together. Again, I believe that the tool was well received by participants.
+
+There are a few things that I noticed during the conference that I believe are worth mentioning here. First, the conference had a wide mix of participants from different backgrounds and roles. From researchers that work on meta-science, all the way to policy makers, directors of funding agencies (both philanthropies and public agencies), librarians, and members of government. I was positively surprised by this mix, which led to very productive conversations and also allowed us to chat with lots of folks that are in decision making positions that are important for research in general.
+
+Another point that came to mind is that from the talks and conversations the impression I got is that most funding agencies and researchers (at least from this selected group) are very pro open science, while these mentioned players believe that institutions (read Universities, mostly), are not too keen on open science (not my words, but what I picked up from conversations).
+
+A third aspect that I perceived from several panels, talks and conversations is that a lot of researchers/participants are concerned with the importance of open science as an umbrella philosophy that is important for a country’s scientific sovereignty and research security. To be clear of how important I think this aspect is, it was weaved across the three days of conference in pretty much all the panels and several of the major talks of the conference. I think we need to be proponents of the open science philosophy for much larger purposes than what we currently have in mind. Most of us are usually (when we think about this), concerned with open science mostly to address the requirements of publishers. The point here is much more important. Open science is a mechanism that preserves the autonomy of a given country to work with knowledge. Some speakers even mentioned the situations related to geopolitical events (read wars), and how that affects not only a country’s research ecosystem, but also vital services and systems that rely, for instance, on databases.
+
+To wrap up, the conference ended with a clear mandate for a 3rd edition of this conference to take place next year in Canada. We still don’t have a venue, but it will most likely take place. Also, next year, Montreal will host the 2027 MetaScience Conference, and it seems that a lot of participants will go to Montreal next summer for that conference. Based on the experience at the 2nd Canadian Open Science Conference, I highly recommend going to Montreal next year for some high-level discussions about Open and Metascience.
