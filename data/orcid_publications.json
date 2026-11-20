@@ -2,8 +2,8 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-11-19T18:24:13Z",
-  "generated_at_display": "November 19, 2026 at 18:24 UTC",
+  "generated_at": "2026-11-20T17:54:16Z",
+  "generated_at_display": "November 20, 2026 at 17:54 UTC",
   "works_count": 484,
   "latest": [
     {
@@ -31,6 +31,33 @@
       "best_url": "https://doi.org/10.1242/bio.062841",
       "source_name": "Crossref",
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/228147340"
+    },
+    {
+      "put_code": 232312044,
+      "title": "Music exposure reduces anxiety- and depression-like behavior in rodents: a systematic review and multilevel meta-analysis",
+      "authors": [
+        "Santiago Ortega",
+        "Anna Lenz",
+        "Erick Lundgren",
+        "Ayumi Mizuno",
+        "Sergio Poo Hernandez",
+        "Shinichi Nakagawa",
+        "Malgorzata Lagisz"
+      ],
+      "authors_display": "Santiago Ortega, Anna Lenz, Erick Lundgren, Ayumi Mizuno, Sergio Poo Hernandez, Shinichi Nakagawa, Malgorzata Lagisz",
+      "journal_title": "Biology Open",
+      "type": "journal-article",
+      "type_display": "Journal Article",
+      "publication_year": "2026",
+      "publication_month": "11",
+      "publication_day": "15",
+      "publication_date_display": "November 15, 2026",
+      "publication_date_iso": "2026-11-15",
+      "doi": "10.1242/bio.062879",
+      "doi_url": "https://doi.org/10.1242/bio.062879",
+      "best_url": "https://doi.org/10.1242/bio.062879",
+      "source_name": "Crossref",
+      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/232312044"
     },
     {
       "put_code": 233346069,
@@ -108,33 +135,6 @@
       "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/232613104"
     },
     {
-      "put_code": 232312044,
-      "title": "Music exposure reduces anxiety- and depression-like behavior in rodents: a systematic review and multilevel meta-analysis",
-      "authors": [
-        "Santiago Ortega",
-        "Anna Lenz",
-        "Erick Lundgren",
-        "Ayumi Mizuno",
-        "Sergio Poo Hernandez",
-        "Shinichi Nakagawa",
-        "Malgorzata Lagisz"
-      ],
-      "authors_display": "Santiago Ortega, Anna Lenz, Erick Lundgren, Ayumi Mizuno, Sergio Poo Hernandez, Shinichi Nakagawa, Malgorzata Lagisz",
-      "journal_title": "Biology Open",
-      "type": "journal-article",
-      "type_display": "Journal Article",
-      "publication_year": "2026",
-      "publication_month": "11",
-      "publication_day": "05",
-      "publication_date_display": "November 5, 2026",
-      "publication_date_iso": "2026-11-05",
-      "doi": "10.1242/bio.062879",
-      "doi_url": "https://doi.org/10.1242/bio.062879",
-      "best_url": "https://doi.org/10.1242/bio.062879",
-      "source_name": "Crossref",
-      "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/232312044"
-    },
-    {
       "put_code": 229201385,
       "title": "No effect of short‐term exposure to ocean acidification on individual‐level variation in behaviour and susceptibility to predation in a Great Barrier Reef damselfish",
       "authors": [
@@ -191,6 +191,33 @@
           "best_url": "https://doi.org/10.1242/bio.062841",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/228147340"
+        },
+        {
+          "put_code": 232312044,
+          "title": "Music exposure reduces anxiety- and depression-like behavior in rodents: a systematic review and multilevel meta-analysis",
+          "authors": [
+            "Santiago Ortega",
+            "Anna Lenz",
+            "Erick Lundgren",
+            "Ayumi Mizuno",
+            "Sergio Poo Hernandez",
+            "Shinichi Nakagawa",
+            "Malgorzata Lagisz"
+          ],
+          "authors_display": "Santiago Ortega, Anna Lenz, Erick Lundgren, Ayumi Mizuno, Sergio Poo Hernandez, Shinichi Nakagawa, Malgorzata Lagisz",
+          "journal_title": "Biology Open",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "11",
+          "publication_day": "15",
+          "publication_date_display": "November 15, 2026",
+          "publication_date_iso": "2026-11-15",
+          "doi": "10.1242/bio.062879",
+          "doi_url": "https://doi.org/10.1242/bio.062879",
+          "best_url": "https://doi.org/10.1242/bio.062879",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/232312044"
         },
         {
           "put_code": 233346069,
@@ -266,33 +293,6 @@
           "best_url": "https://doi.org/10.1038/s44358-026-00215-4",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/232613104"
-        },
-        {
-          "put_code": 232312044,
-          "title": "Music exposure reduces anxiety- and depression-like behavior in rodents: a systematic review and multilevel meta-analysis",
-          "authors": [
-            "Santiago Ortega",
-            "Anna Lenz",
-            "Erick Lundgren",
-            "Ayumi Mizuno",
-            "Sergio Poo Hernandez",
-            "Shinichi Nakagawa",
-            "Malgorzata Lagisz"
-          ],
-          "authors_display": "Santiago Ortega, Anna Lenz, Erick Lundgren, Ayumi Mizuno, Sergio Poo Hernandez, Shinichi Nakagawa, Malgorzata Lagisz",
-          "journal_title": "Biology Open",
-          "type": "journal-article",
-          "type_display": "Journal Article",
-          "publication_year": "2026",
-          "publication_month": "11",
-          "publication_day": "05",
-          "publication_date_display": "November 5, 2026",
-          "publication_date_iso": "2026-11-05",
-          "doi": "10.1242/bio.062879",
-          "doi_url": "https://doi.org/10.1242/bio.062879",
-          "best_url": "https://doi.org/10.1242/bio.062879",
-          "source_name": "Crossref",
-          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/232312044"
         },
         {
           "put_code": 229201385,
