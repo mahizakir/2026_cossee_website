@@ -2,9 +2,9 @@
   "orcid_id": "0000-0002-7765-5182",
   "record_url": "https://orcid.org/0000-0002-7765-5182",
   "works_api_url": "https://pub.orcid.org/v3.0/0000-0002-7765-5182/works",
-  "generated_at": "2026-11-23T21:32:59Z",
-  "generated_at_display": "November 23, 2026 at 21:32 UTC",
-  "works_count": 484,
+  "generated_at": "2026-11-24T20:14:43Z",
+  "generated_at_display": "November 24, 2026 at 20:14 UTC",
+  "works_count": 485,
   "latest": [
     {
       "put_code": 228147340,
@@ -164,7 +164,7 @@
   "years": [
     {
       "year": "2026",
-      "count": 45,
+      "count": 46,
       "items": [
         {
           "put_code": 228147340,
@@ -399,6 +399,34 @@
           "best_url": "https://doi.org/10.24072/pcjournal.809",
           "source_name": "Crossref",
           "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/228799541"
+        },
+        {
+          "put_code": 234488207,
+          "title": "Research weaving to mobilise expert‐curated knowledge for species conservation: Case study of the diamond‐backed terrapin—A protocol",
+          "authors": [
+            "Iwo Gross",
+            "McKae Sarkowski",
+            "Patricia Levasseur",
+            "John C. Maerz",
+            "John Wnek",
+            "Matthew E. Wolak",
+            "Malgorzata Lagisz",
+            "Shinichi Nakagawa"
+          ],
+          "authors_display": "Iwo Gross, McKae Sarkowski, Patricia Levasseur, John C. Maerz, John Wnek, Matthew E. Wolak, Malgorzata Lagisz, Shinichi Nakagawa",
+          "journal_title": "Ecological Solutions and Evidence",
+          "type": "journal-article",
+          "type_display": "Journal Article",
+          "publication_year": "2026",
+          "publication_month": "10",
+          "publication_day": "00",
+          "publication_date_display": "October 2026",
+          "publication_date_iso": "2026-10-00",
+          "doi": "10.1002/2688-8319.70349",
+          "doi_url": "https://doi.org/10.1002/2688-8319.70349",
+          "best_url": "https://doi.org/10.1002/2688-8319.70349",
+          "source_name": "Crossref",
+          "orcid_work_url": "https://orcid.org/0000-0002-7765-5182/work/234488207"
         },
         {
           "put_code": 226977622,
@@ -13783,7 +13811,7 @@
   "type_counts": {
     "book": 1,
     "book-chapter": 2,
-    "journal-article": 401,
+    "journal-article": 402,
     "other": 6,
     "preprint": 74
   }
