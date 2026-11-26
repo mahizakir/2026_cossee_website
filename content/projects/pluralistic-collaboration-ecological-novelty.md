@@ -17,7 +17,7 @@ hide_contact = true
 
 We are engaging in pluralistic collaboration to explore controversial questions in conservation biology and ecology, while pioneering new methods of doing science. We represent a spectrum of values and empirical perspectives on introduced species and ecological novelty. By meeting in small groups and employing tools of pluralistic collaboration, we are mapping the dimensions of our disagreements and codesigning fair tests of the empirical ones.
 
-Given the diversity of viewpoints, the current cohort of 18 researchers is pilot, one that provides the framework and tools to begin this process.
+Given the diversity of viewpoints, the current cohort of 18 researchers is a pilot, one that provides the framework and tools to begin this process.
 
 Our initial pilot phase intends to produce two documents:
 
