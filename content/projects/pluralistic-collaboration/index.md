@@ -15,8 +15,10 @@ hero_image = "/web_files/pluralistic-collaboration/background.svg"
 card_image = "pluralistic-collaboration-logo.webp"
 hero_image_fit = "contain"
 hero_image_variant = "centered-large"
+cases_eyebrow = ""
+cases_title = "Pluralistic Collaboration Pilot"
 cases = [
-  { title = "Ecological Novelty", url = "/projects/pluralistic-collaboration/ecological-novelty/", summary = "Using pluralistic collaboration to explore controversial questions about introduced species and ecological novelty in conservation biology and ecology." },
+  { title = "Ecological Novelty & Introduced Species", url = "/projects/pluralistic-collaboration/ecological-novelty/", summary = "Using pluralistic collaboration to explore controversial questions about introduced species and ecological novelty in conservation biology and ecology.", image = "/web_files/pluralistic-collaboration/ecological-dialogue-logo.webp" },
 ]
 outputs = []
 
