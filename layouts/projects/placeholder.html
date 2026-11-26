@@ -184,7 +184,21 @@
           </section>
           {{ end }}
 
-          {{ if not .Params.hide_contact }}
+          {{ if .Params.contact_form_embed }}
+          <section class="gw-section pc-contact" id="contact">
+            <div class="gw-section__head">
+              <span class="gw-eyebrow">Contact</span>
+              <h2>Get in touch</h2>
+              <p class="gw-section__sub">Questions about {{ .Title }}? Send the team a message through the form below.</p>
+            </div>
+            <div class="pc-contact__embed">
+              <iframe src="{{ .Params.contact_form_embed }}" title="{{ .Title }} contact form" loading="lazy">Loading…</iframe>
+            </div>
+            {{ with .Params.contact_form_url }}
+            <p class="pc-contact__note">If the form does not load here, <a href="{{ . }}" target="_blank" rel="noopener">open it directly</a>.</p>
+            {{ end }}
+          </section>
+          {{ else if not .Params.hide_contact }}
           <section class="gw-join" id="contact">
             <div class="gw-join__copy">
               <span class="gw-eyebrow gw-eyebrow--light">Contact</span>
@@ -636,6 +650,10 @@
 
       .pc-outputs { color: #37493e; font-size: 17px; line-height: 1.7; padding-left: 20px; }
 
+      /* Embedded contact form */
+      .pc-contact__embed iframe { background: transparent; border: 0; display: block; min-height: 960px; width: 100%; }
+      .pc-contact__note { color: var(--gw-muted); font-size: 14px; margin: 14px 0 0; }
+
       /* Contact panel */
       .gw-join {
         background: linear-gradient(135deg, var(--gw-green-dark) 0%, var(--gw-green) 60%, #2d7048 100%);
@@ -696,6 +714,7 @@
         .pc-person--bio { gap: 14px; grid-template-columns: 1fr; padding: 18px; }
         .pc-person--bio .pc-person__photo { max-width: 220px; }
         .pc-cases { grid-template-columns: 1fr; }
+        .pc-contact__embed iframe { min-height: 1000px; }
         .pc-case--image { gap: 16px; grid-template-columns: 1fr 96px; }
         .gw-join { padding: 28px; margin-bottom: 40px; }
         .gw-join__copy h2 { font-size: 26px; }

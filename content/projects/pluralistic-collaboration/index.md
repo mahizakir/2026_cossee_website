@@ -21,6 +21,7 @@ cases = [
   { title = "Ecological Novelty & Introduced Species", url = "/projects/pluralistic-collaboration/ecological-novelty/", summary = "Using pluralistic collaboration to explore controversial questions about introduced species and ecological novelty in conservation biology and ecology.", image = "/web_files/pluralistic-collaboration/ecological-dialogue-logo.webp" },
 ]
 contact_form_url = "https://forms.gle/Fy9hfHFB8Fu1r8Rm7"
+contact_form_embed = "https://docs.google.com/forms/d/e/1FAIpQLSeZKC0znv0XLBR20TFv7_GNjNJv87Xbg-wE_5avJF9RC8MPaA/viewform?embedded=true"
 
 [[team]]
 name = "Laura McLauchlan"
