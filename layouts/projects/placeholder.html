@@ -186,12 +186,20 @@
             <div class="gw-join__copy">
               <span class="gw-eyebrow gw-eyebrow--light">Contact</span>
               <h2>Get in touch</h2>
-              {{ with .Params.contact_email }}
-              <p>Questions about {{ $.Title }}? Reach the team directly.</p>
+              {{ if .Params.contact_form_url }}
+              <p>Questions about {{ .Title }}? Send the team a message through our contact form.</p>
+              {{ else if .Params.contact_email }}
+              <p>Questions about {{ .Title }}? Reach the team directly.</p>
               {{ else }}
               <div class="pc-placeholder pc-placeholder--dark">{{ $placeholderIcon | safeHTML }}<span>Placeholder for contact details</span></div>
               {{ end }}
               <div class="gw-join__actions">
+                {{ with .Params.contact_form_url }}
+                <a class="gw-btn gw-btn--primary gw-btn--lg" href="{{ . }}" target="_blank" rel="noopener">
+                  <span>Open the contact form</span>
+                  <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                {{ end }}
                 {{ with .Params.contact_email }}
                 <a class="gw-btn gw-btn--primary gw-btn--lg" href="mailto:{{ . }}?subject={{ printf "%s interest" $.Title | urlquery }}">
                   <span>Email {{ . }}</span>

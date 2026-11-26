@@ -20,7 +20,7 @@ cases_title = "Pluralistic Collaboration Pilot"
 cases = [
   { title = "Ecological Novelty & Introduced Species", url = "/projects/pluralistic-collaboration/ecological-novelty/", summary = "Using pluralistic collaboration to explore controversial questions about introduced species and ecological novelty in conservation biology and ecology.", image = "/web_files/pluralistic-collaboration/ecological-dialogue-logo.webp" },
 ]
-outputs = []
+contact_form_url = "https://forms.gle/Fy9hfHFB8Fu1r8Rm7"
 
 [[team]]
 name = "Laura McLauchlan"
