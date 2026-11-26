@@ -98,14 +98,17 @@
             </div>
             <div class="pc-team">
               {{ range .Params.team }}
-              <article class="pc-person">
+              <article class="pc-person{{ if .bio }} pc-person--bio{{ end }}">
                 {{ with .photo }}
                 <img class="pc-person__photo" src="{{ . }}" alt="" loading="lazy">
                 {{ else }}
                 <div class="pc-person__photo pc-person__photo--empty" aria-hidden="true"><span>{{ substr .name 0 1 }}</span></div>
                 {{ end }}
-                <h3>{{ .name }}</h3>
-                {{ with .role }}<p>{{ . }}</p>{{ else }}<p class="pc-person__todo">Placeholder for photo, role, and short bio</p>{{ end }}
+                <div class="pc-person__text">
+                  <h3>{{ .name }}</h3>
+                  {{ with .role }}<p class="pc-person__role">{{ . }}</p>{{ else }}<p class="pc-person__todo">Placeholder for photo, role, and short bio</p>{{ end }}
+                  {{ with .bio }}<div class="pc-person__bio">{{ . | markdownify }}</div>{{ end }}
+                </div>
               </article>
               {{ end }}
               {{ if gt $ghosts 0 }}
@@ -539,6 +542,19 @@
       }
       .pc-person p { color: var(--gw-muted); font-size: 14px; line-height: 1.5; margin: 0; }
       .pc-person .pc-person__todo { font-style: italic; }
+      .pc-person--bio {
+        align-items: start;
+        display: grid;
+        gap: 24px;
+        grid-column: 1 / -1;
+        grid-template-columns: 200px 1fr;
+        padding: 24px;
+        text-align: left;
+      }
+      .pc-person--bio .pc-person__photo { margin-bottom: 0; }
+      .pc-person--bio .pc-person__role { color: var(--gw-green); font-weight: 700; margin-bottom: 10px; }
+      .pc-person__bio p { color: var(--gw-ink); font-size: 15px; line-height: 1.65; }
+      .pc-person__bio p + p { margin-top: 10px; }
       .pc-person--ghost { border-style: dashed; }
       .pc-person--ghost h3 { color: var(--gw-muted); }
 
@@ -652,6 +668,8 @@
         .gw-prose { font-size: 17px; }
         .pc-team { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
         .pc-person { padding: 12px; }
+        .pc-person--bio { gap: 14px; grid-template-columns: 1fr; padding: 18px; }
+        .pc-person--bio .pc-person__photo { max-width: 220px; }
         .pc-cases { grid-template-columns: 1fr; }
         .gw-join { padding: 28px; margin-bottom: 40px; }
         .gw-join__copy h2 { font-size: 26px; }
