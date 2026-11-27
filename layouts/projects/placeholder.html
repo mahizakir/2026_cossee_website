@@ -670,7 +670,7 @@
       .pc-partners {
         display: grid;
         gap: 18px;
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       }
       .pc-partner {
         align-items: center;
@@ -678,9 +678,9 @@
         border: 1px solid var(--gw-line);
         border-radius: 20px;
         display: flex;
-        height: 180px;
+        height: 260px;
         justify-content: center;
-        padding: 24px 32px;
+        padding: 28px 36px;
         transition: transform 0.22s ease, box-shadow 0.22s ease;
       }
       .pc-partner:hover, .pc-partner:focus { box-shadow: 0 18px 36px rgba(19, 34, 26, 0.1); transform: translateY(-2px); }
@@ -751,6 +751,7 @@
         .pc-person--bio .pc-person__photo { max-width: 220px; }
         .pc-cases { grid-template-columns: 1fr; }
         .pc-contact__embed iframe { min-height: 1000px; }
+        .pc-partner { height: 200px; padding: 22px 28px; }
         .pc-case--image { gap: 16px; grid-template-columns: 1fr 96px; }
         .gw-join { padding: 28px; margin-bottom: 40px; }
         .gw-join__copy h2 { font-size: 26px; }
