@@ -41,6 +41,16 @@ role = "Graduate student, COSSEE"
 photo = "/web_files/pluralistic-collaboration/aleksandra-milenovic.webp"
 bio = """Aleksandra Milenović is a graduate student at the Collaboration for Open Science and Synthesis in Ecology and Evolution (COSSEE). Her graduate work consists of mixed-methods meta-research on the relationship between collaboration and values. She is specifically interested in the definitions, boundary mapping and power of these concepts. She has previous research experience as a research assistant on an empirical literary studies project investigating the representation of child sexual abuse in fiction. Her education background consists of a Master's degree in Media Studies and a Bachelor's degree in Psychology."""
 
+[[partners]]
+name = "UTS Centre for Compassionate Conservation"
+url = "https://www.uts.edu.au/about/faculties/transdisciplinary-school/td-research/td-centres-and-labs/centre-for-compassionate-conservation"
+logo = "/web_files/pluralistic-collaboration/uts-centre-compassionate-conservation.webp"
+
+[[partners]]
+name = "COSSEE"
+url = "/"
+logo = "/img/cossee_logo_AM.svg"
+
 [build]
   list = "never"
 +++

@@ -128,6 +128,22 @@
           </section>
           {{ end }}
 
+          {{ with .Params.partners }}
+          <section class="gw-section" id="partners">
+            <div class="gw-section__head">
+              <span class="gw-eyebrow">Partners</span>
+              <h2>Our partners</h2>
+            </div>
+            <div class="pc-partners">
+              {{ range . }}
+              <a class="pc-partner" href="{{ .url }}" target="_blank" rel="noopener">
+                <img src="{{ .logo }}" alt="{{ .name }}" loading="lazy">
+              </a>
+              {{ end }}
+            </div>
+          </section>
+          {{ end }}
+
           {{ if isset .Params "ethics" }}
           <section class="gw-section" id="ethics">
             <div class="gw-section__head">
@@ -649,6 +665,26 @@
       .pc-case:hover .pc-case__cta { gap: 10px; }
 
       .pc-outputs { color: #37493e; font-size: 17px; line-height: 1.7; padding-left: 20px; }
+
+      /* Partner logos */
+      .pc-partners {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      }
+      .pc-partner {
+        align-items: center;
+        background: #fff;
+        border: 1px solid var(--gw-line);
+        border-radius: 20px;
+        display: flex;
+        height: 180px;
+        justify-content: center;
+        padding: 24px 32px;
+        transition: transform 0.22s ease, box-shadow 0.22s ease;
+      }
+      .pc-partner:hover, .pc-partner:focus { box-shadow: 0 18px 36px rgba(19, 34, 26, 0.1); transform: translateY(-2px); }
+      .pc-partner img { display: block; max-height: 100%; max-width: 100%; object-fit: contain; }
 
       /* Embedded contact form */
       .pc-contact__embed iframe { background: transparent; border: 0; display: block; min-height: 960px; width: 100%; }
