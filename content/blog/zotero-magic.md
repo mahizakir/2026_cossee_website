@@ -114,13 +114,15 @@ Once files are stored cleanly, the next weak point is metadata—especially DOIs
 
 This matters a lot more than it seems. The DOI is the unique identifier that allows Zotero to fetch authoritative metadata from CrossRef and other services. It’s also the most reliable way to detect duplicates.
 
-The DOI Manager ( https://github.com/bwiernik/zotero-shortdoi
+The DOI Manager ( https://github.com/JuliusBairaktaris/zotero-shortdoi
 
 ) plugin scans your library and: - finds missing DOIs;
 
 - validates existing ones;
 
 - corrects errors.
+
+(Updated November 2026: this now links to a maintained fork that works with Zotero 10, as the original plugin stops at Zotero 7.)
 
 Running it periodically keeps the library's “identity layer” clean. Once DOIs are in place, Zotero can reliably refresh metadata for entries that were imported in messy ways. Think of it as repairing the genetic code of your bibliography.
 
